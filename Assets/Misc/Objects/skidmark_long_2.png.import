@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://kaotqbjagnn8"
-path="res://.godot/imported/skidmark_long_2.png-1ac08a368bdf5428739c434b70b22009.ctex"
+path="res://.godot/imported/skidmark_long_2.png-17c92cf60177b655de0e502fd479ecb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Misc/Objects/skidmark_long_2.png"
-dest_files=["res://.godot/imported/skidmark_long_2.png-1ac08a368bdf5428739c434b70b22009.ctex"]
+source_file="res://Assets/Misc/Objects/skidmark_long_2.png"
+dest_files=["res://.godot/imported/skidmark_long_2.png-17c92cf60177b655de0e502fd479ecb3.ctex"]
 
 [params]
 

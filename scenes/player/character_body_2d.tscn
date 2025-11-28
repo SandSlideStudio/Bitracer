@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bsryovcyh4yjm"]
+[gd_scene load_steps=5 format=3 uid="uid://bsryovcyh4yjm"]
 
 [ext_resource type="Script" uid="uid://dmfevgxenjhvh" path="res://scripts/player/Car1.gd" id="1_4bq1r"]
-[ext_resource type="Texture2D" uid="uid://dj8o1yygyo7sa" path="res://assets/vehicles/cars/car_blue_1.png" id="2_s25n1"]
+[ext_resource type="Texture2D" uid="uid://dj8o1yygyo7sa" path="res://Assets/vehicles/cars/car_blue_1.png" id="2_s25n1"]
+[ext_resource type="Script" uid="uid://c6fmv46rpdht6" path="res://scenes/player/camera_2d.gd" id="3_lxlh8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxlh8"]
 size = Vector2(32, 17)
@@ -18,3 +19,7 @@ position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_lxlh8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+ignore_rotation = false
+position_smoothing_speed = 7.0
+rotation_smoothing_enabled = true
+script = ExtResource("3_lxlh8")

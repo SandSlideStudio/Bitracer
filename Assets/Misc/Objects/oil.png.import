@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cspejlw1eu2aj"
-path="res://.godot/imported/oil.png-0566b78bca5fec64ab1c8be1a9cdef40.ctex"
+path="res://.godot/imported/oil.png-92c95a253afc9bc71386ad82f5a7849c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Misc/Objects/oil.png"
-dest_files=["res://.godot/imported/oil.png-0566b78bca5fec64ab1c8be1a9cdef40.ctex"]
+source_file="res://Assets/Misc/Objects/oil.png"
+dest_files=["res://.godot/imported/oil.png-92c95a253afc9bc71386ad82f5a7849c.ctex"]
 
 [params]
 

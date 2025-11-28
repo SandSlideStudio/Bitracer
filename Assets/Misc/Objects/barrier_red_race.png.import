@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d4lul15t1skl8"
-path="res://.godot/imported/barrier_red_race.png-e1a1ea0d2480a6a37b42320cb187bb43.ctex"
+path="res://.godot/imported/barrier_red_race.png-e7c5d2159d8ff3d24b6f1092dcc8d67d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Misc/Objects/barrier_red_race.png"
-dest_files=["res://.godot/imported/barrier_red_race.png-e1a1ea0d2480a6a37b42320cb187bb43.ctex"]
+source_file="res://Assets/Misc/Objects/barrier_red_race.png"
+dest_files=["res://.godot/imported/barrier_red_race.png-e7c5d2159d8ff3d24b6f1092dcc8d67d.ctex"]
 
 [params]
 
