@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2nkcbrk2kypn"
-path="res://.godot/imported/tires_red_alt.png-51914a647eacfa4d788065b933a96afd.ctex"
+path="res://.godot/imported/tires_red_alt.png-515fb57d07dd0274cab30620cfc41f80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Misc/Objects/tires_red_alt.png"
-dest_files=["res://.godot/imported/tires_red_alt.png-51914a647eacfa4d788065b933a96afd.ctex"]
+source_file="res://assets/Misc/Objects/tires_red_alt.png"
+dest_files=["res://.godot/imported/tires_red_alt.png-515fb57d07dd0274cab30620cfc41f80.ctex"]
 
 [params]
 

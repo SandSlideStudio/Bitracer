@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctfltfpx0rkuw"
-path="res://.godot/imported/tribune_overhang_red.png-376bc5883e8644dd39af8d56ce1de333.ctex"
+path="res://.godot/imported/tribune_overhang_red.png-5f00a9d30ec6d2a86e4fe562d53be218.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Misc/Objects/tribune_overhang_red.png"
-dest_files=["res://.godot/imported/tribune_overhang_red.png-376bc5883e8644dd39af8d56ce1de333.ctex"]
+source_file="res://assets/Misc/Objects/tribune_overhang_red.png"
+dest_files=["res://.godot/imported/tribune_overhang_red.png-5f00a9d30ec6d2a86e4fe562d53be218.ctex"]
 
 [params]
 

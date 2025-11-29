@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c32y6um32fp4k"
-path="res://.godot/imported/road_sand77.png-a3abdeed58cded4bb8a25c5cfd9f525e.ctex"
+path="res://.godot/imported/road_sand77.png-ce792912b48385794ebba011cb2054ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tracks/Tiles/Sand road/road_sand77.png"
-dest_files=["res://.godot/imported/road_sand77.png-a3abdeed58cded4bb8a25c5cfd9f525e.ctex"]
+source_file="res://assets/tracks/Tiles/Sand road/road_sand77.png"
+dest_files=["res://.godot/imported/road_sand77.png-ce792912b48385794ebba011cb2054ff.ctex"]
 
 [params]
 
