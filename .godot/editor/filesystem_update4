@@ -1,5 +1,3 @@
-res://scenes/Main/main.tscn
-res://scripts/player/Rally_physics.gd
-res://scenes/player/Car_Rally_Physics_(test).tscn
-res://scenes/player/Car_Arcade_Rally_Physics.tscn
 res://scenes/track/track.tscn
+res://scenes/player/Car_Arcade_physics.tscn
+res://scenes/Main/main.tscn

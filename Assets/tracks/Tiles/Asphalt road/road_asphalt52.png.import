@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://chhkx1dd3qws0"
-path="res://.godot/imported/road_asphalt52.png-ad24937080929d972e890f980c4f5ed0.ctex"
+path="res://.godot/imported/road_asphalt52.png-d0f5645b2dd2274ec8ba94550791efbc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/tracks/Tiles/Asphalt road/road_asphalt52.png"
-dest_files=["res://.godot/imported/road_asphalt52.png-ad24937080929d972e890f980c4f5ed0.ctex"]
+source_file="res://assets/tracks/Tiles/Asphalt road/road_asphalt52.png"
+dest_files=["res://.godot/imported/road_asphalt52.png-d0f5645b2dd2274ec8ba94550791efbc.ctex"]
 
 [params]
 
