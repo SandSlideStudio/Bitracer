@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ctd2pgpjrcwmw"
-path="res://.godot/imported/land_sand04.png-f13a08752f79089101a5079e92b25fe0.ctex"
+path="res://.godot/imported/land_sand04.png-a2eda1d887e93abae83d6e2f0dca2de5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tracks/Tiles/Sand/land_sand04.png"
-dest_files=["res://.godot/imported/land_sand04.png-f13a08752f79089101a5079e92b25fe0.ctex"]
+source_file="res://Assets/tracks/Tiles/Sand/land_sand04.png"
+dest_files=["res://.godot/imported/land_sand04.png-a2eda1d887e93abae83d6e2f0dca2de5.ctex"]
 
 [params]
 

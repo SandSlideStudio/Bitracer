@@ -1,3 +1,9 @@
 res://scenes/player/Car_Arcade_physics.tscn
-res://scenes/player/Car_Arcade_Rally_Physics.tscn
+res://scenes/track/track.tscn
 res://scenes/Main/main.tscn
+res://scripts/player/Car1.gd
+res://scripts/player/car_camera_rotation.gd
+res://scripts/player/camera_controller.gd
+res://scripts/player/car_camera_something.gd
+res://scenes/player/Camera's.tscn
+res://scenes/player/Car_Arcade_Rally_Physics.tscn

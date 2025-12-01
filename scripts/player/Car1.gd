@@ -29,7 +29,7 @@ func _process(delta: float) -> void:
 		turn_input = 1.0
 
 	# --- FORWARD VECTOR ---
-	var forward: Vector2 = Vector2.UP.rotated(rotation)
+	var forward: Vector2 = Vector2.UP.rotated(global_rotation)
 
 	# --- ACCELERATION & BRAKE ---
 	var forward_speed: float = velocity.dot(forward)
@@ -75,7 +75,7 @@ func _process(delta: float) -> void:
 		if forward_speed < 0.0:
 			steering_factor = -1.0
 
-		rotation += deg_to_rad(turn_input * current_turn_speed * steering_factor * delta)
+		global_rotation += deg_to_rad(turn_input * current_turn_speed * steering_factor * delta)
 
 	# --- MOVE CAR ---
 	global_position += velocity * delta

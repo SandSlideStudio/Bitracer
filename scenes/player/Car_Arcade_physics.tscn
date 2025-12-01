@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bsryovcyh4yjm"]
 
 [ext_resource type="Script" uid="uid://dmfevgxenjhvh" path="res://scripts/player/Car1.gd" id="1_4bq1r"]
-[ext_resource type="Texture2D" uid="uid://dlj4o0f6auijg" path="res://assets/cars/CustomCar(Red).png" id="2_mens8"]
+[ext_resource type="Texture2D" uid="uid://7vwvff2ej72m" path="res://Assets/cars/CustomCar(VANWIJDERACING).png" id="2_mens8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxlh8"]
 size = Vector2(30, 32)
@@ -9,12 +9,8 @@ size = Vector2(30, 32)
 [node name="Car" type="CharacterBody2D"]
 script = ExtResource("1_4bq1r")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Car_Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_mens8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="Car_Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_lxlh8")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-limit_enabled = false
-position_smoothing_speed = 1.0

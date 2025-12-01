@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2d4wgcvs1nwq"]
+
+[ext_resource type="Script" uid="uid://dufy8bd5aw83a" path="res://scripts/player/camera_controller.gd" id="1_02tvy"]
+[ext_resource type="Script" uid="uid://be7liwcuek1sk" path="res://scripts/player/car_camera_something.gd" id="2_q7ht3"]
+
+[node name="Camera\'s" type="Node2D" node_paths=PackedStringArray("cam_rotating", "cam_fixed")]
+script = ExtResource("1_02tvy")
+cam_rotating = NodePath("Camera2D_YESROT")
+cam_fixed = NodePath("Camera2D_NOROT")
+
+[node name="Camera2D_NOROT" type="Camera2D" parent="."]
+script = ExtResource("2_q7ht3")
+
+[node name="Camera2D_YESROT" type="Camera2D" parent="."]
+ignore_rotation = false
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 2.0
+script = ExtResource("2_q7ht3")

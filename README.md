@@ -25,3 +25,13 @@ https://vanwijde.com/download/206/?tmstv=1764582701
 
 In the download there is a separate LICENSE file that strictly relates to the assets in the pack.
 
+
+
+
+
+CONTROLLS:
+W - Forward
+S - Brake/Reverse
+A - Left
+D - Right
+C - Change camera

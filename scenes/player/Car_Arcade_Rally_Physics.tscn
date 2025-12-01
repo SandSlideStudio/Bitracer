@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://1fey2sk64sa0"]
 
 [ext_resource type="Script" uid="uid://lbwubq1vto2v" path="res://scripts/player/Rally_physics.gd" id="1_23y0a"]
-[ext_resource type="Texture2D" uid="uid://5601g3mshca5" path="res://assets/cars/CustomCar(Green).png" id="2_m1l57"]
+[ext_resource type="Texture2D" uid="uid://5601g3mshca5" path="res://Assets/cars/CustomCar(Green).png" id="2_m1l57"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxlh8"]
 size = Vector2(30, 32)
@@ -15,7 +15,3 @@ texture = ExtResource("2_m1l57")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_lxlh8")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-limit_enabled = false
-position_smoothing_speed = 1.0

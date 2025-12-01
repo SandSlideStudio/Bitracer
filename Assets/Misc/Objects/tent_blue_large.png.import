@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1sky5v84ibi6"
-path="res://.godot/imported/tent_blue_large.png-386d5d0392863b47fc4daef91b05d226.ctex"
+path="res://.godot/imported/tent_blue_large.png-74a09cec236fcbbe55f684cb90b818cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Misc/Objects/tent_blue_large.png"
-dest_files=["res://.godot/imported/tent_blue_large.png-386d5d0392863b47fc4daef91b05d226.ctex"]
+source_file="res://Assets/Misc/Objects/tent_blue_large.png"
+dest_files=["res://.godot/imported/tent_blue_large.png-74a09cec236fcbbe55f684cb90b818cb.ctex"]
 
 [params]
 
