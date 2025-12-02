@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ci3u53pimiiad"]
 
 [ext_resource type="PackedScene" uid="uid://bsryovcyh4yjm" path="res://scenes/player/Car_Arcade_physics.tscn" id="2_br8qb"]
-[ext_resource type="PackedScene" uid="uid://c6c4o0r782qgn" path="res://scenes/track/track.tscn" id="2_px18m"]
+[ext_resource type="PackedScene" uid="uid://c6c4o0r782qgn" path="res://scenes/track/Coralus_Iceway.tscn" id="2_px18m"]
 [ext_resource type="PackedScene" uid="uid://c2d4wgcvs1nwq" path="res://scenes/player/Camera's.tscn" id="3_px18m"]
 
 [node name="Node2D" type="Node2D"]
