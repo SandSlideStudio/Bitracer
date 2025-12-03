@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://ci3u53pimiiad"]
 
-[ext_resource type="PackedScene" uid="uid://bsryovcyh4yjm" path="res://scenes/player/Car_Arcade_physics.tscn" id="2_br8qb"]
+[ext_resource type="PackedScene" uid="uid://dokdwqfrpu8iw" path="res://scenes/player/Car_Arcade_Physics_with_rpm+gearshifts.tscn" id="2_8gcrf"]
 [ext_resource type="PackedScene" uid="uid://c6c4o0r782qgn" path="res://scenes/track/Coralus_Iceway.tscn" id="2_px18m"]
 [ext_resource type="PackedScene" uid="uid://c2d4wgcvs1nwq" path="res://scenes/player/Camera's.tscn" id="3_px18m"]
 
@@ -10,10 +10,13 @@
 position = Vector2(2, -6)
 
 [node name="Car_Angle_correction" type="Node2D" parent="."]
+visible = false
 position = Vector2(766, 74)
 rotation = 1.5707964
 
-[node name="Car" parent="Car_Angle_correction" instance=ExtResource("2_br8qb")]
-position = Vector2(1.0000008, 19)
+[node name="Car_With_RPM" parent="." instance=ExtResource("2_8gcrf")]
+position = Vector2(746, 75)
+rotation = 1.5707964
 
-[node name="Camera\'s" parent="Car_Angle_correction/Car" instance=ExtResource("3_px18m")]
+[node name="Camera\'s" parent="Car_With_RPM" instance=ExtResource("3_px18m")]
+position = Vector2(-8.34465e-07, 0)

@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dokdwqfrpu8iw"]
+
+[ext_resource type="Script" uid="uid://5r4v2y1cbfos" path="res://scripts/player/Car/Car_With_Rpm.gd" id="1_8nq6u"]
+[ext_resource type="Texture2D" uid="uid://7vwvff2ej72m" path="res://Assets/cars/CustomCar(VANWIJDERACING).png" id="2_xhxa3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2gg3"]
+size = Vector2(30, 32)
+
+[node name="Car_With_RPM" type="CharacterBody2D"]
+script = ExtResource("1_8nq6u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_b2gg3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_xhxa3")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 7
+
+[node name="SpeedLabel" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+z_as_relative = false
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 40
+
+[node name="GearLabel" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 1
+
+[node name="RPMlabel" type="Label" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_right = 40.0
+offset_bottom = 23.0
+horizontal_alignment = 2
