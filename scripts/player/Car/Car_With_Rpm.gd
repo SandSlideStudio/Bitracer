@@ -164,7 +164,7 @@ func _process(delta: float) -> void:
 	# ENGINE FORCE (based on torque and gear)
 	# -----------------------------
 	var torque: float = get_torque(rpm)
-	var engine_force: float = torque * abs(ratio) * 75.0  # Halved from 150.0
+	var engine_force: float = torque * abs(ratio) * 56.25  # 75.0 * 0.75
 	
 	# -----------------------------
 	# ACCELERATION & BRAKING
