@@ -1,4 +1,4 @@
-extends Node2D
+extends StaticBody2D
 
 # -----------------------------
 # Engine + Transmission
@@ -36,8 +36,6 @@ var gear_ratios: Dictionary = {
 @export var turn_slow_factor: float = 0.05  # base factor for turn slowdown
 
 var velocity: Vector2 = Vector2.ZERO
-var last_valid_position: Vector2 = Vector2.ZERO
-var colliding_bodies: Array = []
 
 # -----------------------------
 # UI References
@@ -46,7 +44,6 @@ var colliding_bodies: Array = []
 @onready var gear_label: Label = $CanvasLayer/Control/VBoxContainer/GearLabel
 @onready var speed_label: Label = $CanvasLayer/Control/VBoxContainer/SpeedLabel
 @onready var engine_sound: AudioStreamPlayer2D = $EngineSound
-@onready var collision_area: Area2D = $Area2D
 
 # -----------------------------
 # Engine Sound Settings
@@ -90,17 +87,6 @@ func _ready() -> void:
 		print("ERROR: Gear Label is null!")
 	if speed_label == null:
 		print("ERROR: Speed Label is null!")
-	
-	# Store initial position
-	last_valid_position = global_position
-	
-	# Connect collision signals
-	if collision_area:
-		collision_area.body_entered.connect(_on_body_entered)
-		collision_area.body_exited.connect(_on_body_exited)
-		print("Collision area connected!")
-	else:
-		print("WARNING: No collision area found!")
 
 func _process(delta: float) -> void:
 	shift_timer -= delta
@@ -267,23 +253,15 @@ func _process(delta: float) -> void:
 		global_rotation += deg_to_rad(turn_input * current_turn_speed * steering_factor * delta)
 	
 	# -----------------------------
-	# MOVE CAR (with collision blocking)
+	# MOVE CAR (using test_move for collision)
 	# -----------------------------
-	var new_position: Vector2 = global_position + velocity * delta
+	var motion: Vector2 = velocity * delta
+	var collision: KinematicCollision2D = move_and_collide(motion)
 	
-	# Try to move
-	global_position = new_position
-	
-	# Check if we're overlapping after move
-	await get_tree().process_frame  # Wait for Area2D to update
-	
-	if colliding_bodies.size() > 0:
-		# Collision detected! Revert to last valid position
-		global_position = last_valid_position
+	if collision:
+		# Hit something, stop movement
 		velocity = Vector2.ZERO
-	else:
-		# No collision, this is now our last valid position
-		last_valid_position = global_position
+		print("Hit: ", collision.get_collider().name)
 	
 	# -----------------------------
 	# UPDATE UI
@@ -362,15 +340,3 @@ func update_engine_sound(delta: float) -> void:
 		throttle_volume_boost = 3.0  # +3dB when throttling
 	
 	engine_sound.volume_db = base_volume + throttle_volume_boost
-
-# -----------------------------
-# COLLISION DETECTION
-# -----------------------------
-func _on_body_entered(body):
-	if not colliding_bodies.has(body):
-		colliding_bodies.append(body)
-	print("Colliding with: ", body.name)
-
-func _on_body_exited(body):
-	colliding_bodies.erase(body)
-	print("Stopped colliding with: ", body.name)

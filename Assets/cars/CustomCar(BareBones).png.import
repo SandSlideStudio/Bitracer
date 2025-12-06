@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkjuwtmkud5wm"
-path="res://.godot/imported/CustomCar(BareBones).png-6baa4472095ff51cd10cf21238608c1a.ctex"
+path="res://.godot/imported/CustomCar(BareBones).png-031007fe60d7e8d32f447f48d7d6bd11.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/cars/CustomCar(BareBones).png"
-dest_files=["res://.godot/imported/CustomCar(BareBones).png-6baa4472095ff51cd10cf21238608c1a.ctex"]
+source_file="res://assets/cars/CustomCar(BareBones).png"
+dest_files=["res://.godot/imported/CustomCar(BareBones).png-031007fe60d7e8d32f447f48d7d6bd11.ctex"]
 
 [params]
 

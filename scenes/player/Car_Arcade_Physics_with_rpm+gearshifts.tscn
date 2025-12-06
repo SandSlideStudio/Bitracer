@@ -1,19 +1,17 @@
 [gd_scene load_steps=6 format=3 uid="uid://dokdwqfrpu8iw"]
 
 [ext_resource type="Script" uid="uid://5r4v2y1cbfos" path="res://scripts/player/Car/Car_With_Rpm.gd" id="1_8nq6u"]
-[ext_resource type="Texture2D" uid="uid://7vwvff2ej72m" path="res://Assets/cars/CustomCar(VANWIJDERACING).png" id="2_xhxa3"]
-[ext_resource type="AudioStream" uid="uid://bmathndj7fgi1" path="res://Assets/sounds/Sound effects/Engine/engine-47745.mp3" id="3_b2gg3"]
-[ext_resource type="FontFile" uid="uid://bt7bwpk5kweam" path="res://Assets/ui/fonts/PressStart2P-Regular.ttf" id="3_vg5ro"]
+[ext_resource type="Texture2D" uid="uid://7vwvff2ej72m" path="res://assets/cars/CustomCar(VANWIJDERACING).png" id="2_xhxa3"]
+[ext_resource type="AudioStream" uid="uid://bmathndj7fgi1" path="res://assets/sounds/Sound effects/Engine/engine-47745.mp3" id="3_b2gg3"]
+[ext_resource type="FontFile" uid="uid://bt7bwpk5kweam" path="res://assets/ui/fonts/PressStart2P-Regular.ttf" id="3_vg5ro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b2gg3"]
 size = Vector2(30, 32)
 
-[node name="Car_With_RPM" type="Node2D"]
+[node name="Car_With_RPM" type="StaticBody2D"]
 script = ExtResource("1_8nq6u")
 
-[node name="Area2D" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_b2gg3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
