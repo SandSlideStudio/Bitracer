@@ -11,6 +11,8 @@ config_version=5
 [application]
 
 config/name="Bitracer"
+config/description="A 2D, pixel art, top down arcade racing game made for good old fun!"
+config/version="0.1"
 run/main_scene="uid://d3ysm6causiig"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"

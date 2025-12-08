@@ -1,1 +1,5 @@
+res://scripts/ui/LapTimerUI.gd
 res://scenes/track/Coralus_Iceway.tscn
+res://scripts/systems/LapTracker.gd
+res://scenes/Main/Coralus_Iceway+Car.tscn
+res://scenes/player/Car_Arcade_Physics_with_rpm+gearshifts.tscn
