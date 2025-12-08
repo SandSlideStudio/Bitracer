@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1765134633
+::res://::1765184724
 export_presets.cfg::TextFile::-1::1764954715::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::3326045996642002456::1763927551::1763927551::1::::<><><>0<>0<>5770c86ecaa021ace47a7a0c3d11d7c2<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 LICENSE.md::TextFile::-1::1763927551::0::1::::<><><>0<>0<><>::
@@ -466,15 +466,16 @@ motorcycle_green.png::CompressedTexture2D::8350965995605656898::1764016146::1765
 motorcycle_red.png::CompressedTexture2D::8597447668324920052::1764016146::1765134485::1::::<><><>0<>0<>f6a8f96d1f9baa3ae9e36f6303b67151<>res://.godot/imported/motorcycle_red.png-1e7f65727f78d5ce8f3b16f845aefa88.ctex::
 motorcycle_yellow.png::CompressedTexture2D::4633200647378763962::1764016146::1765134485::1::::<><><>0<>0<>69cc40ade81b1263f5f654f1000176e7<>res://.godot/imported/motorcycle_yellow.png-f91bc8780d55b55cbd3941944410f7b7.ctex::
 ::res://scenes/::1764355988
-::res://scenes/Main/::1764960863
-main.tscn::PackedScene::5393424101482324451::1764960863::0::1::::<><><>0<>0<><>::uid://dokdwqfrpu8iw::::res://scenes/player/Car_Arcade_Physics_with_rpm+gearshifts.tscn<>uid://c6c4o0r782qgn::::res://scenes/track/Coralus_Iceway.tscn<>uid://c2d4wgcvs1nwq::::res://scenes/player/Camera's.tscn
+::res://scenes/Main/::1765137166
+Coralus_Iceway+Car.tscn::PackedScene::5393424101482324451::1765135074::0::1::::<><><>0<>0<><>::uid://c6c4o0r782qgn::::res://scenes/track/Coralus_Iceway.tscn<>uid://dokdwqfrpu8iw::::res://scenes/player/Car_Arcade_Physics_with_rpm+gearshifts.tscn<>uid://c2d4wgcvs1nwq::::res://scenes/player/Camera's.tscn
+track_selector.tscn::PackedScene::9175210705779206662::1765137166::0::1::::<><><>0<>0<><>::uid://4e65kxontn7c::::res://scripts/ui/Track_selector.gd
 ::res://scenes/player/::1765134461
 Camera's.tscn::PackedScene::6675933678340336320::1764620094::0::1::::<><><>0<>0<><>::uid://dufy8bd5aw83a::::res://scripts/player/camera_controller.gd<>uid://be7liwcuek1sk::::res://scripts/player/car_camera_something.gd
 Car_Arcade_physics.tscn::PackedScene::3686397607118698102::1764706534::0::1::::<><><>0<>0<><>::uid://dmfevgxenjhvh::::res://scripts/player/Car1.gd<>uid://7vwvff2ej72m::::res://Assets/cars/CustomCar(VANWIJDERACING).png
 Car_Arcade_Physics_with_rpm+gearshifts.tscn::PackedScene::8162771926887457562::1765134461::0::1::::<><><>0<>0<><>::uid://5r4v2y1cbfos::::res://scripts/player/Car/Car_With_Rpm.gd<>uid://7vwvff2ej72m::::res://assets/cars/CustomCar(VANWIJDERACING).png<>uid://bmathndj7fgi1::::res://assets/sounds/Sound effects/Engine/engine-47745.mp3<>uid://bt7bwpk5kweam::::res://assets/ui/fonts/PressStart2P-Regular.ttf
 Car_Arcade_Rally_Physics.tscn::PackedScene::1835518996817798905::1764706630::0::1::::<><><>0<>0<><>::uid://lbwubq1vto2v::::res://scripts/player/Rally_physics.gd<>uid://cnyvcnk00glu1::::res://Assets/vehicles/cars/car_blue_small_4.png
-::res://scenes/track/::1765134927
-Coralus_Iceway.tscn::PackedScene::6954611410422762817::1765134927::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png
+::res://scenes/track/::1765135726
+Coralus_Iceway.tscn::PackedScene::6954611410422762817::1765135726::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png
 ::res://scenes/ui/::1763928595
 ::res://scripts/::1763928568
 ::res://scripts/player/::1764706673
@@ -486,4 +487,5 @@ Car1.gd::GDScript::8012130784019138373::1764616858::0::1::::<>Node2D<><>0<>0<><>
 Car_With_Rpm.gd::GDScript::2142559481812017130::1765134461::0::1::::<>StaticBody2D<><>0<>0<><>::
 Rally_physics.gd::GDScript::775513225941744907::1764529282::0::1::::<>RigidBody2D<><>0<>0<><>::
 ::res://scripts/systems/::1763928570
-::res://scripts/ui/::1763928560
+::res://scripts/ui/::1765137158
+Track_selector.gd::GDScript::2045670338530319710::1765137158::0::1::::<>Control<><>0<>0<><>::

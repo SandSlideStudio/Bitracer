@@ -1,4 +1,2 @@
-res://scenes/track/Coralus_Iceway.tscn
-res://scenes/Main/Coralus_Iceway+Car.tscn
 res://scenes/Main/track_selector.tscn
 res://scripts/ui/Track_selector.gd
