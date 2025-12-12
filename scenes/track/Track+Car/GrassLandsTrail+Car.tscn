@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://g1pv12eonl0j"]
+
+[ext_resource type="PackedScene" uid="uid://d0prdr8myg8t8" path="res://scenes/track/Raw track/GrassLandsTrail.tscn" id="1_847s7"]
+[ext_resource type="PackedScene" uid="uid://dokdwqfrpu8iw" path="res://scenes/player/Car/Car_Arcade_Physics_with_rpm+gearshifts.tscn" id="2_lbihf"]
+[ext_resource type="PackedScene" uid="uid://c2d4wgcvs1nwq" path="res://scenes/player/Camera's.tscn" id="3_pob4e"]
+[ext_resource type="PackedScene" uid="uid://b2t7l3mtdpatn" path="res://scenes/ui/LapTimerUI.tscn" id="4_3eh2y"]
+
+[node name="Scene collection" type="Node2D"]
+
+[node name="track" parent="." instance=ExtResource("1_847s7")]
+
+[node name="Car" parent="." instance=ExtResource("2_lbihf")]
+position = Vector2(744, 48)
+rotation = 1.5707964
+
+[node name="Camera\'s" parent="Car" instance=ExtResource("3_pob4e")]
+position = Vector2(0, 3.0517578e-05)
+
+[node name="LapTimerUI" parent="." instance=ExtResource("4_3eh2y")]

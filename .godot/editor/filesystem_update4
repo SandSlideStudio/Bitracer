@@ -1,1 +1,4 @@
+res://scenes/track/Raw track/GrassLandsTrail.tscn
+res://scenes/track/Track+Car/GrassLandsTrail+Car.tscn
 res://scripts/ui/Track_selector.gd
+res://scripts/player/Camera/car_camera_something.gd

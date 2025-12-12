@@ -1,6 +1,6 @@
 extends Camera2D
 
-@export var car_path: NodePath
+@export var car_path: NodePath 
 @export var follow_rotation: bool = true
 @export var position_smooth_speed: float = 8.0
 @export var rotation_smooth_speed: float = 6.0

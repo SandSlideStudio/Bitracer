@@ -2,7 +2,8 @@ extends Control
 
 # Official tracks
 const OFFICIAL_TRACKS := [
-	{"name": "Coralus Iceway", "path": "res://scenes/Main/Coralus_Iceway+Car.tscn"}
+	{"name": "Coralus Iceway", "path": "res://scenes/track/Track+Car/Coralus_Iceway+Car.tscn"},
+	{"name": "Grass Lands Trail", "path": "res://scenes/track/Track+Car/GrassLandsTrail+Car.tscn"}
 ]
 
 # Folder to auto-scan for modded tracks
