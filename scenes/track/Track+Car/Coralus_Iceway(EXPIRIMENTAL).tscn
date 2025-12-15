@@ -9,7 +9,7 @@ script = ExtResource("1_2cqb3")
 
 [node name="CarSpawn" type="Marker2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(748, 80)
+position = Vector2(745, 80)
 rotation = 1.5707964
 
 [node name="track" parent="." instance=ExtResource("1_47qr3")]

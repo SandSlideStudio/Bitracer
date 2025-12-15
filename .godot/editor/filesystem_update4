@@ -1,5 +1,2 @@
-res://scripts/systems/Car_Spawner.gd
 res://scenes/track/Track+Car/Coralus_Iceway(EXPIRIMENTAL).tscn
-res://scenes/player/Car/Car_Arcade_Physics_with_rpm+gearshifts.tscn
-res://scenes/track/Track+Car/Coralus_Iceway+Car.tscn
-res://scenes/track/Track+Car/GrassLandsTrail+Car.tscn
+res://scenes/track/Raw track/GrassLandsTrail.tscn
