@@ -1,1 +1,4 @@
-res://scenes/track/Raw track/GrassLandsTrail(SHORT).tscn
+res://scenes/track/Track+Car/Coralus_Iceway+SELECTOR.tscn
+res://scripts/ui/Track_selector.gd
+res://scenes/track/Track+Car/GrassLandsTrailLONG+SELECTOR.tscn
+res://scenes/track/Track+Car/GrassLandsTrailSHORT+SELECTOR.tscn

@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://l40xriaunbqf"]
+
+[ext_resource type="Script" uid="uid://cq4r5bgy5xglk" path="res://scripts/systems/Car_Spawner.gd" id="1_07lqd"]
+[ext_resource type="PackedScene" uid="uid://c6c4o0r782qgn" path="res://scenes/track/Raw track/Coralus_Iceway.tscn" id="2_loj26"]
+[ext_resource type="PackedScene" uid="uid://b2t7l3mtdpatn" path="res://scenes/ui/LapTimerUI.tscn" id="3_23son"]
+
+[node name="Scene collection" type="Node2D"]
+script = ExtResource("1_07lqd")
+
+[node name="CarSpawn" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(745, 80)
+rotation = 1.5707964
+
+[node name="track" parent="." instance=ExtResource("2_loj26")]
+
+[node name="LapTimerUI" parent="." instance=ExtResource("3_23son")]
