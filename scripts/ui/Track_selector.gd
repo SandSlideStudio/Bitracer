@@ -17,9 +17,13 @@ var current_index := 0
 var in_mode_select := true
 
 @onready var track_label = $Panel/VBoxContainer/TrackLabel
-@onready var sfx_player: AudioStreamPlayer = $SFXPlayer
+@onready var sfx_player: AudioStreamPlayer = $SFXPlayer if has_node("SFXPlayer") else null
 
 func _ready():
+	print("=== TRACK SELECTOR READY ===")
+	print("Is in multiplayer session: ", GameManager.is_in_session())
+	print("Players in session: ", GameManager.players.keys())
+	
 	_load_tracks()
 	$Panel/VBoxContainer/HBoxContainer/BtnPrev.pressed.connect(_cycle.bind(-1))
 	$Panel/VBoxContainer/HBoxContainer/BtnNext.pressed.connect(_cycle.bind(1))
@@ -74,16 +78,32 @@ func _on_select():
 		current_index = 0
 		_update_ui()
 	else:
-		# Player selected a track - store it and start race
+		# Player selected a track
 		var tracks = _get_current_tracks()
 		if tracks.size() == 0:
 			return
 		
-		# Store selected track path in GameGlobals
+		# Store selected track
 		GameGlobals.selected_track_path = tracks[current_index]["path"]
+		print("Track selected: ", tracks[current_index]["name"])
 		
-		sfx_player.play()
-		get_tree().change_scene_to_file(tracks[current_index]["path"])
+		if sfx_player:
+			sfx_player.play()
+			await sfx_player.finished
+		
+		# Return to appropriate screen
+		print("Returning to appropriate screen...")
+		print("Is multiplayer: ", GameGlobals.is_multiplayer)
+		print("In session: ", GameManager.is_in_session())
+		
+		if GameGlobals.is_multiplayer and GameManager.is_in_session():
+			# Return to lobby (session persists!)
+			print("Returning to lobby with active session")
+			get_tree().change_scene_to_file("res://scenes/main/Lobby.tscn")
+		else:
+			# Start race in solo mode
+			print("Starting race (solo mode)")
+			get_tree().change_scene_to_file(tracks[current_index]["path"])
 
 func _update_ui():
 	if in_mode_select:
@@ -97,7 +117,11 @@ func _update_ui():
 			track_label.text = tracks[current_index]["name"]
 		else:
 			track_label.text = "No tracks available"
-		$Panel/VBoxContainer/BtnPlay.text = "Race"
+		
+		if GameGlobals.is_multiplayer and GameManager.is_in_session():
+			$Panel/VBoxContainer/BtnPlay.text = "Confirm"
+		else:
+			$Panel/VBoxContainer/BtnPlay.text = "Race"
 
 func get_selected_track_path() -> String:
 	var tracks = _get_current_tracks()

@@ -7,11 +7,26 @@
 [node name="Scene collection" type="Node2D"]
 script = ExtResource("1_awruo")
 
-[node name="track" parent="." instance=ExtResource("1_o63nh")]
-
-[node name="CarSpawn" type="Marker2D" parent="."]
+[node name="SpawPosition1" type="Marker2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(748, 48)
+position = Vector2(744, 48)
 rotation = 1.5707964
+
+[node name="SpawPosition2" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(712, -16)
+rotation = 1.5707964
+
+[node name="SpawPosition3" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(680, 48)
+rotation = 1.5707964
+
+[node name="SpawPosition4" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(648, -16)
+rotation = 1.5707964
+
+[node name="track" parent="." instance=ExtResource("1_o63nh")]
 
 [node name="LapTimerUI" parent="." instance=ExtResource("2_awruo")]

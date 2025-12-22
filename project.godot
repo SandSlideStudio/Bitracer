@@ -13,19 +13,24 @@ config_version=5
 config/name="Bitracer"
 config/description="A 2D, pixel art, top down arcade racing game made for good old fun!"
 config/version="0.1"
-run/main_scene="uid://b51bsg2tjqohw"
+run/main_scene="uid://d1mu4vi3fk6cm"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameGlobals="*res://scripts/systems/GameGlobals.gd"
+GameManager="*res://scripts/systems/GameManager.gd"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
+
+[global_group]
+
+player=""
 
 [input]
 

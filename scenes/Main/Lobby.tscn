@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://vhcm8gxvheri"]
+
+[ext_resource type="Script" uid="uid://bhj0jbmmrkg6o" path="res://scripts/systems/Lobby.gd" id="1_ykuhn"]
+
+[node name="Lobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ykuhn")
+
+[node name="Panel" type="Panel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 2
+
+[node name="Title" type="Label" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "MULTIPLAYER LOBBY"
+horizontal_alignment = 1
+
+[node name="NameInput" type="LineEdit" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Your name"
+
+[node name="IPInput" type="LineEdit" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Server IP adress"
+
+[node name="HostButton" type="Button" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Host Game"
+
+[node name="JoinButton" type="Button" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Join Game"
+
+[node name="Control" type="Control" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="PlayerList" type="Label" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Players will appear here"
+
+[node name="SelectCarButton" type="Button" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Select car"
+
+[node name="SelectTrackButton" type="Button" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Select track (Host only)"
+
+[node name="ReadyButton" type="Button" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Ready"
+
+[node name="StartButton" type="Button" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start"
+
+[node name="BackButton" type="Button" parent="Panel/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Back"
