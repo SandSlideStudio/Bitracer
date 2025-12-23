@@ -36,13 +36,15 @@ func _ready():
 	print("Car: ", car.name)
 	print("Locked at: ", spawn_position, " rotation: ", rad_to_deg(spawn_rotation), "°")
 	
-	# DISABLE car's processing during spawn lock
+	# IMMEDIATELY disable car's processing during spawn lock
 	car.set_process(false)
 	car.set_physics_process(false)
 	print("Car processing DISABLED for spawn lock")
 	
-	await get_tree().create_timer(0.1).timeout
-	
+	# Don't check multiplayer until next frame - prevents race conditions
+	call_deferred("_setup_multiplayer")
+
+func _setup_multiplayer():
 	if not multiplayer.has_multiplayer_peer():
 		print("Solo mode - unlocking immediately")
 		_unlock_spawn()
@@ -63,17 +65,37 @@ func _ready():
 		_setup_camera(false)
 		_setup_ui(false)
 		_disable_car_input()
+		
+		# CRITICAL: Initialize remote target to spawn position
+		# This prevents lerping to (0,0) or stale positions
+		remote_position = spawn_position
+		remote_rotation = spawn_rotation
+		remote_velocity = Vector2.ZERO
+		
+		print("Remote car initialized at spawn position")
 
 func _physics_process(delta):
 	if spawn_locked:
 		lock_time += delta
 		
-		# FORCE car to spawn position
+		# FORCE car to spawn position - override everything
 		car.global_position = spawn_position
 		car.global_rotation = spawn_rotation
 		
+		# Zero out all velocity
 		if "velocity" in car:
 			car.velocity = Vector2.ZERO
+		if "linear_velocity" in car:
+			car.linear_velocity = Vector2.ZERO
+		if "angular_velocity" in car:
+			car.angular_velocity = 0.0
+		
+		# CRITICAL: Keep resetting remote targets during lock
+		# This prevents the car from trying to lerp to received positions
+		if not is_local:
+			remote_position = spawn_position
+			remote_rotation = spawn_rotation
+			remote_velocity = Vector2.ZERO
 		
 		# Check if lock time expired
 		if lock_time >= LOCK_DURATION:
@@ -96,6 +118,7 @@ func _physics_process(delta):
 				vel = car.linear_velocity
 			sync_car.rpc(car.global_position, car.rotation, vel)
 	else:
+		# Smoothly interpolate to remote position
 		car.global_position = car.global_position.lerp(remote_position, LERP_SPEED * delta)
 		car.rotation = lerp_angle(car.rotation, remote_rotation, LERP_SPEED * delta)
 		if "velocity" in car:
@@ -138,6 +161,11 @@ func _setup_ui(enable: bool):
 
 @rpc("any_peer", "unreliable")
 func sync_car(pos: Vector2, rot: float, vel: Vector2):
+	# During spawn lock, we ignore all incoming sync data
+	# The spawn lock will keep resetting our targets anyway
+	if spawn_locked:
+		return
+	
 	if not is_multiplayer_authority():
 		remote_position = pos
 		remote_rotation = rot

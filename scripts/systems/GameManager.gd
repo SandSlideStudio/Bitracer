@@ -15,10 +15,15 @@ var selected_track := ""
 # Session tracking
 var session_active := false
 
+# NEW: Spawn coordination
+var spawn_ready := false
+var players_spawned := {}  # peer_id -> bool
+
 # Signals
 signal player_connected(peer_id, player_info)
 signal player_disconnected(peer_id)
 signal server_disconnected()
+signal all_players_spawned()
 
 func _ready():
 	# CRITICAL: Don't destroy this node when changing scenes
@@ -91,8 +96,10 @@ func disconnect_from_game():
 		print("Multiplayer peer closed and cleared")
 	
 	players.clear()
+	players_spawned.clear()
 	race_started = false
 	session_active = false
+	spawn_ready = false
 	
 	print("Session is now INACTIVE")
 	print("Players cleared")
@@ -120,6 +127,7 @@ func _on_player_disconnected(id: int):
 	if players.has(id):
 		var player_name = players[id]["name"]
 		players.erase(id)
+		players_spawned.erase(id)
 		player_disconnected.emit(id)
 		print(player_name, " left the game")
 
@@ -147,7 +155,9 @@ func _on_server_disconnected():
 	print("Server disconnected")
 	multiplayer.multiplayer_peer = null
 	players.clear()
+	players_spawned.clear()
 	session_active = false
+	spawn_ready = false
 	server_disconnected.emit()
 
 # === RPCs ===
@@ -209,4 +219,65 @@ func set_player_ready(peer_id: int, is_ready: bool):
 func start_race(track_path: String):
 	print("Starting race! Track: ", track_path)
 	race_started = true
+	spawn_ready = false
+	players_spawned.clear()
 	get_tree().change_scene_to_file(track_path)
+
+# === NEW: OPTION C - SPAWN COORDINATION ===
+
+# Called by track/spawner when it's ready to spawn cars
+func prepare_spawning():
+	spawn_ready = true
+	players_spawned.clear()
+	print("Spawn system ready")
+
+# Server spawns a car for a specific player at a specific position
+@rpc("authority", "call_local", "reliable")
+func spawn_player_car(peer_id: int, car_scene_path: String, spawn_pos: Vector2, spawn_rot: float):
+	if not spawn_ready:
+		push_error("Spawn system not ready!")
+		return
+	
+	print("Spawning car for peer ", peer_id, " at ", spawn_pos)
+	
+	# Load and instance the car
+	var car_scene = load(car_scene_path)
+	if not car_scene:
+		push_error("Failed to load car scene: ", car_scene_path)
+		return
+	
+	var car = car_scene.instantiate()
+	car.name = "Car_" + str(peer_id)
+	
+	# Set position BEFORE adding to tree
+	car.global_position = spawn_pos
+	car.global_rotation = spawn_rot
+	
+	# Add multiplayer wrapper if it doesn't have one
+	var wrapper = car.get_node_or_null("MultiplayerCarWrapper")
+	if not wrapper:
+		wrapper = preload("res://scripts/systems/MultiPlayerCarWrapper.gd").new()
+		wrapper.name = "MultiplayerCarWrapper"
+		car.add_child(wrapper)
+	
+	# Set authority BEFORE adding to scene tree
+	car.set_multiplayer_authority(peer_id)
+	
+	# Add to scene
+	get_tree().current_scene.add_child(car)
+	
+	# Mark as spawned
+	players_spawned[peer_id] = true
+	print("Car spawned for peer ", peer_id, " | Spawned: ", players_spawned.size(), "/", players.size())
+	
+	# Check if all players spawned
+	if players_spawned.size() == players.size():
+		print("All players spawned!")
+		all_players_spawned.emit()
+
+# Client notifies server it's ready to receive spawn commands
+@rpc("any_peer", "reliable")
+func client_ready_for_spawn():
+	var peer_id = multiplayer.get_remote_sender_id()
+	print("Client ", peer_id, " ready for spawn")
+	# Server can use this to coordinate spawn timing if needed

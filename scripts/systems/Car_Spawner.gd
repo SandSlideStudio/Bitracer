@@ -112,13 +112,15 @@ func _spawn_single_player_car():
 	var car = car_scene.instantiate()
 	print("Car instantiated: ", car.name)
 	
-	# Add car FIRST
+	# Get spawn transform BEFORE adding to scene
+	var spawn_transform = _get_spawn_transform(0)
+	
+	# Set transform BEFORE adding to tree (prevents physics from running first)
+	car.global_transform = spawn_transform
+	
+	# NOW add car to scene
 	add_child(car)
 	print("Car added to scene")
-	
-	# Then set transform
-	var spawn_transform = _get_spawn_transform(0)
-	car.global_transform = spawn_transform
 	
 	print("Final car position: ", car.global_position)
 	print("Final car rotation: ", car.global_rotation_degrees, "°")
@@ -151,7 +153,12 @@ func _find_cameras(node: Node) -> Array:
 
 func _spawn_multiplayer_cars():
 	print("=== SPAWNING MULTIPLAYER CARS ===")
-	await get_tree().create_timer(0.2).timeout
+	
+	# NEW: Tell GameManager we're ready to spawn
+	GameManager.prepare_spawning()
+	
+	# Wait slightly longer to ensure all clients are ready
+	await get_tree().create_timer(0.3).timeout
 	
 	if GameManager.is_server():
 		print("Server spawning cars...")
@@ -164,7 +171,7 @@ func _spawn_multiplayer_cars():
 			_spawn_car_for_player.rpc(peer_id, spawn_index)
 			spawn_index += 1
 	else:
-		print("Client waiting...")
+		print("Client waiting for spawn commands...")
 
 @rpc("authority", "call_local", "reliable")
 func _spawn_car_for_player(peer_id: int, spawn_index: int):
@@ -180,24 +187,58 @@ func _spawn_car_for_player(peer_id: int, spawn_index: int):
 	
 	if car_path != "" and ResourceLoader.exists(car_path):
 		car_scene = load(car_path)
+		print("Loaded car: ", car_path)
 	else:
 		car_scene = DEFAULT_CAR
+		print("Using default car")
 	
 	var car = car_scene.instantiate()
 	car.name = "Car_" + str(peer_id)
-	car.set_multiplayer_authority(peer_id)
 	
-	add_child(car)
-	
+	# CRITICAL ORDER OF OPERATIONS:
+	# 1. Get spawn transform
 	var spawn_transform = _get_spawn_transform(spawn_index)
+	print("Spawn transform - Position: ", spawn_transform.origin, " Rotation: ", rad_to_deg(spawn_transform.get_rotation()), "°")
+	
+	# 2. Set transform BEFORE adding to tree
 	car.global_transform = spawn_transform
+	print("Car transform set (before adding to tree)")
 	
-	print("Car positioned at: ", car.global_position, " rotation: ", car.global_rotation_degrees, "°")
+	# 3. Set authority BEFORE adding to tree
+	car.set_multiplayer_authority(peer_id)
+	print("Authority set to peer ", peer_id)
 	
+	# 4. NOW add to scene tree
+	add_child(car)
+	print("Car added to scene tree")
+	
+	# 5. Verify position
+	print("Verification:")
+	print("  Expected position: ", spawn_transform.origin)
+	print("  Actual position: ", car.global_position)
+	print("  Difference: ", car.global_position.distance_to(spawn_transform.origin), " pixels")
+	
+	# 6. Set up MultiplayerSync if it exists
+	# NOTE: If using the new MultiplayerCarWrapper, this should work automatically
 	if car.has_node("MultiplayerSync"):
 		var sync_node = car.get_node("MultiplayerSync")
 		if sync_node.has_method("set_player_authority"):
 			sync_node.set_player_authority(peer_id)
+			print("MultiplayerSync authority set")
+	
+	# Check for MultiplayerCarWrapper too
+	if car.has_node("MultiplayerCarWrapper"):
+		print("MultiplayerCarWrapper detected - spawn lock active")
 	
 	spawned_cars[peer_id] = car
+	
+	# NEW: Notify GameManager that this player spawned
+	GameManager.players_spawned[peer_id] = true
+	print("Player ", peer_id, " marked as spawned (", GameManager.players_spawned.size(), "/", GameManager.players.size(), ")")
+	
+	# Check if all players spawned
+	if GameManager.players_spawned.size() == GameManager.players.size():
+		print("🎉 ALL PLAYERS SPAWNED! 🎉")
+		GameManager.all_players_spawned.emit()
+	
 	print("=== SPAWN COMPLETE ===")

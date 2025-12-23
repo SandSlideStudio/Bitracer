@@ -1,16 +1,3 @@
-res://scenes/player/Car/Car_Arcade_Rally_Physics.tscn
-res://scripts/systems/LapTracker.gd
-res://scripts/systems/MainMenu.gd
-res://scenes/Main/MainMenu.tscn
-res://scripts/systems/GameGlobals.gd
-res://scripts/ui/CarSelector.gd
-res://scripts/systems/Lobby.gd
-res://scripts/systems/GameManager.gd
-res://scenes/Main/Lobby.tscn
 res://scripts/systems/MultiPlayerCarWrapper.gd
-res://scenes/player/Car/Car_Arcade_Physics_with_rpm+gearshifts.tscn
-res://scenes/track/Track+Car/Coralus_Iceway+SELECTOR.tscn
 res://scripts/systems/Car_Spawner.gd
-res://scenes/track/Track+Car/GrassLandsTrailLONG+SELECTOR.tscn
-res://scenes/track/Track+Car/GrassLandsTrailSHORT+SELECTOR.tscn
-res://scripts/ui/Track_selector.gd
+res://scripts/systems/GameManager.gd
