@@ -70,6 +70,7 @@ func _ready():
 	GameManager.player_disconnected.connect(_on_player_disconnected)
 	GameManager.server_disconnected.connect(_on_server_disconnected)
 	GameManager.connection_failed.connect(_on_connection_failed_signal)
+	GameManager.client_registered.connect(_on_client_registered)
 	
 	_update_ui()
 
@@ -268,18 +269,8 @@ func _on_back_pressed():
 		get_tree().change_scene_to_file("res://scenes/main/MainMenu.tscn")
 
 func _on_player_connected(_peer_id: int, _player_info: Dictionary):
-	print("Player connected event received")
-	
-	# If we just connected to a server, enter lobby mode
-	if not in_lobby and GameManager.session_active:
-		in_lobby = true
-		_update_ui()
-		
-		# Restore IP input color
-		if ip_input:
-			ip_input.add_theme_color_override("font_color", original_ip_color)
-			ip_input.editable = true
-	
+	print("Player connected event received - Peer: ", _peer_id)
+	# Just refresh the list - lobby entry is handled by client_registered
 	_refresh_player_list()
 
 func _on_player_disconnected(_peer_id: int):
@@ -311,6 +302,21 @@ func _on_connection_failed_signal():
 			ip_input.text = failed_address
 			ip_input.add_theme_color_override("font_color", original_ip_color)
 			ip_input.editable = true
+
+func _on_client_registered():
+	print("Client successfully registered - entering lobby!")
+	
+	# This is the definitive "we're in!" signal
+	if not in_lobby:
+		in_lobby = true
+		_update_ui()
+		
+		# Restore IP input
+		if ip_input:
+			ip_input.add_theme_color_override("font_color", original_ip_color)
+			ip_input.editable = true
+		
+		_refresh_player_list()
 
 func _update_ui():
 	print("Updating UI - in_lobby: ", in_lobby)

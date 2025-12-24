@@ -34,6 +34,7 @@ signal player_disconnected(peer_id)
 signal server_disconnected()
 signal all_players_spawned()
 signal connection_failed()
+signal client_registered()  # NEW: Emitted when client successfully registers with server
 
 func _ready():
 	# CRITICAL: Don't destroy this node when changing scenes
@@ -183,6 +184,11 @@ func _on_connected_to_server():
 	
 	# Register with server
 	register_player.rpc_id(1, local_player_id, player_info)
+	
+	# IMPORTANT: Wait a bit for registration to complete, then notify lobby
+	await get_tree().create_timer(0.3).timeout
+	# Emit a local signal to tell lobby we're ready
+	player_connected.emit(local_player_id, player_info)
 
 func _on_connection_failed():
 	print("Failed to connect to server")
@@ -220,9 +226,18 @@ func register_player(id: int, player_info: Dictionary):
 	# Send all players to the new player
 	sync_players.rpc_id(id, players)
 	
+	# IMPORTANT: Confirm registration back to the client
+	confirm_registration.rpc_id(id)
+	
 	# Notify all other players about new player
 	player_connected.emit(id, player_info)
 	announce_player_joined.rpc(id, player_info)
+
+# Server confirms successful registration to client
+@rpc("authority", "reliable")
+func confirm_registration():
+	print("✓ Registration confirmed by server!")
+	client_registered.emit()
 
 # Server sends full player list to a client (or all clients)
 @rpc("authority", "reliable")
