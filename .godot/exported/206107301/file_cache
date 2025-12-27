@@ -1,0 +1,569 @@
+res://Assets/cars/CustomCar(BareBones).png::10bbcf8bbc574a8f1174e3b7e5c0dea942750c35a19a2e233705804d53f5b40f::1764612338::res://.godot/exported/206107301/export-6baa4472095ff51cd10cf21238608c1a-CustomCar(BareBones).res
+res://Assets/cars/CustomCar(Blue).png::67a1c166dd098c1bbe360545293587ef732e36e862791f1cecabc636bfbe1196::1764612338::res://.godot/exported/206107301/export-36b389b1f3b8e375debecdbe6dfebd7d-CustomCar(Blue).res
+res://Assets/cars/CustomCar(Green).png::dcdc966594e7aaf9db7002d49c8746ff9fdbf5a8a429cf3b101c0a56b33656ed::1764612338::res://.godot/exported/206107301/export-18acbee91d379add869545aba864fad0-CustomCar(Green).res
+res://Assets/cars/CustomCar(Red).png::3a77fd98231ba0a0c992406bd10fd48cbb1430e79b51d6218c4a2ac53e0c9139::1764612338::res://.godot/exported/206107301/export-5b7dbc1ea89d1aa500fcd2b429a7167e-CustomCar(Red).res
+res://Assets/cars/CustomCar(VANWIJDERACING).png::0d7f917b542b98f3424ae0046d794373ec8c14d64341e5a8cac5f80b53fda04a::1764613209::res://.godot/exported/206107301/export-01b421891bdc98ce8dfc724692db6ddf-CustomCar(VANWIJDERACING).res
+res://Assets/cars/Go kart.png::4ef3ebd0ba75667cdf00ece9310fc036527dd49e28fafabbcc2d77e0d6c230f5::1764928635::res://.godot/exported/206107301/export-8e7d4eff8d682bfbf900011698a9e693-Go kart.res
+res://Assets/Misc/Characters/character_black_blue.png::455376ba03f4c98e269e137844319ddaa7f1b2886e981536577ba73043e4850f::1764016146::res://.godot/exported/206107301/export-0c0247d574f54d9ab9798183b3393563-character_black_blue.res
+res://Assets/Misc/Characters/character_black_green.png::ec7be9408f4457656b1d211d6abe7f88542b5ad104025fb0dd55d4b4b91011e5::1764016146::res://.godot/exported/206107301/export-869b8aa52c021c32049b0c4dc15e0a3b-character_black_green.res
+res://Assets/Misc/Characters/character_black_red.png::08434bc95fb9cbafffc3edaee0f2473d63df9c9e7c576aa515267a4b8a0d60a4::1764016146::res://.godot/exported/206107301/export-9a22dcbedf696294154fe48a2ec7b90b-character_black_red.res
+res://Assets/Misc/Characters/character_black_white.png::e14236940e5602c97de2714ddf5893c31dd5f5b45d12a61bb7a67849877e93f8::1764016146::res://.godot/exported/206107301/export-ac0c02608d15447ca23e15af2bc7a3de-character_black_white.res
+res://Assets/Misc/Characters/character_blonde_blue.png::2c5b4aac21daca3374d99336a3725b33ffc38528df6bd382e52d433253c0b198::1764016146::res://.godot/exported/206107301/export-442d92828fd27affdce6c9ab5088ecf9-character_blonde_blue.res
+res://Assets/Misc/Characters/character_blonde_green.png::282328392fbd93f6d4d6001b97ce431f533eabb5d4fa8f5682843673b016e46d::1764016146::res://.godot/exported/206107301/export-e6277f363365e853137964ba35a1bb99-character_blonde_green.res
+res://Assets/Misc/Characters/character_blonde_red.png::749a3c578ecc6ec58d20d9410badc89a355760b1f4189bb8781dbd097a827ef2::1764016146::res://.godot/exported/206107301/export-9fab67ac70d000590f4d82a81e1121f6-character_blonde_red.res
+res://Assets/Misc/Characters/character_blonde_white.png::5d520fc86ffb43dda8591949f476b3cf39f0cf6e335a7b85149091b504650997::1764016146::res://.godot/exported/206107301/export-aeeb5bf1164e9ff72f94a16e321173e5-character_blonde_white.res
+res://Assets/Misc/Characters/character_brown_blue.png::9f20931b4e3ef544fdcef1e3ca165839ffd71dfeabae70eb58bd08858029df0c::1764016146::res://.godot/exported/206107301/export-9af9b38fbb27cb43e33c2e22349a4253-character_brown_blue.res
+res://Assets/Misc/Characters/character_brown_green.png::43c07d8d173221ce242afab12a02a27d2ecb2c7e97bc5faf34e71a56b2259901::1764016146::res://.godot/exported/206107301/export-bcba67dc6ab232d26834a1c9a457dd20-character_brown_green.res
+res://Assets/Misc/Characters/character_brown_red.png::e7d12f7a15063109311e01ca518df4ed50eed5700de755932c35a6c0062e60b3::1764016146::res://.godot/exported/206107301/export-86fb11475f40a8a0a2c0451f02de738b-character_brown_red.res
+res://Assets/Misc/Characters/character_brown_white.png::06649f3fee69b9859eae9854d9c049b0d66f57d511ea046605636fbebfd67409::1764016146::res://.godot/exported/206107301/export-11386ad3d02fdd19df7222503dc85c07-character_brown_white.res
+res://Assets/Misc/Characters/racer_black.png::c61f4c486893d220deded1243ac3368a3f54d3a9cf41f9e0b5a36aec3621d86f::1764016146::res://.godot/exported/206107301/export-238785cdc8d13d419a58a46ebd759285-racer_black.res
+res://Assets/Misc/Characters/racer_blue.png::fe594f4e39ad1b6c8be77582d26cff980bdc2ad0e4c0270580a6879bd3c8a645::1764016146::res://.godot/exported/206107301/export-6e910a604056a312b129c726e5d5b348-racer_blue.res
+res://Assets/Misc/Characters/racer_green.png::f17b7c19e1fec62d415a29261808c7c07b72ffd5623eac974fcf7acd7b1d0f7b::1764016146::res://.godot/exported/206107301/export-3e65942e117bd5281d6266db524ad792-racer_green.res
+res://Assets/Misc/Characters/racer_red.png::1c010588347f79187b9dade87c46310978b46867f263fe8a466fa26ff67b4963::1764016146::res://.godot/exported/206107301/export-856119f209cf6a4458d845876b5a2eba-racer_red.res
+res://Assets/Misc/Characters/racer_yellow.png::791260e4c4ce7dedcef3aa9eed04c246d8f6714797b14cc89779141614e16dc0::1764016146::res://.godot/exported/206107301/export-4215d261db6665724a07ad45dee668c6-racer_yellow.res
+res://Assets/Misc/Objects/arrow_white.png::51e3fd85077c2a1b4701a611a48994add61efd9af83317a91cf6b1b85f4e1241::1764016146::res://.godot/exported/206107301/export-924bd489c0208e13828be7ce3866920b-arrow_white.res
+res://Assets/Misc/Objects/arrow_yellow.png::8bc0a2d42a530fbf8dff6d12f4f727752726421d9ea69a311529da14e84ef8a2::1764016146::res://.godot/exported/206107301/export-a5d51b5bda7fa212e5ae1f4bfab8125e-arrow_yellow.res
+res://Assets/Misc/Objects/barrel_blue.png::3b3f193315abdd6d183958b33dad7efafb01fc7b8cbc3910388771edfd095e76::1764016146::res://.godot/exported/206107301/export-bd2405094342b8844b4d6a9f621b03a1-barrel_blue.res
+res://Assets/Misc/Objects/barrel_blue_down.png::06d5c7a7fec3a3f445f20d4ab381d7a96592ffc6678e6b2514ddbda4b7718d11::1764016146::res://.godot/exported/206107301/export-f66362643007642a14ba93142dc9372d-barrel_blue_down.res
+res://Assets/Misc/Objects/barrel_red.png::e6fbe59aec99b9712b38ce3d265be1c23238e4a9542771fd8fac122fb360c152::1764016146::res://.godot/exported/206107301/export-867e86d93e4afd79b96cc9aada083685-barrel_red.res
+res://Assets/Misc/Objects/barrel_red_down.png::8e7ea6b8955adeefd28abb6023b36b854a5efd42c04df472bb32e25027f0af3b::1764016146::res://.godot/exported/206107301/export-b05879b6b64caccd366ca87b85ec51fb-barrel_red_down.res
+res://Assets/Misc/Objects/barrier_red.png::92b76feb06f85a1f331658294fdcef1fb6f6928aa95c95a50c911cd43509af12::1764016146::res://.godot/exported/206107301/export-f5e219fe7357439776f3ac5c8f7f5bef-barrier_red.res
+res://Assets/Misc/Objects/barrier_red_race.png::b0a9d92ee2de7c70efc70a68d68191aff39f2eabc01d25683677839138445899::1764016146::res://.godot/exported/206107301/export-e7c5d2159d8ff3d24b6f1092dcc8d67d-barrier_red_race.res
+res://Assets/Misc/Objects/barrier_white.png::0e24e898a1635f67fc9f0703333106bcd1b0b9f7d3538a85a650ad3d5818dd06::1764016146::res://.godot/exported/206107301/export-0b74959011693948308733db51f55366-barrier_white.res
+res://Assets/Misc/Objects/barrier_white_race.png::9e04234fb9a77e875f6f8aec7783ee52d11256f62b2bf0d6c099b9551f2f3314::1764016146::res://.godot/exported/206107301/export-36a939e344cc084630151892ebc52e78-barrier_white_race.res
+res://Assets/Misc/Objects/cone_down.png::399e409888845e074a07a6792ff330c42443e66541d31a797c9bf1aafeecaaa9::1764016146::res://.godot/exported/206107301/export-a11bbee7271b1457662f4859ed97270e-cone_down.res
+res://Assets/Misc/Objects/cone_straight.png::5ab656b201d2897fd4d93ed844475923085ef9d86e788a06f8f1f5d2d63eeec3::1764016146::res://.godot/exported/206107301/export-091f338b1b40b547f31dce3b5db710f5-cone_straight.res
+res://Assets/Misc/Objects/lights.png::0be1fbe13ae867776ebabc98456b442e58c6fd8ba5496a3ecff0f98b720d2e04::1764016146::res://.godot/exported/206107301/export-27c77554bbfbd2a3b705170a17b1dfdb-lights.res
+res://Assets/Misc/Objects/light_white.png::bdbe4e011e04a200d7f59150e0176f7bc9834aacc719198300dec1e6b2eb530b::1764016146::res://.godot/exported/206107301/export-79e38e1b6cd997d92aa9b69db1e40e96-light_white.res
+res://Assets/Misc/Objects/light_yellow.png::95590f6ffd9ccf0cb66abeaef09c3d8b1aba43dee22db3691f09ffb3625c2791::1764016146::res://.godot/exported/206107301/export-abb44063348daf70717722bf21e05838-light_yellow.res
+res://Assets/Misc/Objects/oil.png::a37caf2c017ca0726e5a073e57cfd715c1b483ba4b413f082054d82c129da834::1764016146::res://.godot/exported/206107301/export-92c95a253afc9bc71386ad82f5a7849c-oil.res
+res://Assets/Misc/Objects/rock1.png::83e6316396a4d5cdee05ddef579e2c53ef8277dec508ac83c806993594bb0a74::1764016146::res://.godot/exported/206107301/export-1f7fcb5870b53e7a28727fd5934579a9-rock1.res
+res://Assets/Misc/Objects/rock2.png::85bc4fc804abd5d9e6c4076f7e140400099d4b7c46abbdf42f5f65a4c8c68227::1764016146::res://.godot/exported/206107301/export-e0c1601630c6fcfbb3190174ba198acb-rock2.res
+res://Assets/Misc/Objects/rock3.png::0f16d07641d5e0f6a85ed56fa426e54918cc8a29662d2e4fbe3e564a2c107833::1764016146::res://.godot/exported/206107301/export-bd785e3ff20ef86cc245e6cbadae6348-rock3.res
+res://Assets/Misc/Objects/skidmark_long_1.png::c48c6f5094ca119b2e1d8149bdee25e6cf1d37a1bcb2784f4572b14caf8d10aa::1764016146::res://.godot/exported/206107301/export-f598c95735c684b95464e5ebb72831f2-skidmark_long_1.res
+res://Assets/Misc/Objects/skidmark_long_2.png::82779cb76f42d1a30baec24f7a2b8285a25af5dd5aa1699a9e7d63787704a656::1764016146::res://.godot/exported/206107301/export-17c92cf60177b655de0e502fd479ecb3-skidmark_long_2.res
+res://Assets/Misc/Objects/skidmark_long_3.png::e5278f47bc3f8de8c90484ca6f44ab138e1ea49bcb516346d638ef32f746fd82::1764016146::res://.godot/exported/206107301/export-8a8c7b492ff093e5a20c1531a7635020-skidmark_long_3.res
+res://Assets/Misc/Objects/skidmark_short_1.png::71cebd05b358cbee2ccceb28f1ac913c5161b0a5e15872ac0480199836d8f40a::1764016146::res://.godot/exported/206107301/export-4f64b70e09561ae51641a9265d64c583-skidmark_short_1.res
+res://Assets/Misc/Objects/skidmark_short_2.png::95b36e06ce0e2c8d42bd15042ec29002fc9409832e17e903c1889738c77444ed::1764016146::res://.godot/exported/206107301/export-131df538321ab9c5b38deffde94d4400-skidmark_short_2.res
+res://Assets/Misc/Objects/skidmark_short_3.png::9889c7f14d8d7c1dc94de3c5e74e351e052f4670ffc4ea6fa90ac5db53700a46::1764016146::res://.godot/exported/206107301/export-ed17638223b3eb8ac34b1baa8a38f41d-skidmark_short_3.res
+res://Assets/Misc/Objects/tent_blue.png::744a3ce77a8672163b50539e8917aa8afb8f40d024515aa58a66b638d795851e::1764016146::res://.godot/exported/206107301/export-fb98836cf39002978319c399bec3a721-tent_blue.res
+res://Assets/Misc/Objects/tent_blue_large.png::4fc62aa9dea5166dd4544e387aa1587ad19ecacd71dcab94c4e68ff28453a09d::1764016146::res://.godot/exported/206107301/export-74a09cec236fcbbe55f684cb90b818cb-tent_blue_large.res
+res://Assets/Misc/Objects/tent_red.png::c815439eeac5768e896e533cb68135133a5dae2405f065b98b6573bf63002d41::1764016146::res://.godot/exported/206107301/export-a2de95626c13396effa33f5933282cf5-tent_red.res
+res://Assets/Misc/Objects/tent_red_large.png::1b9bb88251ef660482d40919f2c1f68b75be1ceb467b32731147038a5283551e::1764016146::res://.godot/exported/206107301/export-5e7282952686e6baa65e31d59256a894-tent_red_large.res
+res://Assets/Misc/Objects/tires_red.png::8895600f3db95e55173c522186e7a1d593c0574c4225eed89bc09df6df3b4beb::1764016146::res://.godot/exported/206107301/export-49eaa4b1135a04a33e078071beb00941-tires_red.res
+res://Assets/Misc/Objects/tires_red_alt.png::8e3764b3bc3c6b7cc372dfd8869aafa0f1e0dd5830daeb6e7fb5413a42c61635::1764016146::res://.godot/exported/206107301/export-51914a647eacfa4d788065b933a96afd-tires_red_alt.res
+res://Assets/Misc/Objects/tires_white.png::4291f685fbdd3bbee7be7fb5bcbf96491c2e8cd1d16e69884ed10bd0708742b8::1764016146::res://.godot/exported/206107301/export-0c2b01b8ead5e7d5d8b23e044d2ff4a6-tires_white.res
+res://Assets/Misc/Objects/tires_white_alt.png::be96fea6a2fb7e6af448a5a1f274071fc5b74754dd7a0cf54a5f59dfe9b476fb::1764016146::res://.godot/exported/206107301/export-a57684dd30336578b0d64287f8f101a7-tires_white_alt.res
+res://Assets/Misc/Objects/tree_large.png::da9c1363917925078ecdc4f5a1c2b871c76f370325c5191e772981c09780ad66::1764016146::res://.godot/exported/206107301/export-56dde60987709e4e122bd4724d238abb-tree_large.res
+res://Assets/Misc/Objects/tree_small.png::d8ec9cdb8d2666bddce0e5e558721a631ee0bfa20e53caf3507d660abb40b2f2::1764016146::res://.godot/exported/206107301/export-cdf37ebd1655fde8154800037e50910f-tree_small.res
+res://Assets/Misc/Objects/tribune_empty.png::5afa0f89607a60c8f2b59f0a1eab8b7cf2422e6c907fa5626a0a38da815d3236::1764016146::res://.godot/exported/206107301/export-0853413688f17372553a2f16dc5236b5-tribune_empty.res
+res://Assets/Misc/Objects/tribune_full.png::ce839601f7ca5d9047a6626c93ffc7c584888e3c00da7ed4bae5302527dff5a5::1764016146::res://.godot/exported/206107301/export-0d6e3e54830a64d1d9b275b512556f88-tribune_full.res
+res://Assets/Misc/Objects/tribune_overhang_red.png::ea9c6a554106cc4e43dc4a20a36e9fed026942e2a14ec9e7d96e17b6c4cec40f::1764016146::res://.godot/exported/206107301/export-376bc5883e8644dd39af8d56ce1de333-tribune_overhang_red.res
+res://Assets/Misc/Objects/tribune_overhang_striped.png::891345b695776f58205134aa68e12f2a3d9b2e87f5580ef6baae089558ed47f3::1764016146::res://.godot/exported/206107301/export-3def76cf2a13a9d4ae816bcdfe0e1e95-tribune_overhang_striped.res
+res://Assets/sounds/Sound effects/Engine/engine-6000.mp3::4a3d20144d2166c775bff663813289e02aa9564852e041d6e56bcede260a81d2::1764857624::
+res://Assets/sounds/Sound effects/Engine/engine-47745.mp3::2d88c674c6ebb24152ae0502a3d02e8a75446e50fd7f424ea1a3f51ee139611f::1764857637::
+res://Assets/sounds/Sound effects/UI/back_001.ogg::52ecd8bf5614833f2a3d83eea9a3385862882c169d555809e3cd014b4b174506::1765187576::
+res://Assets/sounds/Sound effects/UI/back_002.ogg::24369863311bc19adbdc989a182b6e210778dad08531fc452708699dcf816457::1765187576::
+res://Assets/sounds/Sound effects/UI/back_003.ogg::ca885556e9aa56e688aee70e58daee4fcf18ed39576d27d4743b2d468ea267ed::1765187576::
+res://Assets/sounds/Sound effects/UI/back_004.ogg::9aa3f3913f65020d3675902f7db3119e0fba2547ac88db17f956934dc8ea21fa::1765187576::
+res://Assets/sounds/Sound effects/UI/bong_001.ogg::c78792d47b805c726b2fb1ad5f03c81da0ba1fa0272858860144765b9c131fc6::1765187576::
+res://Assets/sounds/Sound effects/UI/click_001.ogg::594234cc27bcfb903fdafc49cb728bc9ca31365c52462fe2928febcac8255a90::1765187576::
+res://Assets/sounds/Sound effects/UI/click_002.ogg::722ec540eb252470b8b0cf3577ceba271be80e4a6ff4d390569f993307bfa18a::1765187576::
+res://Assets/sounds/Sound effects/UI/click_003.ogg::4ca9982997589cb0f2f823741545ef4f95858d435d0b39cec73f7ae97141def2::1765187576::
+res://Assets/sounds/Sound effects/UI/click_004.ogg::99d3617f544ce7c6ceaccf3b4d56cfceb7c7fa49f9ece3813e59746a9492463c::1765187576::
+res://Assets/sounds/Sound effects/UI/click_005.ogg::428548a9eac9ba75573ed61b6a7b8a6d60a5bb745805fb2993c066cada2c3b68::1765187576::
+res://Assets/sounds/Sound effects/UI/close_001.ogg::d2a8e5bcd2dbdd176ddda287693a4810634878f08a2cdfa85c7ef1e16b81547b::1765187576::
+res://Assets/sounds/Sound effects/UI/close_002.ogg::031350aa3b5aa2e0734c530414354fa227222bf26ae6ad6ddb52b389381d47e8::1765187576::
+res://Assets/sounds/Sound effects/UI/close_003.ogg::2198b25ef3f56805fc117447abacc182574108a54aa9c93ca4018ac8c7731bfe::1765187576::
+res://Assets/sounds/Sound effects/UI/close_004.ogg::91de9101dda09c86b05a86935e8a375d8d38f1d10ed846bac0c1beb99eb0683e::1765187576::
+res://Assets/sounds/Sound effects/UI/confirmation_001.ogg::4c063b519fe0b43ffb7c6555aa8ad22dfa0a4c36e6acc7247289a3b18dfe2242::1765187576::
+res://Assets/sounds/Sound effects/UI/confirmation_002.ogg::67c1280c7ee58806e09e80900f157354760e8b8a0b0ce2448ae2ea8bca3137b1::1765187576::
+res://Assets/sounds/Sound effects/UI/confirmation_003.ogg::41a03cd6b80886d0beaa6045d45b4bed6fee762bd2d1f4e329f5e52edd93a3ee::1765187576::
+res://Assets/sounds/Sound effects/UI/confirmation_004.ogg::ca5d476bb550e2640795745fc5ac8e267d235c6b47ff979fff5f708e446f4b22::1765187576::
+res://Assets/sounds/Sound effects/UI/drop_001.ogg::fdb7c6bd1abf0e06c75f5ef3ee29d5a2fa777348e228433a7b10b638e521576a::1765187576::
+res://Assets/sounds/Sound effects/UI/drop_002.ogg::c93648d84483c6ba9c375ba570ab1648b1e50cc5e369e10be71c7a60b744fe91::1765187576::
+res://Assets/sounds/Sound effects/UI/drop_003.ogg::a7fbcb59b45db1d2b998ea416bf52c62704268ee7ac32c43cae70588703f8015::1765187576::
+res://Assets/sounds/Sound effects/UI/drop_004.ogg::486b022fdb020e14c527b3da772aac8a15187a647328c4b1ccc534182ecfeb85::1765187576::
+res://Assets/sounds/Sound effects/UI/error_001.ogg::5411e5aef377d635c40fe3fbb78f0d849c8f7d80da8181e29924d7bfe1c9bfd9::1765187576::
+res://Assets/sounds/Sound effects/UI/error_002.ogg::48e561761e8706e3be4a804dbe97b468d13b2a1c3c7ee5b1ce7fb8a86c2c96b2::1765187576::
+res://Assets/sounds/Sound effects/UI/error_003.ogg::7384f25603baa9ae13b2157c25c23f835f972fca349d947785051db639e168fd::1765187576::
+res://Assets/sounds/Sound effects/UI/error_004.ogg::8f156f95b61f82b7e73fc8b44ecf9c77c17c0075dc5672020c75d152dfc4d516::1765187576::
+res://Assets/sounds/Sound effects/UI/error_005.ogg::b6723b1ad48ef3c9b743ab2f81a533187143542934548030335aaa051cc4a960::1765187576::
+res://Assets/sounds/Sound effects/UI/error_006.ogg::ed97458c522ebd7161fb3044f70702eff54921c8faa542d51ad957a62cd5f003::1765187576::
+res://Assets/sounds/Sound effects/UI/error_007.ogg::2ad22ff394fe1dcb6368d085ad9d53cfdb752d743cbbccd005ebf052b0256b64::1765187576::
+res://Assets/sounds/Sound effects/UI/error_008.ogg::2213e44fdef6d5202aab607431af84a05a72d890451210cda98ea57afcbba77e::1765187576::
+res://Assets/sounds/Sound effects/UI/glass_001.ogg::a2dd3e42c9d9643eac6ffb2299fbc71ad3d9343162a5d19ce2dc63f3b70ebd09::1765187576::
+res://Assets/sounds/Sound effects/UI/glass_002.ogg::5cd337ebfa42ac8492b8e7b9513b5e29f5ba6eb84ec196d60e25715202275002::1765187576::
+res://Assets/sounds/Sound effects/UI/glass_003.ogg::f0822577bba8b3484689f7a8d7c2e9af03e02b3aef261da8d24a28d93754a9b7::1765187576::
+res://Assets/sounds/Sound effects/UI/glass_004.ogg::1deb2dd2520d64eb074f37ea1ee9ac6ea30aaa2e7c3bd7fc490525d66e97f472::1765187576::
+res://Assets/sounds/Sound effects/UI/glass_005.ogg::35a420d30a057ba2ffc9e1008e8451ac907b8a2a1170b7a375989191a69e54b5::1765187576::
+res://Assets/sounds/Sound effects/UI/glass_006.ogg::7cc27b1b9460ad903ea89f45dd412d2f10f3d0b88a33733dfed2808af376b34e::1765187576::
+res://Assets/sounds/Sound effects/UI/glitch_001.ogg::662f975f84f46bb38de42dafe2f53ca9044da5a10c28161b0a7f0ce67f114aab::1765187576::
+res://Assets/sounds/Sound effects/UI/glitch_002.ogg::5767e40852cf9d11254174667b6ff0c62219414b4903195628e81654ea64e171::1765187576::
+res://Assets/sounds/Sound effects/UI/glitch_003.ogg::9f221e7587c45d49f18b199d48d904f621b33315a02f246b361df258754509a8::1765187576::
+res://Assets/sounds/Sound effects/UI/glitch_004.ogg::fc9f21d945671eaf7413bfd06a13fe90f24a3538f247f3f1f3b3d56d7f25fcd3::1765187576::
+res://Assets/sounds/Sound effects/UI/maximize_001.ogg::86a6516be248b9277dbde048f1b36448ef1c462b0fcd24134eb88c0a14755494::1765187576::
+res://Assets/sounds/Sound effects/UI/maximize_002.ogg::24f490a388d9561c295499b4188687d434116b4efaaf67e9babb6b8a2a879672::1765187576::
+res://Assets/sounds/Sound effects/UI/maximize_003.ogg::83c2759b5dbc4ac001e2c80cad530b5a1309b9490b46ca1779c60b896f925450::1765187576::
+res://Assets/sounds/Sound effects/UI/maximize_004.ogg::46d9c41b952784948eb114cec6e5297fd86f5c6ecefec5c5cf9a132c3d37bc60::1765187576::
+res://Assets/sounds/Sound effects/UI/maximize_005.ogg::92fdbae5ab91160adf981a98068daed0278f0d31f76b5789956315ad27ac4b6e::1765187576::
+res://Assets/sounds/Sound effects/UI/maximize_006.ogg::1df65f11187274abc2f1c8a6dda1355ce6913a7f71f84ac2153666d340c5f38a::1765187576::
+res://Assets/sounds/Sound effects/UI/maximize_007.ogg::8a00b883eed71fef9bc9e2ad7121908b7beeac39782671b76d36ba8ee3bfab39::1765187576::
+res://Assets/sounds/Sound effects/UI/maximize_008.ogg::2571a7f694089c530ada1a4c0c6f1de31444544418f1d8fa6248b487da55485d::1765187576::
+res://Assets/sounds/Sound effects/UI/maximize_009.ogg::7fad81beb44a95530a125f76d7d1e4e2379142850d9cec364b7b5be41041b64e::1765187576::
+res://Assets/sounds/Sound effects/UI/minimize_001.ogg::cbe27df8d4048355a9d4d9121ff7fc361667b9883f4a3e40cd81b4390361c344::1765187576::
+res://Assets/sounds/Sound effects/UI/minimize_002.ogg::8154f23214b69a8cbf79ca1df8b59d2d3fb9c323907dada5ff846bd84033ac48::1765187576::
+res://Assets/sounds/Sound effects/UI/minimize_003.ogg::9659e12d931babe140c6c77a9815dc0df8437898783593e215d6b5891c282286::1765187576::
+res://Assets/sounds/Sound effects/UI/minimize_004.ogg::8a8dd1a5964e3451038e930fcab70d6d222ff6ea8e363e81736c99dee1949780::1765187576::
+res://Assets/sounds/Sound effects/UI/minimize_005.ogg::0d168bd6f74238d2f533cf9649f9cb0fca519a7cdb9352485afbe0d91dee2ae8::1765187576::
+res://Assets/sounds/Sound effects/UI/minimize_006.ogg::8e9c01863a3bb941038616aa5c63b42a093022536c6517102c2b59e4bb7b8deb::1765187576::
+res://Assets/sounds/Sound effects/UI/minimize_007.ogg::6c87760c603d09e3b9661c2c22ade19874492c159ce44b196cafe76cc70fe620::1765187576::
+res://Assets/sounds/Sound effects/UI/minimize_008.ogg::cd1bba75ebdd0d0217c5f5f3ce0447d645a808576e16261eb923b3bbc52d28f4::1765187576::
+res://Assets/sounds/Sound effects/UI/minimize_009.ogg::93e0c14f0943b4230196c94bd0f446a2d9c05744a9a97d3cf04d50ead71fc9c9::1765187576::
+res://Assets/sounds/Sound effects/UI/open_001.ogg::75ba742a4b059ad7f99bce2b56d0db933d294a9819dee93a21955135a41e92ff::1765187576::
+res://Assets/sounds/Sound effects/UI/open_002.ogg::3ae6d7b87bbe9062a4d45e4eef716c4cb50edaec8e2ffd15690e8e4b728e60db::1765187576::
+res://Assets/sounds/Sound effects/UI/open_003.ogg::b9c6194461901340816790c15bfbc0a7c8e1da2c0b624061c3c97a9b774ef6ea::1765187576::
+res://Assets/sounds/Sound effects/UI/open_004.ogg::0a55b142903b3e1b47d04f5c998f0aca3deb4538060c9981c9d3b5f2714685bb::1765187577::
+res://Assets/sounds/Sound effects/UI/pluck_001.ogg::fb8403a1e6b516d8b59543879b4fc90cbe03d0703eda0664efe7cd8945fba481::1765187577::
+res://Assets/sounds/Sound effects/UI/pluck_002.ogg::b77574f5448f919d6f3bacab9d4b30dea48ef69abeec685c13757c83e5790bb3::1765187577::
+res://Assets/sounds/Sound effects/UI/question_001.ogg::f8363411fb13c2bc8ea0473baf760e6eacb786b4bf8e345b7ed3752326dc8ea0::1765187577::
+res://Assets/sounds/Sound effects/UI/question_002.ogg::e3cf0f1b91c746646d126aa4f44f960fd88999655553568992074108e108c865::1765187577::
+res://Assets/sounds/Sound effects/UI/question_003.ogg::108d298428daf5000fdd17b63a05013371f4f9e6b707eaad96c9240160574de3::1765187577::
+res://Assets/sounds/Sound effects/UI/question_004.ogg::fdbf47d0b3cc6dc5454a1a8e88667d25262e1aff74bfe10d555939e3e412e596::1765187577::
+res://Assets/sounds/Sound effects/UI/scratch_001.ogg::8fb4b377b4c3d24c861d9916cdb6e3b5f9c7aaf7cd64288745f947de3efd1cc9::1765187577::
+res://Assets/sounds/Sound effects/UI/scratch_002.ogg::1be65209fd4d64881e6bc0c7c6084ea1bad8be88c45f98ae544a7a8de5d4befd::1765187577::
+res://Assets/sounds/Sound effects/UI/scratch_003.ogg::eae1e1a24a816302c07c8123e7e650b05a41522c70404bff4431c580eb8022c8::1765187577::
+res://Assets/sounds/Sound effects/UI/scratch_004.ogg::8c61e463b201459f822abe2680ee62321b3e0534a3f86b9f01fc458cbde5cff2::1765187577::
+res://Assets/sounds/Sound effects/UI/scratch_005.ogg::255b5131629753189cc81fa6b224c3bf73365240cd3b85e406f5a881e156f326::1765187577::
+res://Assets/sounds/Sound effects/UI/scroll_001.ogg::6081ed807d8f0e7c0eb44bab3dd1a7ea6527b9462fe8025a1f2373ef3faaa8ef::1765187577::
+res://Assets/sounds/Sound effects/UI/scroll_002.ogg::d05b14107f629fd1c65983625685ddd8eac50a9c435281e4057e9f43ba03a19a::1765187577::
+res://Assets/sounds/Sound effects/UI/scroll_003.ogg::fa12732fadd314a99e7e58c95ae26e4e6b98f29397bf48c94ae7ed98e5f32fae::1765187577::
+res://Assets/sounds/Sound effects/UI/scroll_004.ogg::c31a617420a6be584e618fafab9a30837f00e3473a3f06589b03f0b0d07f8cd3::1765187577::
+res://Assets/sounds/Sound effects/UI/scroll_005.ogg::8e9db06d73c7a9847a0d68b1d9123168ec1a5c644dc83b2326019a26504a977e::1765187577::
+res://Assets/sounds/Sound effects/UI/select_001.ogg::75b36f3989f1f21ef2422e457ea0f10e9ce020e34d11019a7f5d9a5202b1c63f::1765187577::
+res://Assets/sounds/Sound effects/UI/select_002.ogg::1c489e029c6a1f7d20f32344960ceeb12e5844c882488614c7c9c1b1de628584::1765187577::
+res://Assets/sounds/Sound effects/UI/select_003.ogg::6346952f360153a647ba43c1f9e97693a5c182dee6fd8264388f60c533d91f69::1765187577::
+res://Assets/sounds/Sound effects/UI/select_004.ogg::0de772d401f7ffbc4a60906ae90f100909d0d0d02700c3acf69a4dc9e9ff1a7b::1765187577::
+res://Assets/sounds/Sound effects/UI/select_005.ogg::d8bc676a31c196c538e6b0b37a9856531f33fc8772e9da174a2a6d6b193c6caf::1765187577::
+res://Assets/sounds/Sound effects/UI/select_006.ogg::8109b18bb8ec2a251fffe7d06b6764b0687e2e969a193adb6c8f9d31ec555656::1765187577::
+res://Assets/sounds/Sound effects/UI/select_007.ogg::3b73f3cdb35b18913eae0e10ffc3d346d1866bd35be026dd9d437f58601de383::1765187577::
+res://Assets/sounds/Sound effects/UI/select_008.ogg::9c01cfbd7213bc8c5f41177e926b1a080d76b4f035ff42046be34f48258d4b8d::1765187577::
+res://Assets/sounds/Sound effects/UI/switch_001.ogg::4649a947a5b042ac8d2a03c25c52185b6e7aa0dc0acfbd4ee72927225f1230d3::1765187577::
+res://Assets/sounds/Sound effects/UI/switch_002.ogg::23878cdaa2bfaaa916173541626514e22bae8ad6dca48a7f8afb788342ede93d::1765187577::
+res://Assets/sounds/Sound effects/UI/switch_003.ogg::bf89fea02633664504f6509ed24b214bafd66f56fd376b28551da99c9670341c::1765187577::
+res://Assets/sounds/Sound effects/UI/switch_004.ogg::62a8978241dcaae2dadde7a5af93326fae07db53a3b79c4b1c24f90bc852f990::1765187577::
+res://Assets/sounds/Sound effects/UI/switch_005.ogg::d921a7714bb765a6276567786e6886720cd972d124561a102aa66fbf32b94f50::1765187577::
+res://Assets/sounds/Sound effects/UI/switch_006.ogg::877ebe9adf7569fc5e2bcbcd9564c00fdc70e9e2a6603d0b13196466842a3ac5::1765187577::
+res://Assets/sounds/Sound effects/UI/switch_007.ogg::21e77de22e3598ad432f4ce940f84516306358389881b10cf37daa285d8fabdb::1765187577::
+res://Assets/sounds/Sound effects/UI/tick_001.ogg::52d2db5f6ab3b34a7bb64ec76984d7358bb875a197b9f54c16a87a5277edcb38::1765187577::
+res://Assets/sounds/Sound effects/UI/tick_002.ogg::b99f5be5af52aa48e13a407c274afeb59665616d3ada158b485c61c169be9b85::1765187577::
+res://Assets/sounds/Sound effects/UI/tick_004.ogg::1eb5c9b7af8214ad061e5e63e84848c5888034d1eff344a75443beb625edb9a6::1765187577::
+res://Assets/sounds/Sound effects/UI/toggle_001.ogg::c0d06cf0c2f81b8f077e517b7eea4e6ed3b245fb23e8ea554b8e4c5597c8908b::1765187577::
+res://Assets/sounds/Sound effects/UI/toggle_002.ogg::130aff70eeb584df492ca898d0e98b96e1ff61c32ac191c903ddc2e64c6e9ff8::1765187577::
+res://Assets/sounds/Sound effects/UI/toggle_003.ogg::d85f935031217db3b440f84f67d0ba1cb2f29e6bf24db84808e2f6404d4f4bab::1765187577::
+res://Assets/sounds/Sound effects/UI/toggle_004.ogg::8d550900d79af6ce6f4113a93c81a2de35366d9920226ba332ad98cfaf59f1e2::1765187577::
+res://Assets/tracks/tilemap/Decor.png::c2edfd827d5883ee00a5460316a542a1dd21127e9a1675d9264f6d349863d6eb::1764958612::res://.godot/exported/206107301/export-9c2c747301ff26f1933dcd21e05eb38c-Decor.res
+res://Assets/tracks/tilemap/Decor_but_better.png::37eeed2b7b2846deac6add742f3ae1a717ff6f77962bef2da74d0249215ce791::1764965087::res://.godot/exported/206107301/export-bcf9fc88ccb82a033fb451320cf083ea-Decor_but_better.res
+res://Assets/tracks/tilemap/tilemap1.png::0b40a24657a28de4200d3f3ffefab223e53ae278318cbd3843a1fe3fdc1694e2::1764339296::res://.godot/exported/206107301/export-0fc2366110aa44f43b56bd6cf516068c-tilemap1.res
+res://Assets/tracks/tilemap/tilemap2.png::5b279412803e54b79b61e61b0f58dcdf35be78e24479f2f39a7447b4e8891ca3::1764339267::res://.godot/exported/206107301/export-ba1e89a352e8abbe2155955eb18775a9-tilemap2.res
+res://Assets/tracks/tilemap/tilemap.png::cecd0c12cf8ec40574f4135dea3b9b22e3f5bc54c630f41f638d2627906661da::1764339173::res://.godot/exported/206107301/export-02aefed24126f07ee24b469bb134d915-tilemap.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt01.png::ed13b481d44dbb83f1df957f3e92f83d0501a8e9e952f3cb1c3faa2b773c4009::1764016146::res://.godot/exported/206107301/export-787274bcc6262c52e394760c1b9a6591-road_asphalt01.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt02.png::1898c8b5cfbfb2beef84f9d0ea05138fa8e7721ff8f55618787557e01e629abe::1764016146::res://.godot/exported/206107301/export-d6c07d67517e4ffb4052a552f8fe24bb-road_asphalt02.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt03.png::1e07ec1006d62803b44994f3112573cf3318d16bf8f2df9e3d810d4d9b885d3f::1764016146::res://.godot/exported/206107301/export-a80f119ebcec4380a65ce5ec2db482b0-road_asphalt03.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt04.png::202fcfbe56dd9822dd87cbb09577c5cd8a4d8e9692269ad1fa19dc9a5834e19e::1764016146::res://.godot/exported/206107301/export-5f19b032be9cfb0e68ab45390c49bd1c-road_asphalt04.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt05.png::36e32df218907b5eaf4535affab063965b2fcef6e23bf34add428f73a33902bc::1764016146::res://.godot/exported/206107301/export-f437db9cb5e48be696a25b9aca56dd3a-road_asphalt05.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt06.png::3f438609882b695567b01bb1a41ee69728d0ef8796c1909beb1c7c813d76b42e::1764016146::res://.godot/exported/206107301/export-39b643fdb0788e380d34227459202df3-road_asphalt06.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt07.png::9fe4304eb41e0b5d20725470e68db9a743a786681a8e44b8d55bad248cf3b9e9::1764016146::res://.godot/exported/206107301/export-4b72f3fbef3a54b9d5b17c5a33376769-road_asphalt07.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt08.png::004873a3b50356f9213ac060ff169423551360254d78aa597f38daaf1c6952e9::1764016146::res://.godot/exported/206107301/export-13490a9a872c62f9aa304a498aee6746-road_asphalt08.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt09.png::7b6a289f684dd0d805ecf56abc0f0fa0339c68ae343b521178a3723046675305::1764016146::res://.godot/exported/206107301/export-5b4424cffa5a9591e4efc9803cb7d2ca-road_asphalt09.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt10.png::d59f8b20b2f44faa02ad2dedb35cf7dbfc6d2ce50c2143435da2c4b2eb037918::1764016146::res://.godot/exported/206107301/export-80eb3053ea242b8312c6d278aa03cc8b-road_asphalt10.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt11.png::7cf6ddf598867461a08b413910608619e0e64f7806eadd9fd6d2e1dbb3a81d10::1764016146::res://.godot/exported/206107301/export-8e286370b2d808e512cc8065f7e5a164-road_asphalt11.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt12.png::33a5703c531a1505a7d2b893fa5b87197c5a3f8eed28bbe670dccfd1c0e34f1f::1764016146::res://.godot/exported/206107301/export-6c1f678e0ad17df647ec0707f263cd27-road_asphalt12.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt13.png::494d2e4eb6b5008c56b7d53a8ecc2934d90b51c6050284cb80eb8bad90b48999::1764016146::res://.godot/exported/206107301/export-5e1d0213c6cdab50cd1b24a87dffb717-road_asphalt13.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt14.png::53f17a0a94561404a0c5e0c40047d33ee85910ce902fa4c910e6ae3196766f42::1764016146::res://.godot/exported/206107301/export-80416457f17aa16aaf2b3121b982ce4e-road_asphalt14.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt15.png::f80d06eb6b63be87c2cd9193c48ea1b09143746baaaeb52b10ad08d9999b5d42::1764016146::res://.godot/exported/206107301/export-3e098c9879d90d8cc8178acad9db7115-road_asphalt15.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt16.png::832a3d72e2a3142c3fe55476b294f77b1d3c989406fc001dc44caaea1d7f7220::1764016146::res://.godot/exported/206107301/export-6b7dd6652859061dd3ef07f06a7476ed-road_asphalt16.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt17.png::e878a54f9bf1df1e8e9e03acfc41eec6234b37f832b3d6b9b5e104cfc68b0489::1764016146::res://.godot/exported/206107301/export-31ad44dd59d3fe288db4abb632b9e4ad-road_asphalt17.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt18.png::4ef3d2e9a91560fce7a73be13c2d7d1ec863920c59d91977430190ff926df87d::1764016146::res://.godot/exported/206107301/export-668c8b7f8e000c3f07417a5a7c3cfb36-road_asphalt18.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt19.png::d68bbd093f7c10cab8673e6176178200610970e7fc1b48b7d82cbb1c98df478e::1764016146::res://.godot/exported/206107301/export-9c369793e81ba88cad531483de66bc6e-road_asphalt19.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt20.png::579a0602eb9caf70d953349c26888708efcba223a196c930f80464e650a2a13a::1764016146::res://.godot/exported/206107301/export-5c05a498005f22f52b36fc3cb79e4835-road_asphalt20.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt21.png::e3ea7e1def3ce280ee7696f6c54273140474509eccbc6645178b3db479cea63b::1764016146::res://.godot/exported/206107301/export-b6ab644caa843257e8c761c80e2269a4-road_asphalt21.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt22.png::1c34827ffada8a872785c0c4805032485caacd2dac2942d5dbdfeb4924610d6e::1764016146::res://.godot/exported/206107301/export-0b333d90b1a635ce0bca03481606c2bc-road_asphalt22.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt23.png::1222fe61c8a9a38a084eb5cd45016c3102e7a3d78d4ed6b47480a42c42fcf684::1764016146::res://.godot/exported/206107301/export-2e04e1e68601df6e8c9826197f7adb92-road_asphalt23.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt24.png::5cab05c7db32a38ae222301101841a173f2a95cdcdf07fa3ff0723267a0370d0::1764016146::res://.godot/exported/206107301/export-eb5a0e1f722f4402d064e156dfe1dc74-road_asphalt24.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt25.png::6643a94e9c48fe11372711074b0f3dbebf7f37ce9cbd5eb12ca00ca359934a32::1764016146::res://.godot/exported/206107301/export-e659ec08b94af0bffcb77437b7fbd005-road_asphalt25.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt26.png::a4f2b3a3f3f2f63b1630a14e216b9c5232b47a4d8151bab4ac6bede3573afebd::1764016146::res://.godot/exported/206107301/export-ba8364bfe82d2a37cb34bcd117a5e575-road_asphalt26.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt27.png::600936678ec5712b73fb291cedc235396206f5920f59b2d3fb2874737c58da6a::1764016146::res://.godot/exported/206107301/export-9725a5df41a75ef9107582474b341bc4-road_asphalt27.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt28.png::6d56f5685d81504a2872a9ed762ae57dd98721794c6fa5fd6cda8439801f8a8b::1764016146::res://.godot/exported/206107301/export-6d97e36160fdedeef6c3f364df49a45a-road_asphalt28.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt29.png::8bc35fdc442b03ea36606dc78b43ee288acf0f369921544850dadddc54605e05::1764016146::res://.godot/exported/206107301/export-cb3966864639108efb9b6b2c84836333-road_asphalt29.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt30.png::b0922f74461ff2e79ff20fb71da646a326cd4fef787482ac6cb6f3498ce66ffe::1764016146::res://.godot/exported/206107301/export-a6743e0e72ebca5c57db1e028f9bce2a-road_asphalt30.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt31.png::1dad6645926b0da27a544654a41ec7214dd1b7a59ddbc511af4551ad261942f8::1764016146::res://.godot/exported/206107301/export-edc75a0accd46e63a28684cd7a393bf1-road_asphalt31.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt32.png::183ef1f4a87fc1af720298867a449a83fbb861d73cb37d89f19620f11fdcd2d8::1764016146::res://.godot/exported/206107301/export-7ab73a214e150cad3b5fe36b6fd930df-road_asphalt32.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt33.png::d3926cdbc2f945762f9658709b132186c679cbb5564b24d15a3fb83e0fccd04b::1764016146::res://.godot/exported/206107301/export-4908a63cec9317dd0ba0f314e298c566-road_asphalt33.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt34.png::99344c1e6d26b79d34fa01b7eb4d8add882d6a1a85fcaca642786afbad61e7ad::1764016146::res://.godot/exported/206107301/export-9214fb5608d9eda12665d17cdfe176ca-road_asphalt34.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt35.png::7b11f9b2264aa805b0dacb52fa46b129553df0b14d171cb466314e01c42b152f::1764016146::res://.godot/exported/206107301/export-1d1feafb5d5d57394b31455ac4cb358e-road_asphalt35.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt36.png::2cf6a7e4613cd22ed752db2daf473e288463e1e59905aaf14fd49fbdcebf0cba::1764016146::res://.godot/exported/206107301/export-f1601cf7f09e74729b26cacb77e4d4c8-road_asphalt36.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt37.png::ca3715f0ce75a2aaf46f6d3adfdab31a736c26f85fdb2b96aa91fecee22ab107::1764016146::res://.godot/exported/206107301/export-f2de749ce284cdd881eb16c48419fb10-road_asphalt37.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt38.png::8ca84b39f1592967582de9cdb7fd34efed27c0c7aa354280eab520e4e44d1e44::1764016146::res://.godot/exported/206107301/export-7ad1af70b6b4a7989330fbef9847d2b8-road_asphalt38.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt39.png::1197611aae57fe4c87f6b44d990a04197b8c96a9c9ba917391478c8d2908fbf2::1764016146::res://.godot/exported/206107301/export-ba8242e9cd49964576d2fa427d0a947d-road_asphalt39.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt40.png::e2a86cad2eefc81a0600e101dabe80d085fb5c50b9ba18aa77861dbd7065daca::1764016146::res://.godot/exported/206107301/export-145cc9f309055b3f5818586d8081a26b-road_asphalt40.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt41.png::654dfe17a4597149e5010bfc3d09640d5224fe9798de1aed167ae225125e0cea::1764016146::res://.godot/exported/206107301/export-94e2cabff5bd8b9267eeeea32c121e23-road_asphalt41.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt42.png::33d6a33bc87478806a9545f84dadf3497acbd9f38efb97e5a1eff201da46a175::1764016146::res://.godot/exported/206107301/export-f8f29769afcbf5764388033824582370-road_asphalt42.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt43.png::c8326cf6f8a03a0ebf50ccf8ead175e5298e6b2b75ea55bece49f0eda8538ccd::1764016146::res://.godot/exported/206107301/export-21e43071d04ebee524d360952cfa771c-road_asphalt43.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt44.png::065491c19cda64bfc3e5c66f07d5098736d9b682b0e9119db04f9315abaf7a79::1764016146::res://.godot/exported/206107301/export-07fa8cce561b48b2bcb49978eb6ab96b-road_asphalt44.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt45.png::104b1c0b6a9045965a2ded07a3fe87c48885d6f85f3fa540ea470b15af1ebb3b::1764016146::res://.godot/exported/206107301/export-5e96747c04e5ea70c12d75e8eb845141-road_asphalt45.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt46.png::c66a710beeb642ef18d7b0d33780fdec57ff058b1a79e09ec0f436fde2d45056::1764016146::res://.godot/exported/206107301/export-594d3f03ca53bef07bb47f4e13d45070-road_asphalt46.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt47.png::4f76ec76169ec1cdbc19b8c0669a81ec7d3d266a35212be22a8fa87717227253::1764016146::res://.godot/exported/206107301/export-653927bb625c84ef2a5e6cce38c97206-road_asphalt47.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt48.png::03fb26f2649d62443e6315fdcfec3a96aa2f20fe8360d68b9f34797429dc8b44::1764016146::res://.godot/exported/206107301/export-1a99582c5643c6839a847c57f4edcf57-road_asphalt48.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt49.png::02b9ea10c4f8a213016c29b515a85a8dbc631fc27f9ea363aca3b95bd90cf859::1764016146::res://.godot/exported/206107301/export-8f8a606a2de4a8a1c79bdd22ef232c2e-road_asphalt49.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt50.png::7104ca163138deb632c54c97e8f0184ef9d7583df99dca2ba5a122a6eb6c2257::1764016146::res://.godot/exported/206107301/export-5bab57bdd1c566a9c5e9f41acc488920-road_asphalt50.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt51.png::bf09410a7582ba6e02794dc7f70dba91319e744891425efcdb281e030f5fd0a4::1764016146::res://.godot/exported/206107301/export-16bd163390d4704b846dcf1888e55463-road_asphalt51.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt52.png::9a756654c3f000f3d8a22ab10d48abbd6c9a95af33bca357d729b8fc73b4b18b::1764016146::res://.godot/exported/206107301/export-ad24937080929d972e890f980c4f5ed0-road_asphalt52.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt53.png::035fb4c8de28d16daf7f66c662615d1a79771fbb37acdd2927a3c9bd5311d4d5::1764016146::res://.godot/exported/206107301/export-d21cc51a1ba0a01a26a5e9b9d5d42e96-road_asphalt53.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt54.png::ffb213ea9ea79cb726b032937ce90fe73cf279ecacec90ae07202ddaaad086f8::1764016146::res://.godot/exported/206107301/export-d9d744489494f0bed39c7cc891981cd7-road_asphalt54.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt55.png::1d0d45d5331aa367285711caeeb566caa8fd2ccda86b87b7606b076bfc11ab05::1764016146::res://.godot/exported/206107301/export-59f5605583c8841029da3dd0f965cc00-road_asphalt55.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt56.png::f0f47e82f646a33a710fcefa8a48680e75b7207145430fe7d3ac6cb25a7e59d0::1764016146::res://.godot/exported/206107301/export-81825697e98c89d096b282be0b7d79ce-road_asphalt56.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt57.png::8c1bc1afeaefdf1e6e61f85852c943bfa35ba938c5f25a895fe4a519fa875342::1764016146::res://.godot/exported/206107301/export-821a06229e9ddefa4f11d7036d2640c7-road_asphalt57.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt58.png::9e09247e704b04de8764e3fc5c8bc39946b5a9edf17bd86163911c19f7f53280::1764016146::res://.godot/exported/206107301/export-12c012ac86d823d3504c74322fb4f6f5-road_asphalt58.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt59.png::ea921574280136f0d48132b761e5c39248cf135df69f1e9361c15458333ad1fb::1764016146::res://.godot/exported/206107301/export-0face0cfb0d42ee890323fddd564b84a-road_asphalt59.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt60.png::5df9df8be907cc8aa882b40e607c69e266f6da952e5e9b7c627e12ef19d66e5d::1764016146::res://.godot/exported/206107301/export-83e75c4dfc542c36b2d58fb794cc10d9-road_asphalt60.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt61.png::303499d55665049c198c8a22fea03f856330883a81d5a48a909e23ddcd9004f9::1764016146::res://.godot/exported/206107301/export-32746584023d2de5ce88ece53814ba38-road_asphalt61.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt62.png::d357586a3541ba1fedfd8dc4fe920079899d7dd63bbed080ab83cdcd2453c19b::1764016146::res://.godot/exported/206107301/export-7fed418abb1edc5246b97b3149bc12a8-road_asphalt62.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt63.png::63a7f421ac08db40de889ea1fa593ad318a86f8cbbcf403b65bc3727fd9d9dde::1764016146::res://.godot/exported/206107301/export-e95140f6ed787d3a4f91d6439d09afea-road_asphalt63.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt64.png::7b82c6f5917aa06db460874980653bb7cf7c388d9728d746e72fa86970dae830::1764016146::res://.godot/exported/206107301/export-2d01ad28ca660a0622d749fdae568549-road_asphalt64.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt65.png::f1ca2d1cac077b8370f0e9668cc0140349aa31e05a5833bebf7c359485f66bca::1764016146::res://.godot/exported/206107301/export-74a3bbd89883199da69013756e2bf7e9-road_asphalt65.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt66.png::5fffc40e23edc446ee3f932d470cf8d8c4b0b55f25376d9cf3eeb06f73ab1450::1764016146::res://.godot/exported/206107301/export-2d2ee3ba352a77c3d9ae96b0a7a324d7-road_asphalt66.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt67.png::65772572b737f388bc5af3d273b8fa3f059fcf448884c1ae802a785f3103d1f8::1764016146::res://.godot/exported/206107301/export-f869db28ef564ac1a7dff87d33099bde-road_asphalt67.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt68.png::a6e6acaa408605811a7e4479b4ac527d8e9d181db0b156b9a8763f9271e842b3::1764016146::res://.godot/exported/206107301/export-668d9e3cf6d6db700d94255f018d4ede-road_asphalt68.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt69.png::a17fe9b11d75c03023f5b21fafa96c9c497fd1caaed7e9d49845053d09c31e7a::1764016146::res://.godot/exported/206107301/export-acfad68a1df355f8ac2c41566e84c586-road_asphalt69.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt70.png::721c6397df36699e9c771b8e7fc8c8084acec39d68ecedf159f80f6e71c5bade::1764016146::res://.godot/exported/206107301/export-a750e58873470dd0d5e934af3bb8a0e2-road_asphalt70.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt71.png::c89cefa8cdd43a0f1cb454f632b2a60b1458d66d79b61dee8d75be47507ae848::1764016146::res://.godot/exported/206107301/export-5f84bb8f5d7d11053afe0a03639f9a2e-road_asphalt71.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt72.png::0aead68d507f18fe1f5d0d13522186c4d4590bc2a48fded02a88db40fe829bc5::1764016146::res://.godot/exported/206107301/export-1cefa3a2db88ac45b699e32f0cbca108-road_asphalt72.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt73.png::0615117620152543fed109b2ac78906490b5d45eb867dcc94723340cd58d4d36::1764016146::res://.godot/exported/206107301/export-705d791b46eab6d805135b3008655012-road_asphalt73.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt74.png::5fee4838f126d9f74cf7a5ed59bb8e8af5c6e1b004ad57324a92457ddec4af06::1764016146::res://.godot/exported/206107301/export-2010cbff028da217e7347943213627d2-road_asphalt74.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt75.png::afaacde823f145fcadc7202f8d0a45b028bccb1a467e58bf0e04ab02187b1cb8::1764016146::res://.godot/exported/206107301/export-6e9af63145bbd3860f1faa8eab590d9d-road_asphalt75.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt76.png::29cbd74406f85b2aeb98bbe27709aa14e91e32e14c5898ce4ed24b03b155ac8e::1764016146::res://.godot/exported/206107301/export-7f7523ef7cdd936b788141906bba64eb-road_asphalt76.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt77.png::c207385233fac6197fec3139ed885e1117f4c61338e3311b5ddc2617da5b63e2::1764016146::res://.godot/exported/206107301/export-770988a47540bff12a16989cf675eebd-road_asphalt77.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt78.png::dde01ff3a168bfa87808574b136bdbe8582188d77f27775751132acc6331ad61::1764016146::res://.godot/exported/206107301/export-15071e5f603d77567bdef2adc70a0a07-road_asphalt78.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt79.png::6851f3df2981729602cc71de91c58cca8664433b197d67b6211d5025da425d03::1764016146::res://.godot/exported/206107301/export-60485993f5ab98045fac8bb36b9f2ba6-road_asphalt79.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt80.png::e2ab3e76e3dbd10e147ed5c7cd48214a4ce4e6f45f5912c527a66c36f12e91fa::1764016146::res://.godot/exported/206107301/export-e07724e48761bf2996dde16cdde0dff1-road_asphalt80.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt81.png::d19e06c6eabfb319ece17d005e3e387044725c9b2683aab1e3c68fd9b0cd24b8::1764016146::res://.godot/exported/206107301/export-ad987bf3a157279ba93394554b22affb-road_asphalt81.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt82.png::207d1cefa1b122884dfeaac7eb5ab8e1d6027a868c9c5cd0425270af30214602::1764016146::res://.godot/exported/206107301/export-90748a5234ab8a774f444d93f27effdb-road_asphalt82.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt83.png::d2becae691ab392319ce8713556638e5d6d2f58e97f6f706491fa9f48d049f5b::1764016146::res://.godot/exported/206107301/export-df1c38cec8f46816eca0b2c7e3cee02a-road_asphalt83.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt84.png::40313ee8fc92a7681811c1b6f490c1202fc7df79bcb80aa5d280af0eff6f3bdf::1764016146::res://.godot/exported/206107301/export-6337ff4590972ef818800a7996767731-road_asphalt84.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt85.png::357d8054d4d455df9e79315a940af63ed45cd53a7d0d31ba537e330e12cb4637::1764016146::res://.godot/exported/206107301/export-3bbbf9d35d1fdc9154d9892f0d5f7e87-road_asphalt85.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt86.png::cd2312db99122d07318b95c04d1ddcb8d0055ac31e9fbc24e9208ea1e4c40930::1764016146::res://.godot/exported/206107301/export-b9b33c34a186c102d2bb8da158a6bc3f-road_asphalt86.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt87.png::5d8e207834347e8644895cf16fbf1b8cd4e7e3ba55ef932e66625d0b2ce45896::1764016146::res://.godot/exported/206107301/export-24d43f30241b3e1130f6907bea839377-road_asphalt87.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt88.png::31ce516da6859c521536ce7532d94122ee579b00c8468ca8dc20f29ee6e1e5d7::1764016146::res://.godot/exported/206107301/export-1f8e8c3ecedb623cd87df1cb11bc21df-road_asphalt88.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt89.png::78222cfbbe0f1873ece210be4b4dfc9e125d07abf449ee96e59c13fc42acd108::1764016146::res://.godot/exported/206107301/export-250d824112a38c636aa0ef1f0214ca94-road_asphalt89.res
+res://Assets/tracks/Tiles/Asphalt road/road_asphalt90.png::d1929925f05fb29c44d7c06efe78d12fd18ed8afad88a0a0bb7cb43faa9d2024::1764016146::res://.godot/exported/206107301/export-46b3c8f9bcb126a27dda816f08a3d720-road_asphalt90.res
+res://Assets/tracks/Tiles/Dirt/land_dirt01.png::3616b0231ba7fb4fc99b8745b578891be61da6a8a9a11e398587a69c90266443::1764016146::res://.godot/exported/206107301/export-ca30990f0eb8faab65deb41e019efd09-land_dirt01.res
+res://Assets/tracks/Tiles/Dirt/land_dirt02.png::ef9a8925ffd7cd9b565df894259b1f6f9d5d8b9f4b29d642ed08200f908e35b1::1764016146::res://.godot/exported/206107301/export-98406201431d92142112519d29a1ff52-land_dirt02.res
+res://Assets/tracks/Tiles/Dirt/land_dirt03.png::df7ef228a443e8c8f24f34989e0465b7a22337a523428ab50bd5183ff60987f2::1764016146::res://.godot/exported/206107301/export-9f5b2ebd5a37017cba16849806783f7f-land_dirt03.res
+res://Assets/tracks/Tiles/Dirt/land_dirt04.png::13ca112263e51f7f7523fdafc4c76c8fc2f4e4d79c23d1f0047552552ef14893::1764016146::res://.godot/exported/206107301/export-f77e914fe4b2ed66141c9e5b8c2b6999-land_dirt04.res
+res://Assets/tracks/Tiles/Dirt/land_dirt05.png::87c5f9331cbeabb40daf0368cfecfc5351cef09b98e8743cd79008ede084c625::1764016146::res://.godot/exported/206107301/export-1ea48e7b0cc83292c9fa80efc766b3fa-land_dirt05.res
+res://Assets/tracks/Tiles/Dirt/land_dirt06.png::9e44c9d84b117e42513c167bb877113b29267a86f180c6e7e260bf20f5541e5c::1764016146::res://.godot/exported/206107301/export-136cdb96f6758b9b038aee6cdf135535-land_dirt06.res
+res://Assets/tracks/Tiles/Dirt/land_dirt07.png::5937caf30cf1e2bc7c76b853167c1192cbb46c474d733d50eeebb1d8a750b6be::1764016146::res://.godot/exported/206107301/export-1664123f16fdf6c1c0f3bf661e84eed0-land_dirt07.res
+res://Assets/tracks/Tiles/Dirt/land_dirt08.png::e3b4d4396e24b2fe79f9bb9b8c6012b370314de8dc1132ec917a318980466a14::1764016146::res://.godot/exported/206107301/export-214a88f5f03d95754dd8cea7327163eb-land_dirt08.res
+res://Assets/tracks/Tiles/Dirt/land_dirt09.png::85c490df7c4c9fb8591d440a1d2c00ad7c975ef3e024c6b6471128cf8db02f3a::1764016146::res://.godot/exported/206107301/export-8cf030a38e316d22d53f3c1f91b2f7ec-land_dirt09.res
+res://Assets/tracks/Tiles/Dirt/land_dirt10.png::c47da1ca24a4d105d608c651fedb08533a08ae0482c792613c1892e3d313ce57::1764016147::res://.godot/exported/206107301/export-61df476fc4740f2d2e98c0c2366026ad-land_dirt10.res
+res://Assets/tracks/Tiles/Dirt/land_dirt11.png::521b35de64967a011423f982af0f8cc47ea09fb853532922eed4c393179978d9::1764016147::res://.godot/exported/206107301/export-2be83520017be680c447c58a098dbd76-land_dirt11.res
+res://Assets/tracks/Tiles/Dirt/land_dirt12.png::ca87784d35f09b8530115ddd5b6dcc098302350e5e39bb79e061cd215b2a330d::1764016147::res://.godot/exported/206107301/export-64b9fdbcbfe2aef9b804aaed458564f7-land_dirt12.res
+res://Assets/tracks/Tiles/Dirt/land_dirt13.png::fc16c1e334e0d4a598fb50fa306c52134e5af79ae933af25b1de7b73bc175f4f::1764016147::res://.godot/exported/206107301/export-4ce3855ca0e79bb6b6295382aac62245-land_dirt13.res
+res://Assets/tracks/Tiles/Dirt/land_dirt14.png::6af6a50892543cb598970859931d67a351665d4f2e536e6d0c59e1f8d09b40e6::1764016147::res://.godot/exported/206107301/export-2631c4c715fa13fb806f13f185f0a82a-land_dirt14.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt01.png::91ec45724f912f05fd2390b5ceb31ec54f69c4deb96ce980d18cdf058786873b::1764016147::res://.godot/exported/206107301/export-df62747a8b9727b4d2e3aafea1cb0e37-road_dirt01.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt02.png::ead96de46dde386c3ef281cb0c7f4ad882cd12f096b7596e56e4c857b5ae3525::1764016147::res://.godot/exported/206107301/export-2d4d08661070e7e3a290b5e4dbac2d07-road_dirt02.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt03.png::2a587e0548085e8b06bbbfc8ebb942e21e9ea915492cf6a414f7c1f4e5550f2f::1764016147::res://.godot/exported/206107301/export-9997c421cbf15adde4a246649cf82760-road_dirt03.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt04.png::325ad744cc381d39d19f9a91584e1d8459e43b544c0a3aed6d3941e04140c3c5::1764016147::res://.godot/exported/206107301/export-f198768f95c3c15849937836bf6b50d3-road_dirt04.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt05.png::463dc9e3ee1fe02a74d18f9513f07d718b42b656b8b9cd34b1cfd60d05ed2784::1764016147::res://.godot/exported/206107301/export-f31d6fa931c5a509105f307501e2570f-road_dirt05.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt06.png::2b823af0a57c1df422054c1f24e26740feb855940aef87cbad8d910b55d2146f::1764016147::res://.godot/exported/206107301/export-cb7eca90dafe5e75aa9923dd6ea5d875-road_dirt06.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt07.png::180bb476014b67adc179d0f48529811ff5ff4b6829c13e892c406ec8af7905bb::1764016147::res://.godot/exported/206107301/export-4588b45af4908f60e3dec1f68756eac7-road_dirt07.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt08.png::69a4766b27612f1b1c8c0e79cb74b9e7a56f91843a6bac0ac92c3d4697e18c8e::1764016147::res://.godot/exported/206107301/export-f0699f35d04e182771eea7cef70045c6-road_dirt08.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt09.png::77d808a899b36ed90672ac200492e061f508b3f5a598767d387aefa753bec49d::1764016147::res://.godot/exported/206107301/export-013c0d334edd955d9c0b9290936ed2f5-road_dirt09.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt10.png::2050f4fd03b96db91d7875c1ce840643bcf5fada06f800ad70dfd6b7f1f909c0::1764016147::res://.godot/exported/206107301/export-4cb05972172ec88deb16fface74827ff-road_dirt10.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt11.png::fdce016fa2a1974ec0c68de9e3cc41a828464b08dedcd7a3527cf6ab9d0664f4::1764016147::res://.godot/exported/206107301/export-57a4ba9853f26080d6df1dfa75d67359-road_dirt11.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt12.png::d905be9c884e5a910c32e760e5cdbfa29d3156214fa1afaa063e9bebbf5de411::1764016147::res://.godot/exported/206107301/export-ad9927aee29ec668b6c944061296aa5d-road_dirt12.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt13.png::17ba66060d619d5f373f78e154e419e30e9cf1e94d6b4ac13140fb601694bd70::1764016147::res://.godot/exported/206107301/export-8078567c533b38b115247d0c918fcaaa-road_dirt13.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt14.png::37b6de6d369d4776fa62704160cd3b57319f2a3db76fdcab5ec44d013575e425::1764016147::res://.godot/exported/206107301/export-e1d3827644e31546fa04053e2001601b-road_dirt14.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt15.png::5443a0969ec174a67ac9ab86ade84b90bf5af17ebad2794dd24eb08ddaf41bf9::1764016147::res://.godot/exported/206107301/export-ee81c1e87216f6f6c298bf6f508ce8b8-road_dirt15.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt16.png::e785d6b8b0ce7621c692d0c946cdb7e07e0a96e05f92d3c4494ba4967a431295::1764016147::res://.godot/exported/206107301/export-135295da22dfdb1008aa294b16afd53e-road_dirt16.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt17.png::4b22a406f74bff36329561d8207edc069e802fe38f91a5d9fb1f5d5936b647e9::1764016147::res://.godot/exported/206107301/export-6e405fdb3d6c6b88471c404363c4a611-road_dirt17.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt18.png::47ecba15e688c7ed1a0cb74d061a441e5bf017876a36e22a854f37234025e881::1764016147::res://.godot/exported/206107301/export-c1643c57939608e7c6f4ef231133223b-road_dirt18.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt19.png::b99f37b650650b6fc4e00ccdd08ba47bc23e82730d068e1acbc47ca49c292b02::1764016147::res://.godot/exported/206107301/export-7ecd0729fb10f4c1b87876497efd1119-road_dirt19.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt20.png::f812e07ecf22a0daaf39b92ea99b703ff9d86b19141327e4cd40932a3e482b92::1764016147::res://.godot/exported/206107301/export-7910f47d18671617f73e7a6d2e03fabd-road_dirt20.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt21.png::d9accb1d6cfd840c6f077639fbe8cb359eedc6b1b53861f96d5e42e18b7b8025::1764016147::res://.godot/exported/206107301/export-b19f68653250bd1c38ba5e3b3913f8e5-road_dirt21.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt22.png::bef50d4fc32ff996bc9494a510c6846d5922e4a1e060dbc514261bb497ba31e0::1764016147::res://.godot/exported/206107301/export-7d2ed76e185e842ad37af894315167ce-road_dirt22.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt23.png::b20e1bfef6bf80e87d095764d62ef62b82a4e038d6bbecf0ba199a7cfa57fee3::1764016147::res://.godot/exported/206107301/export-205d2a0e7f0fa540db87fd8c004a0567-road_dirt23.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt24.png::02e73f64939b82ff466898cdeb9cae2451a9975350602bc382f82ac1ec540098::1764016147::res://.godot/exported/206107301/export-007f6d0d7704d6658d3c9dca78b0599c-road_dirt24.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt25.png::841167b58a350c665102033350e55f783f8bcf62f0fcc6e201c7ac83ba3ad4f9::1764016147::res://.godot/exported/206107301/export-9086e6d7ac1e10a2ef9a66c8b466b769-road_dirt25.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt26.png::f8a309134b731b2fbcb99f19e302477d817902ba21315234433f61cfa2b683d5::1764016147::res://.godot/exported/206107301/export-f0fdb6d6598b06bfc640f61acefa3c8c-road_dirt26.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt27.png::04e9f37d111a829545cf7dd23854667ee2236248ecc9743ae141255f93602375::1764016147::res://.godot/exported/206107301/export-a80477c3b072102a0ad8ea103d119703-road_dirt27.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt28.png::0032a3b4b05b8aea56e3f9cd846a479e6bb269cb46d50bad5dbf9b8ab5e60324::1764016147::res://.godot/exported/206107301/export-6fcfbaab8d78ee92bf8653af26ab31e1-road_dirt28.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt29.png::23e085ff724edf6a7c94803d2906564a08a4c3b1f14f744b58b1092552c0907e::1764016147::res://.godot/exported/206107301/export-bc63e73b57a9e4bfd84214727d67378f-road_dirt29.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt30.png::d5f96a621258d417fcbd96da5dea51c2fd2f31746723b8cdae9a5dcb7aaf2a8e::1764016147::res://.godot/exported/206107301/export-e9f23f1b8f4084e03c76fbd8c446ed2a-road_dirt30.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt31.png::6a41b373442b0d3b6956095dd2ece13ec51bb92f8e68f0c27fe602453239fa57::1764016147::res://.godot/exported/206107301/export-090c8fc02d4f17109ea6d3c0909bc382-road_dirt31.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt32.png::ed0539851c5a793d9f7437125cb98ad3aac9180d098fc3f9332ff901ac9a7647::1764016147::res://.godot/exported/206107301/export-cb99f914673572551c4fda18c1bda272-road_dirt32.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt33.png::be0007665f66d80c84c6ca2b276b4c33fca164f35136dbdf942a46f2a7ab750e::1764016147::res://.godot/exported/206107301/export-24fc1258a6f0052d4d25c13234d4ff32-road_dirt33.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt34.png::e43867cf68d846e0b9794934fe3308bda3114449320894f5b571fa8b9b7c702e::1764016147::res://.godot/exported/206107301/export-c1ef6b9ec554a66884fcbcb91f4161df-road_dirt34.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt35.png::6ad3112d24b30beebf5b7a009a25dc90d0c9e85b4ce00d2c29c7220a3afa311d::1764016147::res://.godot/exported/206107301/export-bd419b7f25df8fe3c19f9f192fafbee8-road_dirt35.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt36.png::3910b909011746ca7440cf8396e022989f463ea736aed970884915b65534b589::1764016147::res://.godot/exported/206107301/export-1061aa5da1ec2c5c59b394cb6701bebc-road_dirt36.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt37.png::c1672022379f90e4471dac5ea9eed7be7fee9e513780752987b8b8e883814880::1764016147::res://.godot/exported/206107301/export-a1e94dee96eaf9c4b2cfbe3a5c3cd146-road_dirt37.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt38.png::543ac430f7162257b039e7cd9818447dbf3205239861d85fe5d4ffb071bc9a42::1764016147::res://.godot/exported/206107301/export-be679caf59df50b7bac6698421281c04-road_dirt38.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt39.png::47e9cdd56773eda1477d769cacdcd649af656e2e2bfe5f0f773ab4c0d283bc67::1764016147::res://.godot/exported/206107301/export-db354ac6378f822708b0de1f956af032-road_dirt39.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt40.png::9047d5fa8132b3cd22128b45d472cd9128605694a6e3f546cada2eeaf862f691::1764016147::res://.godot/exported/206107301/export-b6240449d4ab1cb20ededea5f11f85ea-road_dirt40.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt41.png::bdbe766b17282006b9b49e4daac7640227d59f4d5ba6f8afd2cfba43a67d660c::1764016147::res://.godot/exported/206107301/export-27657cb9a9e9050edddb7f8f0eaa2f43-road_dirt41.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt42.png::00d3f597802c6c504f3b996881e88ba880112d07cc632abb91b96c3df977451e::1764016147::res://.godot/exported/206107301/export-9f4a8f8679d722db87402ae086e6e33b-road_dirt42.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt43.png::67a0a85681fb2357ef51c2085dd146c14d8af0a6b0fd644300ef8a25e474c204::1764016147::res://.godot/exported/206107301/export-ca74a379de62b0378113d87424037e69-road_dirt43.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt44.png::d79a9f507f015d3b575e2184ca736ab9066e78e5d95663c99c6f55be1fea9512::1764016147::res://.godot/exported/206107301/export-5f3415d671c7f0aab4a05b753635025d-road_dirt44.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt45.png::0e200e5fe24e9431b0ebdf74fe6f64683e8cd1fca9c6233ece63bed012504a39::1764016147::res://.godot/exported/206107301/export-6c549e79e2f73cba1736b14e840301ef-road_dirt45.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt46.png::26892ffa11cb66a27fcd019f054e6347e1beb0f0f5ed6285605a42ca2b6c9b9c::1764016147::res://.godot/exported/206107301/export-03d2d68f11ee6ba8e9363efd7fa1fa45-road_dirt46.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt47.png::dc56eb6950d8d2727699bc07c69904af836984d77388db8045318cbd8ce10d7e::1764016147::res://.godot/exported/206107301/export-0d7d6940ee54ac8a8f0299097270acd4-road_dirt47.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt48.png::d20f3305724f6322546ce33aaa85e3b892ee854496334c61385b5b6fed249381::1764016147::res://.godot/exported/206107301/export-21b7c37e26f7ebad51379c02f93d6c38-road_dirt48.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt49.png::48e866251c05f9e8824c954cb879a3a0bfe517f61d6ff4c61257beb726591ad9::1764016147::res://.godot/exported/206107301/export-5e2206bc6580c6ba45f8664a16d7b8a7-road_dirt49.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt50.png::af3eaa89e6e706eb1d9b3f7b3b6a8b5f1177b9ef5b022fe20c83fe02d2b205ea::1764016147::res://.godot/exported/206107301/export-7d83aca6d7f24c261ebb4b0cf70bd1a7-road_dirt50.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt51.png::050ac30bf8bdae69fee3b531b9a3d05069e15330c3132f6d244a99224c869247::1764016147::res://.godot/exported/206107301/export-f9ecaf9f037c2d44c6cf2f363567254a-road_dirt51.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt52.png::77881bb093ca050fe5b45159e67ebe35a06871bd0728017f0b81893580b983c1::1764016147::res://.godot/exported/206107301/export-df43dd37945958d72dd8ff4fb2ac141b-road_dirt52.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt53.png::3245a7c3cc0315cdd01b1d3ac49565c6086f029c93553dd90a40c56c58d85106::1764016147::res://.godot/exported/206107301/export-9efb9074a71f8c290afa3a17bb14a030-road_dirt53.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt54.png::389a47c9c922de11735277b9110005145fee1ffca4953d113a23b0f6e8de6cf8::1764016147::res://.godot/exported/206107301/export-60f2e1ee35b3c710420a1502f9f30fcb-road_dirt54.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt55.png::213f71c0a7b1fc8647aa88098979e801aa3d61e2199617ac00a667797fa4bbc0::1764016147::res://.godot/exported/206107301/export-badb70868f646585ed2e71453d1ae328-road_dirt55.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt56.png::0d8a259a001bcb9249a115d13eb0b9a17a0b13826d3e7856fdc23c632d161c4c::1764016147::res://.godot/exported/206107301/export-26ef2704dd311a3c5a46658d02030fb1-road_dirt56.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt57.png::07dc0b5242eda1be29a59f74399a3dfc6d927b5770201c835fe4fd9a1b639035::1764016147::res://.godot/exported/206107301/export-8ce9db01d4ffa73a31a61fe1ffc0b4db-road_dirt57.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt58.png::03281d24b46e535ab1b39f973c2359b0ea17db3d31c6b870e63b00f02f2bc013::1764016147::res://.godot/exported/206107301/export-4f3791813b76eb7b55beadf2b6057f92-road_dirt58.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt59.png::271a2fa57e2fe80ea46f76e67195533a98822753b86c2e152bdd5bec424a2b0a::1764016147::res://.godot/exported/206107301/export-d6377d291c18691ec85f8f72d9e88b42-road_dirt59.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt60.png::b1df5e42affc477dbab8ed3747da04bb2ae5a859f9663530148d1cf40e61f4af::1764016147::res://.godot/exported/206107301/export-61b222135c31939a974feb10cbf82ad0-road_dirt60.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt61.png::5108d64a2393d5b26e0c48fc4edb28937b2455d12d25912832b0383a15197b1b::1764016147::res://.godot/exported/206107301/export-7bcb008a497c838d98bb1b029a1d73ec-road_dirt61.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt62.png::01a37eefbb5a833c073a2e54b33ba15f33dd58412caaf9e35bb5f942d0681058::1764016147::res://.godot/exported/206107301/export-646361deb976a4f03fdbb824d1d033c2-road_dirt62.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt63.png::f82ba32d12ec09718e789e49d20189803d9a8edd08c84761ebc06c1dd2916441::1764016147::res://.godot/exported/206107301/export-459efb8e56024c1614043a92fea9f058-road_dirt63.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt64.png::a4941e937b565a103014c74fda288dc880990291161d48eb7de87a7374b37555::1764016147::res://.godot/exported/206107301/export-0028f2d6a339c54bdda5e618c63161bd-road_dirt64.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt65.png::02b2c1a5285e11dc4e0a51ecc3e1f30405e338f120b281d812021f86eeb03236::1764016147::res://.godot/exported/206107301/export-00a9377e7d364d92d849a3c817be1eb7-road_dirt65.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt66.png::fc5f654ebc38bcde9684b14e730fa84484333cc88561a236044773f578b26fb9::1764016147::res://.godot/exported/206107301/export-574c9950d2639cd7427423e8e1f79cef-road_dirt66.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt67.png::a00d7aa7aaebb0c0e62e90875c11abf7f9637b5507ebb10382f958dc1f2a007a::1764016147::res://.godot/exported/206107301/export-0f3994dfa8d973f0b0d4e5be8efbed30-road_dirt67.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt68.png::5c3c70a97574d9b8cd56ca8f7682a3c5f55d409ac0e26c861153703ee1fda6b5::1764016147::res://.godot/exported/206107301/export-76de457ff7a4ef83d35a6d2a09fe25a2-road_dirt68.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt69.png::1b9168379a9aade741844e10e28a384e820043deae5679757fcdfc142dfadc6d::1764016147::res://.godot/exported/206107301/export-1bf15d9c1092238ec29b5cc8178c3562-road_dirt69.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt70.png::23441b9c770ae717dfaa049cb187688521e309bf8663f73ede5994a3bcb581f8::1764016147::res://.godot/exported/206107301/export-340e70743a143a543b291d29c5e94fa8-road_dirt70.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt71.png::6a0c17d0f8038241863c07dd8b3adf5752e6f46ad628ca96eac274e0825b8aa5::1764016147::res://.godot/exported/206107301/export-ce35798c6545f74141e455eddc458118-road_dirt71.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt72.png::d2c901e8037db83c3e369b344b36ace8cc46b914b3ecad2f1727ac4288f59ac6::1764016147::res://.godot/exported/206107301/export-4775ce69b06d11a5470ab9a299722495-road_dirt72.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt73.png::6cc3b3a8ab793f83dd4196415ccad586728f1eae355f77ababcf60ec8a55a803::1764016147::res://.godot/exported/206107301/export-aacd5ff92a96189780a4a3d6b693f4b7-road_dirt73.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt74.png::f203da06346785b8003875cb9ae561df377394f6ef2f53930fbcda61c64f28c8::1764016147::res://.godot/exported/206107301/export-155b2fa6a9c8c9a31da33766a52c8790-road_dirt74.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt75.png::77f3613ae7fa99fa3a08d15c1630fdc4823ac66026df605dfc5408cb1bbe1906::1764016147::res://.godot/exported/206107301/export-d7fe921f95bc51693b347016d748b841-road_dirt75.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt76.png::c6e35b66f62ed491ad2aa8cc127ab95771b26e14dd280bf95742f02b08521431::1764016147::res://.godot/exported/206107301/export-e4b91933f3947c9761566d272cf95188-road_dirt76.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt77.png::df4c7950de84528bdf02e535b893a6e5eb00caddf12599ec54728ad08e831528::1764016147::res://.godot/exported/206107301/export-32fd4e9b9b28976ed656fff9cc0c479b-road_dirt77.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt78.png::b5ae63abbd67a5ae59319404512fc0af03258b64ddea85fd6d17f7d67d5b3178::1764016147::res://.godot/exported/206107301/export-28c39433be626c741de9052e94f55e03-road_dirt78.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt79.png::fdca6f7dd6b6cc3e4273984c7f795a00aac250de3868871e1ee1b7f5e6abdb6f::1764016147::res://.godot/exported/206107301/export-7b36e4b4512b472411c56884e97f9d3b-road_dirt79.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt80.png::0e7ca9a9fad1b47ba14bde4ef37055d30539773392e560dd2e91883c41ea5c26::1764016147::res://.godot/exported/206107301/export-7caa1fe9995a74dc4c3b4e1af8cb5981-road_dirt80.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt81.png::346696f407c72fa8491823bfaed52aba3f53794cc385aa43197de709286fb715::1764016147::res://.godot/exported/206107301/export-d2f8b1019f88b876339ab4d2422bc357-road_dirt81.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt82.png::6b531f55071e785c717fc409c6cb973fbac8f8d2e4e8369280ee2713f10ea4a7::1764016147::res://.godot/exported/206107301/export-1d7f55b60df152b05a17135c17034f12-road_dirt82.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt83.png::40a538a062c98252e55fa70465439bf694f52823b0ed710439e27a40fe3c659e::1764016147::res://.godot/exported/206107301/export-4d812f47fe0c3d2682c7184b589cb166-road_dirt83.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt84.png::082f7f2bcc8dbef0b0c8faf6cd690814071d406334808e6738719204e6dfcee8::1764016147::res://.godot/exported/206107301/export-4a148d5c9f2aadbe7fa1f1d29afe8c0f-road_dirt84.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt85.png::b10131010341e1ae056b83893239d87ebc66777236ee6ffddb09eee5c7178527::1764016147::res://.godot/exported/206107301/export-14bba5d663965a24e777c78aa1e4bcc8-road_dirt85.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt86.png::3cf53361888368160f19ea10e90240a0df1fe8c1a5af6b802dd0944ff16e8f7f::1764016147::res://.godot/exported/206107301/export-5ddf9b029e50712fb559c9cb46f9fb38-road_dirt86.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt87.png::c2f0aa2876ed1120f2ce8734a798eb71be53dc04374cddfd281a1aa9939ba7d3::1764016147::res://.godot/exported/206107301/export-e27ee29b5741637c2accf31c5e8761ae-road_dirt87.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt88.png::99f68b6d176270a572e2420a829b2ea28e582140fcaf96c06791993166963978::1764016147::res://.godot/exported/206107301/export-53c2f19b32c654dab5ca2a5945a38325-road_dirt88.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt89.png::8c5a4d4daa7840ef72f707e4d8cc27e99da3be64dce9c9acfcb8fb767ec050ef::1764016147::res://.godot/exported/206107301/export-2ec928b89dd9d05d3e4647c3190c2c85-road_dirt89.res
+res://Assets/tracks/Tiles/Dirt road/road_dirt90.png::143950f01fcbaeb3803daf3e6eea77f64d059bdcf8ab66e634fd562626829efb::1764016147::res://.godot/exported/206107301/export-7047fe38d06cec8a58f7d7e0017a714e-road_dirt90.res
+res://Assets/tracks/Tiles/Grass/land_grass01.png::434f3c90022ae1a93980e803ad30caf64243ad43c7f924c0df47facddf48c6fd::1764016147::res://.godot/exported/206107301/export-aa6a618b8eb84c51b11e2244d822674b-land_grass01.res
+res://Assets/tracks/Tiles/Grass/land_grass02.png::d044a9320dc37fc798f0064917ca811ce13a6a5bd0272fb95716677754362d59::1764016147::res://.godot/exported/206107301/export-8d046d0c2791601d2817d729861733b9-land_grass02.res
+res://Assets/tracks/Tiles/Grass/land_grass03.png::6347f61a782024774c7ba9aa3b53511e0240410ef2783a76b27f7202b3c9e67e::1764016147::res://.godot/exported/206107301/export-1126e11ff273b1d082651d4778d87a43-land_grass03.res
+res://Assets/tracks/Tiles/Grass/land_grass04.png::3bb712bcf16d4697c96120d3adc88d042616d26a18eeb1fcc5e7b632f6284e49::1764016147::res://.godot/exported/206107301/export-d9d2d2fb27e13da80fed0689c7c92084-land_grass04.res
+res://Assets/tracks/Tiles/Grass/land_grass05.png::b6ee5d80457fb3ac9722085b722f4da642c64e611a84cf7850a890e13085d23b::1764016147::res://.godot/exported/206107301/export-28592e0c51c2fde5f97273eb8e59f237-land_grass05.res
+res://Assets/tracks/Tiles/Grass/land_grass06.png::4d4be6a753a64d83394bea67b5b456ca87220e7986bdf2d77fd5693f58d15cd0::1764016147::res://.godot/exported/206107301/export-8e86344284d6295bb08a03f6efdb29cf-land_grass06.res
+res://Assets/tracks/Tiles/Grass/land_grass07.png::6c6d75c70612b075266714d8dcafbbf6ea937602b1460727533300fa26b6d59b::1764016147::res://.godot/exported/206107301/export-efe50a1ef7eaab13bdc007fbca5285d3-land_grass07.res
+res://Assets/tracks/Tiles/Grass/land_grass08.png::77f31b6a43520d0f6d731faecdd5c151fac4e4c18e4c5a3da37835c15f138c08::1764016147::res://.godot/exported/206107301/export-26f66e26255de6e858d2451d117e6a30-land_grass08.res
+res://Assets/tracks/Tiles/Grass/land_grass09.png::8f5a764fa53cda7c28e9d2bb47b3af70ce7933f2e96fc3f80a3cff4b26c67146::1764016147::res://.godot/exported/206107301/export-396fd8cf2eddc851110a373fde4d80a1-land_grass09.res
+res://Assets/tracks/Tiles/Grass/land_grass10.png::5b06607ffe2e699c89c62227d41712a151560ab621c65efcbaee81c20e606874::1764016147::res://.godot/exported/206107301/export-ec5e2fbfd8457e6928966459a92819d1-land_grass10.res
+res://Assets/tracks/Tiles/Grass/land_grass11.png::8ed7a252ad3fbc438c126cc7cf4620a3d6ab2b2b530a13365f78611d2072391c::1764016147::res://.godot/exported/206107301/export-6f8639b6bb57b62c0ef92e79e99fa572-land_grass11.res
+res://Assets/tracks/Tiles/Grass/land_grass12.png::0086427e8a6ff35dc8d5cffb55bcf0d959f58df872517a0e61392fe0f2d75f10::1764016147::res://.godot/exported/206107301/export-402a9847cb2fa2e91c09cbf4daca9cb2-land_grass12.res
+res://Assets/tracks/Tiles/Grass/land_grass13.png::89ce081fdb2f1f58ba7a7d09b64dff217624d8b0722b83b6981dd8ea3563b275::1764016147::res://.godot/exported/206107301/export-1cfd16d44ddea78be795c0002a501b70-land_grass13.res
+res://Assets/tracks/Tiles/Grass/land_grass14.png::b618a954bcc4b9b6a38631915ca1c83a8c0e0514ed3286b00b9e7cca1bffcbc4::1764016147::res://.godot/exported/206107301/export-349aa8dd36cc9471902a33b8c4df42dc-land_grass14.res
+res://Assets/tracks/Tiles/Sand/land_sand01.png::50111c83ded08d7d361bc3db9aafc07aab254bbbcef72cbd0514601a3038eeab::1764016147::res://.godot/exported/206107301/export-595fe3907216d4b87cf7114f75dec68c-land_sand01.res
+res://Assets/tracks/Tiles/Sand/land_sand02.png::a2174cc4246571e51b14219b7232dd61b455967a93595b6d1a7d9df570bac3e2::1764016147::res://.godot/exported/206107301/export-962c957f251996462b52797e6e117cbe-land_sand02.res
+res://Assets/tracks/Tiles/Sand/land_sand03.png::e7205bae3909ca3caffada80135384830536c4414cbec3c3326612ee14515c81::1764016147::res://.godot/exported/206107301/export-0e59bf4a484a3c18f83ae30c14e66464-land_sand03.res
+res://Assets/tracks/Tiles/Sand/land_sand04.png::5ba0dfc888af4a48680e213f9cc6929c324e65e478230f91e0bc524c3e192d3a::1764016147::res://.godot/exported/206107301/export-a2eda1d887e93abae83d6e2f0dca2de5-land_sand04.res
+res://Assets/tracks/Tiles/Sand/land_sand05.png::ea17a9021aeeed20eead217e88323af2181d986ef3b860ca6e57723f65293c0f::1764016147::res://.godot/exported/206107301/export-bb330189dd02a7f269d8f385a0ccdabd-land_sand05.res
+res://Assets/tracks/Tiles/Sand/land_sand06.png::afaa08acc8adcc2d9caa5577bbc458e510c8dcab031aa82ecf47a7f31b0a9826::1764016147::res://.godot/exported/206107301/export-6170fed19ebb22d214d1a1417b16dc71-land_sand06.res
+res://Assets/tracks/Tiles/Sand/land_sand07.png::d0326329d45552501399579b0a353c5690e998d12985522c5d67ee4dc81026df::1764016147::res://.godot/exported/206107301/export-eaf4c7476eb7a6d432db9f64459f52a6-land_sand07.res
+res://Assets/tracks/Tiles/Sand/land_sand08.png::824f39cfeb5ece7db246eba1f9c3ccc31d92313c84df5d5fca527952742e4f72::1764016147::res://.godot/exported/206107301/export-7af7769e5ce921523800d6523695f553-land_sand08.res
+res://Assets/tracks/Tiles/Sand/land_sand09.png::b098899486923cd92d38ab1f350bc689c0a149db8690f60632f5cd519097ac1c::1764016147::res://.godot/exported/206107301/export-2a530d960432528624ac754f482b8978-land_sand09.res
+res://Assets/tracks/Tiles/Sand/land_sand10.png::9916885d254bf350dd9e95d74e7efb0e5b3e1e97eeb8c612f1e09308c6e606fc::1764016147::res://.godot/exported/206107301/export-555be5865fd2ecd72d3a90861b1e04df-land_sand10.res
+res://Assets/tracks/Tiles/Sand/land_sand11.png::446092c0a65cc2c5c19ee79c5b49802279f744630191eb130d0ceb6ac4597d96::1764016147::res://.godot/exported/206107301/export-f687c1c1d5d9a5589e206bc1e89db6c7-land_sand11.res
+res://Assets/tracks/Tiles/Sand/land_sand12.png::74d1608212860f87dbd1ddfa4ac865d2e1c50829fbe53636cad0552e23d3673e::1764016147::res://.godot/exported/206107301/export-43241fd62c48d41fc6ed14b6ed31708f-land_sand12.res
+res://Assets/tracks/Tiles/Sand/land_sand13.png::9f5ecf5f3fb0f71ba22921c594ae6ac3a901cc81ae6347cffd053c9eaaa75dfc::1764016147::res://.godot/exported/206107301/export-6bd15436f4f82180f7ddf797da51c942-land_sand13.res
+res://Assets/tracks/Tiles/Sand/land_sand14.png::6c9ae1b47f938f29dcfb070b26c52ca545c6d10cef80a8b34ab0cc110cc8b494::1764016147::res://.godot/exported/206107301/export-826522e7019b911fb221ddf048ff70bd-land_sand14.res
+res://Assets/tracks/Tiles/Sand road/road_sand01.png::b0596456cec8ee563755cbce97ea170d35ac78cf886c2cca34a56c3838f5e913::1764016147::res://.godot/exported/206107301/export-49b1c912878d45776d04e92ca3c62394-road_sand01.res
+res://Assets/tracks/Tiles/Sand road/road_sand02.png::1d24a17a2ffb1894b77d90c0db342350f5f24eab4f55eedd16cd8c4a948fefa6::1764016147::res://.godot/exported/206107301/export-4901bff85979910ccd5b332bbaf94454-road_sand02.res
+res://Assets/tracks/Tiles/Sand road/road_sand03.png::3ad387d5b00dc43d97d9172728775386ab382b2fe482f5950748842a5f55fa46::1764016147::res://.godot/exported/206107301/export-9712ee6f342a5646074ea18efcfc476c-road_sand03.res
+res://Assets/tracks/Tiles/Sand road/road_sand04.png::0b07800de1260764482aa7b291e7308d4f99c06c23c6e597a81c517404bbfabc::1764016147::res://.godot/exported/206107301/export-b8b9f3216de77f4770a072b387d63f67-road_sand04.res
+res://Assets/tracks/Tiles/Sand road/road_sand05.png::2f332e07ffa637a8e0a9dbcc1d5af31d9fec29aa39113932e4371271ba33e439::1764016147::res://.godot/exported/206107301/export-5d16096cff41a8ee892382418dac6d44-road_sand05.res
+res://Assets/tracks/Tiles/Sand road/road_sand06.png::772e4a1735feca6f3d48d28d05a7c8e14a0f52984ae3534ff8d20209e2bd4d86::1764016147::res://.godot/exported/206107301/export-5af8cf581badea95633954fb1db27a92-road_sand06.res
+res://Assets/tracks/Tiles/Sand road/road_sand07.png::2e33ff7412c89a3b748ac66358441c4231a6960eb8313f80b44ddf853b49deb7::1764016147::res://.godot/exported/206107301/export-a42882b58e1d31fd9dddebfe09c9d40a-road_sand07.res
+res://Assets/tracks/Tiles/Sand road/road_sand08.png::8b1d2102038b26007624289fc17825028dcb8d31d78fe486aa4ab94633a9a2cd::1764016147::res://.godot/exported/206107301/export-9170af0af9b1bbc81de348cf4bebce7d-road_sand08.res
+res://Assets/tracks/Tiles/Sand road/road_sand09.png::a1d7ba422d6ef5738ab74d84dd448abd063e59ce367d255182e815157da2c732::1764016147::res://.godot/exported/206107301/export-fa4a7d4b4eb50d32a930e267c7aec9d7-road_sand09.res
+res://Assets/tracks/Tiles/Sand road/road_sand10.png::d8b5c14bce005c54352321055990915f3c84926bf769110a7d32f9baf730129b::1764016147::res://.godot/exported/206107301/export-ba5079c1786dc686e08528dd91a91ed8-road_sand10.res
+res://Assets/tracks/Tiles/Sand road/road_sand11.png::d53bb33143bc36cc73c84845af1656850cec5ca95c2226b9323f349e217ef807::1764016147::res://.godot/exported/206107301/export-c520b72d03d94c853fc6a65cbd428ce7-road_sand11.res
+res://Assets/tracks/Tiles/Sand road/road_sand12.png::f0bc841c2bb3e3b1465c341d71d03dfcad9f0bc69fa2a05b6a487237982ea282::1764016147::res://.godot/exported/206107301/export-fb8d1d26ca185c8cda21f954111fab29-road_sand12.res
+res://Assets/tracks/Tiles/Sand road/road_sand13.png::e804e76563e8dc742af932a727de3c378656c42ea451b17722c2663f9f5192a9::1764016147::res://.godot/exported/206107301/export-beb5532bc018ece6b43f3eaf2cea82b2-road_sand13.res
+res://Assets/tracks/Tiles/Sand road/road_sand14.png::a5df39bd130b398dfdab0e52b537a3052a5c03021a02ff0ffcb343b280cedc3e::1764016147::res://.godot/exported/206107301/export-c469239968225b3cf2cce9bc491808ce-road_sand14.res
+res://Assets/tracks/Tiles/Sand road/road_sand15.png::70e4cdc4c846ba6c9c0152e7e580c0ef6dc87239b792118a6a6928d5d131d1ca::1764016147::res://.godot/exported/206107301/export-97927e91edace692fe2c383cd2377716-road_sand15.res
+res://Assets/tracks/Tiles/Sand road/road_sand16.png::c321ec2abac460710752ed481ba46a0a731293ee2b3f6d373efa83dc2429e972::1764016147::res://.godot/exported/206107301/export-a48a1c89cead888b5ce3205e20b7526f-road_sand16.res
+res://Assets/tracks/Tiles/Sand road/road_sand17.png::1daddb7e0c5404ba9101b5b48930ba46d687100f7a8898b7fd0110b3700e7d64::1764016147::res://.godot/exported/206107301/export-ef1f8377d4a0984bb942decfcda03eff-road_sand17.res
+res://Assets/tracks/Tiles/Sand road/road_sand18.png::8818e7f8695154dc613c032eb9774b069e8fd865bd36f8591777f0800a67f35c::1764016147::res://.godot/exported/206107301/export-93a156554bfed88a7d570415f963e4a8-road_sand18.res
+res://Assets/tracks/Tiles/Sand road/road_sand19.png::ee0ddeb51e9ebe6c52140ba913a5c78f5d06d6111f27515f6f3758d043aa4f34::1764016147::res://.godot/exported/206107301/export-0e2a759e26d51f33ac3cb5d33b6cde19-road_sand19.res
+res://Assets/tracks/Tiles/Sand road/road_sand20.png::0a82ae3e91590657dc79a0b6039c1887553ad4fb38f1d1758accc18569a27b48::1764016147::res://.godot/exported/206107301/export-2354c21e0a7ccc4ea9b1e392b6c21068-road_sand20.res
+res://Assets/tracks/Tiles/Sand road/road_sand21.png::b3b1cfcd9083cc2f5957ad707a314f775bfec550712e508397a14cd310ca1446::1764016147::res://.godot/exported/206107301/export-368bbce5ce3948bca1329dd3d5ec11f9-road_sand21.res
+res://Assets/tracks/Tiles/Sand road/road_sand22.png::e285fde3ba5a39fde55d1bcea3503140e707f60c4647e018f24a694b274e7b48::1764016147::res://.godot/exported/206107301/export-f25ddbe518f77093819f88924e5704ab-road_sand22.res
+res://Assets/tracks/Tiles/Sand road/road_sand23.png::4548853fa5ff77417c2f2d2cf56a0b5c3963f62f9a6b708021a8cd51760a78ac::1764016147::res://.godot/exported/206107301/export-e3934dc9a4f13e98048b74a5f8731046-road_sand23.res
+res://Assets/tracks/Tiles/Sand road/road_sand24.png::05ab8d89e41157ef7bd47a7f371a4532de7e139c04a61a25c80bacf292a215a4::1764016147::res://.godot/exported/206107301/export-1b8e9674351def5b135d07a610176b0a-road_sand24.res
+res://Assets/tracks/Tiles/Sand road/road_sand25.png::8006190ce0c2bcdbe5618ffefca3de064dad5ce659fec795f20ec5af67fc5b66::1764016147::res://.godot/exported/206107301/export-19ea687492d58cee310e4e3aa17896b9-road_sand25.res
+res://Assets/tracks/Tiles/Sand road/road_sand26.png::94a96e1b790458d77c965e2eb5091dd0a7b4aec71baaf9932efd9c39f5144287::1764016147::res://.godot/exported/206107301/export-65e1f24113dafc0e9e67c366627b00df-road_sand26.res
+res://Assets/tracks/Tiles/Sand road/road_sand27.png::a061d04cc6b7bad29cfd290ecf0509d88a67c213e6f7d5aaedc4734bb2128fc9::1764016147::res://.godot/exported/206107301/export-893d8a32667e42533d5accd03375b31b-road_sand27.res
+res://Assets/tracks/Tiles/Sand road/road_sand28.png::0a83a4ca41ad804bdecc20b54b9915e133b628fc0089aa826ede59dd8d8b5534::1764016147::res://.godot/exported/206107301/export-4ca327656bb20265efdfdeb5ba5c15e1-road_sand28.res
+res://Assets/tracks/Tiles/Sand road/road_sand29.png::fccdc79397ac4b371989b778da7c639c6c2d87142393ab585372f5e7eec34902::1764016147::res://.godot/exported/206107301/export-ca1d0a06eb267c0731b492fb6f76d1ec-road_sand29.res
+res://Assets/tracks/Tiles/Sand road/road_sand30.png::ca367f274d0b675612dd9663577ba2bf09536a778f79c4930d6e3894bb47e3db::1764016147::res://.godot/exported/206107301/export-3a15d07ff7463759f445c0708bcc8093-road_sand30.res
+res://Assets/tracks/Tiles/Sand road/road_sand31.png::bd4edc8d823b303fdca16e136e5cc57685c21f7f48802358b7148a622571dd0a::1764016147::res://.godot/exported/206107301/export-c125a19c219e77bf29fac19cc25c76f5-road_sand31.res
+res://Assets/tracks/Tiles/Sand road/road_sand32.png::d55f91b1fdba23ab0d69027a116e363770d9050ec74b96c666e530f13a094b86::1764016147::res://.godot/exported/206107301/export-befa884bbd279454733c06b8bec4178f-road_sand32.res
+res://Assets/tracks/Tiles/Sand road/road_sand33.png::2f44e1bad5846f4b780c41b6da09c6f1f1c8819a8b1a3bfc1f730917d5f83026::1764016147::res://.godot/exported/206107301/export-13516fd876630856c29ec8fe07c620f7-road_sand33.res
+res://Assets/tracks/Tiles/Sand road/road_sand34.png::40136ff943404f18adb648faf6bb14d44d621952bbc1d90a32a0ba88f4fd63da::1764016147::res://.godot/exported/206107301/export-1c58518dc0028195a56c7c9faee9ab6b-road_sand34.res
+res://Assets/tracks/Tiles/Sand road/road_sand35.png::a064b97ebaf8a80e1bcef6e3e9f2fdd12ebb11cb05c20d02fab77a0d9bd0e5fd::1764016147::res://.godot/exported/206107301/export-058e485f9bdfa3a366477d73d7917c5c-road_sand35.res
+res://Assets/tracks/Tiles/Sand road/road_sand36.png::a1366811309821baadbdc526e055b280dcadba5e1713502ad85287bc7d2a4045::1764016147::res://.godot/exported/206107301/export-ba5d8a4449cad9217b6622b64aa59bee-road_sand36.res
+res://Assets/tracks/Tiles/Sand road/road_sand37.png::52670f0583fc87b616aca47b2a4c429153145ed5dbd12b47d20406cb9cda52f9::1764016147::res://.godot/exported/206107301/export-32e99092462f5b4d05eebd07ad6f301b-road_sand37.res
+res://Assets/tracks/Tiles/Sand road/road_sand38.png::867f252b04d99bd8fcd93e9d1d5fe70f51ab0eab4739a6972db3a1081cd20953::1764016147::res://.godot/exported/206107301/export-bdc024d779313e77399ab6a075fb17f9-road_sand38.res
+res://Assets/tracks/Tiles/Sand road/road_sand39.png::dc742f7758cbf40141a23420449e9de8c7cc338e7c6f1e9dea886be5b6111f0f::1764016147::res://.godot/exported/206107301/export-551bac8f07d57f386f9216a72f7b2df5-road_sand39.res
+res://Assets/tracks/Tiles/Sand road/road_sand40.png::5b047926dae490a080c275dd7aead10ec8bb2b46a65c6d8cf9539f7321d787b5::1764016147::res://.godot/exported/206107301/export-6290d452e2dd6758d81627872bb57785-road_sand40.res
+res://Assets/tracks/Tiles/Sand road/road_sand41.png::c191f4f16a9f88d4c6e18aff119c75bb1a766de6fce30b743a2bb2b0ff73b4f1::1764016147::res://.godot/exported/206107301/export-1299be7e072e3a568cb82542ab777638-road_sand41.res
+res://Assets/tracks/Tiles/Sand road/road_sand42.png::614e8f5bac028606978c86a4df5011daf1cb59aec21a8addcc3add95f4e27540::1764016147::res://.godot/exported/206107301/export-9103373d9ac6bfa60b26274f9f792b42-road_sand42.res
+res://Assets/tracks/Tiles/Sand road/road_sand43.png::43684cd51089da758f16bd3ede9430b35091e7d238495b87043d35ffe877490c::1764016147::res://.godot/exported/206107301/export-4a841232126cef1c6cbd9f8b7f183cc1-road_sand43.res
+res://Assets/tracks/Tiles/Sand road/road_sand44.png::636ce28b1c8f38637f96e8dc7b157a2ce0d5458cd70c8b5929310719ca72857a::1764016147::res://.godot/exported/206107301/export-fe31cb59399166f1dcc3e59513a3e1c6-road_sand44.res
+res://Assets/tracks/Tiles/Sand road/road_sand45.png::8a4e39a0966bf236f663c972ecb126929cd1405c5254f2630f0a377a69298fc2::1764016147::res://.godot/exported/206107301/export-fd1206cda2ff8f3e270e4680ab4bd23c-road_sand45.res
+res://Assets/tracks/Tiles/Sand road/road_sand46.png::8b2161051f30bf89b44c0403f007ef03b9998550388c6ac170b1d53a9ce90770::1764016147::res://.godot/exported/206107301/export-4be9febeb22eefe859c0717f0a6a0980-road_sand46.res
+res://Assets/tracks/Tiles/Sand road/road_sand47.png::3011b31fe9d93b0a042bc31463a811f3d38c6de3fbbc86466825980bcb86eee7::1764016147::res://.godot/exported/206107301/export-a374d87c675512d62394f2e9ace1b677-road_sand47.res
+res://Assets/tracks/Tiles/Sand road/road_sand48.png::b89f704381e5de18d71616b3e55972453a40cf8ee4b6647147097866dfa95bb6::1764016147::res://.godot/exported/206107301/export-80a5294b46b88bcbd65fcdf40f59996e-road_sand48.res
+res://Assets/tracks/Tiles/Sand road/road_sand49.png::7025dee3ebd1afc5b94c0db308a2e3d7935543668a19ecee22eda91772e7dc9e::1764016147::res://.godot/exported/206107301/export-02edc33e285c2dd70a75e6e6165a10d9-road_sand49.res
+res://Assets/tracks/Tiles/Sand road/road_sand50.png::e55480be2c948605a07263bcac8a8cd5c78151f9a98a0d1d2ec5498343848e50::1764016147::res://.godot/exported/206107301/export-e273d68ed478e0df60cf3391639cda55-road_sand50.res
+res://Assets/tracks/Tiles/Sand road/road_sand51.png::c0c9a391f206d1fd4083212e19d1080a00dd350313b9658686d03e7993b5a8d1::1764016147::res://.godot/exported/206107301/export-655a5b93f0e806c751846ea5b8b2f5d5-road_sand51.res
+res://Assets/tracks/Tiles/Sand road/road_sand52.png::2f00f3a5b8037e8fdc6a1ea313a9f4ebbabbbbf87a47ac73c75477b53ff104bc::1764016147::res://.godot/exported/206107301/export-fb060618679d6dbb52b8461ffb6f10c9-road_sand52.res
+res://Assets/tracks/Tiles/Sand road/road_sand53.png::d1b75358664273e230ea334bdae1a049881ddc57140e3b10e077203a56f80d62::1764016147::res://.godot/exported/206107301/export-cbce97b3a75d367cc930edfd6a0f9e9d-road_sand53.res
+res://Assets/tracks/Tiles/Sand road/road_sand54.png::cdb81e7351389d45629e6328008e8a8d281a18bb6c3c4eeeebef22d26f988c8b::1764016147::res://.godot/exported/206107301/export-40709805b2bce275657cdcc68ac51177-road_sand54.res
+res://Assets/tracks/Tiles/Sand road/road_sand55.png::d80ead7cb3ca6e4079b427ba40fb554db9c21cfa6b0f2844133a35474db91020::1764016147::res://.godot/exported/206107301/export-2c2a19adcad123d015f94660bb164245-road_sand55.res
+res://Assets/tracks/Tiles/Sand road/road_sand56.png::cbfd0dd3c45c61c2ecc3334d2507cb526cff83ea903656ebdd4e1d9a79140019::1764016147::res://.godot/exported/206107301/export-525d3358ee7acbcfe4ebabfa70a486c1-road_sand56.res
+res://Assets/tracks/Tiles/Sand road/road_sand57.png::0edc536966f938e06613419c1bc56a7a7eff281f1602e151bc69593e481e61e8::1764016147::res://.godot/exported/206107301/export-a2dbd8221b9167bb2919519cf357075a-road_sand57.res
+res://Assets/tracks/Tiles/Sand road/road_sand58.png::8f53aa99980cd7cd603e47fece2503305f6b4343a7f39440eba7f69eb49fd8fa::1764016147::res://.godot/exported/206107301/export-f88933084c7d13ec9fe4e4b5a20c8586-road_sand58.res
+res://Assets/tracks/Tiles/Sand road/road_sand59.png::c6fd5a0dd8f4dafdb5dce44360609a4a78d02cf2b9cd950449c76b67d1207613::1764016147::res://.godot/exported/206107301/export-a7b77c3c176546625ce774135dafef87-road_sand59.res
+res://Assets/tracks/Tiles/Sand road/road_sand60.png::5c83e301827f3f8c79a072d142bd475d0d726db2204708c98cde79bfe7074f0a::1764016147::res://.godot/exported/206107301/export-cbf5753ed312ce17d0a840f586d1d6f4-road_sand60.res
+res://Assets/tracks/Tiles/Sand road/road_sand61.png::e22669ed09179fc97ee97c707f48f7bd01cfb55986bcee0a81800af611413570::1764016147::res://.godot/exported/206107301/export-d7c76fa15b1d03166781bd4d6677fd87-road_sand61.res
+res://Assets/tracks/Tiles/Sand road/road_sand62.png::749033fb37dd331de05f7c5647b62fad1a362a95c678857083bbc556db946176::1764016147::res://.godot/exported/206107301/export-a4c1d9bc17dd4ee3147eb211807ea2cd-road_sand62.res
+res://Assets/tracks/Tiles/Sand road/road_sand63.png::048fca77257b81567c680b63b27bc15ccd31c9193fa96f78f243c99a322903a4::1764016147::res://.godot/exported/206107301/export-ae8659d3856db1bfe7ce5955bcb320f9-road_sand63.res
+res://Assets/tracks/Tiles/Sand road/road_sand64.png::c05675019acd015e3a466cffdc2b364e3623dff9f5d8ee636dcf72d47db1a8d1::1764016147::res://.godot/exported/206107301/export-1d03bdea6ac95d7f5c34b1f3bc548cb2-road_sand64.res
+res://Assets/tracks/Tiles/Sand road/road_sand65.png::41e4f930ca1ac8d73eaf8a8d2e437630e94a016c888694a4b131660e3130405d::1764016147::res://.godot/exported/206107301/export-433876c764e41b82a0d2e1836c40817e-road_sand65.res
+res://Assets/tracks/Tiles/Sand road/road_sand66.png::555b3dce48ac4fc0b2b53314b590a5b0d44eede8cf6e2322abcf3aa427231c37::1764016147::res://.godot/exported/206107301/export-9542dc8a033184e19622c2923a653549-road_sand66.res
+res://Assets/tracks/Tiles/Sand road/road_sand67.png::1ab91e8e6d1fc2284327db4726702aff9bb629699d0602d46c34792f3e7bb491::1764016147::res://.godot/exported/206107301/export-b51d4a0c1a93ad8f8efc31773bcb3e3f-road_sand67.res
+res://Assets/tracks/Tiles/Sand road/road_sand68.png::3fe393d10dce6121af3fe3ced9bbdd8c3ac8a928522dd7d8629b23cbd49f78a8::1764016147::res://.godot/exported/206107301/export-25956520f6ce49ee5873a8256feabe69-road_sand68.res
+res://Assets/tracks/Tiles/Sand road/road_sand69.png::6ee5b5cf95b29afeafcfe66f18cd181b59b5cd03f98744ddbfd615565891d86d::1764016147::res://.godot/exported/206107301/export-5e094bfff341c49c3807c01c80d0453e-road_sand69.res
+res://Assets/tracks/Tiles/Sand road/road_sand70.png::05463ec900cc1c310cc84ba67b317db350a93b2cded012d602247addbf88b866::1764016147::res://.godot/exported/206107301/export-be81b4ea8e07812bb9b5e39a9c1f72ee-road_sand70.res
+res://Assets/tracks/Tiles/Sand road/road_sand71.png::7944b7dc45e0fd86ceada06c63ef3dbfed5bbce562f643a835bf91ce6cf4438b::1764016147::res://.godot/exported/206107301/export-1d672b53d5059577af21f8dd3eb337ba-road_sand71.res
+res://Assets/tracks/Tiles/Sand road/road_sand72.png::9da2229e00909094a7358c70adbdc827d01d629edfa8386a2751a24d467669a7::1764016147::res://.godot/exported/206107301/export-b5a8343ed2cb125d9cb78e27e77e557c-road_sand72.res
+res://Assets/tracks/Tiles/Sand road/road_sand73.png::5ff7bdff010e212048d67d1c81315d106cd9b339c38a9ff952fde6373c2c4a4f::1764016147::res://.godot/exported/206107301/export-20b9942f61bd001eab4b5190cfd1714c-road_sand73.res
+res://Assets/tracks/Tiles/Sand road/road_sand74.png::2ee17fe4fe015a483e642dd0f1253d8256400de521f496cfbbef6fb7b7a63c5d::1764016147::res://.godot/exported/206107301/export-354e3ef3132da3b48c3db4e4e18ffbdc-road_sand74.res
+res://Assets/tracks/Tiles/Sand road/road_sand75.png::44d815b4b4e8aa5d183858ca33b3fd10b81918fd4712d433fd7b5c6d113924cd::1764016147::res://.godot/exported/206107301/export-84ac4cd2933e2bf838f6237e54eb563a-road_sand75.res
+res://Assets/tracks/Tiles/Sand road/road_sand76.png::8c9f825998055e85ef644948faadabbf675065ce7c0ca857b9305d4361d42c42::1764016147::res://.godot/exported/206107301/export-4b72d0dfea5a7a6fc8f1bfc8fd3c4eee-road_sand76.res
+res://Assets/tracks/Tiles/Sand road/road_sand77.png::bd7abf38927c8dddf0d640ec163036f2285501e52fa3975320f3b446d44e0c7d::1764016147::res://.godot/exported/206107301/export-a3abdeed58cded4bb8a25c5cfd9f525e-road_sand77.res
+res://Assets/tracks/Tiles/Sand road/road_sand78.png::453e67386171912328fb78ebcd33e1c95a5c6c97c26b62af82c9c7afca17dff8::1764016147::res://.godot/exported/206107301/export-9f28bca85e59b1fd8270f477db2738c9-road_sand78.res
+res://Assets/tracks/Tiles/Sand road/road_sand79.png::2a4481ff2b0f8692e977716fc5e780665dc541abd4441d5bfb011848fe27b678::1764016147::res://.godot/exported/206107301/export-0df11d12185bde90b6c973fb1d1ef89d-road_sand79.res
+res://Assets/tracks/Tiles/Sand road/road_sand80.png::8a7fe5485f17f8ce97de33fb9ec4da0854d4f86f31b882b3a3a4ff352e7586d5::1764016147::res://.godot/exported/206107301/export-0ae4e6b18f2a5517f1019568a91ab188-road_sand80.res
+res://Assets/tracks/Tiles/Sand road/road_sand81.png::b7c99946bb27f625f89fbfb4b8863e61515c736d505f1c98d9ee0a6c3000e2e1::1764016147::res://.godot/exported/206107301/export-22b77a4f39615fb88802225079df7525-road_sand81.res
+res://Assets/tracks/Tiles/Sand road/road_sand82.png::c67c68f8b96a94a4cc1a67a8789f528799f0a44aaea35693abc7245cafd21d3e::1764016147::res://.godot/exported/206107301/export-0aabe80fe0db0d764924ecdedb624e62-road_sand82.res
+res://Assets/tracks/Tiles/Sand road/road_sand83.png::587fd57bbf503030624ad8d6a642b1cda7086356bb793150f6dcb047aa28ccd1::1764016147::res://.godot/exported/206107301/export-0cf3c61d5534f51abeff7dc088c08c93-road_sand83.res
+res://Assets/tracks/Tiles/Sand road/road_sand84.png::40ea842b482ee07b52ac99c1073c6f916695f1a5396fd87976e521efc072b0d5::1764016147::res://.godot/exported/206107301/export-859e31c05e00e5996e0ada1d0f9ec82f-road_sand84.res
+res://Assets/tracks/Tiles/Sand road/road_sand85.png::f850fe676e6345757d1e264559fc5654d2d26d54837f8b8a2e96db513a868a60::1764016147::res://.godot/exported/206107301/export-a8c66d57bf789df2a249dca932140330-road_sand85.res
+res://Assets/tracks/Tiles/Sand road/road_sand86.png::759fdd2ac8249a359775d1e76262f27d66a19cb2b2040388088ef1288feb01db::1764016147::res://.godot/exported/206107301/export-71d24b6c618d04404b73ed0073150a81-road_sand86.res
+res://Assets/tracks/Tiles/Sand road/road_sand87.png::9db1ffadbbf6570d908d0e7b866e72f72923288e1b83d31ddf8cf689102b9dd5::1764016147::res://.godot/exported/206107301/export-60519e1ee393836e90f0873fe8615dd3-road_sand87.res
+res://Assets/tracks/Tiles/Sand road/road_sand88.png::9e0d1497794b0d5d763dd783c4bc33156ac7daf5905b5de9a7535b90a1b17ea9::1764016147::res://.godot/exported/206107301/export-5662dc372890fe9a23b52cfeafa2a93c-road_sand88.res
+res://Assets/tracks/Tiles/Sand road/road_sand89.png::9634b74212fd5563749f1e8153057737ca0bc5e075d6dc4ca49aac352d9876b1::1764016147::res://.godot/exported/206107301/export-4827013e31df12f32d153e8146837f5b-road_sand89.res
+res://Assets/tracks/Tiles/Sand road/road_sand90.png::857ee7dda79ffa8388e26a840926c9477ad88cf900bb2096bdeb02b562c77e32::1764016147::res://.godot/exported/206107301/export-a9f48675891797000608b801155db6a0-road_sand90.res
+res://Assets/ui/fonts/PressStart2P-Regular.ttf::f98cd910425bf727bd54ce767a9b68846b2272213bad4e01114d6f8e3fabdad9::1764943618::
+res://Assets/vehicles/cars/car_black_1.png::d337648fad99f3549735a86fbdbdb3f0cf876448a3697957d0aa6a3d0718b6f4::1764016146::res://.godot/exported/206107301/export-ab1219f6c12dc291d1e58c5edb260c9c-car_black_1.res
+res://Assets/vehicles/cars/car_black_2.png::daaaafd8c8641f83bfd22f7b3a9e2cf555258a791b5eef3f36ec7e07a92fb48f::1764016146::res://.godot/exported/206107301/export-bb95af1b3c317b8d8f123e111e92239f-car_black_2.res
+res://Assets/vehicles/cars/car_black_3.png::95c01801e18042d54162896433fdcd6eeda965836083a01315e5c672203fd0ca::1764016146::res://.godot/exported/206107301/export-0b1fb2d4d4fe21f66f044794164c9a14-car_black_3.res
+res://Assets/vehicles/cars/car_black_4.png::85cddb31d0a5273a444bdc8ddf197dea1e29e7e44ef443c18366430f2d6c4611::1764016146::res://.godot/exported/206107301/export-1d83741c4a32e71c3bfd0d4c145ec962-car_black_4.res
+res://Assets/vehicles/cars/car_black_5.png::869183c5453907206a346523448332f5ece087af98bf923ac8e73f26e8252320::1764016146::res://.godot/exported/206107301/export-4123a8d2089468586bc30672ba99a8e9-car_black_5.res
+res://Assets/vehicles/cars/car_black_small_1.png::374538abbd28ad96f27fbb5a318ee1b710b59c89acbe6c0762466f578708bc46::1764016146::res://.godot/exported/206107301/export-9f6bf8eb9686aba7dca026cbfd91b11c-car_black_small_1.res
+res://Assets/vehicles/cars/car_black_small_2.png::cf6866efe5614d6aa2049008d9351036122a928c624e48d64bd88005a2c8aeaa::1764016146::res://.godot/exported/206107301/export-2b64ffd090fa0d155f901c0bb4ada874-car_black_small_2.res
+res://Assets/vehicles/cars/car_black_small_3.png::e1e56fee42a2442a02c98dd8f5c0173e87543a11615565bf9344366a2664e581::1764016146::res://.godot/exported/206107301/export-afb74f5fe767225666f2c2a22ebf9c46-car_black_small_3.res
+res://Assets/vehicles/cars/car_black_small_4.png::f74d7db64026b3559d1543edf205b16a9ae276869e1a47c276c02b5711a11226::1764016146::res://.godot/exported/206107301/export-55bd1cb6463c06b55194e83fae41b2fc-car_black_small_4.res
+res://Assets/vehicles/cars/car_black_small_5.png::008bd9c2220237ee43d2b8bbb56ebb0c427fe08431eb16c468034f8b84468289::1764016146::res://.godot/exported/206107301/export-b3a3c61d4575c17963d5792f857ca2cf-car_black_small_5.res
+res://Assets/vehicles/cars/car_blue_1.png::3b86520280ec61f2c6c1f844b6d394ebe26ab798a25afa36c3c965052f4c479b::1764016146::res://.godot/exported/206107301/export-6e5fa7d30ef67256c0b21fa42d436257-car_blue_1.res
+res://Assets/vehicles/cars/car_blue_2.png::842c4cc939ae3945595837bdcbe356bddfd5c5dafcf95f2b8f45f81f2f3b0af1::1764016146::res://.godot/exported/206107301/export-3b300c14e53b70b389d3fcc0b6b5e84d-car_blue_2.res
+res://Assets/vehicles/cars/car_blue_3.png::87f55d108db3bfb585a0771cce1b309c664c0c4701c525a5bc3061ab9eb180d0::1764016146::res://.godot/exported/206107301/export-539418d4fe4d4ef9af4ed26e8184ddf4-car_blue_3.res
+res://Assets/vehicles/cars/car_blue_4.png::00a8063ab5da02c203c06430151f89fa1c3b566944f12d9a23463087f0a3ac68::1764016146::res://.godot/exported/206107301/export-da3d3088826438b9facfb20259c79cdb-car_blue_4.res
+res://Assets/vehicles/cars/car_blue_5.png::0a6aa727f9a3c01d30a06baa02b314f3dd2d49af00ab1ce49a82b79deb070a04::1764016146::res://.godot/exported/206107301/export-afab37ccbfede99de5dc2764c7216db3-car_blue_5.res
+res://Assets/vehicles/cars/car_blue_small_1.png::cdb213c994c3ba56583c311d18e3bca403e9e8a0e53b0044e611b301f2b0261c::1764016146::res://.godot/exported/206107301/export-861701ac5ea381dded3f9f114b7d1b74-car_blue_small_1.res
+res://Assets/vehicles/cars/car_blue_small_2.png::90c98d15fcc5732c1f4ecd82c22ba79093c5beefcb7006a6304923a06791d946::1764016146::res://.godot/exported/206107301/export-85fb4f0ff86c5613e7fe5b2a06c192c0-car_blue_small_2.res
+res://Assets/vehicles/cars/car_blue_small_3.png::a28225fb62d89801e8b75b9d98287ebc66bb460b6e2f90f089e883f5fad8b1d2::1764016146::res://.godot/exported/206107301/export-8f81f3bd7bf5eb37a81e79213b2118f5-car_blue_small_3.res
+res://Assets/vehicles/cars/car_blue_small_4.png::00427c72ad54737873b9e2f5687fa43231897212e34c576c9306eaea44aa89f4::1764016146::res://.godot/exported/206107301/export-73a979b295c66596adb11e1cdb1e100b-car_blue_small_4.res
+res://Assets/vehicles/cars/car_blue_small_5.png::a7d4cae9a92abe22a8cf4954a7bbcdcd95e9cbba08b1f992c5c56ba5947bc8b4::1764016146::res://.godot/exported/206107301/export-9bb019d6d8ee1e5042ab61494bbc8ffe-car_blue_small_5.res
+res://Assets/vehicles/cars/car_green_1.png::65a0262ea37f1c24208511a33942fe8ce55ca6c538223ef1d0ac2a6efe4bd878::1764016146::res://.godot/exported/206107301/export-ee65a81106ed45c6465fddf8df247a10-car_green_1.res
+res://Assets/vehicles/cars/car_green_2.png::9681f6307fb9d327cac0ab9f761f740233727a20124d9ec31bb5c5d23569ce61::1764016146::res://.godot/exported/206107301/export-67dc36a8bc1923c859f706740e33a209-car_green_2.res
+res://Assets/vehicles/cars/car_green_3.png::ceed3da299f2dbc38c86b4497bfff61e6f4074a72b12290479cd60ec69352fd9::1764016146::res://.godot/exported/206107301/export-c3e25adcea3ad178d6296fbe829286da-car_green_3.res
+res://Assets/vehicles/cars/car_green_4.png::177b1beac24557e2d145df5a680179ba99ab5bcd39047d540b409134722be34a::1764016146::res://.godot/exported/206107301/export-125fc9167656e2b59ecb7c90e2e3b39f-car_green_4.res
+res://Assets/vehicles/cars/car_green_5.png::349266f17b7a597afca3fac66e77665d1e3c4f4703c9f629cca13d90deac4538::1764016146::res://.godot/exported/206107301/export-e56ad4d392963bbbd8b4e1ec260ef29c-car_green_5.res
+res://Assets/vehicles/cars/car_green_small_1.png::bbb3f6401035193e79decf1c9c725cef4b864d2b39d00b7e7695b059acf4f012::1764016146::res://.godot/exported/206107301/export-7b18ecc4a43933ab988662eb3ba1b373-car_green_small_1.res
+res://Assets/vehicles/cars/car_green_small_2.png::d49812becfef373259ad12fbe94983ffef54d89d6787440b25a76a60406e68dd::1764016146::res://.godot/exported/206107301/export-9b314c693a5ffdbe531652e8db89da98-car_green_small_2.res
+res://Assets/vehicles/cars/car_green_small_3.png::eef3866a17ab6d6a96042ca9d8f86411507aed15755d1bc0360a0ffd22d3b3b3::1764016146::res://.godot/exported/206107301/export-7b1f450f0452367d316b68e94e55f953-car_green_small_3.res
+res://Assets/vehicles/cars/car_green_small_4.png::1708268b5ec830e3af2dd4815d5c79bb7565322ad7e102c7e563303d894099d6::1764016146::res://.godot/exported/206107301/export-874b1214473d53adf67ec5926dc6aa08-car_green_small_4.res
+res://Assets/vehicles/cars/car_green_small_5.png::ce84c0e7e7927267896b720917ef35a8c94e3dcafd6549d0c312a867e07757f9::1764016146::res://.godot/exported/206107301/export-cb9488584cdc613a7e4645ddae72b975-car_green_small_5.res
+res://Assets/vehicles/cars/car_red_1.png::cfe05fd9e8ef55e2c63283ee0dbb90bbd1a319ec9e000f8e43b8d00e30928177::1764016146::res://.godot/exported/206107301/export-46a43ead7bfb86b3f60188487c826173-car_red_1.res
+res://Assets/vehicles/cars/car_red_2.png::8aba6a4e3bfa02c48b704272c9ad21a675afb4b55052613d064a635c8037c55b::1764016146::res://.godot/exported/206107301/export-2fb2e8c08082804dd6e6bffd51992261-car_red_2.res
+res://Assets/vehicles/cars/car_red_3.png::2cd4dfed1f2d6b5ef1fc1ced5f4647d97c24e403862bd2239f054fb4532dedd0::1764016146::res://.godot/exported/206107301/export-e4f348b3685dbf299bb5128618c6c1b5-car_red_3.res
+res://Assets/vehicles/cars/car_red_4.png::dee3734261ab730746dfbaf6f49cb0a233d30c0eb0f552a4d447289cffe1de80::1764016146::res://.godot/exported/206107301/export-f66b8cf69379c2c7274b7a0e005fc759-car_red_4.res
+res://Assets/vehicles/cars/car_red_5.png::a233c4e3c084d13477f3eb9c82011aa2a98bb43b6310fcee4b7a31af2653ba76::1764016146::res://.godot/exported/206107301/export-496eb6806de6d11baeaf75362b1443c5-car_red_5.res
+res://Assets/vehicles/cars/car_red_small_1.png::5ba5d96e71572b4e124104faec358796a9e43aa2c9bdb0118211cf28627a507d::1764016146::res://.godot/exported/206107301/export-01820e728ddd3b324a0e8f018274f6fc-car_red_small_1.res
+res://Assets/vehicles/cars/car_red_small_2.png::ba82974a71b1deb2d1016c78b045dd87714afd143524c12a8bae84f73d0b21ed::1764016146::res://.godot/exported/206107301/export-fa65806db3991652c9e1c2ac1558686c-car_red_small_2.res
+res://Assets/vehicles/cars/car_red_small_3.png::4b26193dd47c2d677aa871840b2f551d7a6a082d3e0dbd808b4c64cc8c96f288::1764016146::res://.godot/exported/206107301/export-3cd77860ae07f1e1bc26a1a288cd8121-car_red_small_3.res
+res://Assets/vehicles/cars/car_red_small_4.png::3f5f508007a6140bb828e72e73446337b1b5c647a8c2b9b1f569db19d5a403db::1764016146::res://.godot/exported/206107301/export-23e2f05e14b83e53834003b2ac294cc9-car_red_small_4.res
+res://Assets/vehicles/cars/car_red_small_5.png::dde166500e128cdb4064b02d2a1986590d3946c36970d2d70e1f04db7c82bbb3::1764016146::res://.godot/exported/206107301/export-3800b5adcfa15349a7e5120820042886-car_red_small_5.res
+res://Assets/vehicles/cars/car_yellow_1.png::95efdcd67d9a65f23ef9d2dc422796ef35c265439960717530832be0978aa92e::1764016146::res://.godot/exported/206107301/export-a9e4b37e08aaedc59a29a62be267afa3-car_yellow_1.res
+res://Assets/vehicles/cars/car_yellow_2.png::330e14acf844c64ef132601ae3c41190f629282a136256b004d080759dce3aa6::1764016146::res://.godot/exported/206107301/export-63cee6b3a6dea88d5cb1f05558175d4e-car_yellow_2.res
+res://Assets/vehicles/cars/car_yellow_3.png::b2828de9b6dddd62b89b25c9fe31f98589475892d6c765d06a2649ef9224a3f4::1764016146::res://.godot/exported/206107301/export-8198a914e0cf2aad337349f4ee274adc-car_yellow_3.res
+res://Assets/vehicles/cars/car_yellow_4.png::7831b0bfe9c41a34faa287b34e27242528b1f4c8ef567dd2c4d8a9c8df190953::1764016146::res://.godot/exported/206107301/export-74783ddb639be07f729d67207dd7cfd2-car_yellow_4.res
+res://Assets/vehicles/cars/car_yellow_5.png::a710c286e5385f46a1cbe4e68b220442c84a7163cc4030aede7e33cbb251c066::1764016146::res://.godot/exported/206107301/export-72ebab366020e4f9f31444f94406d520-car_yellow_5.res
+res://Assets/vehicles/cars/car_yellow_small_1.png::97463e341e7f7a76f0e2e7c9f0fd05d95f1977e6d536e62826ddcc5213ce225c::1764016146::res://.godot/exported/206107301/export-3290057507efa2e3944b38d020e8b699-car_yellow_small_1.res
+res://Assets/vehicles/cars/car_yellow_small_2.png::3ee0de764c96e6073ac7ec7354b42dd2f50b1d26daf5f8ac7f964a2c7e5455aa::1764016146::res://.godot/exported/206107301/export-a3e733eec221e423502db979d9a634a9-car_yellow_small_2.res
+res://Assets/vehicles/cars/car_yellow_small_3.png::88fbb1c7610a44bc79534c1b81a9b43608009adb9b4e03732a7fa2274cccd155::1764016146::res://.godot/exported/206107301/export-480bce9f40a05f44eb344c890b974a0b-car_yellow_small_3.res
+res://Assets/vehicles/cars/car_yellow_small_4.png::b8e1fd3302851039db10fdb0f4c709f30c3a6bf80dcd9177fd683b5db95d7d0b::1764016146::res://.godot/exported/206107301/export-824baa3a469b171c65f121916c9368f1-car_yellow_small_4.res
+res://Assets/vehicles/cars/car_yellow_small_5.png::5d93381b36d28997195770d3cf7ac616aae6a1f43f77130af539b1290b8d396c::1764016146::res://.godot/exported/206107301/export-46bc4165aa04b38eebd4e4b8d873fd23-car_yellow_small_5.res
+res://Assets/vehicles/Motorcycles/motorcycle_black.png::a622b6b1f91413cf89535af9722ea6ed030c2486098a31c543461b2bcdf8541a::1764016146::res://.godot/exported/206107301/export-d649c1745795a9db64b00a280394a394-motorcycle_black.res
+res://Assets/vehicles/Motorcycles/motorcycle_blue.png::46674bad9bb9f70658095f15bd2b4c8d2a80edaab6f771e01fbbd6f462e7127f::1764016146::res://.godot/exported/206107301/export-1c7316b7e21c814e1c435064943c6f2c-motorcycle_blue.res
+res://Assets/vehicles/Motorcycles/motorcycle_green.png::8ab2ec13b4ebc0eeb673557d581c4d8d916cd48318ad82366d89b7717defc8ca::1764016146::res://.godot/exported/206107301/export-d4a0474f05d026208c30368f2fe68c20-motorcycle_green.res
+res://Assets/vehicles/Motorcycles/motorcycle_red.png::b9fd817b645e9f542ec12ef9c40bcadcf6a8f96d1f9baa3ae9e36f6303b67151::1764016146::res://.godot/exported/206107301/export-1e7f65727f78d5ce8f3b16f845aefa88-motorcycle_red.res
+res://Assets/vehicles/Motorcycles/motorcycle_yellow.png::cfda4cea0257e70b318643065277364169cc40ade81b1263f5f654f1000176e7::1764016146::res://.godot/exported/206107301/export-f91bc8780d55b55cbd3941944410f7b7-motorcycle_yellow.res
+res://scenes/main/CarSelector.tscn::473977063d5e3d0b4b64fc0efe5badba::1766414745::res://.godot/exported/206107301/export-aef9894710954ade6c9133bb4d2ee0c2-CarSelector.scn
+res://scenes/main/Lobby.tscn::5c2fa4fa4f5bdac7e0eb1fc0c2025d59::1766428709::res://.godot/exported/206107301/export-4e26b34b68ce1b88e7b6a2b5b3f9ba8b-Lobby.scn
+res://scenes/main/MainMenu.tscn::21106521adf8801f82c686b247f71e17::1766604544::res://.godot/exported/206107301/export-7f26e0d15f396623b3824c1cf41e625d-MainMenu.scn
+res://scenes/main/TrackSelector.tscn::31f64123161ad4b665f2631f389ec0e8::1765187866::res://.godot/exported/206107301/export-9773d5af8127f9e6f84baca360cef98b-TrackSelector.scn
+res://scenes/player/Car/Car_Arcade_physics.tscn::72b0bb6252c7b88345629030cc65dcf2::1764706534::res://.godot/exported/206107301/export-cafef255f28117b20ef1d2c410d2d0a6-Car_Arcade_physics.scn
+res://scenes/player/Car/Car_Arcade_Physics_with_rpm+gearshifts.tscn::ab29c305e297e7730de8bb5158ffb1e5::1766605890::res://.godot/exported/206107301/export-69df4e04cc03c73cd2c43c93f1681df2-Car_Arcade_Physics_with_rpm+gearshifts.scn
+res://scenes/player/Car/Car_Arcade_Rally_Physics.tscn::42780ecf6f301f9800c6b3318fb46160::1766605890::res://.godot/exported/206107301/export-af2eded5d9c5ca6c958593b2ae0646de-Car_Arcade_Rally_Physics.scn
+res://scenes/player/Camera's.tscn::965e357af3fc4857133d3fcea5fc9029::1764620094::res://.godot/exported/206107301/export-91292354825e9b90b2ce2ca42ff8846b-Camera's.scn
+res://scenes/track/Raw track/Coralus_Iceway.tscn::9cf097c1a3eccbf8e328b23b2b83e56b::1765543315::res://.godot/exported/206107301/export-ae16296a3567dcc916a5fd6bc4becb86-Coralus_Iceway.scn
+res://scenes/track/Raw track/GrassLandsTrail(LONG).tscn::5221a55a1041a51c2cbdf59a361a4e07::1766347592::res://.godot/exported/206107301/export-58cb4bdc7663fb0f12ae93b3585535c4-GrassLandsTrail(LONG).scn
+res://scenes/track/Raw track/GrassLandsTrail(SHORT).tscn::43a8ee9c43a029c9af8552b752265a49::1766354934::res://.godot/exported/206107301/export-b20eafae42c4609f1bf2e9e47924a858-GrassLandsTrail(SHORT).scn
+res://scenes/track/Raw track/TrackTemplate.tscn::ce422aa7d36057e64c6fdf2af8546f11::1765830031::res://.godot/exported/206107301/export-4e10c46bb53a3a6439dda933c3ddeba6-TrackTemplate.scn
+res://scenes/track/Track+Car/Coralus_Iceway+SELECTOR.tscn::40542c6093ffeac1d11b0fd8cf4c12a1::1766425495::res://.godot/exported/206107301/export-39e036c23c3e993ae51907d3bfb9ad4c-Coralus_Iceway+SELECTOR.scn
+res://scenes/track/Track+Car/GrassLandsTrailLONG+SELECTOR.tscn::dc718b4f9be677d1d2ed8ab8853360e3::1766425706::res://.godot/exported/206107301/export-2792bed8e6763edcadce73d170da0267-GrassLandsTrailLONG+SELECTOR.scn
+res://scenes/track/Track+Car/GrassLandsTrailSHORT+SELECTOR.tscn::fdfb6f664a0e8b893985918c3567178b::1766425707::res://.godot/exported/206107301/export-b4dfb8f34c26524ff70f8936944edb45-GrassLandsTrailSHORT+SELECTOR.scn
+res://scenes/ui/LapTimerUI.tscn::19ed636ac90772b9116ed0c6d503ea0f::1765224682::res://.godot/exported/206107301/export-220e5ee7c2ed5fee0f55119a5db59aee-LapTimerUI.scn
+res://scripts/player/Camera/camera_controller.gd::d38138d8d88ade789e14293c89e89b54::1764620062::
+res://scripts/player/Camera/car_camera_something.gd::466f2bb9b1666236606387be14ea5608::1765578078::
+res://scripts/player/Car/Car1.gd::d1bf3e8c115fee5f0836435f4fe70ddf::1764616858::
+res://scripts/player/Car/Car_With_Rpm.gd::cb6a4f9442d529e38495d89bce464411::1765544188::
+res://scripts/player/Car/Rally_physics.gd::874b215d0545167fe9e8075ff2638c3e::1764529282::
+res://scripts/systems/Car_Spawner.gd::cecb653460b8febe68ca6282bc49be09::1766487043::
+res://scripts/systems/GameGlobals.gd::e12251f59e8bebc2e3ec3ef193341555::1766423728::
+res://scripts/systems/GameManager.gd::0a205cf5bf835bde37f8bac9b8da484e::1766604753::
+res://scripts/systems/LapTracker.gd::612aefed87d6c40112dd3ae489a06ea7::1766422401::
+res://scripts/systems/Lobby.gd::706b1c719f1693f39b61cb707d656b57::1766596026::
+res://scripts/systems/MainMenu.gd::5ca1cbfff45f740e57cc9cad6277e281::1766606175::
+res://scripts/systems/MultiplayerCarWrapper.gd::51ae4d1bb11cee29b8639943b070252a::1766486844::
+res://scripts/ui/CarSelector.gd::f2ededc31b83b6df1276c6d4680ffa4e::1766428247::
+res://scripts/ui/LapTimerUI.gd::50662a5c6ca3dfd13f287edc7d0b2840::1765224275::
+res://scripts/ui/Track_selector.gd::53468fc4f18c1ca912b71a60c76e1917::1766428261::
+res://Icon.svg::03dd01709b400cd5c8a3af64c3e702ed211035967000fd77194f98a753c83990::1765746199::res://.godot/exported/206107301/export-209197100d5fe6cba9c168636c60b76c-Icon.res
