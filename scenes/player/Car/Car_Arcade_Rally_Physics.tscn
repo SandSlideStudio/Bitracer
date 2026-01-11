@@ -1,11 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://1fey2sk64sa0"]
+[gd_scene load_steps=9 format=3 uid="uid://1fey2sk64sa0"]
 
 [ext_resource type="Script" uid="uid://lbwubq1vto2v" path="res://scripts/player/Car/Rally_physics.gd" id="1_23y0a"]
 [ext_resource type="Texture2D" uid="uid://cnyvcnk00glu1" path="res://Assets/vehicles/cars/car_blue_small_4.png" id="2_m1l57"]
 [ext_resource type="PackedScene" uid="uid://c2d4wgcvs1nwq" path="res://scenes/player/Camera's.tscn" id="3_4tqho"]
 [ext_resource type="Script" uid="uid://btgc7mhi2e537" path="res://scripts/systems/MultiplayerCarWrapper.gd" id="4_rg42r"]
+[ext_resource type="FontFile" uid="uid://bt7bwpk5kweam" path="res://Assets/ui/fonts/PressStart2P-Regular.ttf" id="5_jbswb"]
+[ext_resource type="AudioStream" uid="uid://bmathndj7fgi1" path="res://Assets/sounds/Sound effects/Engine/engine-47745.mp3" id="6_yy3nq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxlh8"]
+size = Vector2(30, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tlyiv"]
 size = Vector2(30, 32)
 
 [node name="Car_Rally_Physics" type="RigidBody2D" groups=["player"]]
@@ -23,3 +28,62 @@ unique_name_in_owner = true
 
 [node name="MultiPlayerSync" type="Node" parent="."]
 script = ExtResource("4_rg42r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 7
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -109.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="GearLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_jbswb")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="RPMlabel" type="Label" parent="CanvasLayer/Control/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_jbswb")
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="SpeedLabel" type="Label" parent="CanvasLayer/Control/VBoxContainer"]
+unique_name_in_owner = true
+z_as_relative = false
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_jbswb")
+theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="EngineSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_yy3nq")
+volume_db = -8.0
+autoplay = true
+parameters/looping = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_tlyiv")
