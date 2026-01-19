@@ -79,6 +79,7 @@ parameters/looping = true
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
 shape = SubResource("RectangleShape2D_vg5ro")
 
 [node name="Camera\'s" parent="." instance=ExtResource("5_ddl2e")]

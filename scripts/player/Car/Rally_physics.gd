@@ -108,7 +108,7 @@ func _physics_process(delta):
 	
 	# Calculate current speed
 	var forward_speed = forward.dot(linear_velocity)
-	var abs_speed = abs(forward_speed)
+	var _abs_speed = abs(forward_speed)
 	var current_speed = linear_velocity.length()
 	
 	# -----------------------------

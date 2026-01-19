@@ -1,26 +1,28 @@
 [gd_scene load_steps=9 format=3 uid="uid://1fey2sk64sa0"]
 
 [ext_resource type="Script" uid="uid://lbwubq1vto2v" path="res://scripts/player/Car/Rally_physics.gd" id="1_23y0a"]
-[ext_resource type="Texture2D" uid="uid://cnyvcnk00glu1" path="res://Assets/vehicles/cars/car_blue_small_4.png" id="2_m1l57"]
+[ext_resource type="Texture2D" uid="uid://s5js4go2psa1" path="res://Assets/cars/RallyCar(11).png" id="2_jbswb"]
 [ext_resource type="PackedScene" uid="uid://c2d4wgcvs1nwq" path="res://scenes/player/Camera's.tscn" id="3_4tqho"]
 [ext_resource type="Script" uid="uid://btgc7mhi2e537" path="res://scripts/systems/MultiplayerCarWrapper.gd" id="4_rg42r"]
 [ext_resource type="FontFile" uid="uid://bt7bwpk5kweam" path="res://Assets/ui/fonts/PressStart2P-Regular.ttf" id="5_jbswb"]
 [ext_resource type="AudioStream" uid="uid://bmathndj7fgi1" path="res://Assets/sounds/Sound effects/Engine/engine-47745.mp3" id="6_yy3nq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lxlh8"]
-size = Vector2(30, 32)
+size = Vector2(18, 31)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tlyiv"]
-size = Vector2(30, 32)
+size = Vector2(18, 31)
 
 [node name="Car_Rally_Physics" type="RigidBody2D" groups=["player"]]
 gravity_scale = 0.0
 script = ExtResource("1_23y0a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_m1l57")
+texture = ExtResource("2_jbswb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_lxlh8")
 
 [node name="Camera\'s" parent="." instance=ExtResource("3_4tqho")]
@@ -86,4 +88,6 @@ parameters/looping = true
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_tlyiv")
