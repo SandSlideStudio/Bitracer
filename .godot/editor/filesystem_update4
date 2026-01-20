@@ -2,3 +2,4 @@ res://scenes/track/Track+Car/TestRally.tscn
 res://scripts/player/Car/Rally_physics.gd
 res://scenes/player/Car/Car_Arcade_Rally_Physics.tscn
 res://scripts/player/Car/dirt_particles.gd
+res://scenes/player/Camera's.tscn
