@@ -1,8 +1,8 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1768928544
+::res://::1770151395
 export_presets.cfg::TextFile::-1::1766955863::0::1::::<><><>0<>0<><>::
 Icon.svg::CompressedTexture2D::8107707766876378206::1765746199::1765826715::1::::<><><>0<>0<>211035967000fd77194f98a753c83990<>res://.godot/imported/Icon.svg-209197100d5fe6cba9c168636c60b76c.ctex::
-LICENSE.md::TextFile::-1::1763927551::0::1::::<><><>0<>0<><>::
+LICENSE.md::TextFile::-1::1768940536::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1767357659::0::1::::<><><>0<>0<><>::
 ::res://Assets/::1764857105
 ::res://Assets/cars/::1768910413
@@ -75,7 +75,10 @@ tribune_full.png::CompressedTexture2D::6664791145144755688::1764016146::17651344
 tribune_overhang_red.png::CompressedTexture2D::6117453389151660958::1764016146::1765134486::1::::<><><>0<>0<>026942e2a14ec9e7d96e17b6c4cec40f<>res://.godot/imported/tribune_overhang_red.png-376bc5883e8644dd39af8d56ce1de333.ctex::
 tribune_overhang_striped.png::CompressedTexture2D::3543632370551289643::1764016146::1765134486::1::::<><><>0<>0<>3d9b2e87f5580ef6baae089558ed47f3<>res://.godot/imported/tribune_overhang_striped.png-3def76cf2a13a9d4ae816bcdfe0e1e95.ctex::
 ::res://Assets/sounds/::1764857734
-::res://Assets/sounds/Music/::1764857724
+::res://Assets/sounds/Music/::1770151972
+music-for-arcade-style-game-146875.mp3::AudioStreamMP3::5870408255156078346::1770151972::1770151972::1::::<><><>0<>0<>58b02ea35fcf60173afd140404781ce1<>res://.godot/imported/music-for-arcade-style-game-146875.mp3-86f6c73e94a11a8f969e21f9f60ad130.mp3str::
+pixel-dreams-259187.mp3::AudioStreamMP3::5943111271562648552::1770151709::1770151709::1::::<><><>0<>0<>d1ea984f70b214ed2e2b626849daaad5<>res://.godot/imported/pixel-dreams-259187.mp3-55d719dfa2763b19870034889c2e6ab7.mp3str::
+so-happy-with-my-8-bit-game-301275.mp3::AudioStreamMP3::9036801484887348305::1770151882::1770151883::1::::<><><>0<>0<>b61133a2fccc1d79e748954072d57483<>res://.godot/imported/so-happy-with-my-8-bit-game-301275.mp3-795f08180977c01707d12eaa3db7e958.mp3str::
 ::res://Assets/sounds/Sound effects/::1768852079
 ::res://Assets/sounds/Sound effects/Engine/::1768851394
 engine-6000.mp3::AudioStreamMP3::2081548954521887303::1764857624::1765134484::1::::<><><>0<>0<>2aa9564852e041d6e56bcede260a81d2<>res://.godot/imported/engine-6000.mp3-7dc40393752dd184230bf61a0a1b9f1b.mp3str::
@@ -581,10 +584,10 @@ PLACEHOLDER.txt::TextFile::-1::1765566605::0::1::::<><><>0<>0<><>::
 ::res://mods/Tracks/::1765566599
 PLACEHOLDER.txt::TextFile::-1::1765566594::0::1::::<><><>0<>0<><>::
 ::res://scenes/::1766606132
-::res://scenes/main/::1766606233
-CarSelector.tscn::PackedScene::4545853033448446828::1766414745::0::1::::<><><>0<>0<><>::uid://cqoklcoq5jhv2::::res://scripts/ui/CarSelector.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://bot2bc08es4ir::::res://Assets/sounds/Sound effects/UI/confirmation_004.ogg
+::res://scenes/main/::1770151908
+CarSelector.tscn::PackedScene::4545853033448446828::1770151908::0::1::::<><><>0<>0<><>::uid://cqoklcoq5jhv2::::res://scripts/ui/CarSelector.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://bot2bc08es4ir::::res://Assets/sounds/Sound effects/UI/confirmation_004.ogg<>uid://d10q2g8uppukf::::res://Assets/sounds/Music/so-happy-with-my-8-bit-game-301275.mp3
 Lobby.tscn::PackedScene::1488560967802229570::1766428709::0::1::::<><><>0<>0<><>::uid://bhj0jbmmrkg6o::::res://scripts/systems/Lobby.gd
-MainMenu.tscn::PackedScene::9010211763223524588::1766604544::0::1::::<><><>0<>0<><>::uid://c7ytex5tcfgb8::::res://scripts/systems/MainMenu.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf
+MainMenu.tscn::PackedScene::9010211763223524588::1770151908::0::1::::<><><>0<>0<><>::uid://c7ytex5tcfgb8::::res://scripts/systems/MainMenu.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://cqw5f6snd21cu::::res://Assets/sounds/Music/pixel-dreams-259187.mp3
 TrackSelector.tscn::PackedScene::9175210705779206662::1765187866::0::1::::<><><>0<>0<><>::uid://4e65kxontn7c::::res://scripts/ui/Track_selector.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://bot2bc08es4ir::::res://Assets/sounds/Sound effects/UI/confirmation_004.ogg
 ::res://scenes/player/::1768918023
 Camera's.tscn::PackedScene::6675933678340336320::1768918023::0::1::::<><><>0<>0<><>::uid://dufy8bd5aw83a::::res://scripts/player/Camera/camera_controller.gd<>uid://be7liwcuek1sk::::res://scripts/player/Camera/car_camera_something.gd
@@ -599,11 +602,11 @@ Coralus_Iceway.tscn::PackedScene::6954611410422762817::1765543315::0::1::::<><><
 GrassLandsTrail(LONG).tscn::PackedScene::8945987299052823963::1766347592::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
 GrassLandsTrail(SHORT).tscn::PackedScene::6086947706079344935::1766354934::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
 TrackTemplate.tscn::PackedScene::973578392416152859::1765830031::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
-::res://scenes/track/Track+Car/::1768910445
+::res://scenes/track/Track+Car/::1768934776
 Coralus_Iceway+SELECTOR.tscn::PackedScene::833504138247691089::1766425495::0::1::::<><><>0<>0<><>::uid://cq4r5bgy5xglk::::res://scripts/systems/Car_Spawner.gd<>uid://c6c4o0r782qgn::::res://scenes/track/Raw track/Coralus_Iceway.tscn<>uid://b2t7l3mtdpatn::::res://scenes/ui/LapTimerUI.tscn
 GrassLandsTrailLONG+SELECTOR.tscn::PackedScene::475756547515046159::1766425706::0::1::::<><><>0<>0<><>::uid://cq4r5bgy5xglk::::res://scripts/systems/Car_Spawner.gd<>uid://d0prdr8myg8t8::::res://scenes/track/Raw track/GrassLandsTrail(LONG).tscn<>uid://b2t7l3mtdpatn::::res://scenes/ui/LapTimerUI.tscn
 GrassLandsTrailSHORT+SELECTOR.tscn::PackedScene::4301033674669305753::1766425707::0::1::::<><><>0<>0<><>::uid://cq4r5bgy5xglk::::res://scripts/systems/Car_Spawner.gd<>uid://csyte0ff3otnr::::res://scenes/track/Raw track/GrassLandsTrail(SHORT).tscn<>uid://b2t7l3mtdpatn::::res://scenes/ui/LapTimerUI.tscn
-TestRally.tscn::PackedScene::4872697698103610095::1768910445::0::1::::<><><>0<>0<><>::uid://ded4q58irx7uu::::res://Assets/tracks/Tests/RallyTrack.png<>uid://1fey2sk64sa0::::res://scenes/player/Car/Car_Arcade_Rally_Physics.tscn<>uid://bww0jh03vdaqr::::res://Assets/cars/van.png
+TestRally.tscn::PackedScene::4872697698103610095::1768934776::0::1::::<><><>0<>0<><>::uid://ded4q58irx7uu::::res://Assets/tracks/Tests/RallyTrack.png<>uid://1fey2sk64sa0::::res://scenes/player/Car/Car_Arcade_Rally_Physics.tscn<>uid://bww0jh03vdaqr::::res://Assets/cars/van.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://dq8jgpqdya4wc::::res://Assets/vehicles/Motorcycles/motorcycle_green.png<>uid://btjgpdu0iij5i::::res://Assets/vehicles/Motorcycles/motorcycle_black.png<>uid://s5js4go2psa1::::res://Assets/cars/RallyCar(11).png
 ::res://scenes/ui/::1765224719
 LapTimerUI.tscn::PackedScene::4322706716807921179::1765224682::0::1::::<><><>0<>0<><>::uid://bwkoinuuh1keh::::res://scripts/ui/LapTimerUI.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf
 ::res://scripts/::1763928568

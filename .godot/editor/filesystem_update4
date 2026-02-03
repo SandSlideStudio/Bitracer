@@ -1,1 +1,3 @@
-res://scenes/track/Track+Car/TestRally.tscn
+res://scenes/main/MainMenu.tscn
+res://scenes/main/CarSelector.tscn
+res://scenes/main/TrackSelector.tscn
