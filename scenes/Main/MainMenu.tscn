@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d1mu4vi3fk6cm"]
+[gd_scene load_steps=17 format=3 uid="uid://d1mu4vi3fk6cm"]
 
 [ext_resource type="Script" uid="uid://c7ytex5tcfgb8" path="res://scripts/systems/MainMenu.gd" id="1_iclq3"]
 [ext_resource type="Texture2D" uid="uid://cvye13gf7nvhq" path="res://Assets/Misc/Screenshot 2026-02-04 182944.png" id="2_kg8x7"]
@@ -13,6 +13,9 @@
 [ext_resource type="Texture2D" uid="uid://bww0jh03vdaqr" path="res://Assets/cars/van.png" id="9_0aa8n"]
 [ext_resource type="Texture2D" uid="uid://kaotqbjagnn8" path="res://Assets/Misc/Objects/skidmark_long_2.png" id="10_b8gin"]
 [ext_resource type="Texture2D" uid="uid://bqa1fa1iqq8lr" path="res://Assets/Misc/Objects/tree_large.png" id="12_bkjnr"]
+[ext_resource type="Texture2D" uid="uid://cnyvcnk00glu1" path="res://Assets/vehicles/cars/car_blue_small_4.png" id="14_m8347"]
+[ext_resource type="Texture2D" uid="uid://bclgbfh24yttq" path="res://Assets/Misc/Objects/cone_straight.png" id="15_0aa8n"]
+[ext_resource type="Texture2D" uid="uid://cgxofe1lm5op7" path="res://Assets/Misc/Objects/cone_down.png" id="16_b8gin"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -86,6 +89,7 @@ text = "Quit to desktop"
 [node name="mainmenusound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_v3gjy")
 autoplay = true
+parameters/looping = true
 
 [node name="Oil" type="Sprite2D" parent="."]
 position = Vector2(1012, 871)
@@ -135,6 +139,32 @@ scale = Vector2(3.75, 4.893461)
 texture = ExtResource("10_b8gin")
 
 [node name="TreeLarge" type="Sprite2D" parent="."]
-position = Vector2(745, 453)
+position = Vector2(749, 448.99997)
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("12_bkjnr")
+
+[node name="CarBlueSmall4" type="Sprite2D" parent="."]
+position = Vector2(131.99994, 102)
+rotation = -2.003638
+scale = Vector2(3.25, 3.25)
+texture = ExtResource("14_m8347")
+
+[node name="GoKart3" type="Sprite2D" parent="."]
+position = Vector2(156, 93)
+rotation = 1.3177236
+scale = Vector2(1.2500002, 1.2500002)
+texture = ExtResource("8_2g00v")
+
+[node name="ConeStraight" type="Sprite2D" parent="."]
+position = Vector2(229, 73)
+rotation = -0.7784169
+texture = ExtResource("15_0aa8n")
+
+[node name="ConeStraight2" type="Sprite2D" parent="."]
+position = Vector2(218, 119)
+texture = ExtResource("15_0aa8n")
+
+[node name="ConeDown" type="Sprite2D" parent="."]
+position = Vector2(176.99998, 153.99998)
+rotation = 1.298525
+texture = ExtResource("16_b8gin")
