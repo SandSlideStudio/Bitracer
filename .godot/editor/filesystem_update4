@@ -1,5 +1,4 @@
-res://scenes/main/MainMenu_testEnviroment.tscn
-res://scripts/systems/MainMenu_testEnviroment.gd
-res://scenes/track/Raw track/Coralus_Iceway.tscn
-res://scripts/systems/MainMenu.gd
-res://scenes/main/MainMenu.tscn
+res://scripts/player/Car/Rally_physics.gd
+res://scripts/player/Car/Car_With_Rpm.gd
+res://scripts/player/Car/GoKart.gd
+res://scripts/player/Car/Car1.gd

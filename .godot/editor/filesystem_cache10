@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1770224787
+::res://::1770229349
 export_presets.cfg::TextFile::-1::1766955863::0::1::::<><><>0<>0<><>::
 Icon.svg::CompressedTexture2D::8107707766876378206::1765746199::1765826715::1::::<><><>0<>0<>211035967000fd77194f98a753c83990<>res://.godot/imported/Icon.svg-209197100d5fe6cba9c168636c60b76c.ctex::
 LICENSE.md::TextFile::-1::1768940536::0::1::::<><><>0<>0<><>::
@@ -14,7 +14,7 @@ CustomCar(VANWIJDERACING).png::CompressedTexture2D::2290768476338422858::1764613
 GoKart.png::CompressedTexture2D::4407523139307320737::1766925306::1766925996::1::::<><><>0<>0<>b6a62ad2a6420387002ef3d2e279e92f<>res://.godot/imported/GoKart.png-2dc3af71abaa3d73112136a84d1bde74.ctex::
 RallyCar(11).png::CompressedTexture2D::1325910648450330570::1768835723::1768835781::1::::<><><>0<>0<>f0093c650875c31f829e2e3e2590e414<>res://.godot/imported/RallyCar(11).png-70e4cb144d161c7d80fca2ee2f047de3.ctex::
 van.png::CompressedTexture2D::3977525958867369049::1768909258::1768910413::1::::<><><>0<>0<>171e11e18a0f89e218e5a6418d1f1e6a<>res://.godot/imported/van.png-bb8cfaea85bfb9598b41a5983c4291f9.ctex::
-::res://Assets/Misc/::1770226644
+::res://Assets/Misc/::1770226645
 Rally pacenotes (to record).txt::TextFile::-1::1764196022::0::1::::<><><>0<>0<><>::
 Screenshot 2026-02-04 182944.png::CompressedTexture2D::6296642928688015834::1770226644::1770226645::1::::<><><>0<>0<>3f7c9ff50d25180a8a5ab9e370de3e28<>res://.godot/imported/Screenshot 2026-02-04 182944.png-fb8dc7ad9038ee2a68fc53a205a9ee6b.ctex::
 ::res://Assets/Misc/Characters/::1765134486
@@ -585,11 +585,11 @@ PLACEHOLDER.txt::TextFile::-1::1765566605::0::1::::<><><>0<>0<><>::
 ::res://mods/Tracks/::1765566599
 PLACEHOLDER.txt::TextFile::-1::1765566594::0::1::::<><><>0<>0<><>::
 ::res://scenes/::1766606132
-::res://scenes/main/::1770225892
+::res://scenes/main/::1770227376
 CarSelector.tscn::PackedScene::4545853033448446828::1770151908::0::1::::<><><>0<>0<><>::uid://cqoklcoq5jhv2::::res://scripts/ui/CarSelector.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://bot2bc08es4ir::::res://Assets/sounds/Sound effects/UI/confirmation_004.ogg<>uid://d10q2g8uppukf::::res://Assets/sounds/Music/so-happy-with-my-8-bit-game-301275.mp3
 Lobby.tscn::PackedScene::1488560967802229570::1766428709::0::1::::<><><>0<>0<><>::uid://bhj0jbmmrkg6o::::res://scripts/systems/Lobby.gd
-MainMenu.tscn::PackedScene::9010211763223524588::1770151908::0::1::::<><><>0<>0<><>::uid://c7ytex5tcfgb8::::res://scripts/systems/MainMenu.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://cqw5f6snd21cu::::res://Assets/sounds/Music/pixel-dreams-259187.mp3
-MainMenu_testEnviroment.tscn::PackedScene::576917518179610919::1770225892::0::1::::<><><>0<>0<><>::uid://ownektpr8x2h::::res://scripts/systems/MainMenu_testEnviroment.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://cqw5f6snd21cu::::res://Assets/sounds/Music/pixel-dreams-259187.mp3<>uid://7vwvff2ej72m::::res://Assets/cars/CustomCar(VANWIJDERACING).png<>uid://s5js4go2psa1::::res://Assets/cars/RallyCar(11).png
+MainMenu.tscn::PackedScene::9010211763223524588::1770227376::0::1::::<><><>0<>0<><>::uid://c7ytex5tcfgb8::::res://scripts/systems/MainMenu.gd<>uid://cvye13gf7nvhq::::res://Assets/Misc/Screenshot 2026-02-04 182944.png<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://cqw5f6snd21cu::::res://Assets/sounds/Music/pixel-dreams-259187.mp3<>uid://7vwvff2ej72m::::res://Assets/cars/CustomCar(VANWIJDERACING).png<>uid://s5js4go2psa1::::res://Assets/cars/RallyCar(11).png<>uid://c3st6b1oi7ujx::::res://Assets/cars/CustomCar(Blue).png<>uid://b32bi6b3dvhdh::::res://Assets/cars/GoKart.png<>uid://bww0jh03vdaqr::::res://Assets/cars/van.png<>uid://kaotqbjagnn8::::res://Assets/Misc/Objects/skidmark_long_2.png
+MainMenu_testEnviroment.tscn::PackedScene::576917518179610919::1770227160::0::1::::<><><>0<>0<><>::uid://ownektpr8x2h::::res://scripts/systems/MainMenu_testEnviroment.gd<>uid://cvye13gf7nvhq::::res://Assets/Misc/Screenshot 2026-02-04 182944.png<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://cqw5f6snd21cu::::res://Assets/sounds/Music/pixel-dreams-259187.mp3<>uid://7vwvff2ej72m::::res://Assets/cars/CustomCar(VANWIJDERACING).png<>uid://s5js4go2psa1::::res://Assets/cars/RallyCar(11).png<>uid://c3st6b1oi7ujx::::res://Assets/cars/CustomCar(Blue).png<>uid://b32bi6b3dvhdh::::res://Assets/cars/GoKart.png<>uid://bww0jh03vdaqr::::res://Assets/cars/van.png<>uid://kaotqbjagnn8::::res://Assets/Misc/Objects/skidmark_long_2.png
 TrackSelector.tscn::PackedScene::9175210705779206662::1770152007::0::1::::<><><>0<>0<><>::uid://4e65kxontn7c::::res://scripts/ui/Track_selector.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://bot2bc08es4ir::::res://Assets/sounds/Sound effects/UI/confirmation_004.ogg<>uid://cpvw1b3cjy1tm::::res://Assets/sounds/Music/music-for-arcade-style-game-146875.mp3
 ::res://scenes/player/::1768918023
 Camera's.tscn::PackedScene::6675933678340336320::1768918023::0::1::::<><><>0<>0<><>::uid://dufy8bd5aw83a::::res://scripts/player/Camera/camera_controller.gd<>uid://be7liwcuek1sk::::res://scripts/player/Camera/car_camera_something.gd
@@ -599,8 +599,8 @@ Car_Arcade_Physics_with_rpm+gearshifts.tscn::PackedScene::8162771926887457562::1
 Car_Arcade_Rally_Physics.tscn::PackedScene::1835518996817798905::1768917892::0::1::::<><><>0<>0<><>::uid://lbwubq1vto2v::::res://scripts/player/Car/Rally_physics.gd<>uid://s5js4go2psa1::::res://Assets/cars/RallyCar(11).png<>uid://c2d4wgcvs1nwq::::res://scenes/player/Camera's.tscn<>uid://btgc7mhi2e537::::res://scripts/systems/MultiplayerCarWrapper.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://b7xkr3k1k2pgp::::res://Assets/sounds/Sound effects/Engine/rally-car-idle-loop-17-84405.mp3
 GoKart.tscn::PackedScene::4104082771539174303::1766926638::0::1::::<><><>0<>0<><>::uid://btfrghv4bgj73::::res://scripts/player/Car/GoKart.gd<>uid://b32bi6b3dvhdh::::res://Assets/cars/GoKart.png<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://bmathndj7fgi1::::res://Assets/sounds/Sound effects/Engine/engine-47745.mp3<>uid://c2d4wgcvs1nwq::::res://scenes/player/Camera's.tscn<>uid://btgc7mhi2e537::::res://scripts/systems/MultiplayerCarWrapper.gd
 ::res://scenes/track/::1765568908
-::res://scenes/track/Raw track/::1766354934
-Coralus_Iceway.tscn::PackedScene::6954611410422762817::1765543315::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
+::res://scenes/track/Raw track/::1770226741
+Coralus_Iceway.tscn::PackedScene::6954611410422762817::1770226741::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
 GrassLandsTrail(LONG).tscn::PackedScene::8945987299052823963::1766347592::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
 GrassLandsTrail(SHORT).tscn::PackedScene::6086947706079344935::1766354934::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
 TrackTemplate.tscn::PackedScene::973578392416152859::1765830031::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
@@ -622,15 +622,15 @@ Car_With_Rpm.gd::GDScript::2142559481812017130::1765544188::0::1::::<>StaticBody
 dirt_particles.gd::GDScript::1085049146261626384::1768915872::0::1::::<>CPUParticles2D<><>0<>0<><>::
 GoKart.gd::GDScript::3731373906650029216::1766927590::0::1::::<>StaticBody2D<><>0<>0<><>::
 Rally_physics.gd::GDScript::775513225941744907::1768917556::0::1::::<>RigidBody2D<><>0<>0<><>::
-::res://scripts/systems/::1770226089
+::res://scripts/systems/::1770227276
 Car_Spawner.gd::GDScript::5956815646080258736::1766487043::0::1::::<>Node2D<><>0<>0<><>::
 GameGlobals.gd::GDScript::850091141252086314::1766423728::0::1::::<>Node<><>0<>0<><>::
 GameManager.gd::GDScript::8982784802477160030::1766604753::0::1::::<>Node<><>0<>0<><>::
 LapTracker.gd::GDScript::1974359438375780011::1766422401::0::1::::<>Area2D<><>0<>0<><>::
 Lobby.gd::GDScript::2897856057539518372::1766596026::0::1::::<>Control<><>0<>0<><>::
-MainMenu.gd::GDScript::7069591451186190467::1766606175::0::1::::<>Control<><>0<>0<><>::
+MainMenu.gd::GDScript::7069591451186190467::1770227276::0::1::::<>Control<><>0<>0<><>::
+MainMenu_testEnviroment.gd::GDScript::1028857140893711025::1770227267::0::1::::<>Control<><>0<>0<><>::
 MultiplayerCarWrapper.gd::GDScript::3732574200224154592::1766486844::0::1::::<>Node<><>0<>0<><>::
-MainMenu_testEnviroment.gd::GDScript::1028857140893711025::1770226089::0::1::::<>Control<><>0<>0<><>::
 ::res://scripts/ui/::1766926842
 CarSelector.gd::GDScript::5925391095253557161::1766926842::0::1::::<>Control<><>0<>0<><>::
 LapTimerUI.gd::GDScript::3952084060139117559::1765224275::0::1::::<>CanvasLayer<><>0<>0<><>::

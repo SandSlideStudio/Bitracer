@@ -98,9 +98,9 @@ func _process(delta: float) -> void:
 	shift_timer -= delta
 	
 	# Cache input states once per frame
-	throttle_pressed = Input.is_action_pressed("ui_up")
-	brake_pressed = Input.is_action_pressed("ui_down")
-	turn_input = Input.get_axis("ui_left", "ui_right")
+	throttle_pressed = Input.is_action_pressed("accelerate")
+	brake_pressed = Input.is_action_pressed("brake")
+	turn_input = Input.get_axis("steer_left", "steer_right")
 	
 	# -----------------------------
 	# PIT LIMITER TOGGLE

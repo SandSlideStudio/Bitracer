@@ -17,15 +17,15 @@ var velocity: Vector2 = Vector2.ZERO
 func _process(delta: float) -> void:
 	# --- INPUT ---
 	var throttle: float = 0.0
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("accelerate"):
 		throttle = 1.0
-	elif Input.is_action_pressed("ui_down"):
+	elif Input.is_action_pressed("brake"):
 		throttle = -1.0
 
 	var turn_input: float = 0.0
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("steer_left"):
 		turn_input = -1.0
-	elif Input.is_action_pressed("ui_right"):
+	elif Input.is_action_pressed("steer_right"):
 		turn_input = 1.0
 
 	# --- FORWARD VECTOR ---

@@ -139,9 +139,9 @@ func _physics_process(delta):
 	shift_timer -= delta
 	debug_timer += delta
 	
-	throttle_pressed = Input.is_action_pressed("ui_up")
-	brake_pressed = Input.is_action_pressed("ui_down")
-	var steer_input = Input.get_axis("ui_left", "ui_right")
+	throttle_pressed = Input.is_action_pressed("accelerate")
+	brake_pressed = Input.is_action_pressed("brake")
+	var steer_input = Input.get_axis("steer_left", "steer_right")
 	
 	var forward = -transform.y
 	var right = transform.x
