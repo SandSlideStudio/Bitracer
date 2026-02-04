@@ -1,3 +1,5 @@
+res://scenes/main/MainMenu_testEnviroment.tscn
+res://scripts/systems/MainMenu_testEnviroment.gd
+res://scenes/track/Raw track/Coralus_Iceway.tscn
+res://scripts/systems/MainMenu.gd
 res://scenes/main/MainMenu.tscn
-res://scenes/main/CarSelector.tscn
-res://scenes/main/TrackSelector.tscn

@@ -1,15 +1,15 @@
-[gd_scene load_steps=11 format=3 uid="uid://d1mu4vi3fk6cm"]
+[gd_scene load_steps=11 format=3 uid="uid://ihp0n2l8qv6f"]
 
-[ext_resource type="Script" uid="uid://c7ytex5tcfgb8" path="res://scripts/systems/MainMenu.gd" id="1_iclq3"]
-[ext_resource type="Texture2D" uid="uid://cvye13gf7nvhq" path="res://Assets/Misc/Screenshot 2026-02-04 182944.png" id="2_kg8x7"]
-[ext_resource type="FontFile" uid="uid://bt7bwpk5kweam" path="res://Assets/ui/fonts/PressStart2P-Regular.ttf" id="2_w265d"]
-[ext_resource type="AudioStream" uid="uid://cqw5f6snd21cu" path="res://Assets/sounds/Music/pixel-dreams-259187.mp3" id="3_v3gjy"]
-[ext_resource type="Texture2D" uid="uid://7vwvff2ej72m" path="res://Assets/cars/CustomCar(VANWIJDERACING).png" id="4_bkjnr"]
-[ext_resource type="Texture2D" uid="uid://s5js4go2psa1" path="res://Assets/cars/RallyCar(11).png" id="5_440sr"]
-[ext_resource type="Texture2D" uid="uid://c3st6b1oi7ujx" path="res://Assets/cars/CustomCar(Blue).png" id="7_m8347"]
-[ext_resource type="Texture2D" uid="uid://b32bi6b3dvhdh" path="res://Assets/cars/GoKart.png" id="8_2g00v"]
-[ext_resource type="Texture2D" uid="uid://bww0jh03vdaqr" path="res://Assets/cars/van.png" id="9_0aa8n"]
-[ext_resource type="Texture2D" uid="uid://kaotqbjagnn8" path="res://Assets/Misc/Objects/skidmark_long_2.png" id="10_b8gin"]
+[ext_resource type="Script" uid="uid://ownektpr8x2h" path="res://scripts/systems/MainMenu_testEnviroment.gd" id="1_x8vmo"]
+[ext_resource type="Texture2D" uid="uid://cvye13gf7nvhq" path="res://Assets/Misc/Screenshot 2026-02-04 182944.png" id="2_eublw"]
+[ext_resource type="FontFile" uid="uid://bt7bwpk5kweam" path="res://Assets/ui/fonts/PressStart2P-Regular.ttf" id="2_ky54x"]
+[ext_resource type="AudioStream" uid="uid://cqw5f6snd21cu" path="res://Assets/sounds/Music/pixel-dreams-259187.mp3" id="3_kwyu0"]
+[ext_resource type="Texture2D" uid="uid://7vwvff2ej72m" path="res://Assets/cars/CustomCar(VANWIJDERACING).png" id="3_ky54x"]
+[ext_resource type="Texture2D" uid="uid://s5js4go2psa1" path="res://Assets/cars/RallyCar(11).png" id="4_kwyu0"]
+[ext_resource type="Texture2D" uid="uid://c3st6b1oi7ujx" path="res://Assets/cars/CustomCar(Blue).png" id="7_tuwm7"]
+[ext_resource type="Texture2D" uid="uid://b32bi6b3dvhdh" path="res://Assets/cars/GoKart.png" id="8_dhgnp"]
+[ext_resource type="Texture2D" uid="uid://bww0jh03vdaqr" path="res://Assets/cars/van.png" id="9_lmiu5"]
+[ext_resource type="Texture2D" uid="uid://kaotqbjagnn8" path="res://Assets/Misc/Objects/skidmark_long_2.png" id="10_thtk8"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -18,12 +18,12 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_iclq3")
+script = ExtResource("1_x8vmo")
 
 [node name="background" type="Sprite2D" parent="."]
 position = Vector2(960, 540.00006)
 scale = Vector2(1.25, 1.25)
-texture = ExtResource("2_kg8x7")
+texture = ExtResource("2_eublw")
 
 [node name="TitleLabel" type="Label" parent="."]
 layout_mode = 0
@@ -31,7 +31,7 @@ offset_left = 661.0
 offset_top = 241.0
 offset_right = 1173.0
 offset_bottom = 305.0
-theme_override_fonts/font = ExtResource("2_w265d")
+theme_override_fonts/font = ExtResource("2_ky54x")
 theme_override_font_sizes/font_size = 64
 text = "BitRACER"
 horizontal_alignment = 1
@@ -43,7 +43,7 @@ offset_top = 349.0
 offset_right = 869.0
 offset_bottom = 389.0
 text = "Solo"
-icon = ExtResource("4_bkjnr")
+icon = ExtResource("3_ky54x")
 
 [node name="MultiplayerButton" type="Button" parent="."]
 layout_mode = 0
@@ -60,7 +60,7 @@ offset_top = 349.0
 offset_right = 1083.0
 offset_bottom = 389.0
 text = "Rally"
-icon = ExtResource("5_440sr")
+icon = ExtResource("4_kwyu0")
 
 [node name="SettingsButton" type="Button" parent="."]
 layout_mode = 0
@@ -79,47 +79,47 @@ offset_bottom = 430.0
 text = "Quit to desktop"
 
 [node name="mainmenusound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_v3gjy")
+stream = ExtResource("3_kwyu0")
 autoplay = true
 
 [node name="RallyCar(11)" type="Sprite2D" parent="."]
 position = Vector2(1170, 230.00002)
 rotation = -1.0890855
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("5_440sr")
+texture = ExtResource("4_kwyu0")
 
 [node name="CustomCar(vanwijderacing)" type="Sprite2D" parent="."]
 position = Vector2(1195, 608.99994)
 rotation = 1.0402162
 scale = Vector2(2, 2)
-texture = ExtResource("4_bkjnr")
+texture = ExtResource("3_ky54x")
 
 [node name="CustomCar(blue)" type="Sprite2D" parent="."]
 position = Vector2(1007, 643)
 rotation = -4.569272
 scale = Vector2(2, 2)
-texture = ExtResource("7_m8347")
+texture = ExtResource("7_tuwm7")
 
 [node name="GoKart" type="Sprite2D" parent="."]
 position = Vector2(442, 829.00006)
 rotation = 1.1431906
 scale = Vector2(1.25, 1.25)
-texture = ExtResource("8_2g00v")
+texture = ExtResource("8_dhgnp")
 
 [node name="GoKart2" type="Sprite2D" parent="."]
 position = Vector2(375, 872)
 rotation = 0.27052602
 scale = Vector2(1.25, 1.25)
-texture = ExtResource("8_2g00v")
+texture = ExtResource("8_dhgnp")
 
 [node name="Van" type="Sprite2D" parent="."]
 position = Vector2(959, 877.00006)
 rotation = 0.98611104
 scale = Vector2(2.5, 2.5)
-texture = ExtResource("9_0aa8n")
+texture = ExtResource("9_lmiu5")
 
 [node name="SkidmarkLong2" type="Sprite2D" parent="."]
 position = Vector2(1246.1948, 267.75104)
 rotation = -1.1414453
 scale = Vector2(3.75, 4.893461)
-texture = ExtResource("10_b8gin")
+texture = ExtResource("10_thtk8")
