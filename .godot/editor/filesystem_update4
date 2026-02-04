@@ -1,4 +1,1 @@
-res://scripts/player/Car/Rally_physics.gd
-res://scripts/player/Car/Car_With_Rpm.gd
-res://scripts/player/Car/GoKart.gd
-res://scripts/player/Car/Car1.gd
+res://scenes/main/MainMenu.tscn

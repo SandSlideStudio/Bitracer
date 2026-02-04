@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1770229349
+::res://::1770230150
 export_presets.cfg::TextFile::-1::1766955863::0::1::::<><><>0<>0<><>::
 Icon.svg::CompressedTexture2D::8107707766876378206::1765746199::1765826715::1::::<><><>0<>0<>211035967000fd77194f98a753c83990<>res://.godot/imported/Icon.svg-209197100d5fe6cba9c168636c60b76c.ctex::
 LICENSE.md::TextFile::-1::1768940536::0::1::::<><><>0<>0<><>::
@@ -518,9 +518,11 @@ road_sand87.png::CompressedTexture2D::3891536810000884953::1764016147::176513448
 road_sand88.png::CompressedTexture2D::8035779092536057946::1764016147::1765134485::1::::<><><>0<>0<>6ac7daf5905b5de9a7535b90a1b17ea9<>res://.godot/imported/road_sand88.png-5662dc372890fe9a23b52cfeafa2a93c.ctex::
 road_sand89.png::CompressedTexture2D::2465443020670327829::1764016147::1765134485::1::::<><><>0<>0<>ca0bc5e075d6dc4ca49aac352d9876b1<>res://.godot/imported/road_sand89.png-4827013e31df12f32d153e8146837f5b.ctex::
 road_sand90.png::CompressedTexture2D::491753414258678300::1764016147::1765134485::1::::<><><>0<>0<>7ad88cf900bb2096bdeb02b562c77e32<>res://.godot/imported/road_sand90.png-a9f48675891797000608b801155db6a0.ctex::
-::res://Assets/ui/::1764943615
+::res://Assets/ui/::1770230126
 ::res://Assets/ui/fonts/::1765134484
 PressStart2P-Regular.ttf::FontFile::3786169610079895084::1764943618::1765134484::1::::<><><>0<>0<>6b2272213bad4e01114d6f8e3fabdad9<>res://.godot/imported/PressStart2P-Regular.ttf-034eaed2579121650b4a879b52d58d08.fontdata::
+::res://Assets/ui/Icons/::1770230134
+settings menu logo.png::CompressedTexture2D::1255120635745473981::1770230077::1770230150::1::::<><><>0<>0<>403d43f6ca0a1bde8d44c3bd14e63a3a<>res://.godot/imported/settings menu logo.png-85c7c1d92494a0ed3a6ddf534d5c885e.ctex::
 ::res://Assets/vehicles/::1764186123
 ::res://Assets/vehicles/cars/::1765558360
 car_black_1.png::CompressedTexture2D::6280429751742671162::1764016146::1765134485::1::::<><><>0<>0<>cf876448a3697957d0aa6a3d0718b6f4<>res://.godot/imported/car_black_1.png-ab1219f6c12dc291d1e58c5edb260c9c.ctex::
@@ -616,12 +618,12 @@ LapTimerUI.tscn::PackedScene::4322706716807921179::1765224682::0::1::::<><><>0<>
 ::res://scripts/player/Camera/::1766775438
 camera_controller.gd::GDScript::8574877010157236332::1764620062::0::1::::<>Node2D<><>0<>0<><>::
 car_camera_something.gd::GDScript::2733919479164603238::1765578078::0::1::::<>Camera2D<><>0<>0<><>::
-::res://scripts/player/Car/::1768917556
-Car1.gd::GDScript::8012130784019138373::1764616858::0::1::::<>Node2D<><>0<>0<><>::
-Car_With_Rpm.gd::GDScript::2142559481812017130::1765544188::0::1::::<>StaticBody2D<><>0<>0<><>::
+::res://scripts/player/Car/::1770229565
+Car1.gd::GDScript::8012130784019138373::1770229565::0::1::::<>Node2D<><>0<>0<><>::
+Car_With_Rpm.gd::GDScript::2142559481812017130::1770229503::0::1::::<>StaticBody2D<><>0<>0<><>::
 dirt_particles.gd::GDScript::1085049146261626384::1768915872::0::1::::<>CPUParticles2D<><>0<>0<><>::
-GoKart.gd::GDScript::3731373906650029216::1766927590::0::1::::<>StaticBody2D<><>0<>0<><>::
-Rally_physics.gd::GDScript::775513225941744907::1768917556::0::1::::<>RigidBody2D<><>0<>0<><>::
+GoKart.gd::GDScript::3731373906650029216::1770229533::0::1::::<>StaticBody2D<><>0<>0<><>::
+Rally_physics.gd::GDScript::775513225941744907::1770229456::0::1::::<>RigidBody2D<><>0<>0<><>::
 ::res://scripts/systems/::1770227276
 Car_Spawner.gd::GDScript::5956815646080258736::1766487043::0::1::::<>Node2D<><>0<>0<><>::
 GameGlobals.gd::GDScript::850091141252086314::1766423728::0::1::::<>Node<><>0<>0<><>::

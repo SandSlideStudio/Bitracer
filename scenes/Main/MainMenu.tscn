@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d1mu4vi3fk6cm"]
+[gd_scene load_steps=14 format=3 uid="uid://d1mu4vi3fk6cm"]
 
 [ext_resource type="Script" uid="uid://c7ytex5tcfgb8" path="res://scripts/systems/MainMenu.gd" id="1_iclq3"]
 [ext_resource type="Texture2D" uid="uid://cvye13gf7nvhq" path="res://Assets/Misc/Screenshot 2026-02-04 182944.png" id="2_kg8x7"]
@@ -6,10 +6,13 @@
 [ext_resource type="AudioStream" uid="uid://cqw5f6snd21cu" path="res://Assets/sounds/Music/pixel-dreams-259187.mp3" id="3_v3gjy"]
 [ext_resource type="Texture2D" uid="uid://7vwvff2ej72m" path="res://Assets/cars/CustomCar(VANWIJDERACING).png" id="4_bkjnr"]
 [ext_resource type="Texture2D" uid="uid://s5js4go2psa1" path="res://Assets/cars/RallyCar(11).png" id="5_440sr"]
+[ext_resource type="Texture2D" uid="uid://r48who8kn3mn" path="res://Assets/ui/Icons/settings menu logo.png" id="6_kg8x7"]
 [ext_resource type="Texture2D" uid="uid://c3st6b1oi7ujx" path="res://Assets/cars/CustomCar(Blue).png" id="7_m8347"]
 [ext_resource type="Texture2D" uid="uid://b32bi6b3dvhdh" path="res://Assets/cars/GoKart.png" id="8_2g00v"]
+[ext_resource type="Texture2D" uid="uid://cspejlw1eu2aj" path="res://Assets/Misc/Objects/oil.png" id="8_440sr"]
 [ext_resource type="Texture2D" uid="uid://bww0jh03vdaqr" path="res://Assets/cars/van.png" id="9_0aa8n"]
 [ext_resource type="Texture2D" uid="uid://kaotqbjagnn8" path="res://Assets/Misc/Objects/skidmark_long_2.png" id="10_b8gin"]
+[ext_resource type="Texture2D" uid="uid://bqa1fa1iqq8lr" path="res://Assets/Misc/Objects/tree_large.png" id="12_bkjnr"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -69,6 +72,8 @@ offset_top = 390.0
 offset_right = 923.0
 offset_bottom = 430.0
 text = "Settings"
+icon = ExtResource("6_kg8x7")
+expand_icon = true
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 0
@@ -81,6 +86,11 @@ text = "Quit to desktop"
 [node name="mainmenusound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_v3gjy")
 autoplay = true
+
+[node name="Oil" type="Sprite2D" parent="."]
+position = Vector2(1012, 871)
+rotation = 1.9111356
+texture = ExtResource("8_440sr")
 
 [node name="RallyCar(11)" type="Sprite2D" parent="."]
 position = Vector2(1170, 230.00002)
@@ -123,3 +133,8 @@ position = Vector2(1246.1948, 267.75104)
 rotation = -1.1414453
 scale = Vector2(3.75, 4.893461)
 texture = ExtResource("10_b8gin")
+
+[node name="TreeLarge" type="Sprite2D" parent="."]
+position = Vector2(745, 453)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("12_bkjnr")
