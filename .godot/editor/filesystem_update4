@@ -1,7 +1,1 @@
-res://scenes/track/Raw track/Coralus_Iceway.tscn
-res://scenes/track/Track+Car/Coralus_Iceway+SELECTOR.tscn
-res://scripts/systems/AIwaypoint.gd
-res://scenes/systems/waypoint.tscn
-res://scripts/AI/Car/AICar.gd
-res://scenes/AI/Car/AICar.tscn
 res://scenes/track/Track+Car/Testingenviroment.tscn

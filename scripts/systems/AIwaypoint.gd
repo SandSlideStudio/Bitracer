@@ -1,10 +1,14 @@
-# track.gd
-extends Node2D
+# waypoint.gd
+@tool
+extends Marker2D
+class_name Waypoint
 
-@onready var racing_line = $RacingLine
-var waypoints: Array[Marker2D] = []
+@export var speed_multiplier: float = 1.0  # 0.0 to 1.0
+@export var track_width: float = 60.0
+@export var sector: int = 0
 
-func _ready():
-	for child in racing_line.get_children():
-		waypoints.append(child)
-#Since ill probably forget this, waypoints have to be children of a node2d called RacingLine in order for the ai to be able to pick up on it
+# Optional visual helper (only in editor)
+func _draw():
+	if Engine.is_editor_hint():
+		draw_circle(Vector2.ZERO, 8, Color.GREEN)
+		draw_circle(Vector2.ZERO, track_width / 2, Color(0, 1, 0, 0.2))

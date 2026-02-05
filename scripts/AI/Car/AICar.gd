@@ -8,7 +8,7 @@ class_name AIRacer
 var track: Node2D
 var waypoints: Array = []
 var current_waypoint_index: int = 0
-const WAYPOINT_REACH_DISTANCE: float = 50.0
+const WAYPOINT_REACH_DISTANCE: float = 80.0  # Increased from 50 to 80
 var last_distance_to_waypoint: float = INF
 
 # AI Behavior
@@ -22,7 +22,7 @@ var aggression: float = 0.5
 var overtake_offset: float = 0.0  # -1 to 1 (left to right)
 var overtake_timer: float = 0.0
 const OVERTAKE_DISTANCE: float = 100.0
-const DETECTION_RADIUS: float = 150.0
+const DETECTION_RADIUS: float = 80.0
 const CAR_WIDTH: float = 32.0
 
 # Rubberbanding
@@ -98,18 +98,74 @@ func get_torque(in_rpm: float) -> float:
 # -----------------------------
 # READY
 # -----------------------------
+
 func _ready() -> void:
-	# Find track and waypoints
-	track = get_tree().get_first_node_in_group("track")
-	if track and track.has_node("RacingLine"):
-		for child in track.get_node("RacingLine").get_children():
-			waypoints.append(child)
+		# Reset AI waypoint state
+	current_waypoint_index = 0
+	last_distance_to_waypoint = INF
+	overtake_offset = 0.0
+	overtake_timer = 0.0
+	# Wait for scene to be ready
+	await get_tree().process_frame
+	
+	# Find RacingLine directly - it's a sibling of the track
+	var racing_line = get_node_or_null("/root/Scene collection/RacingLine")
+	
+	if racing_line:
+		print("AI CAR: Found RacingLine directly at scene root!")
+		load_waypoints_from_node(racing_line)
+	else:
+		print("AI CAR ERROR: Could not find RacingLine")
+		print("AI CAR: Trying alternative search...")
+		# Try to find it in parent
+		var parent = get_parent()
+		if parent and parent.has_node("RacingLine"):
+			racing_line = parent.get_node("RacingLine")
+			print("AI CAR: Found RacingLine in parent!")
+			load_waypoints_from_node(racing_line)
+		else:
+			print("AI CAR: Searching entire tree...")
+			racing_line = find_node_by_name(get_tree().root, "RacingLine")
+			if racing_line:
+				print("AI CAR: Found RacingLine via tree search at: ", racing_line.get_path())
+				load_waypoints_from_node(racing_line)
+			else:
+				print("AI CAR FATAL ERROR: Cannot find RacingLine anywhere!")
 	
 	# Set difficulty parameters
 	setup_difficulty()
+	print("AI CAR: Difficulty set to ", difficulty, " (skill: ", base_skill, ")")
 	
 	# Start in 1st gear
 	gear = 1
+	rpm = IDLE_RPM
+	
+	# DEBUG: Print starting info
+	print("AI CAR READY - Gear: ", gear, " | Waypoints: ", waypoints.size(), " | Position: ", global_position)
+
+# Helper function to find node by name recursively
+func find_node_by_name(node: Node, node_name: String) -> Node:
+	if node.name == node_name:
+		return node
+	for child in node.get_children():
+		var result = find_node_by_name(child, node_name)
+		if result:
+			return result
+	return null
+
+# Helper function to load waypoints from a RacingLine node
+func load_waypoints_from_node(racing_line: Node) -> void:
+	print("AI CAR: Loading waypoints from ", racing_line.name, " at path: ", racing_line.get_path())
+	print("AI CAR: RacingLine has ", racing_line.get_child_count(), " children")
+	
+	for child in racing_line.get_children():
+		waypoints.append(child)
+		print("  Added waypoint: ", child.name, " (type: ", child.get_class(), ") at position ", child.global_position)
+	
+	print("AI CAR: Total waypoints loaded: ", waypoints.size())
+	
+	if waypoints.size() == 0:
+		print("AI CAR WARNING: No waypoints found! RacingLine might be empty.")
 
 func setup_difficulty():
 	match difficulty:
@@ -136,15 +192,22 @@ func _process(delta: float) -> void:
 	shift_timer -= delta
 	overtake_timer -= delta
 	
+	# TEMP DEBUG: Force movement if no waypoints
 	if waypoints.is_empty():
-		return
-	
-	# AI Decision Making
-	ai_navigation_logic(delta)
-	ai_shifting_logic()
-	
-	# Apply rubberbanding
-	apply_rubberbanding()
+		# Only print once per second to avoid spam
+		if Engine.get_process_frames() % 60 == 0:
+			print("AI CAR: No waypoints - forcing forward | Gear: ", gear, " RPM: ", int(rpm), " Velocity: ", velocity.length())
+		ai_throttle = true
+		ai_brake = false
+		ai_turn_input = 0.0
+		
+		# Still need to shift!
+		ai_shifting_logic()
+	else:
+		# Normal AI logic
+		ai_navigation_logic(delta)
+		ai_shifting_logic()
+		apply_rubberbanding()
 	
 	# -----------------------------
 	# FORWARD VECTOR & SPEED
@@ -237,20 +300,16 @@ func _process(delta: float) -> void:
 func ai_navigation_logic(delta: float) -> void:
 	var target_waypoint = waypoints[current_waypoint_index]
 	
-	# Calculate target position with overtake offset
-	var waypoint_pos: Vector2 = target_waypoint.global_position
-	var target_pos: Vector2 = waypoint_pos
+	# -----------------------------
+	# Smooth lookahead target
+	# -----------------------------
+	var target_pos: Vector2 = get_lookahead_target(3)  # looks at next 3 waypoints
 	
 	# Apply overtake offset (perpendicular to direction)
 	if overtake_offset != 0.0:
-		var next_idx = (current_waypoint_index + 1) % waypoints.size()
-		var next_waypoint = waypoints[next_idx]
-		var direction = (next_waypoint.global_position - waypoint_pos).normalized()
-		var perpendicular = Vector2(-direction.y, direction.x)
+		var forward_dir = (waypoints[(current_waypoint_index + 1) % waypoints.size()].global_position - global_position).normalized()
+		var perpendicular = Vector2(-forward_dir.y, forward_dir.x)
 		target_pos += perpendicular * overtake_offset * (CAR_WIDTH * 1.5)
-	
-	# Detect cars ahead for overtaking
-	detect_and_overtake()
 	
 	# Calculate steering
 	var direction_to_target = (target_pos - global_position).normalized()
@@ -261,21 +320,19 @@ func ai_navigation_logic(delta: float) -> void:
 	var steering_strength = clamp(angle_diff * 2.0, -1.0, 1.0)
 	ai_turn_input = lerp(ai_turn_input, steering_strength * base_skill, 10.0 * delta)
 	
-	# Add slight random wobble for realism
+	# Slight wobble for realism
 	if randf() < 0.1:
 		ai_turn_input += randf_range(-0.05, 0.05) * (1.0 - base_skill)
 	
 	# Determine throttle/brake based on upcoming turn
-	var next_idx = (current_waypoint_index + 1) % waypoints.size()
-	var next_waypoint = waypoints[next_idx]
-	var turn_sharpness = calculate_turn_sharpness(target_waypoint, next_waypoint)
+	var nav_next_idx = (current_waypoint_index + 1) % waypoints.size()
+	var nav_next_waypoint = waypoints[nav_next_idx]
+	var turn_sharpness = calculate_turn_sharpness(target_waypoint, nav_next_waypoint)
 	
-	# Get waypoint speed hint if available
 	var target_speed_mult = 1.0
-	if target_waypoint.has_method("get") and target_waypoint.get("speed_multiplier"):
+	if "speed_multiplier" in target_waypoint:
 		target_speed_mult = target_waypoint.speed_multiplier
 	
-	# Brake for sharp turns
 	if turn_sharpness > 60 or target_speed_mult < 0.7:
 		ai_brake = true
 		ai_throttle = false
@@ -289,6 +346,8 @@ func ai_navigation_logic(delta: float) -> void:
 	
 	# Check if reached waypoint
 	check_waypoint_reached(target_waypoint)
+
+
 
 func detect_and_overtake() -> void:
 	if overtake_timer > 0.0:
@@ -326,9 +385,9 @@ func initiate_overtake(target_car: Node2D) -> void:
 	# Decide which side to overtake based on aggression and track position
 	if randf() < aggression:
 		# Aggressive - take inside line
-		var next_idx = (current_waypoint_index + 1) % waypoints.size()
-		var next_waypoint = waypoints[next_idx]
-		var to_next = (next_waypoint.global_position - global_position).normalized()
+		var ot_next_idx = (current_waypoint_index + 1) % waypoints.size()
+		var ot_next_waypoint = waypoints[ot_next_idx]
+		var to_next = (ot_next_waypoint.global_position - global_position).normalized()
 		var to_car = (target_car.global_position - global_position).normalized()
 		var cross = to_next.cross(to_car)
 		overtake_offset = 1.0 if cross > 0 else -1.0
@@ -346,22 +405,51 @@ func calculate_turn_sharpness(current_wp, next_wp) -> float:
 	var angle = rad_to_deg(acos(clamp(dir1.dot(dir2), -1.0, 1.0)))
 	return angle
 
+func get_lookahead_target(lookahead: int = 3) -> Vector2:
+	# Get a weighted target based on the next few waypoints
+	var total_weight = 0.0
+	var target = Vector2.ZERO
+	for i in range(lookahead):
+		var idx = (current_waypoint_index + i) % waypoints.size()
+		var wp = waypoints[idx]
+		var weight = 1.0 / (i + 1)  # closer waypoints matter more
+		target += wp.global_position * weight
+		total_weight += weight
+	return target / total_weight
+
 func check_waypoint_reached(waypoint: Node2D) -> void:
 	var current_distance = global_position.distance_to(waypoint.global_position)
-	
-	# Check if within reach OR started moving away
-	if current_distance < WAYPOINT_REACH_DISTANCE or current_distance > last_distance_to_waypoint:
+
+	# DEBUG: Print waypoint status every 60 frames
+	if Engine.get_process_frames() % 60 == 0:
+		print("AI WAYPOINT: Target WP", current_waypoint_index, 
+			  " | Distance: ", int(current_distance), 
+			  " | Last: ", int(last_distance_to_waypoint),
+			  " | Velocity: ", int(velocity.length()))
+
+	# Loop in case AI overshot multiple waypoints in one frame
+	while current_distance < WAYPOINT_REACH_DISTANCE or current_distance > last_distance_to_waypoint:
+		print("AI: REACHED waypoint ", current_waypoint_index, " at distance ", int(current_distance))
 		advance_to_next_waypoint()
+		
+		if waypoints.size() == 0:
+			break
+		
+		waypoint = waypoints[current_waypoint_index]
+		current_distance = global_position.distance_to(waypoint.global_position)
 		last_distance_to_waypoint = INF
 		
 		# Reset overtake when reaching waypoint
 		if overtake_timer <= 0.0:
 			overtake_offset = lerp(overtake_offset, 0.0, 0.3)
-	else:
-		last_distance_to_waypoint = current_distance
+
+	# Update last distance for next frame
+	last_distance_to_waypoint = current_distance
 
 func advance_to_next_waypoint() -> void:
+	var old_idx = current_waypoint_index
 	current_waypoint_index = (current_waypoint_index + 1) % waypoints.size()
+	print("AI: Advanced from WP", old_idx, " to WP", current_waypoint_index)
 
 # -----------------------------
 # AI SHIFTING LOGIC
@@ -373,8 +461,8 @@ func ai_shifting_logic() -> void:
 	var forward: Vector2 = Vector2.UP.rotated(global_rotation)
 	var forward_speed: float = velocity.dot(forward)
 	
-	# Shift up near redline
-	if rpm > REDLINE_RPM * 0.95 and gear < MAX_GEAR:
+	# Shift up at 85% of redline
+	if rpm > REDLINE_RPM * 0.85 and gear < MAX_GEAR:
 		gear += 1
 		shift_timer = SHIFT_COOLDOWN
 		if gear != 0:
@@ -382,7 +470,7 @@ func ai_shifting_logic() -> void:
 			rpm = max(abs(forward_speed) * new_ratio / wheel_scale, IDLE_RPM)
 	
 	# Shift down if RPM too low
-	elif rpm < IDLE_RPM * 1.5 and gear > 1:
+	elif rpm < IDLE_RPM * 2.0 and gear > 1 and abs(forward_speed) > 10.0:
 		gear -= 1
 		shift_timer = SHIFT_COOLDOWN
 		if gear != 0:
@@ -390,16 +478,33 @@ func ai_shifting_logic() -> void:
 			rpm = max(abs(forward_speed) * new_ratio / wheel_scale, IDLE_RPM)
 
 # -----------------------------
-# RUBBERBANDING
+# RUBBERBANDING - FIXED
 # -----------------------------
 func apply_rubberbanding() -> void:
-	# Find player (assuming player is in group "player")
-	var player = get_tree().get_first_node_in_group("player")
-	if not player:
+	# Find player car - need to get the actual car from the wrapper
+	var player_node = get_tree().get_first_node_in_group("local_player")
+	
+	if not player_node:
+		# Try alternative - look for player group
+		player_node = get_tree().get_first_node_in_group("player")
+	
+	if not player_node:
 		rubberband_multiplier = 1.0
 		return
 	
-	distance_to_player = global_position.distance_to(player.global_position)
+	# If it's a wrapper node, get the actual car
+	var player_car = player_node
+	if player_node.get_script() and player_node.get_script().get_path().get_file() == "MultiplayerCarWrapper.gd":
+		# The wrapper's parent is the actual car
+		if player_node.has_method("get_parent"):
+			player_car = player_node.get_parent()
+	
+	# Safety check - make sure we have a Node2D with global_position
+	if not player_car is Node2D:
+		rubberband_multiplier = 1.0
+		return
+	
+	distance_to_player = global_position.distance_to(player_car.global_position)
 	
 	# If AI is far behind, boost them
 	if distance_to_player > 500.0:
@@ -440,7 +545,7 @@ func update_engine_sound(delta: float) -> void:
 	engine_sound.volume_db = BASE_VOLUME + (THROTTLE_VOLUME_BOOST if (ai_throttle and gear > 0) else 0.0)
 
 # -----------------------------
-# DEBUG VISUALIZATION (Optional)
+# DEBUG VISUALIZATION
 # -----------------------------
 func _draw() -> void:
 	if OS.is_debug_build() and not waypoints.is_empty():
@@ -457,6 +562,9 @@ func _draw() -> void:
 		if overtake_offset != 0.0:
 			var offset_indicator = Vector2(overtake_offset * 20, -40)
 			draw_circle(offset_indicator, 5, Color.ORANGE)
+		
+		# Draw waypoint reach distance (bigger circle now)
+		draw_circle(to_local(target.global_position), WAYPOINT_REACH_DISTANCE, Color(0, 1, 0, 0.2))
 
 func _physics_process(_delta: float) -> void:
 	queue_redraw()  # Update debug visualization

@@ -9,7 +9,7 @@
 [node name="Scene collection" type="Node2D"]
 script = ExtResource("1_k7ll1")
 
-[node name="track" parent="." instance=ExtResource("2_54sr3")]
+[node name="track" parent="." groups=["Track"] instance=ExtResource("2_54sr3")]
 
 [node name="LapTimerUI" parent="." instance=ExtResource("3_npb06")]
 
@@ -113,57 +113,117 @@ unique_name_in_owner = true
 position = Vector2(135, 16)
 rotation = 1.5707964
 
-[node name="Car_With_RPM" parent="." instance=ExtResource("4_npb06")]
-position = Vector2(705, 49)
+[node name="AICar" parent="." instance=ExtResource("4_npb06")]
+position = Vector2(712, 16)
 rotation = 1.5707964
 
 [node name="RacingLine" type="Node2D" parent="."]
 unique_name_in_owner = true
 
 [node name="Waypoint0" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(1105, 52)
+position = Vector2(1174, 83)
 
 [node name="Waypoint1" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(1517, -55)
+position = Vector2(1547, -72)
 
 [node name="Waypoint2" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(1995, -181)
+position = Vector2(1637, -141)
 
 [node name="Waypoint3" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(2014, -394)
+position = Vector2(1786, -164)
 
 [node name="Waypoint4" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(1391, -381)
+position = Vector2(1896, -200)
 
 [node name="Waypoint5" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(1379, -708)
+position = Vector2(1957, -263)
 
 [node name="Waypoint6" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(1334, -1065)
+position = Vector2(1748, -371)
 
 [node name="Waypoint7" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(1398, -1406)
+position = Vector2(1920, -344)
 
 [node name="Waypoint8" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(1438, -1640)
+position = Vector2(1561, -344)
 
 [node name="Waypoint9" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(2058, -1646)
+position = Vector2(1417, -404)
 
 [node name="Waypoint10" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(2079, -1985)
+position = Vector2(1353, -1111)
 
 [node name="Waypoint11" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(978, -1984)
+position = Vector2(1349, -1426)
 
 [node name="Waypoint12" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(849, -1769)
+position = Vector2(1395, -1521)
 
 [node name="Waypoint13" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(708, -1967)
+position = Vector2(1483, -1575)
 
 [node name="Waypoint14" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(3, -1990)
+position = Vector2(1917, -1655)
 
 [node name="Waypoint15" parent="RacingLine" instance=ExtResource("5_nv87f")]
-position = Vector2(0, 36)
+position = Vector2(2006, -1715)
+
+[node name="Waypoint16" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(2066, -1828)
+
+[node name="Waypoint17" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(2010, -1912)
+
+[node name="Waypoint18" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(1885, -1972)
+
+[node name="Waypoint19" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(1759, -2032)
+
+[node name="Waypoint20" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(1550, -2051)
+
+[node name="Waypoint21" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(1242, -1987)
+
+[node name="Waypoint22" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(1002, -1892)
+
+[node name="Waypoint23" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(849, -1843)
+
+[node name="Waypoint24" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(658, -1914)
+
+[node name="Waypoint25" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(566, -1968)
+
+[node name="Waypoint26" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(426, -2007)
+
+[node name="Waypoint27" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(270, -2006)
+
+[node name="Waypoint28" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(112, -1965)
+
+[node name="Waypoint29" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(44, -1889)
+
+[node name="Waypoint30" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(-19, -1765)
+
+[node name="Waypoint31" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(-62, -1620)
+
+[node name="Waypoint32" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(-63, -280)
+
+[node name="Waypoint33" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(-46, -138)
+
+[node name="Waypoint34" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(35, -11)
+
+[node name="Waypoint35" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(250, 7)
