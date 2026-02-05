@@ -5,9 +5,27 @@ extends RigidBody2D
 # -----------------------------
 @export var accel := 800.0
 @export var max_speed := 400.0
-@export var steering := 2.5
+@export var steering := 3.0  # Further reduced
 @export var drift_factor := 0.15
 @export var linear_friction := 2.0
+
+# -----------------------------
+# Handbrake Settings
+# -----------------------------
+@export var handbrake_drift_factor := 0.92  # Reduced - still allows some forward motion
+@export var handbrake_brake_force := 250.0  # Reduced to maintain momentum
+@export var handbrake_steering_multiplier := 1.3  # Reduced from boost
+@export var handbrake_max_angular_velocity := 2.5  # NEW: Maximum rotation speed during handbrake
+@export var handbrake_angular_acceleration := 8.0  # NEW: How fast rotation builds up
+@export var wheelspin_duration := 0.6
+@export var wheelspin_drift_factor := 0.88
+@export var traction_recovery_rate := 2.0
+
+# Handbrake state
+var handbrake_active: bool = false
+var handbrake_just_released: bool = false
+var wheelspin_timer: float = 0.0
+var current_traction: float = 1.0
 
 # -----------------------------
 # Engine + Transmission
@@ -55,6 +73,7 @@ var current_pitch: float = 1.0
 
 var throttle_pressed: bool = false
 var brake_pressed: bool = false
+var handbrake_pressed: bool = false
 
 var ui_update_timer: float = 0.0
 const UI_UPDATE_INTERVAL: float = 0.033
@@ -63,6 +82,7 @@ const COLOR_GREEN: Color = Color.GREEN
 const COLOR_YELLOW: Color = Color.YELLOW
 const COLOR_RED: Color = Color.RED
 const COLOR_WHITE: Color = Color.WHITE
+const COLOR_ORANGE: Color = Color.ORANGE
 
 # DEBUG
 var debug_timer: float = 0.0
@@ -101,7 +121,7 @@ func _ready():
 	# Initialize particles
 	if dirt_particles1:
 		dirt_particles1.position = Vector2(-10, 10)
-		dirt_particles1.emitting = false  # Start disabled
+		dirt_particles1.emitting = false
 		dirt_particles1.amount = 50
 		dirt_particles1.lifetime = 1.0
 		dirt_particles1.one_shot = false
@@ -115,11 +135,11 @@ func _ready():
 		dirt_particles1.initial_velocity_max = 100.0
 		dirt_particles1.scale_amount_min = 2.0
 		dirt_particles1.scale_amount_max = 4.0
-		dirt_particles1.color = Color(0.6, 0.4, 0.2, 1.0)  # Brown dirt color
+		dirt_particles1.color = Color(0.6, 0.4, 0.2, 1.0)
 	
 	if dirt_particles2:
 		dirt_particles2.position = Vector2(10, 10)
-		dirt_particles2.emitting = false  # Start disabled
+		dirt_particles2.emitting = false
 		dirt_particles2.amount = 50
 		dirt_particles2.lifetime = 1.0
 		dirt_particles2.one_shot = false
@@ -141,6 +161,16 @@ func _physics_process(delta):
 	
 	throttle_pressed = Input.is_action_pressed("accelerate")
 	brake_pressed = Input.is_action_pressed("brake")
+	var was_handbrake_pressed = handbrake_pressed
+	handbrake_pressed = Input.is_action_pressed("handbrake")
+	
+	# Detect handbrake release - ONLY trigger wheelspin if throttle is pressed
+	if was_handbrake_pressed and not handbrake_pressed:
+		handbrake_just_released = true
+		if gear > 0 and throttle_pressed:
+			wheelspin_timer = wheelspin_duration
+			rpm = min(rpm + 1500.0, REDLINE_RPM)
+	
 	var steer_input = Input.get_axis("steer_left", "steer_right")
 	
 	var forward = -transform.y
@@ -153,19 +183,102 @@ func _physics_process(delta):
 	var lateral_speed = right.dot(linear_velocity)
 	
 	# -----------------------------
-	# UPDATE DIRT PARTICLES - Only when moving
+	# HANDBRAKE & TRACTION SYSTEM
 	# -----------------------------
-	var should_emit = current_speed > PARTICLE_SPEED_THRESHOLD
+	handbrake_active = handbrake_pressed
+	
+	# Update wheelspin timer
+	if wheelspin_timer > 0.0:
+		wheelspin_timer -= delta
+		var recovery_progress = 1.0 - (wheelspin_timer / wheelspin_duration)
+		current_traction = lerp(0.0, 1.0, recovery_progress * traction_recovery_rate)
+	elif handbrake_active:
+		current_traction = 0.0
+	else:
+		current_traction = 1.0
+	
+	# -----------------------------
+	# REALISTIC ANGULAR VELOCITY CONTROL
+	# -----------------------------
+	if handbrake_active:
+		# Gradually build up rotation based on steering input
+		if abs(steer_input) > 0.05:
+			# Target angular velocity based on speed and steering
+			var speed_influence = clamp(current_speed / 150.0, 0.2, 1.0)
+			var target_angular = steer_input * handbrake_max_angular_velocity * speed_influence
+			
+			# Smoothly accelerate towards target
+			angular_velocity = move_toward(angular_velocity, target_angular, handbrake_angular_acceleration * delta)
+		else:
+			# No steering input - slow down rotation
+			angular_velocity = move_toward(angular_velocity, 0.0, 15.0 * delta)
+	else:
+		# Normal damping when not handbraking
+		if abs(forward_speed) < 10:
+			angular_velocity = move_toward(angular_velocity, 0.0, 10.0 * delta)
+	
+	# -----------------------------
+	# UPDATE DIRT PARTICLES
+	# -----------------------------
+	var _is_drifting = abs(lateral_speed) > DRIFT_THRESHOLD
+	var is_wheel_locked = handbrake_active and current_speed > 20.0
+	var is_wheelspinning = wheelspin_timer > 0.0 and current_speed > 20.0 and throttle_pressed
+	var should_emit = current_speed > PARTICLE_SPEED_THRESHOLD or is_wheel_locked or is_wheelspinning
 	
 	if dirt_particles1:
 		dirt_particles1.emitting = should_emit
+		
+		if is_wheel_locked:
+			dirt_particles1.amount = 120
+			dirt_particles1.initial_velocity_min = 120.0
+			dirt_particles1.initial_velocity_max = 200.0
+			dirt_particles1.lifetime = 1.5
+			dirt_particles1.scale_amount_min = 3.0
+			dirt_particles1.scale_amount_max = 6.0
+		elif is_wheelspinning:
+			dirt_particles1.amount = 100
+			dirt_particles1.initial_velocity_min = 100.0
+			dirt_particles1.initial_velocity_max = 180.0
+			dirt_particles1.lifetime = 1.3
+			dirt_particles1.scale_amount_min = 2.5
+			dirt_particles1.scale_amount_max = 5.0
+		else:
+			dirt_particles1.amount = 50
+			dirt_particles1.initial_velocity_min = 50.0
+			dirt_particles1.initial_velocity_max = 100.0
+			dirt_particles1.lifetime = 1.0
+			dirt_particles1.scale_amount_min = 2.0
+			dirt_particles1.scale_amount_max = 4.0
+	
 	if dirt_particles2:
 		dirt_particles2.emitting = should_emit
+		
+		if is_wheel_locked:
+			dirt_particles2.amount = 120
+			dirt_particles2.initial_velocity_min = 120.0
+			dirt_particles2.initial_velocity_max = 200.0
+			dirt_particles2.lifetime = 1.5
+			dirt_particles2.scale_amount_min = 3.0
+			dirt_particles2.scale_amount_max = 6.0
+		elif is_wheelspinning:
+			dirt_particles2.amount = 100
+			dirt_particles2.initial_velocity_min = 100.0
+			dirt_particles2.initial_velocity_max = 180.0
+			dirt_particles2.lifetime = 1.3
+			dirt_particles2.scale_amount_min = 2.5
+			dirt_particles2.scale_amount_max = 5.0
+		else:
+			dirt_particles2.amount = 50
+			dirt_particles2.initial_velocity_min = 50.0
+			dirt_particles2.initial_velocity_max = 100.0
+			dirt_particles2.lifetime = 1.0
+			dirt_particles2.scale_amount_min = 2.0
+			dirt_particles2.scale_amount_max = 4.0
 	
-	# Debug output every 2 seconds
+	# Debug output
 	if debug_timer > 2.0:
 		debug_timer = 0.0
-		print("Speed: ", int(current_speed), " | Particles: ", should_emit)
+		print("Speed: ", int(current_speed), " | HB: ", handbrake_active, " | AngVel: ", snappedf(angular_velocity, 0.01), " | Lateral: ", snappedf(lateral_speed, 0.1))
 	
 	# -----------------------------
 	# SHIFTING
@@ -181,7 +294,13 @@ func _physics_process(delta):
 	else:
 		var gear_max = GEAR_MAX_SPEEDS[gear + 1]
 		var speed_ratio = current_speed / gear_max
-		rpm = IDLE_RPM + (speed_ratio * RPM_RANGE)
+		
+		if wheelspin_timer > 0.0 and throttle_pressed:
+			var wheelspin_rpm_boost = (wheelspin_timer / wheelspin_duration) * 2000.0
+			rpm = IDLE_RPM + (speed_ratio * RPM_RANGE) + wheelspin_rpm_boost
+		else:
+			rpm = IDLE_RPM + (speed_ratio * RPM_RANGE)
+		
 		rpm = clamp(rpm, IDLE_RPM, REDLINE_RPM)
 	
 	rpm += randf_range(-30.0, 30.0)
@@ -194,6 +313,10 @@ func _physics_process(delta):
 	var torque: float = get_torque(rpm)
 	var engine_force: float = torque * abs(ratio) * ENGINE_FORCE_MULTIPLIER
 	
+	# Reduce engine force during wheelspin
+	if wheelspin_timer > 0.0 and throttle_pressed:
+		engine_force *= current_traction * 0.4
+	
 	if gear == 0:
 		linear_velocity = linear_velocity.move_toward(Vector2.ZERO, linear_friction * delta)
 	elif gear == -1:
@@ -201,25 +324,53 @@ func _physics_process(delta):
 			apply_central_force(-forward * engine_force)
 			if current_speed > GEAR_MAX_SPEEDS[0]:
 				linear_velocity = linear_velocity.normalized() * GEAR_MAX_SPEEDS[0]
-		elif brake_pressed:
+		elif brake_pressed or handbrake_pressed:
 			linear_velocity = linear_velocity.move_toward(Vector2.ZERO, BRAKE_FORCE * delta)
 		else:
 			linear_velocity = linear_velocity.move_toward(Vector2.ZERO, linear_friction * delta)
 	else:
-		if throttle_pressed:
+		if throttle_pressed and not handbrake_active:
 			apply_central_force(forward * engine_force)
 			var gear_limit: float = GEAR_MAX_SPEEDS[gear + 1]
-			if current_speed > gear_limit:
+			if current_speed > gear_limit and wheelspin_timer <= 0.0:
 				linear_velocity = linear_velocity.normalized() * gear_limit
+		# Allow throttle during handbrake to maintain momentum through drift
+		elif throttle_pressed and handbrake_active:
+			# Reduced force to maintain realistic drift momentum
+			apply_central_force(forward * engine_force * 0.6)
 		elif brake_pressed:
 			linear_velocity = linear_velocity.move_toward(Vector2.ZERO, BRAKE_FORCE * delta)
+		elif handbrake_active:
+			# Light braking to scrub speed realistically
+			linear_velocity = linear_velocity.move_toward(Vector2.ZERO, handbrake_brake_force * delta)
 		else:
 			linear_velocity = linear_velocity.move_toward(Vector2.ZERO, linear_friction * delta)
 	
-	linear_velocity -= right * lateral_speed * drift_factor
+	# -----------------------------
+	# DRIFT PHYSICS - Realistic lateral grip loss
+	# -----------------------------
+	var active_drift_factor = drift_factor
 	
+	if handbrake_active:
+		active_drift_factor = handbrake_drift_factor
+	elif wheelspin_timer > 0.0 and throttle_pressed:
+		active_drift_factor = wheelspin_drift_factor
+	
+	# Apply lateral friction to create sliding effect
+	linear_velocity -= right * lateral_speed * active_drift_factor
+	
+	# -----------------------------
+	# STEERING - Realistic control during drift
+	# -----------------------------
 	if abs(forward_speed) > 10:
-		rotation += steer_input * steering * (forward_speed / max_speed) * delta
+		var active_steering = steering
+		var speed_factor = forward_speed / max_speed
+		
+		if handbrake_active:
+			# Slight steering boost, but main control comes from angular velocity system above
+			active_steering *= handbrake_steering_multiplier
+		
+		rotation += steer_input * active_steering * speed_factor * delta
 	
 	ui_update_timer += delta
 	if ui_update_timer >= UI_UPDATE_INTERVAL:
@@ -258,15 +409,24 @@ func update_ui(speed: float) -> void:
 	var rpm_int: int = int(rpm)
 	rpm_label.text = str(rpm_int)
 	
-	if rpm_int < 5000:
+	if wheelspin_timer > 0.0 and throttle_pressed:
+		rpm_label.modulate = COLOR_ORANGE
+	elif rpm_int < 5000:
 		rpm_label.modulate = COLOR_GREEN
 	elif rpm_int < 6500:
 		rpm_label.modulate = COLOR_YELLOW
 	else:
 		rpm_label.modulate = COLOR_RED
 	
-	gear_label.text = "R" if gear == -1 else ("N" if gear == 0 else str(gear))
-	gear_label.modulate = COLOR_WHITE
+	var gear_text = "R" if gear == -1 else ("N" if gear == 0 else str(gear))
+	
+	if handbrake_active:
+		gear_text += " [HB]"
+	elif wheelspin_timer > 0.0 and throttle_pressed:
+		gear_text += " [SPIN]"
+	
+	gear_label.text = gear_text
+	gear_label.modulate = COLOR_ORANGE if (handbrake_active or (wheelspin_timer > 0.0 and throttle_pressed)) else COLOR_WHITE
 	
 	speed_label.text = str(int(speed * 0.5)) + " km/h"
 
@@ -276,7 +436,16 @@ func update_engine_sound(delta: float) -> void:
 	
 	var rpm_normalized: float = (rpm - IDLE_RPM) / RPM_RANGE
 	var target_pitch: float = lerp(min_pitch, max_pitch, rpm_normalized)
+	
+	if wheelspin_timer > 0.0 and throttle_pressed:
+		target_pitch += sin(Time.get_ticks_msec() * 0.01) * 0.15
+	
 	current_pitch = lerp(current_pitch, target_pitch, pitch_smoothing * delta)
 	engine_sound.pitch_scale = current_pitch
 	
-	engine_sound.volume_db = BASE_VOLUME + (THROTTLE_VOLUME_BOOST if (throttle_pressed and gear > 0) else 0.0)
+	var volume_boost = THROTTLE_VOLUME_BOOST if (throttle_pressed and gear > 0) else 0.0
+	
+	if wheelspin_timer > 0.0 and throttle_pressed:
+		volume_boost += 2.0
+	
+	engine_sound.volume_db = BASE_VOLUME + volume_boost

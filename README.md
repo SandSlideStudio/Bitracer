@@ -14,4 +14,11 @@ You are free to distribute the mods you create, paid or free, as long as you don
 for more info read the LICENSE file
 
 CONTROLS:
-W - Forward | S - Brake/Reverse | A - Left | D - Right | C - Change camera | E and Q - Shift up/down | X - Pit limiter
+W - Forward | 
+S - Brake/Reverse | 
+A - Left | 
+D - Right | 
+C - Change camera | 
+E and Q - Shift up/down | 
+X - Pit limiter | 
+Space - Handbrake (Rally only)
