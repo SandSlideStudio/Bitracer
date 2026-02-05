@@ -31,6 +31,14 @@ position = Vector2(960, 540.00006)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("2_kg8x7")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 764.0
+offset_top = 348.0
+offset_right = 1084.0
+offset_bottom = 431.0
+color = Color(0.6378432, 0.6378432, 0.63784313, 1)
+
 [node name="TitleLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 661.0
@@ -133,9 +141,9 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("9_0aa8n")
 
 [node name="SkidmarkLong2" type="Sprite2D" parent="."]
-position = Vector2(1246.1948, 267.75104)
+position = Vector2(1241.16, 265.44592)
 rotation = -1.1414453
-scale = Vector2(3.75, 4.893461)
+scale = Vector2(3.75, 4.5473714)
 texture = ExtResource("10_b8gin")
 
 [node name="TreeLarge" type="Sprite2D" parent="."]
