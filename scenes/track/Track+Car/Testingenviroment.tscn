@@ -1,15 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://l40xriaunbqf"]
+[gd_scene load_steps=6 format=3 uid="uid://ddwlogo5tym0d"]
 
-[ext_resource type="Script" uid="uid://cq4r5bgy5xglk" path="res://scripts/systems/Car_Spawner.gd" id="1_07lqd"]
-[ext_resource type="PackedScene" uid="uid://c6c4o0r782qgn" path="res://scenes/track/Raw track/Coralus_Iceway.tscn" id="2_loj26"]
-[ext_resource type="PackedScene" uid="uid://b2t7l3mtdpatn" path="res://scenes/ui/LapTimerUI.tscn" id="3_23son"]
+[ext_resource type="Script" uid="uid://cq4r5bgy5xglk" path="res://scripts/systems/Car_Spawner.gd" id="1_k7ll1"]
+[ext_resource type="PackedScene" uid="uid://c6c4o0r782qgn" path="res://scenes/track/Raw track/Coralus_Iceway.tscn" id="2_54sr3"]
+[ext_resource type="PackedScene" uid="uid://b2t7l3mtdpatn" path="res://scenes/ui/LapTimerUI.tscn" id="3_npb06"]
+[ext_resource type="PackedScene" uid="uid://bpva6x7ms5slb" path="res://scenes/AI/Car/AICar.tscn" id="4_npb06"]
+[ext_resource type="PackedScene" uid="uid://c6qfibqrndtrm" path="res://scenes/systems/waypoint.tscn" id="5_nv87f"]
 
 [node name="Scene collection" type="Node2D"]
-script = ExtResource("1_07lqd")
+script = ExtResource("1_k7ll1")
 
-[node name="track" parent="." instance=ExtResource("2_loj26")]
+[node name="track" parent="." instance=ExtResource("2_54sr3")]
 
-[node name="LapTimerUI" parent="." instance=ExtResource("3_23son")]
+[node name="LapTimerUI" parent="." instance=ExtResource("3_npb06")]
 
 [node name="SpawnPosition19" type="Marker2D" parent="."]
 unique_name_in_owner = true
@@ -110,3 +112,58 @@ rotation = 1.5707964
 unique_name_in_owner = true
 position = Vector2(135, 16)
 rotation = 1.5707964
+
+[node name="Car_With_RPM" parent="." instance=ExtResource("4_npb06")]
+position = Vector2(705, 49)
+rotation = 1.5707964
+
+[node name="RacingLine" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Waypoint0" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(1105, 52)
+
+[node name="Waypoint1" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(1517, -55)
+
+[node name="Waypoint2" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(1995, -181)
+
+[node name="Waypoint3" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(2014, -394)
+
+[node name="Waypoint4" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(1391, -381)
+
+[node name="Waypoint5" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(1379, -708)
+
+[node name="Waypoint6" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(1334, -1065)
+
+[node name="Waypoint7" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(1398, -1406)
+
+[node name="Waypoint8" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(1438, -1640)
+
+[node name="Waypoint9" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(2058, -1646)
+
+[node name="Waypoint10" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(2079, -1985)
+
+[node name="Waypoint11" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(978, -1984)
+
+[node name="Waypoint12" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(849, -1769)
+
+[node name="Waypoint13" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(708, -1967)
+
+[node name="Waypoint14" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(3, -1990)
+
+[node name="Waypoint15" parent="RacingLine" instance=ExtResource("5_nv87f")]
+position = Vector2(0, 36)

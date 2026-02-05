@@ -1,6 +1,7 @@
+Node2D
+Marker2D
 ColorRect
 AudioStreamPlayer      - Matches the "sound" keyword.
-Node2D
 TileMapLayer
 TileMap
 CPUParticles2D
@@ -11,4 +12,3 @@ Control
 HBoxContainer
 LineEdit
 VBoxContainer
-Panel
