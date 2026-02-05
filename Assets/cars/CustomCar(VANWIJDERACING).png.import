@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7vwvff2ej72m"
-path="res://.godot/imported/CustomCar(VANWIJDERACING).png-01b421891bdc98ce8dfc724692db6ddf.ctex"
+path="res://.godot/imported/CustomCar(VANWIJDERACING).png-a005c717ef04bff2a176f22a037654d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/cars/CustomCar(VANWIJDERACING).png"
-dest_files=["res://.godot/imported/CustomCar(VANWIJDERACING).png-01b421891bdc98ce8dfc724692db6ddf.ctex"]
+source_file="res://assets/cars/CustomCar(VANWIJDERACING).png"
+dest_files=["res://.godot/imported/CustomCar(VANWIJDERACING).png-a005c717ef04bff2a176f22a037654d0.ctex"]
 
 [params]
 

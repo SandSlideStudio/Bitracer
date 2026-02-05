@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b06ldxtitnd5r"
-path="res://.godot/imported/racer_yellow.png-4215d261db6665724a07ad45dee668c6.ctex"
+path="res://.godot/imported/racer_yellow.png-46715635aeaad7b74e4e032d4ab25824.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Misc/Characters/racer_yellow.png"
-dest_files=["res://.godot/imported/racer_yellow.png-4215d261db6665724a07ad45dee668c6.ctex"]
+source_file="res://assets/Misc/Characters/racer_yellow.png"
+dest_files=["res://.godot/imported/racer_yellow.png-46715635aeaad7b74e4e032d4ab25824.ctex"]
 
 [params]
 

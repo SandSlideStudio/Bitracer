@@ -3,12 +3,12 @@
 importer="oggvorbisstr"
 type="AudioStreamOggVorbis"
 uid="uid://c4xcwdvcd5rpl"
-path="res://.godot/imported/scroll_002.ogg-4701c4b8a6345d8f6576d3bb79f3b57a.oggvorbisstr"
+path="res://.godot/imported/scroll_002.ogg-c339614f7648c99e26edc12bff9f1823.oggvorbisstr"
 
 [deps]
 
-source_file="res://Assets/sounds/Sound effects/UI/scroll_002.ogg"
-dest_files=["res://.godot/imported/scroll_002.ogg-4701c4b8a6345d8f6576d3bb79f3b57a.oggvorbisstr"]
+source_file="res://assets/sounds/Sound effects/UI/scroll_002.ogg"
+dest_files=["res://.godot/imported/scroll_002.ogg-c339614f7648c99e26edc12bff9f1823.oggvorbisstr"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bkvyt6trk7kwx"
-path="res://.godot/imported/light_yellow.png-abb44063348daf70717722bf21e05838.ctex"
+path="res://.godot/imported/light_yellow.png-0b7e7fc6e9fb62af584bfc33869e270e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Misc/Objects/light_yellow.png"
-dest_files=["res://.godot/imported/light_yellow.png-abb44063348daf70717722bf21e05838.ctex"]
+source_file="res://assets/Misc/Objects/light_yellow.png"
+dest_files=["res://.godot/imported/light_yellow.png-0b7e7fc6e9fb62af584bfc33869e270e.ctex"]
 
 [params]
 

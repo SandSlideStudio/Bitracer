@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b32bi6b3dvhdh"
-path="res://.godot/imported/GoKart.png-2dc3af71abaa3d73112136a84d1bde74.ctex"
+path="res://.godot/imported/GoKart.png-a06f20517cf3a488c895ee159db68a0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/cars/GoKart.png"
-dest_files=["res://.godot/imported/GoKart.png-2dc3af71abaa3d73112136a84d1bde74.ctex"]
+source_file="res://assets/cars/GoKart.png"
+dest_files=["res://.godot/imported/GoKart.png-a06f20517cf3a488c895ee159db68a0a.ctex"]
 
 [params]
 

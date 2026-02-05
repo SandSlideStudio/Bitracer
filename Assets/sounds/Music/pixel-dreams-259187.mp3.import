@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://cqw5f6snd21cu"
-path="res://.godot/imported/pixel-dreams-259187.mp3-55d719dfa2763b19870034889c2e6ab7.mp3str"
+path="res://.godot/imported/pixel-dreams-259187.mp3-efa61c6cb0c91f4b7d7caab3f16d6917.mp3str"
 
 [deps]
 
-source_file="res://Assets/sounds/Music/pixel-dreams-259187.mp3"
-dest_files=["res://.godot/imported/pixel-dreams-259187.mp3-55d719dfa2763b19870034889c2e6ab7.mp3str"]
+source_file="res://assets/sounds/Music/pixel-dreams-259187.mp3"
+dest_files=["res://.godot/imported/pixel-dreams-259187.mp3-efa61c6cb0c91f4b7d7caab3f16d6917.mp3str"]
 
 [params]
 
