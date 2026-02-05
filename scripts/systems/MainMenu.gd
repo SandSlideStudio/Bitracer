@@ -57,8 +57,11 @@ func _on_settings_pressed():
 	print("Settings not implemented yet")
 
 func _on_rally_pressed():
-	# TODO: Connect/make rally mode
-	print("Rally not connected yet")
+	_cleanup_multiplayer()
+	
+	GameGlobals.is_multiplayer = false
+	print("Starting rally mode")
+	get_tree().change_scene_to_file("res://scenes/track/Track+Car/TestRally.tscn")
 
 func _on_quit_pressed():
 	get_tree().quit()

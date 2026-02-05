@@ -176,3 +176,14 @@ texture = ExtResource("15_0aa8n")
 position = Vector2(176.99998, 153.99998)
 rotation = 1.298525
 texture = ExtResource("16_b8gin")
+
+[node name="TitleLabel2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1043.9999
+offset_top = 333.99994
+offset_right = 1117.9999
+offset_bottom = 350.99994
+rotation = 0.43633232
+theme_override_font_sizes/font_size = 12
+text = "Expirimental"
+horizontal_alignment = 1

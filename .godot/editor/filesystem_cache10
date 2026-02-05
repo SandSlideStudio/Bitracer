@@ -1,9 +1,9 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1770289176
+::res://::1770297940
 export_presets.cfg::TextFile::-1::1766955863::0::1::::<><><>0<>0<><>::
 Icon.svg::CompressedTexture2D::8107707766876378206::1765746199::1765826715::1::::<><><>0<>0<>211035967000fd77194f98a753c83990<>res://.godot/imported/Icon.svg-209197100d5fe6cba9c168636c60b76c.ctex::
 LICENSE.md::TextFile::-1::1768940536::0::1::::<><><>0<>0<><>::
-README.md::TextFile::-1::1767357659::0::1::::<><><>0<>0<><>::
+README.md::TextFile::-1::1770290145::0::1::::<><><>0<>0<><>::
 ::res://Assets/::1764857105
 ::res://Assets/cars/::1768910413
 CustomCar(BareBones).png::CompressedTexture2D::3108143164143739912::1764612338::1765134486::1::::<><><>0<>0<>42750c35a19a2e233705804d53f5b40f<>res://.godot/imported/CustomCar(BareBones).png-6baa4472095ff51cd10cf21238608c1a.ctex::
@@ -618,12 +618,12 @@ LapTimerUI.tscn::PackedScene::4322706716807921179::1765224682::0::1::::<><><>0<>
 ::res://scripts/player/Camera/::1766775438
 camera_controller.gd::GDScript::8574877010157236332::1764620062::0::1::::<>Node2D<><>0<>0<><>::
 car_camera_something.gd::GDScript::2733919479164603238::1765578078::0::1::::<>Camera2D<><>0<>0<><>::
-::res://scripts/player/Car/::1770229565
+::res://scripts/player/Car/::1770290090
 Car1.gd::GDScript::8012130784019138373::1770229565::0::1::::<>Node2D<><>0<>0<><>::
 Car_With_Rpm.gd::GDScript::2142559481812017130::1770229503::0::1::::<>StaticBody2D<><>0<>0<><>::
 dirt_particles.gd::GDScript::1085049146261626384::1768915872::0::1::::<>CPUParticles2D<><>0<>0<><>::
 GoKart.gd::GDScript::3731373906650029216::1770229533::0::1::::<>StaticBody2D<><>0<>0<><>::
-Rally_physics.gd::GDScript::775513225941744907::1770229456::0::1::::<>RigidBody2D<><>0<>0<><>::
+Rally_physics.gd::GDScript::775513225941744907::1770290090::0::1::::<>RigidBody2D<><>0<>0<><>::
 ::res://scripts/systems/::1770227276
 Car_Spawner.gd::GDScript::5956815646080258736::1766487043::0::1::::<>Node2D<><>0<>0<><>::
 GameGlobals.gd::GDScript::850091141252086314::1766423728::0::1::::<>Node<><>0<>0<><>::
