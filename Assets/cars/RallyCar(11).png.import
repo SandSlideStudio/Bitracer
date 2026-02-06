@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s5js4go2psa1"
-path="res://.godot/imported/RallyCar(11).png-d42931d0792b2c894c56bca1c51627d7.ctex"
+path="res://.godot/imported/RallyCar(11).png-70e4cb144d161c7d80fca2ee2f047de3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/cars/RallyCar(11).png"
-dest_files=["res://.godot/imported/RallyCar(11).png-d42931d0792b2c894c56bca1c51627d7.ctex"]
+source_file="res://Assets/cars/RallyCar(11).png"
+dest_files=["res://.godot/imported/RallyCar(11).png-70e4cb144d161c7d80fca2ee2f047de3.ctex"]
 
 [params]
 

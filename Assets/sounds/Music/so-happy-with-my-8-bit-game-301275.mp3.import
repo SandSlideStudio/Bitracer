@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://d10q2g8uppukf"
-path="res://.godot/imported/so-happy-with-my-8-bit-game-301275.mp3-b334b57ee960af5540af0911d9c1427e.mp3str"
+path="res://.godot/imported/so-happy-with-my-8-bit-game-301275.mp3-795f08180977c01707d12eaa3db7e958.mp3str"
 
 [deps]
 
-source_file="res://assets/sounds/Music/so-happy-with-my-8-bit-game-301275.mp3"
-dest_files=["res://.godot/imported/so-happy-with-my-8-bit-game-301275.mp3-b334b57ee960af5540af0911d9c1427e.mp3str"]
+source_file="res://Assets/sounds/Music/so-happy-with-my-8-bit-game-301275.mp3"
+dest_files=["res://.godot/imported/so-happy-with-my-8-bit-game-301275.mp3-795f08180977c01707d12eaa3db7e958.mp3str"]
 
 [params]
 

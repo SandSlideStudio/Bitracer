@@ -3,12 +3,12 @@
 importer="mp3"
 type="AudioStreamMP3"
 uid="uid://b7xkr3k1k2pgp"
-path="res://.godot/imported/rally-car-idle-loop-17-84405.mp3-3bb7ed271cff9c4b80c4e455adc7e494.mp3str"
+path="res://.godot/imported/rally-car-idle-loop-17-84405.mp3-a32edb650fb411016a371da06195a5a9.mp3str"
 
 [deps]
 
-source_file="res://assets/sounds/Sound effects/Engine/rally-car-idle-loop-17-84405.mp3"
-dest_files=["res://.godot/imported/rally-car-idle-loop-17-84405.mp3-3bb7ed271cff9c4b80c4e455adc7e494.mp3str"]
+source_file="res://Assets/sounds/Sound effects/Engine/rally-car-idle-loop-17-84405.mp3"
+dest_files=["res://.godot/imported/rally-car-idle-loop-17-84405.mp3-a32edb650fb411016a371da06195a5a9.mp3str"]
 
 [params]
 

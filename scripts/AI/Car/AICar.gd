@@ -97,6 +97,7 @@ func _ready() -> void:
 	last_distance_to_waypoint = INF
 	overtake_offset = 0.0
 	overtake_timer = 0.0
+	
 	await get_tree().process_frame
 	
 	var racing_line = get_node_or_null("/root/Scene collection/RacingLine")
@@ -214,6 +215,7 @@ func _process(delta: float) -> void:
 		var steering_factor: float = -1.0 if forward_speed < 0.0 else 1.0
 		global_rotation += deg_to_rad(ai_turn_input * current_turn_speed * steering_factor * delta)
 	
+	# Use move_and_collide for CharacterBody2D
 	var collision: KinematicCollision2D = move_and_collide(velocity * delta)
 	if collision:
 		velocity = velocity.bounce(collision.get_normal()) * 0.5
@@ -223,8 +225,10 @@ func _process(delta: float) -> void:
 # -----------------------------
 # AI NAVIGATION LOGIC WITH OBSTACLE AVOIDANCE
 # -----------------------------
-const OBSTACLE_DETECT_RADIUS: float = 60.0
-const OBSTACLE_AVOID_FORCE: float = 1.0
+const BASE_CAR_DETECT_RADIUS: float = 55.0  # Detect cars at safe distance
+const BASE_WALL_DETECT_RADIUS: float = 120.0  # Smaller wall range - less cautious (was 200)
+const OBSTACLE_AVOID_FORCE: float = 0.7  # Stronger car avoidance (was 0.2)
+const WALL_AVOID_FORCE: float = 0.8  # Weaker wall avoidance (was 1.2)
 
 func ai_navigation_logic(delta: float) -> void:
 	if waypoints.is_empty():
@@ -232,60 +236,192 @@ func ai_navigation_logic(delta: float) -> void:
 	
 	var target_wp = waypoints[current_waypoint_index]
 	
-	# 1️⃣ Steering toward waypoint
-	var dir: Vector2 = (target_wp.global_position - global_position).normalized()
+	# Add lateral offset to waypoint to spread cars out
+	var wp_position = target_wp.global_position
+	
+	# Create a unique offset for each car based on their instance ID
+	var car_id_hash = hash(get_instance_id())
+	var lateral_offset = (car_id_hash % 5 - 2) * 15.0  # -30 to +30 pixels spread
+	
+	# Calculate perpendicular direction to racing line
+	var to_next_wp = Vector2.ZERO
+	var next_wp_index = (current_waypoint_index + 1) % waypoints.size()
+	if waypoints.size() > 1:
+		to_next_wp = (waypoints[next_wp_index].global_position - wp_position).normalized()
+	else:
+		to_next_wp = (wp_position - global_position).normalized()
+	
+	# Perpendicular to the racing line
+	var perpendicular = Vector2(-to_next_wp.y, to_next_wp.x)
+	
+	# Apply offset to create racing variety
+	wp_position += perpendicular * lateral_offset
+	
+	# 1️⃣ Steering toward offset waypoint
+	var dir: Vector2 = (wp_position - global_position).normalized()
 	var target_angle = dir.angle() + PI / 2
 	var angle_diff = angle_difference(global_rotation, target_angle)
 	ai_turn_input = clamp(angle_diff * 2.0, -1.0, 1.0)
 	
 	# 2️⃣ Throttle/brake logic
-	if global_position.distance_to(target_wp.global_position) > WAYPOINT_REACH_DISTANCE:
+	if global_position.distance_to(wp_position) > WAYPOINT_REACH_DISTANCE:
 		ai_throttle = true
 		ai_brake = false
 	else:
 		ai_throttle = false
 		ai_brake = false
 	
-	# 3️⃣ Obstacle avoidance
-	avoid_obstacles(delta)
+	# 3️⃣ Wall detection using raycasts (prioritized)
+	detect_walls_with_raycasts(delta)
 	
-	# 4️⃣ Waypoint reached
+	# 4️⃣ Car avoidance (secondary)
+	avoid_other_cars(delta)
+	
+	# 5️⃣ Waypoint reached (use actual waypoint position, not offset)
 	check_waypoint_reached(target_wp)
 
-func avoid_obstacles(delta: float) -> void:
+# Raycast-based wall detection for better accuracy
+func detect_walls_with_raycasts(delta: float) -> void:
+	var space_state = get_world_2d().direct_space_state
+	var forward = Vector2.UP.rotated(global_rotation)
+	var wall_detect_distance = BASE_WALL_DETECT_RADIUS
+	
+	# Cast 5 rays: forward, left-forward, right-forward, left, right
+	var ray_angles = [0.0, -30.0, 30.0, -60.0, 60.0]
+	var ray_weights = [1.5, 1.2, 1.2, 0.8, 0.8]  # Forward rays are more important
+	
+	var wall_avoid_dir: Vector2 = Vector2.ZERO
+	var wall_detected: bool = false
+	var closest_wall_distance: float = INF
+	
+	for i in range(ray_angles.size()):
+		var angle = deg_to_rad(ray_angles[i])
+		var ray_direction = forward.rotated(angle)
+		var ray_end = global_position + ray_direction * wall_detect_distance
+		
+		var query = PhysicsRayQueryParameters2D.create(global_position, ray_end)
+		query.collide_with_bodies = true
+		query.collide_with_areas = false  # Don't detect Area2D (those are cars)
+		query.collision_mask = 0b1111
+		query.exclude = [self]
+		
+		var result = space_state.intersect_ray(query)
+		
+		if result:
+			var hit_object = result.collider
+			
+			# Check if it's a wall/barrier (anything that's NOT an AI car or player car)
+			var is_wall = false
+			
+			# TileMap barriers
+			if hit_object is TileMap:
+				is_wall = true
+			# StaticBody2D walls (but not AI cars)
+			elif hit_object is StaticBody2D:
+				if not (hit_object is AIRacer):
+					is_wall = true
+			# Any other physics body that's not a car
+			elif hit_object is RigidBody2D:
+				is_wall = true
+			
+			# Explicitly exclude player cars and AI cars
+			if hit_object is CharacterBody2D:
+				is_wall = false  # This is likely a player car
+			
+			if is_wall:
+				wall_detected = true
+				var hit_pos = result.position
+				var distance_to_wall = global_position.distance_to(hit_pos)
+				
+				if distance_to_wall < closest_wall_distance:
+					closest_wall_distance = distance_to_wall
+				
+				# Calculate avoidance based on distance
+				var proximity = 1.0 - (distance_to_wall / wall_detect_distance)
+				proximity = clamp(proximity, 0.0, 1.0)
+				
+				# Direction away from wall
+				var away_from_wall = (global_position - hit_pos).normalized()
+				wall_avoid_dir += away_from_wall * proximity * ray_weights[i]
+	
+	# Apply wall avoidance if detected
+	if wall_detected and wall_avoid_dir != Vector2.ZERO:
+		wall_avoid_dir = wall_avoid_dir.normalized()
+		var avoid_angle = wall_avoid_dir.angle() + PI / 2
+		var angle_diff = angle_difference(global_rotation, avoid_angle)
+		
+		# Strong steering away from walls (no braking, just avoid)
+		ai_turn_input = lerp(ai_turn_input, clamp(angle_diff * 2.0, -1.0, 1.0), WALL_AVOID_FORCE)  # Reduced from 2.5 to 2.0
+
+# Separate car detection (smaller radius)
+func avoid_other_cars(delta: float) -> void:
 	var space_state = get_world_2d().direct_space_state
 	var query = PhysicsShapeQueryParameters2D.new()
 	var shape = CircleShape2D.new()
-	shape.radius = OBSTACLE_DETECT_RADIUS
+	
+	# Smaller radius for car detection
+	var car_detect_radius = BASE_CAR_DETECT_RADIUS
+	shape.radius = car_detect_radius
+	
 	query.shape = shape
 	query.transform = Transform2D(global_rotation, global_position)
-	query.collision_mask = collision_mask
+	query.collide_with_bodies = true
+	query.collide_with_areas = true  # Cars use Area2D hitboxes
+	query.collision_mask = 0b1111
 	
-	var results = space_state.intersect_shape(query, 10)
+	var results = space_state.intersect_shape(query, 32)
 	var avoid_dir: Vector2 = Vector2.ZERO
+	var car_count: int = 0
 	
 	for result in results:
 		var body = result.collider
 		if body == self:
 			continue
-		if not (body is StaticBody2D or body is CharacterBody2D):
+		
+		# Detect cars: CharacterBody2D, AIRacer, or Area2D (car hitboxes)
+		var is_car = false
+		
+		if body is CharacterBody2D:
+			is_car = true
+		elif body is AIRacer:
+			is_car = true
+		elif body is Area2D:
+			# Area2D car hitboxes - check if parent is a car
+			var parent = body.get_parent()
+			if parent and (parent is CharacterBody2D or parent is AIRacer):
+				is_car = true
+				body = parent  # Use parent position for accurate avoidance
+		
+		if not is_car:
 			continue
 		
-		var to_body = body.global_position - global_position
+		var to_car = body.global_position - global_position
+		var distance = to_car.length()
 		var forward = Vector2.UP.rotated(global_rotation)
-		if forward.dot(to_body.normalized()) < 0.0:
+		
+		# Detect cars in a reasonable forward cone
+		var forward_dot = forward.dot(to_car.normalized())
+		var min_forward_dot = 0.6  # Wider detection cone (was 0.85)
+		
+		if forward_dot < min_forward_dot:
 			continue
 		
-		avoid_dir -= to_body.normalized()
+		# Consistent avoidance strength - don't weaken at distance
+		var proximity_factor = 1.0 - (distance / car_detect_radius)
+		proximity_factor = clamp(proximity_factor, 0.0, 1.0)
 		
-		if to_body.length() < OBSTACLE_DETECT_RADIUS * 0.5:
-			ai_throttle = false
-			ai_brake = true
+		# Avoid the car
+		avoid_dir -= to_car.normalized() * proximity_factor
+		car_count += 1
 	
-	if avoid_dir != Vector2.ZERO:
+	# Apply car avoidance steering
+	if avoid_dir != Vector2.ZERO and car_count > 0:
+		avoid_dir = avoid_dir.normalized()
 		var avoid_angle = avoid_dir.angle() + PI / 2
 		var angle_diff = angle_difference(global_rotation, avoid_angle)
-		ai_turn_input = clamp(ai_turn_input + angle_diff * OBSTACLE_AVOID_FORCE, -1.0, 1.0)
+		
+		# Gentler avoidance for cars (no braking, just steer)
+		ai_turn_input = lerp(ai_turn_input, clamp(angle_diff * 2.0, -1.0, 1.0), OBSTACLE_AVOID_FORCE)
 
 func check_waypoint_reached(waypoint: Node2D) -> void:
 	if global_position.distance_to(waypoint.global_position) <= WAYPOINT_REACH_DISTANCE:
@@ -298,12 +434,16 @@ func ai_shifting_logic() -> void:
 	var forward: Vector2 = Vector2.UP.rotated(global_rotation)
 	var forward_speed: float = velocity.dot(forward)
 	
-	if rpm > REDLINE_RPM * 0.85 and gear < MAX_GEAR:
+	# Fixed shift points
+	var shift_up_rpm = REDLINE_RPM * 0.85
+	var shift_down_rpm = IDLE_RPM * 2.0
+	
+	if rpm > shift_up_rpm and gear < MAX_GEAR:
 		gear += 1
 		shift_timer = SHIFT_COOLDOWN
 		if gear != 0:
 			rpm = max(abs(forward_speed) * GEAR_RATIOS[gear + 1] / wheel_scale, IDLE_RPM)
-	elif rpm < IDLE_RPM * 2.0 and gear > 1 and abs(forward_speed) > 10.0:
+	elif rpm < shift_down_rpm and gear > 1 and abs(forward_speed) > 10.0:
 		gear -= 1
 		shift_timer = SHIFT_COOLDOWN
 		if gear != 0:

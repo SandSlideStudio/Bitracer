@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hrcwbmbxrkwo"
-path="res://.godot/imported/racer_blue.png-1de50ef2228e96a4a73fff4b1eb63f46.ctex"
+path="res://.godot/imported/racer_blue.png-6e910a604056a312b129c726e5d5b348.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Misc/Characters/racer_blue.png"
-dest_files=["res://.godot/imported/racer_blue.png-1de50ef2228e96a4a73fff4b1eb63f46.ctex"]
+source_file="res://Assets/Misc/Characters/racer_blue.png"
+dest_files=["res://.godot/imported/racer_blue.png-6e910a604056a312b129c726e5d5b348.ctex"]
 
 [params]
 

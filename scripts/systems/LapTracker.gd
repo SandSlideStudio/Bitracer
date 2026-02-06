@@ -39,23 +39,34 @@ func _ready() -> void:
 
 func _on_area_entered(area: Area2D) -> void:
 	var car_node = _find_car_node(area)
-	if car_node:
+	if car_node and not _is_ai_car(car_node):
 		_handle_checkpoint(car_node)
 
 func _on_body_entered(body: Node2D) -> void:
 	var car_node = _find_car_node(body)
-	if car_node:
+	if car_node and not _is_ai_car(car_node):
 		_handle_checkpoint(car_node)
 
 func _on_area_exited(area: Area2D) -> void:
 	var car_node = _find_car_node(area)
-	if car_node:
+	if car_node and not _is_ai_car(car_node):
 		_clear_last_checkpoint(car_node)
 
 func _on_body_exited(body: Node2D) -> void:
 	var car_node = _find_car_node(body)
-	if car_node:
+	if car_node and not _is_ai_car(car_node):
 		_clear_last_checkpoint(car_node)
+
+# Check if this is an AI car (name starts with "AI")
+func _is_ai_car(car: Node) -> bool:
+	if car == null:
+		return false
+	
+	# Check if the car's name starts with "AI"
+	if car.name.begins_with("AI"):
+		return true
+	
+	return false
 
 # ROBUST CAR DETECTION - Works with any car setup
 func _find_car_node(node: Node) -> Node:

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ded4q58irx7uu"
-path="res://.godot/imported/RallyTrack.png-ad5f14006f7cbef37b9bf6608bf0d3a1.ctex"
+path="res://.godot/imported/RallyTrack.png-a67d025182d0570fa6a22be2fa5bcef5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tracks/Tests/RallyTrack.png"
-dest_files=["res://.godot/imported/RallyTrack.png-ad5f14006f7cbef37b9bf6608bf0d3a1.ctex"]
+source_file="res://Assets/tracks/Tests/RallyTrack.png"
+dest_files=["res://.godot/imported/RallyTrack.png-a67d025182d0570fa6a22be2fa5bcef5.ctex"]
 
 [params]
 
