@@ -338,7 +338,6 @@ func _physics_process(delta: float) -> void:
 func _process(delta: float) -> void:
 	update_engine_sound(delta)
 
-
 func ai_navigation_logic(delta: float) -> void:
 	overtake_cooldown = max(0.0, overtake_cooldown - delta)
 	if waypoints.is_empty():
@@ -350,65 +349,65 @@ func ai_navigation_logic(delta: float) -> void:
 	if is_stuck:
 		ai_throttle = false
 		ai_brake = false
-		# Shift to reverse if not already
 		if gear > -1:
 			gear = -1
 			shift_timer = SHIFT_COOLDOWN
-		
-		# Reverse and turn away from obstacle
 		ai_throttle = true
-		ai_turn_input = randf_range(-1.0, 1.0)  # Random turn direction
-		return  # Skip normal navigation while stuck
+		ai_turn_input = randf_range(-1.0, 1.0)
+		return  # skip normal navigation while stuck
 
-	var target_wp: Node2D = waypoints[current_waypoint_index]
-
-	# -------------------------------------------------
-	# BASE WAYPOINT + RACING LINE DIRECTION
-	# -------------------------------------------------
+	# -----------------------------
+	# TARGET WAYPOINT
+	# -----------------------------
+	var target_wp: Node2D = waypoints[current_waypoint_index] as Node2D
 	var wp_position: Vector2 = target_wp.global_position
 
-	var to_next_wp := Vector2.ZERO
-	var next_wp_index := (current_waypoint_index + 1) % waypoints.size()
+	var next_wp_index: int = (current_waypoint_index + 1) % waypoints.size()
+	var next_wp: Node2D = waypoints[next_wp_index] as Node2D
+	var to_next_wp: Vector2 = (next_wp.global_position - wp_position).normalized()
+	var perpendicular: Vector2 = Vector2(-to_next_wp.y, to_next_wp.x)
 
-	if waypoints.size() > 1:
-		to_next_wp = (waypoints[next_wp_index].global_position - wp_position).normalized()
-	else:
-		to_next_wp = (wp_position - global_position).normalized()
+	# -----------------------------
+	# LATERAL OFFSET BASED ON OTHER CARS
+	# -----------------------------
+	var lateral_offset: float = 0.0
+	for car_node in get_tree().get_nodes_in_group("cars"):
+		if car_node == self or not is_instance_valid(car_node):
+			continue
+		if not car_node is Node2D:
+			continue
+		var car: Node2D = car_node as Node2D
+		var side: float = (car.global_position - global_position).dot(transform.x)
+		if abs(side) < 80.0:  # only consider nearby cars
+			lateral_offset += clamp(-side * 0.25, -OVERTAKE_LATERAL_DISTANCE, OVERTAKE_LATERAL_DISTANCE)
 
-	var perpendicular := Vector2(-to_next_wp.y, to_next_wp.x)
+	# Add some random racing line variation if no nearby cars
+	if lateral_offset == 0.0:
+		var car_id_hash: int = hash(get_instance_id())
+		lateral_offset = float(car_id_hash % 5 - 2) * 15.0
 
-	# -------------------------------------------------
-	# LATERAL OFFSET / OVERTAKE LOGIC
-	# -------------------------------------------------
-	var lateral_offset := 0.0
-
+	# Apply lateral offset for overtakes
 	if overtake_state == OvertakeState.COMMIT:
-		lateral_offset = overtake_side * 42.0
-
+		lateral_offset = overtake_side * OVERTAKE_LATERAL_DISTANCE
 	elif overtake_state == OvertakeState.REJOIN:
-		lateral_offset = lerp(overtake_side * 42.0, 0.0, delta * 2.5)
-
-	else:
-		# normal racing-line variation
-		var car_id_hash = hash(get_instance_id())
-		lateral_offset = (car_id_hash % 5 - 2) * 15.0
+		lateral_offset = lerp(overtake_side * OVERTAKE_LATERAL_DISTANCE, 0.0, delta * 2.5)
 
 	wp_position += perpendicular * lateral_offset
 
-	# -------------------------------------------------
-	# STEERING TOWARDS TARGET
-	# -------------------------------------------------
+	# -----------------------------
+	# STEERING TOWARDS TARGET (speed-scaled)
+	# -----------------------------
 	var dir: Vector2 = (wp_position - global_position).normalized()
-	var target_angle := dir.angle() + PI / 2
-	var angle_diff := angle_difference(global_rotation, target_angle)
+	var target_angle: float = dir.angle() + PI / 2
+	var angle_diff: float = angle_difference(global_rotation, target_angle)
 
-	ai_turn_input = clamp(angle_diff * 2.0, -1.0, 1.0)
+	var speed_factor: float = clamp(linear_velocity.length() / 400.0, 0.2, 1.0)
+	ai_turn_input = clamp(angle_diff * (2.5 / speed_factor), -1.0, 1.0)
 
-	# -------------------------------------------------
+	# -----------------------------
 	# THROTTLE / BRAKE
-	# -------------------------------------------------
-	var distance_to_wp = global_position.distance_to(target_wp.global_position)
-	
+	# -----------------------------
+	var distance_to_wp: float = global_position.distance_to(target_wp.global_position)
 	if distance_to_wp > WAYPOINT_REACH_DISTANCE:
 		ai_throttle = true
 		ai_brake = false
@@ -416,26 +415,24 @@ func ai_navigation_logic(delta: float) -> void:
 		ai_throttle = false
 		ai_brake = false
 
-	# -------------------------------------------------
-	# ENVIRONMENT AWARENESS (STRONGER AVOIDANCE)
-	# -------------------------------------------------
+	# -----------------------------
+	# ENVIRONMENT AWARENESS
+	# -----------------------------
 	detect_walls_with_raycasts(delta)
 	avoid_other_cars(delta)
 
-	# -------------------------------------------------
+	# -----------------------------
 	# OVERTAKE COMPLETION CHECK
-	# -------------------------------------------------
+	# -----------------------------
 	if overtake_state == OvertakeState.COMMIT and overtake_target:
 		if not is_instance_valid(overtake_target):
 			overtake_state = OvertakeState.REJOIN
 			overtake_target = null
 		else:
-			var forward := Vector2.UP.rotated(global_rotation)
-			var to_target := overtake_target.global_position - global_position
-			var forward_gap := to_target.dot(forward)
-
-			# target safely behind us
-			if forward_gap < -55.0:
+			var forward: Vector2 = Vector2.UP.rotated(global_rotation)
+			var to_target: Vector2 = overtake_target.global_position - global_position
+			var forward_gap: float = to_target.dot(forward)
+			if forward_gap < -SAFE_REJOIN_DISTANCE:
 				overtake_state = OvertakeState.REJOIN
 				overtake_cooldown = OVERTAKE_COOLDOWN_TIME
 
@@ -444,71 +441,65 @@ func ai_navigation_logic(delta: float) -> void:
 			overtake_state = OvertakeState.NONE
 			overtake_target = null
 
-	# -------------------------------------------------
+	# -----------------------------
 	# WAYPOINT PROGRESSION
-	# -------------------------------------------------
+	# -----------------------------
 	check_waypoint_reached(target_wp, distance_to_wp)
 
-
 # Raycast-based wall detection for better accuracy
-func detect_walls_with_raycasts(delta: float) -> void:
+func detect_walls_with_raycasts(delta: float) -> float:
 	var space_state = get_world_2d().direct_space_state
-	var forward := Vector2.UP.rotated(global_rotation)
-	var wall_detect_distance := BASE_WALL_DETECT_RADIUS
+	var forward: Vector2 = Vector2.UP.rotated(global_rotation)
+	var wall_detect_distance: float = BASE_WALL_DETECT_RADIUS
 
-	var ray_angles = [0.0, -30.0, 30.0, -60.0, 60.0]
-	var ray_weights = [1.5, 1.2, 1.2, 0.6, 0.6]
+	var ray_angles: Array[float] = [0.0, -30.0, 30.0, -60.0, 60.0]
+	var ray_weights: Array[float] = [1.5, 1.2, 1.2, 0.6, 0.6]
 
-	var wall_avoid_dir := Vector2.ZERO
-	var wall_detected := false
+	var wall_avoid_dir: Vector2 = Vector2.ZERO
+	var wall_detected: bool = false
 
 	for i in range(ray_angles.size()):
-		var angle = deg_to_rad(ray_angles[i])
-		var ray_dir = forward.rotated(angle)
-		var ray_end = global_position + ray_dir * wall_detect_distance
+		var angle: float = deg_to_rad(ray_angles[i])
+		var ray_dir: Vector2 = forward.rotated(angle)
+		var ray_end: Vector2 = global_position + ray_dir * wall_detect_distance
 
-		var query = PhysicsRayQueryParameters2D.create(global_position, ray_end)
+		var query: PhysicsRayQueryParameters2D = PhysicsRayQueryParameters2D.create(global_position, ray_end)
 		query.exclude = [self]
 		query.collide_with_areas = false
 		query.collide_with_bodies = true
 		query.collision_mask = 0b1111
 
-		var result = space_state.intersect_ray(query)
+		var result: Dictionary = space_state.intersect_ray(query)
 		if not result:
 			continue
 
-		var hit = result.collider
+		var hit: Object = result.collider
 		if hit is AIRacer or hit is CharacterBody2D:
 			continue
 
-		var distance = global_position.distance_to(result.position)
-		var proximity = 1.0 - (distance / wall_detect_distance)
-		proximity = clamp(proximity, 0.0, 1.0)
+		var distance: float = global_position.distance_to(result.position)
+		var proximity: float = clamp(1.0 - (distance / wall_detect_distance), 0.0, 1.0)
 
 		wall_detected = true
 		wall_avoid_dir += (global_position - result.position).normalized() * proximity * ray_weights[i]
 
 	if not wall_detected or wall_avoid_dir == Vector2.ZERO:
-		return
+		return 0.0
 
 	wall_avoid_dir = wall_avoid_dir.normalized()
-	var avoid_angle = wall_avoid_dir.angle() + PI / 2
-	var angle_diff = angle_difference(global_rotation, avoid_angle)
+	var avoid_angle: float = wall_avoid_dir.angle() + PI / 2
+	var angle_diff: float = angle_difference(global_rotation, avoid_angle)
 
-	# Wall avoidance always strong - safety first!
-	var wall_strength := WALL_AVOID_FORCE
+	# Scale wall strength by speed
+	var speed_factor: float = clamp(linear_velocity.length() / 300.0, 0.3, 1.5)
+	var wall_strength: float = WALL_AVOID_FORCE * speed_factor
 	if overtake_state != OvertakeState.NONE:
-		wall_strength *= 0.7  # Still reduce during overtake but not as much
+		wall_strength *= 0.7  # reduce during overtakes
 
-	ai_turn_input = lerp(
-		ai_turn_input,
-		clamp(angle_diff * 2.5, -1.0, 1.0),  # Increased multiplier for sharper turns
-		wall_strength
-	)
-
+	return clamp(angle_diff * 2.5 * wall_strength, -1.0, 1.0)
 
 # Separate car detection (smaller radius)
-func avoid_other_cars(delta: float) -> void:
+func avoid_other_cars(delta: float) -> float:
 	var forward: Vector2 = Vector2.UP.rotated(global_rotation)
 	var right: Vector2 = Vector2.RIGHT.rotated(global_rotation)
 	var my_forward_speed: float = forward.dot(linear_velocity)
@@ -516,181 +507,154 @@ func avoid_other_cars(delta: float) -> void:
 
 	var avoid_dir: Vector2 = Vector2.ZERO
 	var nearby_cars: int = 0
-	var closest_distance: float = 999999.0
 
-	# Iterate over all AI and player cars in the scene
-	for car in get_tree().get_nodes_in_group("cars"):
-		if car == self:
+	for car_node in get_tree().get_nodes_in_group("cars"):
+		if car_node == self or not is_instance_valid(car_node):
 			continue
-		if not is_instance_valid(car):
+		if not car_node is Node2D:
 			continue
-		if not car is Node2D:
-			continue
-
-		var other_pos: Vector2 = car.global_position
-		var to_car: Vector2 = other_pos - my_position
+		var car: Node2D = car_node as Node2D
+		var to_car: Vector2 = car.global_position - my_position
 		var distance: float = to_car.length()
 		if distance <= 1.0:
 			continue
 
-		closest_distance = min(closest_distance, distance)
-
-		var to_car_norm: Vector2 = to_car.normalized()
-		var forward_dot: float = forward.dot(to_car_norm)
-		
-		# Consider cars both ahead AND to the sides
-		if forward_dot < 0.3:  # Widened from 0.6 to detect cars beside us
-			continue
-
-		var other_velocity: Vector2 = Vector2.ZERO
+		# Predictive avoidance
+		var predicted_pos: Vector2 = car.global_position
 		if "linear_velocity" in car:
-			other_velocity = car.linear_velocity
-		elif "velocity" in car:
-			other_velocity = car.velocity
-			
-		var other_forward_speed: float = forward.dot(other_velocity)
-		var relative_speed: float = my_forward_speed - other_forward_speed
+			predicted_pos += car.linear_velocity * 0.3
+		var to_predicted: Vector2 = predicted_pos - my_position
+		var forward_dot: float = forward.dot(to_predicted.normalized())
 
-		# -------------------------
-		# SLOW DOWN IF TOO CLOSE
-		# -------------------------
-		if distance < 40.0 and forward_dot > 0.7:
+		if distance < 40.0 and forward_dot > 0.5:
 			ai_throttle = false
 			ai_brake = true
 
-		# -------------------------
-		# OVERTAKE START
-		# -------------------------
-		if (
-			overtake_state == OvertakeState.NONE
-			and overtake_cooldown <= 0.0
-			and relative_speed > 10.0
-			and distance < OVERTAKE_DISTANCE
-			and distance > 30.0  # Don't overtake if too close - avoid first
-		):
-			overtake_state = OvertakeState.COMMIT
-			overtake_target = car
-			overtake_side = sign(randf() - 0.5)
-			if overtake_side == 0.0:
-				overtake_side = 1.0
-			overtake_timer = 1.2
-			return  # commit overtake this frame
-
-		# -------------------------
-		# NORMAL AVOIDANCE - STRONGER
-		# -------------------------
-		var proximity: float = 1.0 - (distance / BASE_CAR_DETECT_RADIUS)
-		proximity = clamp(proximity, 0.0, 1.0)
-		var closing_speed: float = max(0.0, relative_speed / 30.0)  # More sensitive
-		proximity *= (1.0 + closing_speed)  # Stronger proximity multiplier
-
-		# Avoid the car laterally
-		avoid_dir -= to_car_norm * proximity * 2.0  # 2x stronger avoidance
+		# Lateral avoidance
+		var side_factor: float = -to_predicted.normalized().dot(right)
+		var proximity: float = clamp(1.0 - (distance / BASE_CAR_DETECT_RADIUS), 0.0, 1.0)
+		avoid_dir += right * side_factor * proximity * 2.0
 		nearby_cars += 1
 
-	# -------------------------
-	# APPLY STEERING
-	# -------------------------
 	if avoid_dir != Vector2.ZERO and nearby_cars > 0:
 		avoid_dir = avoid_dir.normalized()
 		var avoid_angle: float = avoid_dir.angle() + PI / 2
 		var angle_diff: float = angle_difference(global_rotation, avoid_angle)
-
-		# Strong steering to avoid cars
 		var steering_strength: float = OBSTACLE_AVOID_FORCE
 		if overtake_state != OvertakeState.NONE:
-			steering_strength *= 0.6  # Reduced less during overtake
-
-		ai_turn_input = lerp(
-			ai_turn_input,
-			clamp(angle_diff * 3.0, -1.0, 1.0),  # Increased from 2.0 - sharper avoidance turns
-			steering_strength
-		)
+			steering_strength *= 0.6
+		return clamp(angle_diff * steering_strength, -1.0, 1.0)
+	return 0.0
 
 
 func check_waypoint_reached(waypoint: Node2D, distance: float) -> void:
-	if distance <= WAYPOINT_REACH_DISTANCE:
-		# Progress to next waypoint
-		var old_index = current_waypoint_index
-		current_waypoint_index = (current_waypoint_index + 1) % waypoints.size()
+	var wp_position: Vector2 = waypoint.global_position
+	var next_wp_index: int = (current_waypoint_index + 1) % waypoints.size()
+	var next_wp: Node2D = waypoints[next_wp_index] as Node2D
+
+	var path_dir: Vector2 = (next_wp.global_position - wp_position).normalized()
+	var to_wp: Vector2 = global_position - wp_position
+	var projected: float = to_wp.dot(path_dir)
+
+	# Only switch if we are past the waypoint along the path
+	if distance <= WAYPOINT_REACH_DISTANCE or projected > 0:
+		current_waypoint_index = next_wp_index
 		last_distance_to_waypoint = INF
 	else:
-		# Update last distance to detect if we're getting closer
+		# Update last distance for stuck detection
 		if distance < last_distance_to_waypoint:
 			last_distance_to_waypoint = distance
 		elif distance > last_distance_to_waypoint + 50.0:
-			# We're moving away from waypoint - might have missed it
-			current_waypoint_index = (current_waypoint_index + 1) % waypoints.size()
+			# Possibly missed the waypoint, advance to next
+			current_waypoint_index = next_wp_index
 			last_distance_to_waypoint = INF
 
 func ai_shifting_logic() -> void:
 	if shift_timer > 0.0:
 		return
-	
+
 	var forward: Vector2 = Vector2.UP.rotated(global_rotation)
 	var forward_speed: float = linear_velocity.dot(forward)
 	var abs_speed: float = abs(forward_speed)
-	
-	# Shift at 83% of redline - achievable with current engine power
-	# At 162 speed in gear 2: 162 * 2.10 / 0.0525 = 6480 RPM
-	var shift_up_rpm = REDLINE_RPM * 0.83  # 6474 RPM
-	var shift_down_rpm = IDLE_RPM * 2.0     # 1800 RPM
-	
+
+	# -----------------------------
 	# SHIFT UP
+	# -----------------------------
+	var shift_up_rpm: float = REDLINE_RPM * 0.83
 	if rpm > shift_up_rpm and gear < MAX_GEAR:
 		var old_gear = gear
 		gear += 1
 		shift_timer = SHIFT_COOLDOWN
-		# Recalculate RPM for new gear immediately (like player car does)
 		if gear != 0:
 			var new_ratio: float = GEAR_RATIOS[gear + 1]
 			rpm = max(abs_speed * new_ratio / wheel_scale, IDLE_RPM)
-		print(name, " shifted UP from ", old_gear, " to ", gear, " at speed ", abs_speed, " | Old RPM: ", int(shift_up_rpm), " New RPM: ", int(rpm))
-	
-	# SHIFT DOWN - prevent money shifting
-	elif gear > 1:
+		print(name, " shifted UP from ", old_gear, " to ", gear, " at speed ", abs_speed, " RPM: ", int(rpm))
+
+	# -----------------------------
+	# SHIFT DOWN
+	# -----------------------------
+	if gear > 1:
 		var target_gear: int = gear - 1
 		if target_gear != 0:
-			# Calculate what RPM would be in lower gear
 			var new_ratio: float = GEAR_RATIOS[target_gear + 1]
 			var predicted_rpm: float = abs_speed * new_ratio / wheel_scale
-			
-			# Only downshift if it won't over-rev AND we're below downshift threshold
-			if predicted_rpm <= REDLINE_RPM and rpm < shift_down_rpm:
+
+			# Only downshift if predicted RPM would be high enough to stay in power band
+			var downshift_rpm_threshold: float = 4000.0
+			if rpm < downshift_rpm_threshold and predicted_rpm < REDLINE_RPM:
+				var old_gear = gear
 				gear = target_gear
 				shift_timer = SHIFT_COOLDOWN
 				rpm = max(predicted_rpm, IDLE_RPM)
-				print(name, " shifted DOWN to gear ", gear, " at speed ", abs_speed, " RPM: ", rpm)
+				print(name, " shifted DOWN from ", old_gear, " to ", gear, " at speed ", abs_speed, " RPM: ", int(rpm))
 
 # -----------------------------
 # RUBBERBANDING
 # -----------------------------
 func apply_rubberbanding() -> void:
-	var player_node = get_tree().get_first_node_in_group("local_player")
+	var player_node: Node = get_tree().get_first_node_in_group("local_player")
 	if not player_node:
 		player_node = get_tree().get_first_node_in_group("player")
 	if not player_node:
 		rubberband_multiplier = 1.0
 		return
-	
-	var player_car = player_node
+
+	var player_car: Node2D = player_node as Node2D
 	if player_node.get_script() and player_node.get_script().get_path().get_file() == "MultiplayerCarWrapper.gd":
 		if player_node.has_method("get_parent"):
-			player_car = player_node.get_parent()
-	
-	if not player_car is Node2D:
+			player_car = player_node.get_parent() as Node2D
+
+	if not player_car:
 		rubberband_multiplier = 1.0
 		return
-	
+
 	distance_to_player = global_position.distance_to(player_car.global_position)
+
+	# Base multiplier
 	if distance_to_player > 500.0:
-		rubberband_multiplier = lerp(rubberband_multiplier, 1.15, 0.01)
+		rubberband_multiplier = lerp(rubberband_multiplier, 1.05, 0.01)
 	elif distance_to_player < 200.0:
-		rubberband_multiplier = lerp(rubberband_multiplier, 0.90, 0.01)
+		rubberband_multiplier = lerp(rubberband_multiplier, 0.95, 0.01)
 	else:
 		rubberband_multiplier = lerp(rubberband_multiplier, 1.0, 0.02)
-	
-	rubberband_multiplier = clamp(rubberband_multiplier, 0.85, 1.20)
+
+	# Check for walls ahead and reduce multiplier if too close
+	var forward: Vector2 = Vector2.UP.rotated(global_rotation)
+	var space_state = get_world_2d().direct_space_state
+	var ray_end: Vector2 = global_position + forward * 120.0
+	var query: PhysicsRayQueryParameters2D = PhysicsRayQueryParameters2D.create(global_position, ray_end)
+	query.exclude = [self]
+	query.collide_with_areas = false
+	query.collide_with_bodies = true
+	query.collision_mask = 0b1111
+	var result: Dictionary = space_state.intersect_ray(query)
+	if result:
+		# Wall detected ahead, reduce boost
+		rubberband_multiplier = min(rubberband_multiplier, 1.0)
+
+	# Clamp finally to safe range
+	rubberband_multiplier = clamp(rubberband_multiplier, 0.95, 1.1)
+
 
 # -----------------------------
 # ENGINE SOUND

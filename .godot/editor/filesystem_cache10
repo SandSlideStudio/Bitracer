@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1770391116
+::res://::1770403876
 export_presets.cfg::TextFile::-1::1766955863::0::1::::<><><>0<>0<><>::
 Icon.svg::CompressedTexture2D::8107707766876378206::1765746199::1770376412::1::::<><><>0<>0<>211035967000fd77194f98a753c83990<>res://.godot/imported/Icon.svg-209197100d5fe6cba9c168636c60b76c.ctex::
 LICENSE.md::TextFile::-1::1768940536::0::1::::<><><>0<>0<><>::
@@ -588,8 +588,8 @@ PLACEHOLDER.txt::TextFile::-1::1765566605::0::1::::<><><>0<>0<><>::
 PLACEHOLDER.txt::TextFile::-1::1765566594::0::1::::<><><>0<>0<><>::
 ::res://scenes/::1770302004
 ::res://scenes/AI/::1770302014
-::res://scenes/AI/Car/::1770315748
-AICar.tscn::PackedScene::3482661888751167951::1770315748::0::1::::<><><>0<>0<><>::uid://oqu2otmup07r::::res://scripts/AI/Car/AICar.gd<>uid://5601g3mshca5::::res://Assets/cars/CustomCar(Green).png<>uid://bmathndj7fgi1::::res://Assets/sounds/Sound effects/Engine/engine-47745.mp3
+::res://scenes/AI/Car/::1770394118
+AICar.tscn::PackedScene::3482661888751167951::1770394118::0::1::::<><><>0<>0<><>::uid://oqu2otmup07r::::res://scripts/AI/Car/AICar.gd<>uid://5601g3mshca5::::res://Assets/cars/CustomCar(Green).png<>uid://bmathndj7fgi1::::res://Assets/sounds/Sound effects/Engine/engine-47745.mp3
 ::res://scenes/main/::1770382583
 CarSelector.tscn::PackedScene::4545853033448446828::1770151908::0::1::::<><><>0<>0<><>::uid://cqoklcoq5jhv2::::res://scripts/ui/CarSelector.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://bot2bc08es4ir::::res://Assets/sounds/Sound effects/UI/confirmation_004.ogg<>uid://d10q2g8uppukf::::res://Assets/sounds/Music/so-happy-with-my-8-bit-game-301275.mp3
 Lobby.tscn::PackedScene::1488560967802229570::1766428709::0::1::::<><><>0<>0<><>::uid://bhj0jbmmrkg6o::::res://scripts/systems/Lobby.gd
@@ -611,18 +611,18 @@ Coralus_Iceway.tscn::PackedScene::6954611410422762817::1770300821::0::1::::<><><
 GrassLandsTrail(LONG).tscn::PackedScene::8945987299052823963::1766347592::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
 GrassLandsTrail(SHORT).tscn::PackedScene::6086947706079344935::1766354934::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
 TrackTemplate.tscn::PackedScene::973578392416152859::1765830031::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
-::res://scenes/track/Track+Car/::1770378778
+::res://scenes/track/Track+Car/::1770393004
 Coralus_Iceway+SELECTOR.tscn::PackedScene::833504138247691089::1770301080::0::1::::<><><>0<>0<><>::uid://cq4r5bgy5xglk::::res://scripts/systems/Car_Spawner.gd<>uid://c6c4o0r782qgn::::res://scenes/track/Raw track/Coralus_Iceway.tscn<>uid://b2t7l3mtdpatn::::res://scenes/ui/LapTimerUI.tscn
 GrassLandsTrailLONG+SELECTOR.tscn::PackedScene::475756547515046159::1766425706::0::1::::<><><>0<>0<><>::uid://cq4r5bgy5xglk::::res://scripts/systems/Car_Spawner.gd<>uid://d0prdr8myg8t8::::res://scenes/track/Raw track/GrassLandsTrail(LONG).tscn<>uid://b2t7l3mtdpatn::::res://scenes/ui/LapTimerUI.tscn
 GrassLandsTrailSHORT+SELECTOR.tscn::PackedScene::4301033674669305753::1766425707::0::1::::<><><>0<>0<><>::uid://cq4r5bgy5xglk::::res://scripts/systems/Car_Spawner.gd<>uid://csyte0ff3otnr::::res://scenes/track/Raw track/GrassLandsTrail(SHORT).tscn<>uid://b2t7l3mtdpatn::::res://scenes/ui/LapTimerUI.tscn
-Testingenviroment.tscn::PackedScene::7415938118774588853::1770378778::0::1::::<><><>0<>0<><>::uid://c6c4o0r782qgn::::res://scenes/track/Raw track/Coralus_Iceway.tscn<>uid://b2t7l3mtdpatn::::res://scenes/ui/LapTimerUI.tscn<>uid://bpva6x7ms5slb::::res://scenes/AI/Car/AICar.tscn<>uid://c6qfibqrndtrm::::res://scenes/systems/waypoint.tscn
+Testingenviroment.tscn::PackedScene::7415938118774588853::1770393004::0::1::::<><><>0<>0<><>::uid://c6c4o0r782qgn::::res://scenes/track/Raw track/Coralus_Iceway.tscn<>uid://b2t7l3mtdpatn::::res://scenes/ui/LapTimerUI.tscn<>uid://bpva6x7ms5slb::::res://scenes/AI/Car/AICar.tscn<>uid://c6qfibqrndtrm::::res://scenes/systems/waypoint.tscn
 TestRally.tscn::PackedScene::4872697698103610095::1768934776::0::1::::<><><>0<>0<><>::uid://ded4q58irx7uu::::res://Assets/tracks/Tests/RallyTrack.png<>uid://1fey2sk64sa0::::res://scenes/player/Car/Car_Arcade_Rally_Physics.tscn<>uid://bww0jh03vdaqr::::res://Assets/cars/van.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://dq8jgpqdya4wc::::res://Assets/vehicles/Motorcycles/motorcycle_green.png<>uid://btjgpdu0iij5i::::res://Assets/vehicles/Motorcycles/motorcycle_black.png<>uid://s5js4go2psa1::::res://Assets/cars/RallyCar(11).png
 ::res://scenes/ui/::1765224719
 LapTimerUI.tscn::PackedScene::4322706716807921179::1765224682::0::1::::<><><>0<>0<><>::uid://bwkoinuuh1keh::::res://scripts/ui/LapTimerUI.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf
 ::res://scripts/::1770301926
 ::res://scripts/AI/::1770301937
-::res://scripts/AI/Car/::1770379112
-AICar.gd::GDScript::1016937176538928557::1770379112::0::1::::AIRacer<>StaticBody2D<><>0<>0<><>::
+::res://scripts/AI/Car/::1770395140
+AICar.gd::GDScript::1016937176538928557::1770395140::0::1::::AIRacer<>RigidBody2D<><>0<>0<><>::
 ::res://scripts/player/::1764706673
 ::res://scripts/player/Camera/::1766775438
 camera_controller.gd::GDScript::8574877010157236332::1764620062::0::1::::<>Node2D<><>0<>0<><>::
