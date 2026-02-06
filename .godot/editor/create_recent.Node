@@ -1,4 +1,5 @@
 Camera2D
+RigidBody2D
 Marker2D
 Node2D
 ColorRect
@@ -11,5 +12,3 @@ Button
 Label
 Control
 HBoxContainer
-LineEdit
-VBoxContainer
