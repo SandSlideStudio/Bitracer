@@ -1,3 +1,1 @@
-res://scenes/track/Track+Car/Testingenviroment.tscn
-res://scripts/systems/LapTracker.gd
-res://scripts/AI/Car/AICar.gd
+res://scenes/main/MainMenu.tscn

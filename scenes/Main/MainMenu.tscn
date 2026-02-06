@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://d1mu4vi3fk6cm"]
+[gd_scene load_steps=20 format=3 uid="uid://d1mu4vi3fk6cm"]
 
 [ext_resource type="Script" uid="uid://c7ytex5tcfgb8" path="res://scripts/systems/MainMenu.gd" id="1_iclq3"]
 [ext_resource type="Texture2D" uid="uid://cvye13gf7nvhq" path="res://Assets/Misc/Screenshot 2026-02-04 182944.png" id="2_kg8x7"]
@@ -16,6 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://cnyvcnk00glu1" path="res://Assets/vehicles/cars/car_blue_small_4.png" id="14_m8347"]
 [ext_resource type="Texture2D" uid="uid://bclgbfh24yttq" path="res://Assets/Misc/Objects/cone_straight.png" id="15_0aa8n"]
 [ext_resource type="Texture2D" uid="uid://cgxofe1lm5op7" path="res://Assets/Misc/Objects/cone_down.png" id="16_b8gin"]
+[ext_resource type="Texture2D" uid="uid://dlj4o0f6auijg" path="res://Assets/cars/CustomCar(Red).png" id="17_b8gin"]
+[ext_resource type="Texture2D" uid="uid://hrcwbmbxrkwo" path="res://Assets/Misc/Characters/racer_blue.png" id="18_2tmkl"]
+[ext_resource type="Texture2D" uid="uid://b06ldxtitnd5r" path="res://Assets/Misc/Characters/racer_yellow.png" id="19_fyxbt"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -105,8 +108,8 @@ rotation = 1.9111356
 texture = ExtResource("8_440sr")
 
 [node name="RallyCar(11)" type="Sprite2D" parent="."]
-position = Vector2(1170, 230.00002)
-rotation = -1.0890855
+position = Vector2(1783.9999, 304.00003)
+rotation = -0.36128315
 scale = Vector2(2.5, 2.5)
 texture = ExtResource("5_440sr")
 
@@ -141,8 +144,8 @@ scale = Vector2(2.5, 2.5)
 texture = ExtResource("9_0aa8n")
 
 [node name="SkidmarkLong2" type="Sprite2D" parent="."]
-position = Vector2(1241.16, 265.44592)
-rotation = -1.1414453
+position = Vector2(1813.27, 383.926)
+rotation = -0.31066862
 scale = Vector2(3.75, 4.5473714)
 texture = ExtResource("10_b8gin")
 
@@ -187,3 +190,21 @@ rotation = 0.43633232
 theme_override_font_sizes/font_size = 12
 text = "Expirimental"
 horizontal_alignment = 1
+
+[node name="CustomCar(red)" type="Sprite2D" parent="."]
+position = Vector2(1171, 248.00003)
+rotation = -0.88313663
+scale = Vector2(2, 2)
+texture = ExtResource("17_b8gin")
+
+[node name="RacerBlue" type="Sprite2D" parent="."]
+position = Vector2(439.79282, 829.6387)
+rotation = 1.1431906
+scale = Vector2(0.4, 0.3455452)
+texture = ExtResource("18_2tmkl")
+
+[node name="RacerBlue2" type="Sprite2D" parent="."]
+position = Vector2(374.25894, 874.20325)
+rotation = 0.31415927
+scale = Vector2(0.4, 0.34763795)
+texture = ExtResource("19_fyxbt")

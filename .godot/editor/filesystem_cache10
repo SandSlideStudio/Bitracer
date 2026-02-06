@@ -1,11 +1,11 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1770376401
+::res://::1770382200
 export_presets.cfg::TextFile::-1::1766955863::0::1::::<><><>0<>0<><>::
 Icon.svg::CompressedTexture2D::8107707766876378206::1765746199::1770376412::1::::<><><>0<>0<>211035967000fd77194f98a753c83990<>res://.godot/imported/Icon.svg-209197100d5fe6cba9c168636c60b76c.ctex::
 LICENSE.md::TextFile::-1::1768940536::0::1::::<><><>0<>0<><>::
 README.md::TextFile::-1::1770290145::0::1::::<><><>0<>0<><>::
 ::res://Assets/::1764857105
-::res://Assets/cars/::1770376382
+::res://Assets/cars/::1770376413
 CustomCar(BareBones).png::CompressedTexture2D::3108143164143739912::1764612338::1770376413::1::::<><><>0<>0<>42750c35a19a2e233705804d53f5b40f<>res://.godot/imported/CustomCar(BareBones).png-6baa4472095ff51cd10cf21238608c1a.ctex::
 CustomCar(Blue).png::CompressedTexture2D::6776496864634132185::1764612338::1770376413::1::::<><><>0<>0<>732e36e862791f1cecabc636bfbe1196<>res://.godot/imported/CustomCar(Blue).png-36b389b1f3b8e375debecdbe6dfebd7d.ctex::
 CustomCar(Green).png::CompressedTexture2D::2171225733941694590::1764612338::1770376413::1::::<><><>0<>0<>9fdbf5a8a429cf3b101c0a56b33656ed<>res://.godot/imported/CustomCar(Green).png-18acbee91d379add869545aba864fad0.ctex::
@@ -14,10 +14,10 @@ CustomCar(VANWIJDERACING).png::CompressedTexture2D::2290768476338422858::1764613
 GoKart.png::CompressedTexture2D::4407523139307320737::1766925306::1770376413::1::::<><><>0<>0<>b6a62ad2a6420387002ef3d2e279e92f<>res://.godot/imported/GoKart.png-2dc3af71abaa3d73112136a84d1bde74.ctex::
 RallyCar(11).png::CompressedTexture2D::1325910648450330570::1768835723::1770376413::1::::<><><>0<>0<>f0093c650875c31f829e2e3e2590e414<>res://.godot/imported/RallyCar(11).png-70e4cb144d161c7d80fca2ee2f047de3.ctex::
 van.png::CompressedTexture2D::3977525958867369049::1768909258::1770376413::1::::<><><>0<>0<>171e11e18a0f89e218e5a6418d1f1e6a<>res://.godot/imported/van.png-bb8cfaea85bfb9598b41a5983c4291f9.ctex::
-::res://Assets/Misc/::1770376382
+::res://Assets/Misc/::1770376413
 Rally pacenotes (to record).txt::TextFile::-1::1764196022::0::1::::<><><>0<>0<><>::
-Screenshot 2026-02-04 182944.png::CompressedTexture2D::6296642928688015834::1770226644::1770376413::1::::<><><>0<>0<>3f7c9ff50d25180a8a5ab9e370de3e28<>res://.godot/imported/Screenshot 2026-02-04 182944.png-fb8dc7ad9038ee2a68fc53a205a9ee6b.ctex::
-::res://Assets/Misc/Characters/::1770376382
+Screenshot 2026-02-04 182944.png::CompressedTexture2D::6296642928688015834::1770382188::1770382200::1::::<><><>0<>0<>3f7c9ff50d25180a8a5ab9e370de3e28<>res://.godot/imported/Screenshot 2026-02-04 182944.png-fb8dc7ad9038ee2a68fc53a205a9ee6b.ctex::
+::res://Assets/Misc/Characters/::1770376413
 character_black_blue.png::CompressedTexture2D::6184961895424271782::1764016146::1770376413::1::::<><><>0<>0<>a7f1b2886e981536577ba73043e4850f<>res://.godot/imported/character_black_blue.png-0c0247d574f54d9ab9798183b3393563.ctex::
 character_black_green.png::CompressedTexture2D::6966536106267796018::1764016146::1770376413::1::::<><><>0<>0<>542b5ad104025fb0dd55d4b4b91011e5<>res://.godot/imported/character_black_green.png-869b8aa52c021c32049b0c4dc15e0a3b.ctex::
 character_black_red.png::CompressedTexture2D::5749684901003140653::1764016146::1770376413::1::::<><><>0<>0<>63df9c9e7c576aa515267a4b8a0d60a4<>res://.godot/imported/character_black_red.png-9a22dcbedf696294154fe48a2ec7b90b.ctex::
@@ -35,7 +35,7 @@ racer_blue.png::CompressedTexture2D::526577119874538298::1764016146::1770376413:
 racer_green.png::CompressedTexture2D::2436520073472166576::1764016146::1770376413::1::::<><><>0<>0<>7b72ffd5623eac974fcf7acd7b1d0f7b<>res://.godot/imported/racer_green.png-3e65942e117bd5281d6266db524ad792.ctex::
 racer_red.png::CompressedTexture2D::8795737270398624457::1764016146::1770376413::1::::<><><>0<>0<>78b46867f263fe8a466fa26ff67b4963<>res://.godot/imported/racer_red.png-856119f209cf6a4458d845876b5a2eba.ctex::
 racer_yellow.png::CompressedTexture2D::4205811967099635953::1764016146::1770376413::1::::<><><>0<>0<>d8f6714797b14cc89779141614e16dc0<>res://.godot/imported/racer_yellow.png-4215d261db6665724a07ad45dee668c6.ctex::
-::res://Assets/Misc/Objects/::1770376382
+::res://Assets/Misc/Objects/::1770376414
 arrow_white.png::CompressedTexture2D::4137786641212986832::1764016146::1770376413::1::::<><><>0<>0<>d61efd9af83317a91cf6b1b85f4e1241<>res://.godot/imported/arrow_white.png-924bd489c0208e13828be7ce3866920b.ctex::
 arrow_yellow.png::CompressedTexture2D::4934506765478474439::1764016146::1770376413::1::::<><><>0<>0<>2726421d9ea69a311529da14e84ef8a2<>res://.godot/imported/arrow_yellow.png-a5d51b5bda7fa212e5ae1f4bfab8125e.ctex::
 barrel_blue.png::CompressedTexture2D::8362383719156934493::1764016146::1770376414::1::::<><><>0<>0<>fb01fc7b8cbc3910388771edfd095e76<>res://.godot/imported/barrel_blue.png-bd2405094342b8844b4d6a9f621b03a1.ctex::
@@ -76,20 +76,20 @@ tribune_full.png::CompressedTexture2D::6664791145144755688::1764016146::17703764
 tribune_overhang_red.png::CompressedTexture2D::6117453389151660958::1764016146::1770376413::1::::<><><>0<>0<>026942e2a14ec9e7d96e17b6c4cec40f<>res://.godot/imported/tribune_overhang_red.png-376bc5883e8644dd39af8d56ce1de333.ctex::
 tribune_overhang_striped.png::CompressedTexture2D::3543632370551289643::1764016146::1770376413::1::::<><><>0<>0<>3d9b2e87f5580ef6baae089558ed47f3<>res://.godot/imported/tribune_overhang_striped.png-3def76cf2a13a9d4ae816bcdfe0e1e95.ctex::
 ::res://Assets/sounds/::1764857734
-::res://Assets/sounds/Music/::1770376382
+::res://Assets/sounds/Music/::1770376411
 music-for-arcade-style-game-146875.mp3::AudioStreamMP3::5870408255156078346::1770151972::1770376411::1::::<><><>0<>0<>58b02ea35fcf60173afd140404781ce1<>res://.godot/imported/music-for-arcade-style-game-146875.mp3-86f6c73e94a11a8f969e21f9f60ad130.mp3str::
 pixel-dreams-259187.mp3::AudioStreamMP3::5943111271562648552::1770151709::1770376411::1::::<><><>0<>0<>d1ea984f70b214ed2e2b626849daaad5<>res://.godot/imported/pixel-dreams-259187.mp3-55d719dfa2763b19870034889c2e6ab7.mp3str::
 so-happy-with-my-8-bit-game-301275.mp3::AudioStreamMP3::9036801484887348305::1770151882::1770376411::1::::<><><>0<>0<>b61133a2fccc1d79e748954072d57483<>res://.godot/imported/so-happy-with-my-8-bit-game-301275.mp3-795f08180977c01707d12eaa3db7e958.mp3str::
 ::res://Assets/sounds/Sound effects/::1768852079
-::res://Assets/sounds/Sound effects/Engine/::1770376382
+::res://Assets/sounds/Sound effects/Engine/::1770376411
 engine-6000.mp3::AudioStreamMP3::2081548954521887303::1764857624::1770376411::1::::<><><>0<>0<>2aa9564852e041d6e56bcede260a81d2<>res://.godot/imported/engine-6000.mp3-7dc40393752dd184230bf61a0a1b9f1b.mp3str::
 engine-47745.mp3::AudioStreamMP3::3229853618659237194::1764857637::1770376411::1::::<><><>0<>0<>75446e50fd7f424ea1a3f51ee139611f<>res://.godot/imported/engine-47745.mp3-843f39272224f4e543a445eb3a0a97b0.mp3str::
 rally-car-idle-loop-17-84405.mp3::AudioStreamMP3::4680583384175171407::1768851342::1770376411::1::::<><><>0<>0<>a6d4f42c726bff28401f52ef4e540443<>res://.godot/imported/rally-car-idle-loop-17-84405.mp3-a32edb650fb411016a371da06195a5a9.mp3str::
 ::res://Assets/sounds/Sound effects/Rally/::1768852162
-::res://Assets/sounds/Sound effects/Rally/Pacenotes/::1770376382
+::res://Assets/sounds/Sound effects/Rally/Pacenotes/::1770376417
 Rally pacenotes.wav::AudioStreamWAV::1170375527080692300::1768852036::1770376417::1::::<><><>0<>0<>1909a6e5d5ed81c2da70766b91ddb438<>res://.godot/imported/Rally pacenotes.wav-c1424f68bb27ee00b658c157524668b2.sample::
 timestamps and shit like that.txt::TextFile::-1::1768852129::0::1::::<><><>0<>0<><>::
-::res://Assets/sounds/Sound effects/UI/::1770376382
+::res://Assets/sounds/Sound effects/UI/::1770376411
 back_001.ogg::AudioStreamOggVorbis::1484620235689647984::1765187576::1770376411::1::::<><><>0<>0<>62882c169d555809e3cd014b4b174506<>res://.godot/imported/back_001.ogg-9b154c0da3c47f63db24c141622bbb9f.oggvorbisstr::
 back_002.ogg::AudioStreamOggVorbis::7863847241932697389::1765187576::1770376411::1::::<><><>0<>0<>0778dad08531fc452708699dcf816457<>res://.godot/imported/back_002.ogg-654d6715e5d43f75a93695ba0fefe98c.oggvorbisstr::
 back_003.ogg::AudioStreamOggVorbis::5437308532751139064::1765187576::1770376411::1::::<><><>0<>0<>cf18ed39576d27d4743b2d468ea267ed<>res://.godot/imported/back_003.ogg-352148f2cb1616cd324956c396885f87.oggvorbisstr::
@@ -191,16 +191,16 @@ toggle_002.ogg::AudioStreamOggVorbis::6485372791813723762::1765187577::177037641
 toggle_003.ogg::AudioStreamOggVorbis::2057738693034265199::1765187577::1770376411::1::::<><><>0<>0<>b2f29e6bf24db84808e2f6404d4f4bab<>res://.godot/imported/toggle_003.ogg-46736ea4ec9779132b438a9a17910f82.oggvorbisstr::
 toggle_004.ogg::AudioStreamOggVorbis::7545192025548739202::1765187577::1770376411::1::::<><><>0<>0<>35366d9920226ba332ad98cfaf59f1e2<>res://.godot/imported/toggle_004.ogg-4a7ba3b48e3a2bfe610042b03325f191.oggvorbisstr::
 ::res://Assets/tracks/::1768849339
-::res://Assets/tracks/Tests/::1770376382
+::res://Assets/tracks/Tests/::1770376417
 RallyTrack.png::CompressedTexture2D::7448001551452510660::1768850799::1770376417::1::::<><><>0<>0<>8c4d5a169219cdd4fe194d991a5d9c18<>res://.godot/imported/RallyTrack.png-a67d025182d0570fa6a22be2fa5bcef5.ctex::
-::res://Assets/tracks/tilemap/::1770376382
+::res://Assets/tracks/tilemap/::1770376413
 Decor.png::CompressedTexture2D::1126739629788510545::1764958612::1770376413::1::::<><><>0<>0<>dd21127e9a1675d9264f6d349863d6eb<>res://.godot/imported/Decor.png-9c2c747301ff26f1933dcd21e05eb38c.ctex::
 Decor_but_better.png::CompressedTexture2D::8663726958433093492::1764965087::1770376413::1::::<><><>0<>0<>17ff6f77962bef2da74d0249215ce791<>res://.godot/imported/Decor_but_better.png-bcf9fc88ccb82a033fb451320cf083ea.ctex::
 tilemap1.png::CompressedTexture2D::25560062586100708::1764339296::1770376413::1::::<><><>0<>0<>e53ae278318cbd3843a1fe3fdc1694e2<>res://.godot/imported/tilemap1.png-0fc2366110aa44f43b56bd6cf516068c.ctex::
 tilemap2.png::CompressedTexture2D::6444695158082544930::1764339267::1770376413::1::::<><><>0<>0<>35be78e24479f2f39a7447b4e8891ca3<>res://.godot/imported/tilemap2.png-ba1e89a352e8abbe2155955eb18775a9.ctex::
 tilemap.png::CompressedTexture2D::4297892666585658835::1764339173::1770376413::1::::<><><>0<>0<>e3f5bc54c630f41f638d2627906661da<>res://.godot/imported/tilemap.png-02aefed24126f07ee24b469bb134d915.ctex::
 ::res://Assets/tracks/Tiles/::1764186091
-::res://Assets/tracks/Tiles/Asphalt road/::1770376382
+::res://Assets/tracks/Tiles/Asphalt road/::1770376414
 road_asphalt01.png::CompressedTexture2D::1869717615704688147::1764016146::1770376413::1::::<><><>0<>0<>0501a8e9e952f3cb1c3faa2b773c4009<>res://.godot/imported/road_asphalt01.png-787274bcc6262c52e394760c1b9a6591.ctex::
 road_asphalt02.png::CompressedTexture2D::1848669571822939983::1764016146::1770376413::1::::<><><>0<>0<>a8e7721ff8f55618787557e01e629abe<>res://.godot/imported/road_asphalt02.png-d6c07d67517e4ffb4052a552f8fe24bb.ctex::
 road_asphalt03.png::CompressedTexture2D::803416796639191984::1764016146::1770376413::1::::<><><>0<>0<>3318d16bf8f2df9e3d810d4d9b885d3f<>res://.godot/imported/road_asphalt03.png-a80f119ebcec4380a65ce5ec2db482b0.ctex::
@@ -291,7 +291,7 @@ road_asphalt87.png::CompressedTexture2D::983924281277358395::1764016146::1770376
 road_asphalt88.png::CompressedTexture2D::7154799742965151969::1764016146::1770376414::1::::<><><>0<>0<>ee579b00c8468ca8dc20f29ee6e1e5d7<>res://.godot/imported/road_asphalt88.png-1f8e8c3ecedb623cd87df1cb11bc21df.ctex::
 road_asphalt89.png::CompressedTexture2D::2313309080062166664::1764016146::1770376414::1::::<><><>0<>0<>125d07abf449ee96e59c13fc42acd108<>res://.godot/imported/road_asphalt89.png-250d824112a38c636aa0ef1f0214ca94.ctex::
 road_asphalt90.png::CompressedTexture2D::9132995006604437453::1764016146::1770376414::1::::<><><>0<>0<>d18ed8afad88a0a0bb7cb43faa9d2024<>res://.godot/imported/road_asphalt90.png-46b3c8f9bcb126a27dda816f08a3d720.ctex::
-::res://Assets/tracks/Tiles/Dirt/::1770376382
+::res://Assets/tracks/Tiles/Dirt/::1770376414
 land_dirt01.png::CompressedTexture2D::7978665843684290068::1764016146::1770376414::1::::<><><>0<>0<>e61da6a8a9a11e398587a69c90266443<>res://.godot/imported/land_dirt01.png-ca30990f0eb8faab65deb41e019efd09.ctex::
 land_dirt02.png::CompressedTexture2D::7839042704359829420::1764016146::1770376414::1::::<><><>0<>0<>9d5d8b9f4b29d642ed08200f908e35b1<>res://.godot/imported/land_dirt02.png-98406201431d92142112519d29a1ff52.ctex::
 land_dirt03.png::CompressedTexture2D::5084415952252040537::1764016146::1770376414::1::::<><><>0<>0<>a22337a523428ab50bd5183ff60987f2<>res://.godot/imported/land_dirt03.png-9f5b2ebd5a37017cba16849806783f7f.ctex::
@@ -306,7 +306,7 @@ land_dirt11.png::CompressedTexture2D::962997628179427052::1764016147::1770376414
 land_dirt12.png::CompressedTexture2D::8605413922254433682::1764016147::1770376414::1::::<><><>0<>0<>8302350e5e39bb79e061cd215b2a330d<>res://.godot/imported/land_dirt12.png-64b9fdbcbfe2aef9b804aaed458564f7.ctex::
 land_dirt13.png::CompressedTexture2D::5750405393722197274::1764016147::1770376414::1::::<><><>0<>0<>4e5af79ae933af25b1de7b73bc175f4f<>res://.godot/imported/land_dirt13.png-4ce3855ca0e79bb6b6295382aac62245.ctex::
 land_dirt14.png::CompressedTexture2D::1584044886515801283::1764016147::1770376414::1::::<><><>0<>0<>51665d4f2e536e6d0c59e1f8d09b40e6<>res://.godot/imported/land_dirt14.png-2631c4c715fa13fb806f13f185f0a82a.ctex::
-::res://Assets/tracks/Tiles/Dirt road/::1770376382
+::res://Assets/tracks/Tiles/Dirt road/::1770376414
 road_dirt01.png::CompressedTexture2D::7785330699254041289::1764016147::1770376414::1::::<><><>0<>0<>4f69c4deb96ce980d18cdf058786873b<>res://.godot/imported/road_dirt01.png-df62747a8b9727b4d2e3aafea1cb0e37.ctex::
 road_dirt02.png::CompressedTexture2D::5150432027512407707::1764016147::1770376414::1::::<><><>0<>0<>82cd12f096b7596e56e4c857b5ae3525<>res://.godot/imported/road_dirt02.png-2d4d08661070e7e3a290b5e4dbac2d07.ctex::
 road_dirt03.png::CompressedTexture2D::7785798278652425777::1764016147::1770376414::1::::<><><>0<>0<>1e9ea915492cf6a414f7c1f4e5550f2f<>res://.godot/imported/road_dirt03.png-9997c421cbf15adde4a246649cf82760.ctex::
@@ -397,7 +397,7 @@ road_dirt87.png::CompressedTexture2D::6239047520556616524::1764016147::177037641
 road_dirt88.png::CompressedTexture2D::7002870226668736873::1764016147::1770376412::1::::<><><>0<>0<>8e582140fcaf96c06791993166963978<>res://.godot/imported/road_dirt88.png-53c2f19b32c654dab5ca2a5945a38325.ctex::
 road_dirt89.png::CompressedTexture2D::5234863185157242147::1764016147::1770376412::1::::<><><>0<>0<>9da3be64dce9c9acfcb8fb767ec050ef<>res://.godot/imported/road_dirt89.png-2ec928b89dd9d05d3e4647c3190c2c85.ctex::
 road_dirt90.png::CompressedTexture2D::3980001628289427364::1764016147::1770376412::1::::<><><>0<>0<>4d059bdcf8ab66e634fd562626829efb<>res://.godot/imported/road_dirt90.png-7047fe38d06cec8a58f7d7e0017a714e.ctex::
-::res://Assets/tracks/Tiles/Grass/::1770376382
+::res://Assets/tracks/Tiles/Grass/::1770376412
 land_grass01.png::CompressedTexture2D::8494829256202128011::1764016147::1770376412::1::::<><><>0<>0<>4243ad43c7f924c0df47facddf48c6fd<>res://.godot/imported/land_grass01.png-aa6a618b8eb84c51b11e2244d822674b.ctex::
 land_grass02.png::CompressedTexture2D::4822993412480933151::1764016147::1770376412::1::::<><><>0<>0<>e13a6a5bd0272fb95716677754362d59<>res://.godot/imported/land_grass02.png-8d046d0c2791601d2817d729861733b9.ctex::
 land_grass03.png::CompressedTexture2D::268183965468889846::1764016147::1770376412::1::::<><><>0<>0<>0240410ef2783a76b27f7202b3c9e67e<>res://.godot/imported/land_grass03.png-1126e11ff273b1d082651d4778d87a43.ctex::
@@ -412,7 +412,7 @@ land_grass11.png::CompressedTexture2D::1639688094135104461::1764016147::17703764
 land_grass12.png::CompressedTexture2D::7941944412848863727::1764016147::1770376412::1::::<><><>0<>0<>59f58df872517a0e61392fe0f2d75f10<>res://.godot/imported/land_grass12.png-402a9847cb2fa2e91c09cbf4daca9cb2.ctex::
 land_grass13.png::CompressedTexture2D::4249301481860748052::1764016147::1770376412::1::::<><><>0<>0<>7624d8b0722b83b6981dd8ea3563b275<>res://.godot/imported/land_grass13.png-1cfd16d44ddea78be795c0002a501b70.ctex::
 land_grass14.png::CompressedTexture2D::238963090356214966::1764016147::1770376412::1::::<><><>0<>0<>8c0e0514ed3286b00b9e7cca1bffcbc4<>res://.godot/imported/land_grass14.png-349aa8dd36cc9471902a33b8c4df42dc.ctex::
-::res://Assets/tracks/Tiles/Sand/::1770376382
+::res://Assets/tracks/Tiles/Sand/::1770376412
 land_sand01.png::CompressedTexture2D::2581086705997591324::1764016147::1770376412::1::::<><><>0<>0<>ab254bbbcef72cbd0514601a3038eeab<>res://.godot/imported/land_sand01.png-595fe3907216d4b87cf7114f75dec68c.ctex::
 land_sand02.png::CompressedTexture2D::5756560410805268077::1764016147::1770376412::1::::<><><>0<>0<>b455967a93595b6d1a7d9df570bac3e2<>res://.godot/imported/land_sand02.png-962c957f251996462b52797e6e117cbe.ctex::
 land_sand03.png::CompressedTexture2D::9218612016592925898::1764016147::1770376412::1::::<><><>0<>0<>0536c4414cbec3c3326612ee14515c81<>res://.godot/imported/land_sand03.png-0e59bf4a484a3c18f83ae30c14e66464.ctex::
@@ -427,7 +427,7 @@ land_sand11.png::CompressedTexture2D::7404202687329960881::1764016147::177037641
 land_sand12.png::CompressedTexture2D::1966954493704769593::1764016147::1770376412::1::::<><><>0<>0<>e1c50829fbe53636cad0552e23d3673e<>res://.godot/imported/land_sand12.png-43241fd62c48d41fc6ed14b6ed31708f.ctex::
 land_sand13.png::CompressedTexture2D::6140960465592838838::1764016147::1770376412::1::::<><><>0<>0<>a901cc81ae6347cffd053c9eaaa75dfc<>res://.godot/imported/land_sand13.png-6bd15436f4f82180f7ddf797da51c942.ctex::
 land_sand14.png::CompressedTexture2D::5707736982994969178::1764016147::1770376412::1::::<><><>0<>0<>45c6d10cef80a8b34ab0cc110cc8b494<>res://.godot/imported/land_sand14.png-826522e7019b911fb221ddf048ff70bd.ctex::
-::res://Assets/tracks/Tiles/Sand road/::1770376382
+::res://Assets/tracks/Tiles/Sand road/::1770376413
 road_sand01.png::CompressedTexture2D::3242833595841255547::1764016147::1770376412::1::::<><><>0<>0<>35ac78cf886c2cca34a56c3838f5e913<>res://.godot/imported/road_sand01.png-49b1c912878d45776d04e92ca3c62394.ctex::
 road_sand02.png::CompressedTexture2D::714936603811694919::1764016147::1770376412::1::::<><><>0<>0<>f5f24eab4f55eedd16cd8c4a948fefa6<>res://.godot/imported/road_sand02.png-4901bff85979910ccd5b332bbaf94454.ctex::
 road_sand03.png::CompressedTexture2D::1567863001917842801::1764016147::1770376412::1::::<><><>0<>0<>ab382b2fe482f5950748842a5f55fa46<>res://.godot/imported/road_sand03.png-9712ee6f342a5646074ea18efcfc476c.ctex::
@@ -519,12 +519,12 @@ road_sand88.png::CompressedTexture2D::8035779092536057946::1764016147::177037641
 road_sand89.png::CompressedTexture2D::2465443020670327829::1764016147::1770376413::1::::<><><>0<>0<>ca0bc5e075d6dc4ca49aac352d9876b1<>res://.godot/imported/road_sand89.png-4827013e31df12f32d153e8146837f5b.ctex::
 road_sand90.png::CompressedTexture2D::491753414258678300::1764016147::1770376413::1::::<><><>0<>0<>7ad88cf900bb2096bdeb02b562c77e32<>res://.godot/imported/road_sand90.png-a9f48675891797000608b801155db6a0.ctex::
 ::res://Assets/ui/::1770230126
-::res://Assets/ui/fonts/::1770376382
+::res://Assets/ui/fonts/::1770376411
 PressStart2P-Regular.ttf::FontFile::3786169610079895084::1764943618::1770376411::1::::<><><>0<>0<>6b2272213bad4e01114d6f8e3fabdad9<>res://.godot/imported/PressStart2P-Regular.ttf-034eaed2579121650b4a879b52d58d08.fontdata::
-::res://Assets/ui/Icons/::1770376382
+::res://Assets/ui/Icons/::1770376413
 settings menu logo.png::CompressedTexture2D::1255120635745473981::1770230077::1770376413::1::::<><><>0<>0<>403d43f6ca0a1bde8d44c3bd14e63a3a<>res://.godot/imported/settings menu logo.png-85c7c1d92494a0ed3a6ddf534d5c885e.ctex::
 ::res://Assets/vehicles/::1764186123
-::res://Assets/vehicles/cars/::1770376382
+::res://Assets/vehicles/cars/::1770376413
 car_black_1.png::CompressedTexture2D::6280429751742671162::1764016146::1770376413::1::::<><><>0<>0<>cf876448a3697957d0aa6a3d0718b6f4<>res://.godot/imported/car_black_1.png-ab1219f6c12dc291d1e58c5edb260c9c.ctex::
 car_black_2.png::CompressedTexture2D::7643491267310115298::1764016146::1770376412::1::::<><><>0<>0<>55258a791b5eef3f36ec7e07a92fb48f<>res://.godot/imported/car_black_2.png-bb95af1b3c317b8d8f123e111e92239f.ctex::
 car_black_3.png::CompressedTexture2D::6783375465309475241::1764016146::1770376412::1::::<><><>0<>0<>eda965836083a01315e5c672203fd0ca<>res://.godot/imported/car_black_3.png-0b1fb2d4d4fe21f66f044794164c9a14.ctex::
@@ -575,7 +575,7 @@ car_yellow_small_2.png::CompressedTexture2D::3795390200474498919::1764016146::17
 car_yellow_small_3.png::CompressedTexture2D::1013704199787584092::1764016146::1770376412::1::::<><><>0<>0<>08009adb9b4e03732a7fa2274cccd155<>res://.godot/imported/car_yellow_small_3.png-480bce9f40a05f44eb344c890b974a0b.ctex::
 car_yellow_small_4.png::CompressedTexture2D::5394514492349433468::1764016146::1770376412::1::::<><><>0<>0<>0c3a6bf80dcd9177fd683b5db95d7d0b<>res://.godot/imported/car_yellow_small_4.png-824baa3a469b171c65f121916c9368f1.ctex::
 car_yellow_small_5.png::CompressedTexture2D::3365655791987372975::1764016146::1770376412::1::::<><><>0<>0<>aae6a1f43f77130af539b1290b8d396c<>res://.godot/imported/car_yellow_small_5.png-46bc4165aa04b38eebd4e4b8d873fd23.ctex::
-::res://Assets/vehicles/Motorcycles/::1770376382
+::res://Assets/vehicles/Motorcycles/::1770376412
 motorcycle_black.png::CompressedTexture2D::3738979391080467464::1764016146::1770376412::1::::<><><>0<>0<>030c2486098a31c543461b2bcdf8541a<>res://.godot/imported/motorcycle_black.png-d649c1745795a9db64b00a280394a394.ctex::
 motorcycle_blue.png::CompressedTexture2D::783338315826774115::1764016146::1770376412::1::::<><><>0<>0<>2a80edaab6f771e01fbbd6f462e7127f<>res://.godot/imported/motorcycle_blue.png-1c7316b7e21c814e1c435064943c6f2c.ctex::
 motorcycle_green.png::CompressedTexture2D::8350965995605656898::1764016146::1770376412::1::::<><><>0<>0<>916cd48318ad82366d89b7717defc8ca<>res://.godot/imported/motorcycle_green.png-d4a0474f05d026208c30368f2fe68c20.ctex::
@@ -611,18 +611,18 @@ Coralus_Iceway.tscn::PackedScene::6954611410422762817::1770300821::0::1::::<><><
 GrassLandsTrail(LONG).tscn::PackedScene::8945987299052823963::1766347592::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
 GrassLandsTrail(SHORT).tscn::PackedScene::6086947706079344935::1766354934::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
 TrackTemplate.tscn::PackedScene::973578392416152859::1765830031::0::1::::<><><>0<>0<><>::uid://xmjonnkqiocr::::res://Assets/tracks/Tiles/Grass/land_grass11.png<>uid://b2h6wt6g5h0rv::::res://Assets/tracks/tilemap/tilemap.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://3enn8xkjl6u6::::res://scripts/systems/LapTracker.gd
-::res://scenes/track/Track+Car/::1770320586
+::res://scenes/track/Track+Car/::1770378778
 Coralus_Iceway+SELECTOR.tscn::PackedScene::833504138247691089::1770301080::0::1::::<><><>0<>0<><>::uid://cq4r5bgy5xglk::::res://scripts/systems/Car_Spawner.gd<>uid://c6c4o0r782qgn::::res://scenes/track/Raw track/Coralus_Iceway.tscn<>uid://b2t7l3mtdpatn::::res://scenes/ui/LapTimerUI.tscn
 GrassLandsTrailLONG+SELECTOR.tscn::PackedScene::475756547515046159::1766425706::0::1::::<><><>0<>0<><>::uid://cq4r5bgy5xglk::::res://scripts/systems/Car_Spawner.gd<>uid://d0prdr8myg8t8::::res://scenes/track/Raw track/GrassLandsTrail(LONG).tscn<>uid://b2t7l3mtdpatn::::res://scenes/ui/LapTimerUI.tscn
 GrassLandsTrailSHORT+SELECTOR.tscn::PackedScene::4301033674669305753::1766425707::0::1::::<><><>0<>0<><>::uid://cq4r5bgy5xglk::::res://scripts/systems/Car_Spawner.gd<>uid://csyte0ff3otnr::::res://scenes/track/Raw track/GrassLandsTrail(SHORT).tscn<>uid://b2t7l3mtdpatn::::res://scenes/ui/LapTimerUI.tscn
-Testingenviroment.tscn::PackedScene::7415938118774588853::1770320586::0::1::::<><><>0<>0<><>::uid://cq4r5bgy5xglk::::res://scripts/systems/Car_Spawner.gd<>uid://c6c4o0r782qgn::::res://scenes/track/Raw track/Coralus_Iceway.tscn<>uid://b2t7l3mtdpatn::::res://scenes/ui/LapTimerUI.tscn<>uid://bpva6x7ms5slb::::res://scenes/AI/Car/AICar.tscn<>uid://c6qfibqrndtrm::::res://scenes/systems/waypoint.tscn
+Testingenviroment.tscn::PackedScene::7415938118774588853::1770378778::0::1::::<><><>0<>0<><>::uid://c6c4o0r782qgn::::res://scenes/track/Raw track/Coralus_Iceway.tscn<>uid://b2t7l3mtdpatn::::res://scenes/ui/LapTimerUI.tscn<>uid://bpva6x7ms5slb::::res://scenes/AI/Car/AICar.tscn<>uid://c6qfibqrndtrm::::res://scenes/systems/waypoint.tscn
 TestRally.tscn::PackedScene::4872697698103610095::1768934776::0::1::::<><><>0<>0<><>::uid://ded4q58irx7uu::::res://Assets/tracks/Tests/RallyTrack.png<>uid://1fey2sk64sa0::::res://scenes/player/Car/Car_Arcade_Rally_Physics.tscn<>uid://bww0jh03vdaqr::::res://Assets/cars/van.png<>uid://dvo1k1x8hyvei::::res://Assets/tracks/tilemap/Decor_but_better.png<>uid://dq8jgpqdya4wc::::res://Assets/vehicles/Motorcycles/motorcycle_green.png<>uid://btjgpdu0iij5i::::res://Assets/vehicles/Motorcycles/motorcycle_black.png<>uid://s5js4go2psa1::::res://Assets/cars/RallyCar(11).png
 ::res://scenes/ui/::1765224719
 LapTimerUI.tscn::PackedScene::4322706716807921179::1765224682::0::1::::<><><>0<>0<><>::uid://bwkoinuuh1keh::::res://scripts/ui/LapTimerUI.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf
 ::res://scripts/::1770301926
 ::res://scripts/AI/::1770301937
-::res://scripts/AI/Car/::1770376382
-AICar.gd::GDScript::1016937176538928557::1770376382::0::1::::AIRacer<>StaticBody2D<><>0<>0<><>::
+::res://scripts/AI/Car/::1770379112
+AICar.gd::GDScript::1016937176538928557::1770379112::0::1::::AIRacer<>StaticBody2D<><>0<>0<><>::
 ::res://scripts/player/::1764706673
 ::res://scripts/player/Camera/::1766775438
 camera_controller.gd::GDScript::8574877010157236332::1764620062::0::1::::<>Node2D<><>0<>0<><>::
@@ -633,12 +633,12 @@ Car_With_Rpm.gd::GDScript::2142559481812017130::1770229503::0::1::::<>StaticBody
 dirt_particles.gd::GDScript::1085049146261626384::1768915872::0::1::::<>CPUParticles2D<><>0<>0<><>::
 GoKart.gd::GDScript::3731373906650029216::1770229533::0::1::::<>StaticBody2D<><>0<>0<><>::
 Rally_physics.gd::GDScript::775513225941744907::1770290090::0::1::::<>RigidBody2D<><>0<>0<><>::
-::res://scripts/systems/::1770314774
+::res://scripts/systems/::1770377000
 AIwaypoint.gd::GDScript::7680426139563794232::1770314774::0::1::::Waypoint<>Marker2D<><>0<>1<><>::
 Car_Spawner.gd::GDScript::5956815646080258736::1766487043::0::1::::<>Node2D<><>0<>0<><>::
 GameGlobals.gd::GDScript::850091141252086314::1766423728::0::1::::<>Node<><>0<>0<><>::
 GameManager.gd::GDScript::8982784802477160030::1766604753::0::1::::<>Node<><>0<>0<><>::
-LapTracker.gd::GDScript::1974359438375780011::1766422401::0::1::::<>Area2D<><>0<>0<><>::
+LapTracker.gd::GDScript::1974359438375780011::1770377000::0::1::::<>Area2D<><>0<>0<><>::
 Lobby.gd::GDScript::2897856057539518372::1766596026::0::1::::<>Control<><>0<>0<><>::
 MainMenu.gd::GDScript::7069591451186190467::1770298139::0::1::::<>Control<><>0<>0<><>::
 MainMenu_testEnviroment.gd::GDScript::1028857140893711025::1770227267::0::1::::<>Control<><>0<>0<><>::
