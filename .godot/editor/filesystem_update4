@@ -1,1 +1,2 @@
-res://scenes/main/MainMenu.tscn
+res://scenes/main/Lobby.tscn
+res://scripts/systems/Lobby.gd

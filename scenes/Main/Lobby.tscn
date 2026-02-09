@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://vhcm8gxvheri"]
+[gd_scene load_steps=3 format=3 uid="uid://vhcm8gxvheri"]
 
 [ext_resource type="Script" uid="uid://bhj0jbmmrkg6o" path="res://scripts/systems/Lobby.gd" id="1_ykuhn"]
+[ext_resource type="FontFile" uid="uid://bt7bwpk5kweam" path="res://Assets/ui/fonts/PressStart2P-Regular.ttf" id="2_6vbca"]
 
 [node name="Lobby" type="Control"]
 layout_mode = 3
@@ -20,73 +21,121 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+[node name="Title" type="Label" parent="."]
 unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 2
-
-[node name="Title" type="Label" parent="Panel/VBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-text = "MULTIPLAYER LOBBY"
+layout_mode = 0
+offset_top = 81.395
+offset_right = 1920.0
+offset_bottom = 145.39502
+theme_override_fonts/font = ExtResource("2_6vbca")
+theme_override_font_sizes/font_size = 64
+text = "Lobby"
 horizontal_alignment = 1
 
-[node name="NameInput" type="LineEdit" parent="Panel/VBoxContainer"]
+[node name="NameInput" type="LineEdit" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
-placeholder_text = "Your name"
+layout_mode = 0
+offset_left = 700.0
+offset_top = 172.0
+offset_right = 949.0
+offset_bottom = 203.0
+theme_override_fonts/font = ExtResource("2_6vbca")
+placeholder_text = "Username"
 
-[node name="IPInput" type="LineEdit" parent="Panel/VBoxContainer"]
+[node name="IPInput" type="LineEdit" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
-placeholder_text = "Server IP adress"
+layout_mode = 0
+offset_left = 964.0
+offset_top = 172.0
+offset_right = 1213.0
+offset_bottom = 203.0
+theme_override_fonts/font = ExtResource("2_6vbca")
+placeholder_text = "Server address"
 
-[node name="HostButton" type="Button" parent="Panel/VBoxContainer"]
+[node name="HostButton" type="Button" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
+offset_left = 964.0
+offset_top = 206.0
+offset_right = 1213.0
+offset_bottom = 237.0
+theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Host Game"
 
-[node name="JoinButton" type="Button" parent="Panel/VBoxContainer"]
+[node name="JoinButton" type="Button" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
+offset_left = 700.0
+offset_top = 206.0
+offset_right = 949.0
+offset_bottom = 237.0
+theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Join Game"
 
-[node name="Control" type="Control" parent="Panel/VBoxContainer"]
+[node name="Control" type="Control" parent="."]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 20)
-layout_mode = 2
+anchors_preset = 0
+offset_top = 858.0
+offset_right = 1920.0
+offset_bottom = 878.0
 
-[node name="PlayerList" type="Label" parent="Panel/VBoxContainer"]
+[node name="PlayerList" type="Label" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
+offset_left = 771.0
+offset_top = 177.375
+offset_right = 1155.0
+offset_bottom = 200.375
+theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Players will appear here"
 
-[node name="SelectCarButton" type="Button" parent="Panel/VBoxContainer"]
+[node name="SelectCarButton" type="Button" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
+offset_left = 853.0
+offset_top = 732.0
+offset_right = 1062.0
+offset_bottom = 763.0
+theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Select car"
 
-[node name="SelectTrackButton" type="Button" parent="Panel/VBoxContainer"]
+[node name="SelectTrackButton" type="Button" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
-text = "Select track (Host only)"
+layout_mode = 0
+offset_left = 852.0
+offset_top = 766.0
+offset_right = 1062.0
+offset_bottom = 797.0
+theme_override_fonts/font = ExtResource("2_6vbca")
+text = "Select track"
 
-[node name="ReadyButton" type="Button" parent="Panel/VBoxContainer"]
+[node name="ReadyButton" type="Button" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
+offset_left = 858.0
+offset_top = 139.76
+offset_right = 1053.0
+offset_bottom = 170.76018
+theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Ready"
 
-[node name="StartButton" type="Button" parent="Panel/VBoxContainer"]
+[node name="StartButton" type="Button" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
+offset_left = 853.0
+offset_top = 800.0
+offset_right = 1062.0
+offset_bottom = 831.0
+theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Start"
 
-[node name="BackButton" type="Button" parent="Panel/VBoxContainer"]
+[node name="BackButton" type="Button" parent="."]
 unique_name_in_owner = true
-layout_mode = 2
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1047.0
+offset_right = 180.0
+offset_bottom = 1078.0
+theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Back"

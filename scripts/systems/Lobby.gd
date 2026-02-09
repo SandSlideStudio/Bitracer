@@ -1,16 +1,16 @@
 extends Control
 
 # Use get_node_or_null for safer access
-@onready var player_name_input = get_node_or_null("Panel/VBoxContainer/NameInput")
-@onready var host_button = get_node_or_null("Panel/VBoxContainer/HostButton")
-@onready var join_button = get_node_or_null("Panel/VBoxContainer/JoinButton")
-@onready var ip_input = get_node_or_null("Panel/VBoxContainer/IPInput")
-@onready var player_list = get_node_or_null("Panel/VBoxContainer/PlayerList")
-@onready var ready_button = get_node_or_null("Panel/VBoxContainer/ReadyButton")
-@onready var start_button = get_node_or_null("Panel/VBoxContainer/StartButton")
-@onready var back_button = get_node_or_null("Panel/VBoxContainer/BackButton")
-@onready var select_car_button = get_node_or_null("Panel/VBoxContainer/SelectCarButton")
-@onready var select_track_button = get_node_or_null("Panel/VBoxContainer/SelectTrackButton")
+@onready var player_name_input = get_node_or_null("NameInput")
+@onready var host_button = get_node_or_null("HostButton")
+@onready var join_button = get_node_or_null("JoinButton")
+@onready var ip_input = get_node_or_null("IPInput")
+@onready var player_list = get_node_or_null("PlayerList")
+@onready var ready_button = get_node_or_null("ReadyButton")
+@onready var start_button = get_node_or_null("StartButton")
+@onready var back_button = get_node_or_null("BackButton")
+@onready var select_car_button = get_node_or_null("SelectCarButton")
+@onready var select_track_button = get_node_or_null("SelectTrackButton")
 
 var in_lobby := false
 
@@ -48,7 +48,7 @@ func _ready():
 	
 	# Pre-fill server address for convenience
 	if ip_input:
-		ip_input.placeholder_text = "yourdomain.com or IP address"
+		ip_input.placeholder_text = "Server address"
 	
 	# Connect signals
 	if host_button:
@@ -100,7 +100,7 @@ func _validate_name_input() -> bool:
 	# Check if empty
 	if name_text.is_empty():
 		validating_name = true
-		player_name_input.text = "Please input name first"
+		player_name_input.text = "Input name first"
 		player_name_input.add_theme_color_override("font_color", Color.RED)
 		player_name_input.editable = false
 		# Clear after a moment and restore
@@ -118,7 +118,7 @@ func _validate_name_input() -> bool:
 			if player["name"].to_lower() == name_text.to_lower():
 				validating_name = true
 				var original_text = player_name_input.text
-				player_name_input.text = "Name already taken!"
+				player_name_input.text = "This name is taken"
 				player_name_input.add_theme_color_override("font_color", Color.RED)
 				player_name_input.editable = false
 				await get_tree().create_timer(1.5).timeout
@@ -143,7 +143,7 @@ func _validate_ip_input() -> bool:
 	
 	if ip_text.is_empty():
 		validating_ip = true
-		ip_input.text = "Please input IP first"
+		ip_input.text = "Server address missing"
 		ip_input.add_theme_color_override("font_color", Color.RED)
 		ip_input.editable = false
 		# Clear after a moment and restore
@@ -206,7 +206,7 @@ func _on_join_pressed():
 			ip_input.editable = true
 
 func _on_select_car_pressed():
-	print("Going to car selector (session will persist)")
+	print("Going to car selector")
 	get_tree().change_scene_to_file("res://scenes/main/CarSelector.tscn")
 
 func _on_select_track_pressed():
@@ -215,7 +215,7 @@ func _on_select_track_pressed():
 		print("Only host can select track!")
 		return
 	
-	print("Going to track selector (session will persist)")
+	print("Going to track selector")
 	get_tree().change_scene_to_file("res://scenes/main/TrackSelector.tscn")
 
 func _on_ready_pressed():
