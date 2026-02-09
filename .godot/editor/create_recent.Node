@@ -1,7 +1,7 @@
+Node2D
 Camera2D
 RigidBody2D
 Marker2D
-Node2D
 ColorRect
 AudioStreamPlayer      - Matches the "sound" keyword.
 TileMapLayer
