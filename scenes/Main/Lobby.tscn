@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://vhcm8gxvheri"]
+[gd_scene load_steps=4 format=3 uid="uid://vhcm8gxvheri"]
 
 [ext_resource type="Script" uid="uid://bhj0jbmmrkg6o" path="res://scripts/systems/Lobby.gd" id="1_ykuhn"]
 [ext_resource type="FontFile" uid="uid://bt7bwpk5kweam" path="res://Assets/ui/fonts/PressStart2P-Regular.ttf" id="2_6vbca"]
+[ext_resource type="Texture2D" uid="uid://bmtbdpcwy1vus" path="res://Assets/Misc/Screenshot 2026-02-09 212722.png" id="2_8dvdn"]
 
 [node name="Lobby" type="Control"]
 layout_mode = 3
@@ -12,21 +13,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ykuhn")
 
-[node name="Panel" type="Panel" parent="."]
-unique_name_in_owner = true
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Screenshot20260209212722" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_8dvdn")
 
 [node name="Title" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_top = 81.395
-offset_right = 1920.0
-offset_bottom = 145.39502
+offset_left = 78.0
+offset_top = 243.0
+offset_right = 398.0
+offset_bottom = 307.00003
 theme_override_fonts/font = ExtResource("2_6vbca")
 theme_override_font_sizes/font_size = 64
 text = "Lobby"
@@ -35,40 +32,40 @@ horizontal_alignment = 1
 [node name="NameInput" type="LineEdit" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 700.0
-offset_top = 172.0
-offset_right = 949.0
-offset_bottom = 203.0
+offset_left = 708.0
+offset_top = 570.0
+offset_right = 957.0
+offset_bottom = 601.0
 theme_override_fonts/font = ExtResource("2_6vbca")
 placeholder_text = "Username"
 
 [node name="IPInput" type="LineEdit" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 964.0
-offset_top = 172.0
-offset_right = 1213.0
-offset_bottom = 203.0
+offset_left = 958.0
+offset_top = 570.0
+offset_right = 1207.0
+offset_bottom = 601.0
 theme_override_fonts/font = ExtResource("2_6vbca")
 placeholder_text = "Server address"
 
 [node name="HostButton" type="Button" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 964.0
-offset_top = 206.0
-offset_right = 1213.0
-offset_bottom = 237.0
+offset_left = 958.0
+offset_top = 743.0
+offset_right = 1207.0
+offset_bottom = 774.0
 theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Host Game"
 
 [node name="JoinButton" type="Button" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 700.0
-offset_top = 206.0
-offset_right = 949.0
-offset_bottom = 237.0
+offset_left = 708.0
+offset_top = 743.0
+offset_right = 957.0
+offset_bottom = 774.0
 theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Join Game"
 
@@ -84,9 +81,9 @@ offset_bottom = 878.0
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 771.0
-offset_top = 177.375
-offset_right = 1155.0
-offset_bottom = 200.375
+offset_top = 1.855
+offset_right = 1155.0002
+offset_bottom = 24.855003
 theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Players will appear here"
 
@@ -94,9 +91,9 @@ text = "Players will appear here"
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 853.0
-offset_top = 732.0
-offset_right = 1062.0
-offset_bottom = 763.0
+offset_top = 688.575
+offset_right = 1061.9998
+offset_bottom = 719.575
 theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Select car"
 
@@ -104,19 +101,19 @@ text = "Select car"
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 852.0
-offset_top = 766.0
-offset_right = 1062.0
-offset_bottom = 797.0
+offset_top = 528.745
+offset_right = 1061.9995
+offset_bottom = 559.745
 theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Select track"
 
 [node name="ReadyButton" type="Button" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 858.0
-offset_top = 139.76
-offset_right = 1053.0
-offset_bottom = 170.76018
+offset_left = 852.0
+offset_top = 570.0
+offset_right = 1062.0
+offset_bottom = 601.0002
 theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Ready"
 
@@ -124,9 +121,9 @@ text = "Ready"
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 853.0
-offset_top = 800.0
+offset_top = 742.76
 offset_right = 1062.0
-offset_bottom = 831.0
+offset_bottom = 773.76
 theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Start"
 

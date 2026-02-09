@@ -22,6 +22,9 @@ var original_ip_color: Color
 var validating_name := false
 var validating_ip := false
 
+# Store the last valid address for restoration
+var last_valid_address := ""
+
 func _ready():
 	print("=== LOBBY READY ===")
 	print("GameManager.session_active: ", GameManager.session_active)
@@ -48,7 +51,7 @@ func _ready():
 	
 	# Pre-fill server address for convenience
 	if ip_input:
-		ip_input.placeholder_text = "Server address"
+		ip_input.placeholder_text = "Server address or domain"
 	
 	# Connect signals
 	if host_button:
@@ -131,6 +134,65 @@ func _validate_name_input() -> bool:
 	
 	return true
 
+func _is_valid_ipv4(ip: String) -> bool:
+	"""Check if string is a valid IPv4 address"""
+	var parts = ip.split(".")
+	if parts.size() != 4:
+		return false
+	
+	for part in parts:
+		if not part.is_valid_int():
+			return false
+		var num = part.to_int()
+		if num < 0 or num > 255:
+			return false
+	
+	return true
+
+func _is_valid_domain(domain: String) -> bool:
+	"""Check if string is a valid domain name"""
+	# Basic domain validation - at least one dot and valid characters
+	if domain.length() < 3:
+		return false
+	
+	# Check for valid domain characters (letters, numbers, dots, hyphens)
+	var regex = RegEx.new()
+	regex.compile("^[a-zA-Z0-9][a-zA-Z0-9-\\.]*[a-zA-Z0-9]$")
+	
+	if not regex.search(domain):
+		return false
+	
+	# Must contain at least one dot
+	if not "." in domain:
+		return false
+	
+	return true
+
+func _parse_address_and_port(input: String) -> Dictionary:
+	"""Parse address into host and port components"""
+	var result = {"host": "", "port": 0}
+	
+	# Check if there's a port specified
+	var parts = input.split(":")
+	
+	if parts.size() == 1:
+		# No port specified
+		result["host"] = parts[0]
+		result["port"] = 0
+	elif parts.size() == 2:
+		# Port specified
+		result["host"] = parts[0]
+		if parts[1].is_valid_int():
+			result["port"] = parts[1].to_int()
+		else:
+			# Invalid port, return empty result
+			return {"host": "", "port": 0}
+	else:
+		# Too many colons, invalid format
+		return {"host": "", "port": 0}
+	
+	return result
+
 func _validate_ip_input() -> bool:
 	if not ip_input:
 		return false
@@ -155,6 +217,39 @@ func _validate_ip_input() -> bool:
 		validating_ip = false
 		return false
 	
+	# Parse the address
+	var parsed = _parse_address_and_port(ip_text)
+	
+	if parsed["host"].is_empty():
+		validating_ip = true
+		ip_input.text = "Invalid address format"
+		ip_input.add_theme_color_override("font_color", Color.RED)
+		ip_input.editable = false
+		await get_tree().create_timer(1.5).timeout
+		if ip_input:
+			ip_input.text = ""
+			ip_input.add_theme_color_override("font_color", original_ip_color)
+			ip_input.editable = true
+		validating_ip = false
+		return false
+	
+	# Validate the host part
+	var is_valid = _is_valid_ipv4(parsed["host"]) or _is_valid_domain(parsed["host"])
+	
+	if not is_valid:
+		validating_ip = true
+		var original_text = ip_input.text
+		ip_input.text = "Invalid IP or domain"
+		ip_input.add_theme_color_override("font_color", Color.RED)
+		ip_input.editable = false
+		await get_tree().create_timer(1.5).timeout
+		if ip_input:
+			ip_input.text = original_text
+			ip_input.add_theme_color_override("font_color", original_ip_color)
+			ip_input.editable = true
+		validating_ip = false
+		return false
+	
 	return true
 
 func _on_host_pressed():
@@ -173,19 +268,66 @@ func _on_host_pressed():
 	else:
 		print("Host failed!")
 
+func _try_connection_with_ports(player_name: String, host: String, custom_port: int, is_domain: bool):
+	"""Try connecting with different port configurations"""
+	var ports_to_try = []
+	
+	if custom_port > 0:
+		# User specified a port - try it first
+		ports_to_try.append(custom_port)
+		# Then try default port
+		if custom_port != 7777:
+			ports_to_try.append(7777)
+	elif is_domain:
+		# For domains without port, try common web ports and game port
+		ports_to_try = [80, 443, 7777]
+	else:
+		# For IPs without port, just try default
+		ports_to_try = [7777]
+	
+	# Try each port in sequence
+	for port in ports_to_try:
+		var address = host + ":" + str(port)
+		print("Trying connection to: ", address)
+		
+		if GameManager.join_game(player_name, address):
+			print("Join initiated with port ", port)
+			# Wait a bit to see if connection succeeds
+			await get_tree().create_timer(2.0).timeout
+			
+			# If we're in lobby, connection succeeded
+			if in_lobby:
+				print("Connection successful!")
+				return
+		
+		print("Port ", port, " failed, trying next...")
+	
+	# All ports failed
+	print("All connection attempts failed")
+	_on_connection_failed_signal()
+
 func _on_join_pressed():
 	# Validate name
 	if not await _validate_name_input():
 		return
 	
-	# Validate IP
+	# Validate IP/domain
 	if not await _validate_ip_input():
 		return
 	
 	var player_name = player_name_input.text.strip_edges()
-	var address = ip_input.text.strip_edges()
+	var input_address = ip_input.text.strip_edges()
 	
-	print("Joining game at ", address, " with name: ", player_name)
+	# Store for restoration on failure
+	last_valid_address = input_address
+	
+	# Parse the address
+	var parsed = _parse_address_and_port(input_address)
+	var host = parsed["host"]
+	var custom_port = parsed["port"]
+	var is_domain = _is_valid_domain(host)
+	
+	print("Joining game at ", host, " (port: ", custom_port if custom_port > 0 else "default", ") with name: ", player_name)
 	
 	# Show "Connecting..." status
 	if ip_input:
@@ -193,17 +335,8 @@ func _on_join_pressed():
 		ip_input.add_theme_color_override("font_color", Color.YELLOW)
 		ip_input.editable = false
 	
-	if GameManager.join_game(player_name, address):
-		# Wait for either success or failure
-		# The connection_failed signal will restore the UI if it fails
-		print("Join initiated...")
-	else:
-		print("Join failed immediately!")
-		# Restore IP input
-		if ip_input:
-			ip_input.text = address
-			ip_input.add_theme_color_override("font_color", original_ip_color)
-			ip_input.editable = true
+	# Try connection with smart port handling
+	_try_connection_with_ports(player_name, host, custom_port, is_domain)
 
 func _on_select_car_pressed():
 	print("Going to car selector")
@@ -289,17 +422,17 @@ func _on_connection_failed_signal():
 	GameGlobals.is_multiplayer = false
 	_update_ui()
 	
-	# Show error message in IP field
+	# Show error message in IP field, then restore original address
 	if ip_input:
-		var failed_address = ip_input.text
-		ip_input.text = "No lobby found"
+		ip_input.text = "Connection failed"
 		ip_input.add_theme_color_override("font_color", Color.RED)
 		ip_input.editable = false
 		
 		await get_tree().create_timer(2.0).timeout
 		
 		if ip_input:
-			ip_input.text = failed_address
+			# Restore the address they tried to connect to
+			ip_input.text = last_valid_address
 			ip_input.add_theme_color_override("font_color", original_ip_color)
 			ip_input.editable = true
 
@@ -370,6 +503,13 @@ func _refresh_player_list():
 	
 	# Show selected track if host has chosen one
 	if GameGlobals.selected_track_path != "":
-		player_list.text += "\nTrack: Selected"
+		# Show the track name stored in GameGlobals (set by TrackSelector)
+		var track_name = GameGlobals.get("selected_track_name")
+		if track_name and track_name != "":
+			player_list.text += "\nTrack: " + track_name
+		else:
+			# Fallback to extracting from path if name not stored
+			track_name = GameGlobals.selected_track_path.get_file().get_basename()
+			player_list.text += "\nTrack: " + track_name
 	else:
 		player_list.text += "\nTrack: Not selected"

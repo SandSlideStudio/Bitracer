@@ -83,8 +83,9 @@ func _on_select():
 		if tracks.size() == 0:
 			return
 		
-		# Store selected track
+		# Store selected track path and name
 		GameGlobals.selected_track_path = tracks[current_index]["path"]
+		GameGlobals.selected_track_name = tracks[current_index]["name"]
 		print("Track selected: ", tracks[current_index]["name"])
 		
 		if sfx_player:
