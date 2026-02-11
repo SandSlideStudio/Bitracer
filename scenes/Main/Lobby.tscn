@@ -14,7 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bpva6x7ms5slb" path="res://scenes/AI/Car/AICar.tscn" id="12_lvwsc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3gicu"]
-size = Vector2(1920, 20)
+size = Vector2(1920, 404)
 
 [node name="Lobby" type="Control"]
 layout_mode = 3
@@ -238,8 +238,13 @@ rotation = 1.5707964
 position = Vector2(-10155, 780)
 rotation = 1.5707964
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(960, 577)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(960, 769)
+shape = SubResource("RectangleShape2D_3gicu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(960, 204)
 shape = SubResource("RectangleShape2D_3gicu")

@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1770839910
+::res://::1770843430
 export_presets.cfg::TextFile::-1::1766955863::0::1::::<><><>0<>0<><>::
 Icon.svg::CompressedTexture2D::8107707766876378206::1765746199::1770376412::1::::<><><>0<>0<>211035967000fd77194f98a753c83990<>res://.godot/imported/Icon.svg-209197100d5fe6cba9c168636c60b76c.ctex::
 LICENSE.md::TextFile::-1::1768940536::0::1::::<><><>0<>0<><>::
@@ -591,9 +591,9 @@ PLACEHOLDER.txt::TextFile::-1::1765566594::0::1::::<><><>0<>0<><>::
 ::res://scenes/AI/::1770302014
 ::res://scenes/AI/Car/::1770394118
 AICar.tscn::PackedScene::3482661888751167951::1770394118::0::1::::<><><>0<>0<><>::uid://oqu2otmup07r::::res://scripts/AI/Car/AICar.gd<>uid://5601g3mshca5::::res://Assets/cars/CustomCar(Green).png<>uid://bmathndj7fgi1::::res://Assets/sounds/Sound effects/Engine/engine-47745.mp3
-::res://scenes/main/::1770669856
+::res://scenes/main/::1770841466
 CarSelector.tscn::PackedScene::4545853033448446828::1770151908::0::1::::<><><>0<>0<><>::uid://cqoklcoq5jhv2::::res://scripts/ui/CarSelector.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://bot2bc08es4ir::::res://Assets/sounds/Sound effects/UI/confirmation_004.ogg<>uid://d10q2g8uppukf::::res://Assets/sounds/Music/so-happy-with-my-8-bit-game-301275.mp3
-Lobby.tscn::PackedScene::1488560967802229570::1770669856::0::1::::<><><>0<>0<><>::uid://bhj0jbmmrkg6o::::res://scripts/systems/Lobby.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://bmtbdpcwy1vus::::res://Assets/Misc/Screenshot 2026-02-09 212722.png
+Lobby.tscn::PackedScene::1488560967802229570::1770841466::0::1::::<><><>0<>0<><>::uid://bhj0jbmmrkg6o::::res://scripts/systems/Lobby.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://bmtbdpcwy1vus::::res://Assets/Misc/Screenshot 2026-02-09 212722.png<>uid://cspejlw1eu2aj::::res://Assets/Misc/Objects/oil.png<>uid://bww0jh03vdaqr::::res://Assets/cars/van.png<>uid://dlj4o0f6auijg::::res://Assets/cars/CustomCar(Red).png<>uid://5601g3mshca5::::res://Assets/cars/CustomCar(Green).png<>uid://bclgbfh24yttq::::res://Assets/Misc/Objects/cone_straight.png<>uid://cgxofe1lm5op7::::res://Assets/Misc/Objects/cone_down.png<>uid://dxkyri8ns38g0::::res://Assets/Misc/Characters/racer_red.png<>uid://c6qfibqrndtrm::::res://scenes/systems/waypoint.tscn<>uid://bpva6x7ms5slb::::res://scenes/AI/Car/AICar.tscn
 MainMenu.tscn::PackedScene::9010211763223524588::1770653633::0::1::::<><><>0<>0<><>::uid://c7ytex5tcfgb8::::res://scripts/systems/MainMenu.gd<>uid://cvye13gf7nvhq::::res://Assets/Misc/Screenshot 2026-02-04 182944.png<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://cqw5f6snd21cu::::res://Assets/sounds/Music/pixel-dreams-259187.mp3<>uid://7vwvff2ej72m::::res://Assets/cars/CustomCar(VANWIJDERACING).png<>uid://s5js4go2psa1::::res://Assets/cars/RallyCar(11).png<>uid://r48who8kn3mn::::res://Assets/ui/Icons/settings menu logo.png<>uid://c3st6b1oi7ujx::::res://Assets/cars/CustomCar(Blue).png<>uid://b32bi6b3dvhdh::::res://Assets/cars/GoKart.png<>uid://cspejlw1eu2aj::::res://Assets/Misc/Objects/oil.png<>uid://bww0jh03vdaqr::::res://Assets/cars/van.png<>uid://kaotqbjagnn8::::res://Assets/Misc/Objects/skidmark_long_2.png<>uid://bqa1fa1iqq8lr::::res://Assets/Misc/Objects/tree_large.png<>uid://cnyvcnk00glu1::::res://Assets/vehicles/cars/car_blue_small_4.png<>uid://bclgbfh24yttq::::res://Assets/Misc/Objects/cone_straight.png<>uid://cgxofe1lm5op7::::res://Assets/Misc/Objects/cone_down.png<>uid://dlj4o0f6auijg::::res://Assets/cars/CustomCar(Red).png<>uid://hrcwbmbxrkwo::::res://Assets/Misc/Characters/racer_blue.png<>uid://b06ldxtitnd5r::::res://Assets/Misc/Characters/racer_yellow.png
 MainMenu_testEnviroment.tscn::PackedScene::576917518179610919::1770227160::0::1::::<><><>0<>0<><>::uid://ownektpr8x2h::::res://scripts/systems/MainMenu_testEnviroment.gd<>uid://cvye13gf7nvhq::::res://Assets/Misc/Screenshot 2026-02-04 182944.png<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://cqw5f6snd21cu::::res://Assets/sounds/Music/pixel-dreams-259187.mp3<>uid://7vwvff2ej72m::::res://Assets/cars/CustomCar(VANWIJDERACING).png<>uid://s5js4go2psa1::::res://Assets/cars/RallyCar(11).png<>uid://c3st6b1oi7ujx::::res://Assets/cars/CustomCar(Blue).png<>uid://b32bi6b3dvhdh::::res://Assets/cars/GoKart.png<>uid://bww0jh03vdaqr::::res://Assets/cars/van.png<>uid://kaotqbjagnn8::::res://Assets/Misc/Objects/skidmark_long_2.png
 TrackSelector.tscn::PackedScene::9175210705779206662::1770152007::0::1::::<><><>0<>0<><>::uid://4e65kxontn7c::::res://scripts/ui/Track_selector.gd<>uid://bt7bwpk5kweam::::res://Assets/ui/fonts/PressStart2P-Regular.ttf<>uid://bot2bc08es4ir::::res://Assets/sounds/Sound effects/UI/confirmation_004.ogg<>uid://cpvw1b3cjy1tm::::res://Assets/sounds/Music/music-for-arcade-style-game-146875.mp3
@@ -634,13 +634,13 @@ Car_With_Rpm.gd::GDScript::2142559481812017130::1770229503::0::1::::<>StaticBody
 dirt_particles.gd::GDScript::1085049146261626384::1768915872::0::1::::<>CPUParticles2D<><>0<>0<><>::
 GoKart.gd::GDScript::3731373906650029216::1770229533::0::1::::<>StaticBody2D<><>0<>0<><>::
 Rally_physics.gd::GDScript::775513225941744907::1770290090::0::1::::<>RigidBody2D<><>0<>0<><>::
-::res://scripts/systems/::1770670660
+::res://scripts/systems/::1770840145
 AIwaypoint.gd::GDScript::7680426139563794232::1770314774::0::1::::Waypoint<>Marker2D<><>0<>1<><>::
 Car_Spawner.gd::GDScript::5956815646080258736::1766487043::0::1::::<>Node2D<><>0<>0<><>::
 GameGlobals.gd::GDScript::850091141252086314::1770670660::0::1::::<>Node<><>0<>0<><>::
 GameManager.gd::GDScript::8982784802477160030::1766604753::0::1::::<>Node<><>0<>0<><>::
 LapTracker.gd::GDScript::1974359438375780011::1770377000::0::1::::<>Area2D<><>0<>0<><>::
-Lobby.gd::GDScript::2897856057539518372::1770670589::0::1::::<>Control<><>0<>0<><>::
+Lobby.gd::GDScript::2897856057539518372::1770840145::0::1::::<>Control<><>0<>0<><>::
 MainMenu.gd::GDScript::7069591451186190467::1770298139::0::1::::<>Control<><>0<>0<><>::
 MainMenu_testEnviroment.gd::GDScript::1028857140893711025::1770227267::0::1::::<>Control<><>0<>0<><>::
 MultiplayerCarWrapper.gd::GDScript::3732574200224154592::1766486844::0::1::::<>Node<><>0<>0<><>::
