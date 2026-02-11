@@ -1,5 +1,2 @@
-res://scenes/track/Raw track/GrassLandsTrail(LONG).tscn
-res://scenes/main/Lobby.tscn
 res://scripts/systems/Lobby.gd
-res://scripts/ui/Track_selector.gd
-res://scripts/systems/GameGlobals.gd
+res://scenes/main/Lobby.tscn

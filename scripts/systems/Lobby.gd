@@ -43,11 +43,13 @@ func _ready():
 		push_error("Lobby UI nodes missing! Check scene structure.")
 		return
 	
-	# Store original colors
+	# Store original colors and set character limits
 	if player_name_input:
 		original_name_color = player_name_input.get_theme_color("font_color", "LineEdit")
+		player_name_input.max_length = 16
 	if ip_input:
 		original_ip_color = ip_input.get_theme_color("font_color", "LineEdit")
+		ip_input.max_length = 100
 	
 	# Pre-fill server address for convenience
 	if ip_input:

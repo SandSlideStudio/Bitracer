@@ -1,8 +1,20 @@
-[gd_scene load_steps=4 format=3 uid="uid://vhcm8gxvheri"]
+[gd_scene load_steps=14 format=3 uid="uid://vhcm8gxvheri"]
 
 [ext_resource type="Script" uid="uid://bhj0jbmmrkg6o" path="res://scripts/systems/Lobby.gd" id="1_ykuhn"]
 [ext_resource type="FontFile" uid="uid://bt7bwpk5kweam" path="res://Assets/ui/fonts/PressStart2P-Regular.ttf" id="2_6vbca"]
 [ext_resource type="Texture2D" uid="uid://bmtbdpcwy1vus" path="res://Assets/Misc/Screenshot 2026-02-09 212722.png" id="2_8dvdn"]
+[ext_resource type="Texture2D" uid="uid://cspejlw1eu2aj" path="res://Assets/Misc/Objects/oil.png" id="4_wtup1"]
+[ext_resource type="Texture2D" uid="uid://bww0jh03vdaqr" path="res://Assets/cars/van.png" id="5_k2qoq"]
+[ext_resource type="Texture2D" uid="uid://dlj4o0f6auijg" path="res://Assets/cars/CustomCar(Red).png" id="6_3gicu"]
+[ext_resource type="Texture2D" uid="uid://5601g3mshca5" path="res://Assets/cars/CustomCar(Green).png" id="7_lvwsc"]
+[ext_resource type="Texture2D" uid="uid://bclgbfh24yttq" path="res://Assets/Misc/Objects/cone_straight.png" id="8_3c7w4"]
+[ext_resource type="Texture2D" uid="uid://cgxofe1lm5op7" path="res://Assets/Misc/Objects/cone_down.png" id="9_xx4b3"]
+[ext_resource type="Texture2D" uid="uid://dxkyri8ns38g0" path="res://Assets/Misc/Characters/racer_red.png" id="10_c1u80"]
+[ext_resource type="PackedScene" uid="uid://c6qfibqrndtrm" path="res://scenes/systems/waypoint.tscn" id="11_3gicu"]
+[ext_resource type="PackedScene" uid="uid://bpva6x7ms5slb" path="res://scenes/AI/Car/AICar.tscn" id="12_lvwsc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gicu"]
+size = Vector2(1920, 20)
 
 [node name="Lobby" type="Control"]
 layout_mode = 3
@@ -13,16 +25,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ykuhn")
 
-[node name="Screenshot20260209212722" type="Sprite2D" parent="."]
+[node name="background" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 texture = ExtResource("2_8dvdn")
 
 [node name="Title" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 78.0
 offset_top = 243.0
-offset_right = 398.0
+offset_right = 1920.0
 offset_bottom = 307.00003
 theme_override_fonts/font = ExtResource("2_6vbca")
 theme_override_font_sizes/font_size = 64
@@ -136,3 +147,99 @@ offset_right = 180.0
 offset_bottom = 1078.0
 theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Back"
+
+[node name="Oil" type="Sprite2D" parent="."]
+position = Vector2(1100, 627)
+rotation = -0.5201081
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_wtup1")
+
+[node name="Van" type="Sprite2D" parent="."]
+position = Vector2(1201, 626.99994)
+rotation = 2.024582
+texture = ExtResource("5_k2qoq")
+
+[node name="CustomCar(red)" type="Sprite2D" parent="."]
+position = Vector2(1092, 621.0001)
+rotation = 1.4538592
+texture = ExtResource("6_3gicu")
+
+[node name="CustomCar(green)" type="Sprite2D" parent="."]
+position = Vector2(1054, 625)
+rotation = 1.7139133
+texture = ExtResource("7_lvwsc")
+
+[node name="ConeStraight" type="Sprite2D" parent="."]
+position = Vector2(1034, 641)
+rotation = 0.46774822
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_3c7w4")
+
+[node name="ConeStraight2" type="Sprite2D" parent="."]
+position = Vector2(1047, 645.99994)
+rotation = -0.46774822
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_3c7w4")
+
+[node name="ConeStraight3" type="Sprite2D" parent="."]
+position = Vector2(1026, 631.00006)
+rotation = 0.7784169
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_3c7w4")
+
+[node name="ConeDown" type="Sprite2D" parent="."]
+position = Vector2(1023.00006, 619)
+rotation = -2.6476645
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_xx4b3")
+
+[node name="RacerRed" type="Sprite2D" parent="."]
+position = Vector2(1086, 639)
+rotation = -0.20769419
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_c1u80")
+
+[node name="RacingLine" type="Node2D" parent="."]
+
+[node name="Waypoint0" parent="RacingLine" instance=ExtResource("11_3gicu")]
+position = Vector2(0, 486)
+
+[node name="Waypoint1" parent="RacingLine" instance=ExtResource("11_3gicu")]
+position = Vector2(3455, 551)
+
+[node name="Waypoint2" parent="RacingLine" instance=ExtResource("11_3gicu")]
+position = Vector2(6249, 568)
+
+[node name="Waypoint3" parent="RacingLine" instance=ExtResource("11_3gicu")]
+position = Vector2(6167, -2043)
+
+[node name="Waypoint4" parent="RacingLine" instance=ExtResource("11_3gicu")]
+position = Vector2(-1743, -2120)
+
+[node name="Waypoint5" parent="RacingLine" instance=ExtResource("11_3gicu")]
+position = Vector2(-5029, -836)
+
+[node name="Waypoint6" parent="RacingLine" instance=ExtResource("11_3gicu")]
+position = Vector2(-2634, 455)
+
+[node name="AICar" parent="." instance=ExtResource("12_lvwsc")]
+position = Vector2(-1322, 466)
+rotation = 1.5707964
+
+[node name="AICar2" parent="." instance=ExtResource("12_lvwsc")]
+position = Vector2(-23591, 709)
+rotation = 1.5707964
+
+[node name="AICar3" parent="." instance=ExtResource("12_lvwsc")]
+position = Vector2(-40880, 911)
+rotation = 1.5707964
+
+[node name="AICar4" parent="." instance=ExtResource("12_lvwsc")]
+position = Vector2(-10155, 780)
+rotation = 1.5707964
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(960, 577)
+shape = SubResource("RectangleShape2D_3gicu")
