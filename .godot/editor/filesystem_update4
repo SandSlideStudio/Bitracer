@@ -1,1 +1,3 @@
 res://scenes/main/Lobby.tscn
+res://scripts/systems/Lobby.gd
+res://scripts/ui/CarSelector.gd

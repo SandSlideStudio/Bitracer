@@ -11,6 +11,7 @@ extends Control
 @onready var back_button = get_node_or_null("BackButton")
 @onready var select_car_button = get_node_or_null("SelectCarButton")
 @onready var select_track_button = get_node_or_null("SelectTrackButton")
+@onready var player_cars_container = get_node_or_null("PlayerCars")
 
 var in_lobby := false
 
@@ -25,10 +26,24 @@ var validating_ip := false
 # Store the last valid address for restoration
 var last_valid_address := ""
 
+# Track which display slots are occupied
+var occupied_slots := {}  # Dictionary mapping peer_id to slot number (1-8)
+var available_slots := []  # Array of available slot numbers
+
+# Store spawned car instances and their paths
+var spawned_cars := {}  # Dictionary mapping peer_id to car node
+var spawned_car_paths := {}  # Dictionary mapping peer_id to car_path string
+
 func _ready():
 	print("=== LOBBY READY ===")
 	print("GameManager.session_active: ", GameManager.session_active)
 	print("GameManager.players.size(): ", GameManager.players.size())
+	
+	# Initialize available slots (1-8)
+	_initialize_slots()
+	
+	# CRITICAL: Ensure lobby camera is active (if you have one)
+	_ensure_lobby_camera_active()
 	
 	# Simple check - use the explicit session flag
 	if GameManager.session_active:
@@ -77,12 +92,229 @@ func _ready():
 	GameManager.connection_failed.connect(_on_connection_failed_signal)
 	GameManager.client_registered.connect(_on_client_registered)
 	
+	# Connect to car update signal if it exists (optional enhancement)
+	if GameManager.has_signal("player_car_updated"):
+		GameManager.player_car_updated.connect(_on_player_car_updated)
+		print("Connected to player_car_updated signal")
+	
 	_update_ui()
+	
+	# If we're already in a lobby, restore car displays
+	if in_lobby:
+		_restore_all_cars()
+
+func _initialize_slots():
+	"""Initialize the pool of available display slots"""
+	available_slots.clear()
+	for i in range(1, 9):  # Slots 1-8
+		available_slots.append(i)
+	available_slots.shuffle()  # Randomize order
+
+func _ensure_lobby_camera_active():
+	"""Make sure the lobby scene's camera is the active one"""
+	# Try to find a camera in the root of the scene
+	var lobby_camera = get_node_or_null("../Camera2D")
+	if not lobby_camera:
+		lobby_camera = get_node_or_null("Camera2D")
+	
+	if lobby_camera and lobby_camera is Camera2D:
+		lobby_camera.enabled = true
+		lobby_camera.make_current()
+		print("Lobby camera activated")
+	else:
+		print("Warning: No lobby camera found - you may want to add one to the scene root")
+
+func _get_random_slot() -> int:
+	"""Get a random available slot number"""
+	if available_slots.is_empty():
+		push_error("No available slots for car display!")
+		return 0
+	return available_slots.pop_front()
+
+func _release_slot(slot: int):
+	"""Return a slot to the available pool"""
+	if slot > 0 and slot <= 8:
+		available_slots.append(slot)
+		available_slots.shuffle()
+
+func _get_marker_for_slot(slot: int) -> Marker2D:
+	"""Get the Marker2D node for a given slot number"""
+	if not player_cars_container:
+		return null
+	
+	var marker_name = "PlayerCar" + str(slot)
+	var marker = player_cars_container.get_node_or_null(marker_name)
+	
+	if not marker:
+		push_error("Could not find marker: " + marker_name)
+	
+	return marker
+
+func _spawn_car_at_slot(peer_id: int, car_path: String, slot: int):
+	"""Spawn a car display (sprite + sound only) at the given slot"""
+	if car_path == "" or car_path == null:
+		print("No car selected for peer ", peer_id)
+		return
+	
+	var marker = _get_marker_for_slot(slot)
+	if not marker:
+		return
+	
+	# Load the car scene temporarily to extract sprite and sound
+	var car_scene = load(car_path)
+	if not car_scene:
+		push_error("Failed to load car scene: " + car_path)
+		return
+	
+	var temp_car = car_scene.instantiate()
+	if not temp_car:
+		push_error("Failed to instantiate car scene")
+		return
+	
+	# Create a simple Node2D container for this display car
+	var display_container = Node2D.new()
+	display_container.name = "DisplayCar_" + str(peer_id)
+	display_container.position = Vector2.ZERO
+	
+	# Extract the sprite (assuming the car has a Sprite2D child)
+	var car_sprite = _find_sprite(temp_car)
+	if car_sprite:
+		# Clone the sprite
+		var sprite_copy = Sprite2D.new()
+		sprite_copy.texture = car_sprite.texture
+		sprite_copy.offset = car_sprite.offset
+		sprite_copy.scale = car_sprite.scale
+		sprite_copy.rotation = car_sprite.rotation
+		sprite_copy.modulate = car_sprite.modulate
+		display_container.add_child(sprite_copy)
+		print("Sprite extracted and added")
+	else:
+		push_warning("No sprite found in car scene")
+	
+	# Extract engine sound
+	var engine_sound = temp_car.get_node_or_null("EngineSound")
+	if engine_sound and engine_sound.stream:
+		# Clone the audio player
+		var sound_copy = AudioStreamPlayer2D.new()
+		sound_copy.stream = engine_sound.stream
+		sound_copy.volume_db = -8.0 + linear_to_db(0.1)  # 10% volume
+		sound_copy.pitch_scale = 0.8  # Idle pitch
+		sound_copy.autoplay = false
+		display_container.add_child(sound_copy)
+		# Start playing after a short delay
+		sound_copy.play()
+		print("Engine sound extracted and playing")
+	else:
+		push_warning("No engine sound found in car scene")
+	
+	# Clean up temp car
+	temp_car.queue_free()
+	
+	# Add display container to marker
+	marker.add_child(display_container)
+	
+	# Store reference
+	spawned_cars[peer_id] = display_container
+	
+	print("Spawned display car for peer ", peer_id, " at slot ", slot)
+
+func _find_sprite(node: Node) -> Sprite2D:
+	"""Recursively find the first Sprite2D in the node tree"""
+	if node is Sprite2D:
+		return node
+	
+	for child in node.get_children():
+		var result = _find_sprite(child)
+		if result:
+			return result
+	
+	return null
+
+func _despawn_car(peer_id: int):
+	"""Remove a car from display"""
+	if peer_id in spawned_cars:
+		var car = spawned_cars[peer_id]
+		if car and is_instance_valid(car):
+			car.queue_free()
+		spawned_cars.erase(peer_id)
+		spawned_car_paths.erase(peer_id)
+		print("Despawned car for peer ", peer_id)
+
+func _update_player_car_display(peer_id: int):
+	"""Update or create car display for a player"""
+	# Get player info
+	var player = GameManager.players.get(peer_id)
+	if not player:
+		return
+	
+	var car_path = player.get("car_path", "")
+	
+	# Skip if no car selected
+	if car_path == "" or car_path == null:
+		# If car was previously spawned, remove it
+		if peer_id in spawned_cars:
+			_despawn_car(peer_id)
+		return
+	
+	# Assign slot if player doesn't have one yet (first time joining)
+	if not peer_id in occupied_slots:
+		var new_slot = _get_random_slot()
+		if new_slot > 0:
+			occupied_slots[peer_id] = new_slot
+			print("Assigned slot ", new_slot, " to peer ", peer_id)
+		else:
+			push_error("No available slots!")
+			return
+	
+	# Get the player's permanent slot
+	var slot = occupied_slots[peer_id]
+	
+	# Check if car path changed or if car needs to be spawned
+	var previous_path = spawned_car_paths.get(peer_id, "")
+	if previous_path != car_path:
+		print("Car changed for peer ", peer_id, ": ", previous_path, " -> ", car_path)
+		# Respawn with new car at SAME slot
+		_despawn_car(peer_id)
+		_spawn_car_at_slot(peer_id, car_path, slot)
+		spawned_car_paths[peer_id] = car_path
+	elif not peer_id in spawned_cars or spawned_cars[peer_id] == null:
+		# Car not spawned yet, spawn it at their assigned slot
+		_spawn_car_at_slot(peer_id, car_path, slot)
+		spawned_car_paths[peer_id] = car_path
+
+func _restore_all_cars():
+	"""Restore car displays for all players currently in lobby"""
+	for peer_id in GameManager.players.keys():
+		_update_player_car_display(peer_id)
+
+func _clear_all_cars():
+	"""Remove all spawned cars"""
+	for peer_id in spawned_cars.keys():
+		_despawn_car(peer_id)
+	occupied_slots.clear()
+	spawned_car_paths.clear()
+	_initialize_slots()
 
 func _process(_delta):
 	# Continuously refresh player list while in lobby
 	if in_lobby:
 		_refresh_player_list()
+		_check_for_car_updates()
+
+func _check_for_car_updates():
+	"""Check if any player's car selection has changed and update display"""
+	for peer_id in GameManager.players.keys():
+		var player = GameManager.players[peer_id]
+		var car_path = player.get("car_path", "")
+		
+		# Check if this player has a spawned car
+		if peer_id in spawned_cars and spawned_cars[peer_id] != null:
+			# Check if the car needs to be updated (you might want to store the path)
+			# For now, we'll just ensure cars are spawned for all players
+			continue
+		elif car_path != "" and peer_id in occupied_slots:
+			# Player has a car selected but it's not spawned yet
+			_update_player_car_display(peer_id)
 
 func _check_nodes() -> bool:
 	var required = [player_name_input, host_button, join_button, ip_input, 
@@ -90,6 +322,11 @@ func _check_nodes() -> bool:
 	for node in required:
 		if node == null:
 			return false
+	
+	# Player cars container is optional but warn if missing
+	if not player_cars_container:
+		push_warning("PlayerCars container not found - car display will not work")
+	
 	return true
 
 func _validate_name_input() -> bool:
@@ -266,6 +503,8 @@ func _on_host_pressed():
 		in_lobby = true
 		_update_ui()
 		_refresh_player_list()
+		# Display host's car if they have one selected
+		_update_player_car_display(GameManager.local_player_id)
 		print("Host successful!")
 	else:
 		print("Host failed!")
@@ -342,7 +581,27 @@ func _on_join_pressed():
 
 func _on_select_car_pressed():
 	print("Going to car selector")
+	# Store that we need to refresh car display when returning
 	get_tree().change_scene_to_file("res://scenes/main/CarSelector.tscn")
+
+# Call this when returning from car selector (you'll need to call this from CarSelector)
+func on_return_from_car_selector():
+	print("Returned from car selector")
+	# Update the car path in GameManager
+	if GameManager.players.has(GameManager.local_player_id):
+		var car_path = GameGlobals.selected_car_path
+		GameManager.players[GameManager.local_player_id]["car_path"] = car_path
+		
+		# Notify server about car change
+		if GameManager.is_server():
+			# Server updates locally and syncs to clients
+			GameManager.sync_car_update.rpc(GameManager.local_player_id, car_path)
+		else:
+			# Client requests server to update
+			GameManager.update_player_car.rpc_id(1, GameManager.local_player_id, car_path)
+		
+		# Update the display for this player
+		_update_player_car_display(GameManager.local_player_id)
 
 func _on_select_track_pressed():
 	# Only host can select track
@@ -394,6 +653,7 @@ func _on_start_pressed():
 func _on_back_pressed():
 	if in_lobby:
 		print("Leaving lobby and disconnecting")
+		_clear_all_cars()  # Clean up car displays
 		GameManager.disconnect_from_game()
 		in_lobby = false
 		# Also reset multiplayer flag
@@ -403,23 +663,32 @@ func _on_back_pressed():
 		print("Going back to main menu")
 		get_tree().change_scene_to_file("res://scenes/main/MainMenu.tscn")
 
-func _on_player_connected(_peer_id: int, _player_info: Dictionary):
-	print("Player connected event received - Peer: ", _peer_id)
-	# Just refresh the list - lobby entry is handled by client_registered
+func _on_player_connected(peer_id: int, _player_info: Dictionary):
+	print("Player connected event received - Peer: ", peer_id)
+	# Refresh the list and update car display
 	_refresh_player_list()
+	_update_player_car_display(peer_id)
 
-func _on_player_disconnected(_peer_id: int):
-	print("Player disconnected event received")
+func _on_player_disconnected(peer_id: int):
+	print("Player disconnected event received - Peer: ", peer_id)
+	# Clean up their car display
+	_despawn_car(peer_id)
+	if peer_id in occupied_slots:
+		var slot = occupied_slots[peer_id]
+		_release_slot(slot)
+		occupied_slots.erase(peer_id)
 	_refresh_player_list()
 
 func _on_server_disconnected():
 	print("Server disconnected!")
+	_clear_all_cars()
 	in_lobby = false
 	GameGlobals.is_multiplayer = false
 	_update_ui()
 
 func _on_connection_failed_signal():
 	print("Connection failed - showing error to user")
+	_clear_all_cars()
 	in_lobby = false
 	GameGlobals.is_multiplayer = false
 	_update_ui()
@@ -452,6 +721,13 @@ func _on_client_registered():
 			ip_input.editable = true
 		
 		_refresh_player_list()
+		# Display all players' cars
+		_restore_all_cars()
+
+func _on_player_car_updated(peer_id: int, car_path: String):
+	"""Handler for when a player updates their car selection"""
+	print("Lobby notified of car update for peer ", peer_id, ": ", car_path)
+	_update_player_car_display(peer_id)
 
 func _update_ui():
 	print("Updating UI - in_lobby: ", in_lobby)

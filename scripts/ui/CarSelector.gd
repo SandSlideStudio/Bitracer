@@ -123,6 +123,9 @@ func _on_select():
 				# Sync to server if we're not the server
 				if not GameManager.is_server():
 					GameManager.update_player_car.rpc_id(1, GameManager.local_player_id, selected_car["path"])
+				else:
+					# Server broadcasts to all clients
+					GameManager.sync_car_update.rpc(GameManager.local_player_id, selected_car["path"])
 				print("Car updated in session!")
 		
 		if sfx_player:
@@ -146,6 +149,7 @@ func _proceed_to_next_screen():
 	if GameGlobals.is_multiplayer and GameManager.is_in_session():
 		# Return to lobby (session persists because GameManager is autoload)
 		print("Returning to lobby with active session")
+		# The lobby will automatically detect the car change via _check_for_car_updates()
 		get_tree().change_scene_to_file("res://scenes/main/Lobby.tscn")
 	else:
 		# Solo mode - go to track selector

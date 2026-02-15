@@ -148,57 +148,6 @@ offset_bottom = 1078.0
 theme_override_fonts/font = ExtResource("2_6vbca")
 text = "Back"
 
-[node name="Oil" type="Sprite2D" parent="."]
-position = Vector2(1100, 627)
-rotation = -0.5201081
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_wtup1")
-
-[node name="Van" type="Sprite2D" parent="."]
-position = Vector2(1201, 626.99994)
-rotation = 2.024582
-texture = ExtResource("5_k2qoq")
-
-[node name="CustomCar(red)" type="Sprite2D" parent="."]
-position = Vector2(1092, 621.0001)
-rotation = 1.4538592
-texture = ExtResource("6_3gicu")
-
-[node name="CustomCar(green)" type="Sprite2D" parent="."]
-position = Vector2(1054, 625)
-rotation = 1.7139133
-texture = ExtResource("7_lvwsc")
-
-[node name="ConeStraight" type="Sprite2D" parent="."]
-position = Vector2(1034, 641)
-rotation = 0.46774822
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("8_3c7w4")
-
-[node name="ConeStraight2" type="Sprite2D" parent="."]
-position = Vector2(1047, 645.99994)
-rotation = -0.46774822
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("8_3c7w4")
-
-[node name="ConeStraight3" type="Sprite2D" parent="."]
-position = Vector2(1026, 631.00006)
-rotation = 0.7784169
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("8_3c7w4")
-
-[node name="ConeDown" type="Sprite2D" parent="."]
-position = Vector2(1023.00006, 619)
-rotation = -2.6476645
-scale = Vector2(0.25, 0.25)
-texture = ExtResource("9_xx4b3")
-
-[node name="RacerRed" type="Sprite2D" parent="."]
-position = Vector2(1086, 639)
-rotation = -0.20769419
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("10_c1u80")
-
 [node name="RacingLine" type="Node2D" parent="."]
 
 [node name="Waypoint0" parent="RacingLine" instance=ExtResource("11_3gicu")]
@@ -222,29 +171,115 @@ position = Vector2(-5029, -836)
 [node name="Waypoint6" parent="RacingLine" instance=ExtResource("11_3gicu")]
 position = Vector2(-2634, 455)
 
-[node name="AICar" parent="." instance=ExtResource("12_lvwsc")]
-position = Vector2(-1322, 466)
-rotation = 1.5707964
-
-[node name="AICar2" parent="." instance=ExtResource("12_lvwsc")]
-position = Vector2(-23591, 709)
-rotation = 1.5707964
-
-[node name="AICar3" parent="." instance=ExtResource("12_lvwsc")]
-position = Vector2(-40880, 911)
-rotation = 1.5707964
-
-[node name="AICar4" parent="." instance=ExtResource("12_lvwsc")]
-position = Vector2(-10155, 780)
-rotation = 1.5707964
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(960, 769)
-shape = SubResource("RectangleShape2D_3gicu")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(960, 204)
 shape = SubResource("RectangleShape2D_3gicu")
+
+[node name="decor" type="Node2D" parent="."]
+
+[node name="Oil" type="Sprite2D" parent="decor"]
+position = Vector2(1100, 627)
+rotation = -0.5201081
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_wtup1")
+
+[node name="Van" type="Sprite2D" parent="decor"]
+position = Vector2(1201, 626.99994)
+rotation = 2.024582
+texture = ExtResource("5_k2qoq")
+
+[node name="CustomCar(red)" type="Sprite2D" parent="decor"]
+position = Vector2(1092, 621.0001)
+rotation = 1.4538592
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("6_3gicu")
+
+[node name="CustomCar(green)" type="Sprite2D" parent="decor"]
+position = Vector2(1054, 625)
+rotation = 1.7139133
+texture = ExtResource("7_lvwsc")
+
+[node name="ConeStraight" type="Sprite2D" parent="decor"]
+position = Vector2(1034, 641)
+rotation = 0.46774822
+scale = Vector2(0.24999999, 0.24999999)
+texture = ExtResource("8_3c7w4")
+
+[node name="ConeStraight2" type="Sprite2D" parent="decor"]
+position = Vector2(1047, 645.99994)
+rotation = -0.46774822
+scale = Vector2(0.24999999, 0.24999999)
+texture = ExtResource("8_3c7w4")
+
+[node name="ConeStraight3" type="Sprite2D" parent="decor"]
+position = Vector2(1026, 631.00006)
+rotation = 0.77841693
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("8_3c7w4")
+
+[node name="AICar" parent="decor" instance=ExtResource("12_lvwsc")]
+position = Vector2(-1322, 466)
+rotation = 1.5707964
+
+[node name="AICar2" parent="decor" instance=ExtResource("12_lvwsc")]
+position = Vector2(-23591, 709)
+rotation = 1.5707964
+
+[node name="AICar3" parent="decor" instance=ExtResource("12_lvwsc")]
+position = Vector2(-40880, 911)
+rotation = 1.5707964
+
+[node name="AICar4" parent="decor" instance=ExtResource("12_lvwsc")]
+position = Vector2(-10155, 780)
+rotation = 1.5707964
+
+[node name="ConeDown" type="Sprite2D" parent="decor"]
+position = Vector2(1023.00006, 619)
+rotation = -2.6476645
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("9_xx4b3")
+
+[node name="RacerRed" type="Sprite2D" parent="decor"]
+position = Vector2(1086, 639)
+rotation = -0.20769417
+scale = Vector2(0.20000002, 0.20000002)
+texture = ExtResource("10_c1u80")
+
+[node name="PlayerCars" type="Node2D" parent="."]
+
+[node name="PlayerCar8" type="Marker2D" parent="PlayerCars"]
+position = Vector2(1144.33, 627.45)
+rotation = 2.453933
+
+[node name="PlayerCar1" type="Marker2D" parent="PlayerCars"]
+position = Vector2(960.115, 621)
+rotation = 1.5707964
+
+[node name="PlayerCar2" type="Marker2D" parent="PlayerCars"]
+position = Vector2(867.02, 621)
+rotation = 1.5707964
+
+[node name="PlayerCar3" type="Marker2D" parent="PlayerCars"]
+position = Vector2(762.29, 621)
+rotation = 1.5707964
+
+[node name="PlayerCar4" type="Marker2D" parent="PlayerCars"]
+position = Vector2(644.135, 621)
+rotation = 1.5707964
+
+[node name="PlayerCar5" type="Marker2D" parent="PlayerCars"]
+position = Vector2(533.285, 621)
+rotation = 1.5707964
+
+[node name="PlayerCar6" type="Marker2D" parent="PlayerCars"]
+position = Vector2(422.645, 621)
+rotation = 1.5707964
+
+[node name="PlayerCar7" type="Marker2D" parent="PlayerCars"]
+position = Vector2(291.08, 621)
+rotation = 1.5707964
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
